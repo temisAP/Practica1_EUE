@@ -2,6 +2,7 @@ classdef barra < material
     properties
         L ;
         theta ;
+        nodes;
     end
     methods 
         function obj = barra(material)
