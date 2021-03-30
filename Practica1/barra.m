@@ -6,6 +6,7 @@ classdef barra < material & handle
         nodes;
         K;
         T;
+        F;
     end
     %% Métodos
      
@@ -21,19 +22,21 @@ classdef barra < material & handle
     end
     
     methods 
-        %% Rigidez (método matricial)
+        %% Rigidez 
         function val = rigidez(obj)
-            obj.K = obj.E * obj.A / obj.L * [1 -1;-1 1];
+            obj.K = obj.E * obj.A / obj.L * [ 1  0 -1  0;...
+                                              0  0  0  0;...
+                                             -1  0  1  0;...
+                                              0  0  0  0];
             val = obj.K;
         end
         %% Matriz de rotación
         function T = rotacion(obj)
-            alpha = obj.alpha;
-            T_aux = [cos(alpha), sin(alpha), 0;
-                -sin(alpha) cos(alpha), 0;
-                0, 0, 1];
-            T = [T_aux, zeros(3);
-                zeros(3), T_aux];
+            alpha = obj.theta;
+            T_aux = [cos(alpha), sin(alpha);
+                -sin(alpha) cos(alpha)];
+            T = [T_aux, zeros(2);
+                zeros(2), T_aux];
             obj.T = T;
         end
     end
