@@ -1,4 +1,4 @@
-classdef material
+classdef material < handle
     properties
         A  %m^2
         E %Pa

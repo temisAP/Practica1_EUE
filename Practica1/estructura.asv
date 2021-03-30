@@ -1,0 +1,65 @@
+classdef estructura
+    %% Propiedades
+    properties 
+        gdl = 1;    %Grados de libertad de cada nodo (predeterminado)
+        K;          %Matriz de rigidez
+    end
+    %% Métodos 
+    methods
+        %% Constructor
+        function obj = estructura(bar_s)
+            nn = num_nodes(bar_s);              % Encontrar el número de nodos totales
+            GDL = obj.gdl * nn;                 % Grados de libertad totales
+            obj.K = zeros(GDL);                 % Inicializar matriz de rigidez
+            for b = 1:lenght(bar_s)
+                bar = bar_s(b);                 % Barra
+                bar.rigidez();                  % Matriz de rigidez
+                T = Matriz_rotacion(bar.alpha); % Matriz de rotación
+                bar.K =  T' * bar.K * T;        % Rotación
+                obj.K = obj.K + ensamblar(bar,nn); % Ensamblar matriz
+            end
+        end
+        %% Determinar el número de nodos
+        function val = num_nodes(bar_s)
+             val = 0;
+             for b = 1:lenght(bar_s)
+                 nod = 
+                 m = max(bar_s(b).nodes);
+                 if m > val 
+                     val = m;
+                 end
+             end
+        end
+        %% Matriz de rotación
+        function T = Matriz_Rotacion(alpha)         
+            T_aux = [cos(alpha), sin(alpha), 0;
+                -sin(alpha) cos(alpha), 0;
+                0, 0, 1];
+            T = [T_aux, zeros(3);
+                zeros(3), T_aux];
+        end
+        %% Posicionaje según nodos
+        function [D] = ensamblar(bar,nn)
+            K = bar.K;
+            n1 = bar.nodes(1);
+            n2 = bar.nodes(2);
+            g = estructura.gdl;
+            D=zeros(nn*g);
+            if g == 1
+                D(n1,n1)=K(1,1);
+                D(n1,n2)=K(1,2);
+                D(n2,n1)=K(2,1);
+                D(n2,n2)=K(2,2);
+            elseif g == 2
+                disp('2gdls not implemented yet')
+            elseif g == 3    
+                D(3*n1-2:3*n1,3*n1-2:3*n1)=K(1:3,1:3);
+                D(3*n2-2:3*n2,3*n1-2:3*n1)=K(4:6,1:3);
+                D(3*n1-2:3*n1,3*n2-2:3*n2)=K(1:3,4:6);
+                D(3*n2-2:3*n2,3*n2-2:3*n2)=K(4:6,4:6);
+            else
+                disp('Not implemented yet')
+            end
+        end
+    end
+end
