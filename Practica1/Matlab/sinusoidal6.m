@@ -1,4 +1,4 @@
-%% Datos
+﻿%% Datos
 
 % Masa puntual 
 Mp = 50;     %kg
@@ -135,6 +135,6 @@ pos = get(h,'Position');
 set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3)+y_pdf/10, pos(4)])
 print(h, 'Figuras/Bode','-dpdf','-r0','-painters')
 
-%Save_as_PDF(h,'Figuras/Bode','horizontal', 7.5, 10);
+%Save_as_PDF(h,'../Figuras/Bode','horizontal', 7.5, 10);
 
 

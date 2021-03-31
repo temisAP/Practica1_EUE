@@ -1,6 +1,6 @@
-%% Datos 
+%% Datos
 DT = 50; %K
-L = 0.25; 
+L = 0.25; %m
 
 
 %% Elementos
@@ -95,18 +95,3 @@ disp(' b13')
 disp(b13.F)
 disp(' b23')
 disp(b23.F)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
