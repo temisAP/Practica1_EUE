@@ -55,7 +55,7 @@ Fc = Kca * Ua;
 
 %% Tensión sobre cada varilla
 
-U=zeros(size(s.K));
+U=zeros(length(s.K),1);
 U(a) = Ua;
 U(c) = zeros(size(c));
 
