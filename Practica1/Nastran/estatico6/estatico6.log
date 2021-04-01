@@ -1,13 +1,13 @@
 MSC Nastran V2020 (Intel Windows 10 Pro 6.2 9200) Control File: 
 ----------------------------------------------------------------- 
 Nastran BUFFSIZE=8193 $(d:/archivos de programa/msc.software/napa_se/2020/nastran/conf/nast20200.rcf[2])
-JID='D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatico6.bdf'
+JID='D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatico6\estatico6.bdf'
 OUT='./estatico6'
 MEM=527MB      $ 
 MACH='Intel'
 OPER='Windows 10 Pro'
 OSV='6.2 9200'
-MODEL='Xeon/1233 (temis)'
+MODEL='Xeon/3078 (temis)'
 NPROC='8'
 CONFIG=6
 NPROC=8
@@ -15,8 +15,8 @@ symbol=DELDIR='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc2020
 symbol=DEMODIR='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/nast/demo' $(program default)
 symbol=SSSALTERDIR='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/nast/sssalter' $(program default)
 symbol=TPLDIR='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/nast/tpl' $(program default)
-SDIR='d:/archivos_de_programa/scratch/estatico6.T10860_33'
-DBS='d:/archivos_de_programa/scratch/estatico6.T10860_33'
+SDIR='d:/archivos_de_programa/scratch/estatico6.T5016_35'
+DBS='d:/archivos_de_programa/scratch/estatico6.T5016_35'
 SCR='yes'
 SMEM=100
 BPOOL=150
@@ -32,13 +32,13 @@ MSGDEST='f06'
 PROG=edu
 NEWS='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/nast/news.txt'
 ----------------------------------------------------------------- 
-MSC_ISHELLPATH=d:\0_andres\1_universidad\muse\eue\trabajos_eue\practica1\nastran 
+MSC_ISHELLPATH=d:\0_andres\1_universidad\muse\eue\trabajos_eue\practica1\nastran\estatico6 
 MSC_JIDPATH= 
 PATH=d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\nCode\bin;d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\nvidia;d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\lib;d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8;D:\Archivos de programa\MSC.Software\NaPa_SE\2020\Patran\bin;D:\Archivos de programa\MSC.Software\NaPa_SE\2020\Patran\bin\exe;D:\Archivos de programa\MSC.Software\NaPa_SE\2020\Patran\Perl_msc\bin;D:\Archivos de programa\MSC.Software\NaPa_SE\2020\Patran\scasystem_files;D:\Archivos de programa\MSC.Software\NaPa_SE\2020\Patran\bin;D:\Archivos de programa\MSC.Software\NaPa_SE\2020\Patran\bin\exe;D:\Archivos de programa\MSC.Software\NaPa_SE\2020\Patran\Perl_msc\bin;D:\Archivos de programa\MSC.Software\NaPa_SE\2020\Patran\scasystem_files;D:\Archivos de programa\MSC.Software\NaPa_SE\2020\Patran\bin;D:\Archivos de programa (x86)\IntelSWTools\compilers_and_libraries_2020.2.254\windows\mpi\intel64\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2019.3.203\windows\mpi\intel64\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\Archivos de programa\MATLAB\R2019b\bin;C:\WINDOWS\System32\OpenSSH\;D:\Archivos de programa\MATLAB\R2020b\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\Andr‚s\AppData\Local\Microsoft\WindowsApps;D:\0_Andres\2_Programas\Python;D:\0_Andres\2_Programas\Python\Anaconda3\envs;C:\Users\Andr‚s\AppData\Local\atom\bin;D:\Archivos_de_programa\MiKTeX 2.9\miktex\bin\x64\;c:\Users\Andr‚s\AppData\Local\atom\bin;C:\Users\Andr‚s\AppData\Local\GitHubDesktop\bin;; 
 SCA_SERVICE_CATALOG=d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\res\SCAServiceCatalog.xml 
 SCA_RESOURCE_DIR=d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\res 
 Cmd Line:    D:\Archivos de programa\MSC.Software\NaPa_SE\2020\Nastran\msc20200\win64i8\nastran.exe estatico6.bdf prog=edu auth=edu bat=no 
-Current Dir: D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran 
+Current Dir: D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatico6 
 Time Cmd:    d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\msctime 
 Executable:  d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\analysis.exe 
 Arch= Kywd:  64  
@@ -47,9 +47,9 @@ FPE:         yes
 ----------------------------------------------------------------- 
 Current resource limits:
  Physical memory:                     8101 MB
- Physical memory available:           2723 MB
- Paging file size:                   15269 MB
- Paging file size available:          7472 MB
+ Physical memory available:           1017 MB
+ Paging file size:                   18779 MB
+ Paging file size available:          3879 MB
  Virtual memory:                 134217727 MB
  Virtual memory available:       134213510 MB
 ----------------------------------------------------------------- 
@@ -57,22 +57,22 @@ System configuration:
  Hostname:         temis
  Architecture:     win64i8
  Platform:         Intel Windows 10 Pro 6.2 9200 (Windows Compute Cluster)
- Model:            Xeon/659
- Clock freq.:      659 MHz
+ Model:            Xeon/2828
+ Clock freq.:      2800 MHz
  Number of CPUs:   8
  Executable:       standard
  Raw model ID:     6
  Config number:    6
  Physical memory:  8101 MB
- Virtual memory:   15269 MB
+ Virtual memory:   18779 MB
  Numeric format:   64-bit little-endian IEEE.
  Bytes per word:   8
  Disk block size:  512 bytes (64 words)
  Remote shell cmd: "d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/win64i8/mscrmtcmd.exe" (Windows non-CCS nodes, UNIX)
                    <ccs_cmd> (Windows CCS nodes)
 ----------------------------------------------------------------- 
-MSC Nastran started  Thu Apr  1 17:31:33 RST 2021 
- 17:31:36  Beginning Analysis
+MSC Nastran started  Thu Apr  1 23:56:35 RST 2021 
+ 23:56:36  Beginning Analysis
 SCA Kernel 24.7.714370 successfully initialized
 BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\libimalloc.dll" has been loaded.
 BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\mkl_core.dll" has been loaded.
@@ -80,36 +80,36 @@ BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc2
 BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\mkl_rt.dll" has been loaded.
 BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\MSCblas.dll" has been loaded.
 
- 17:31:36  MSC Authorization Information - Checkout Successful (1016, 0)
- 17:31:36  -------------------------------------------------------------
- 17:31:36  Acquired 1 license for Student Edition Nastran
+ 23:56:36  MSC Authorization Information - Checkout Successful (1016, 0)
+ 23:56:36  -------------------------------------------------------------
+ 23:56:36  Acquired 1 license for Student Edition Nastran
 
 
 Beginning bulk data processing using the IFPStar component.
 For more information on IFPStar, please see KB article KB8019200
 on our support pages, at http://simcompanion.mscsoftware.com.
 
- 17:31:36  58 records read from JID file "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatico6.bdf"
+ 23:56:36  66 records read from JID file "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatico6\estatico6.bdf"
 
 Processing of bulk data entries is complete.
 
- 17:31:36  Analysis started.
- 17:31:36  Geometry access/verification to CAD part initiated (if needed).
- 17:31:36  Geometry access/verification to CAD part successfully completed (if needed).
- 17:31:36  Finite element model generation started.
- 17:31:36  Finite element model generated 18 degrees of freedom.
- 17:31:36  Finite element model generation successfully completed.
- 17:31:36  Application of Loads and Boundary Conditions to the finite element model started.
- 17:31:36  Application of Loads and Boundary Conditions to the finite element model successfully completed.
- 17:31:37  Solution of the system equations for linear statics started.
- 17:31:37  Solution of the system equations for linear statics successfully completed.
- 17:31:37  Linear static analysis completed.
- 17:31:37  21 records read from JID file "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatico6.bdf"
- 17:31:37  NSEXIT: EXIT(0)
- 17:31:37  Analysis complete  0
-Real:        0.988 seconds ( 0:00:00.988)
-User:        0.546 seconds ( 0:00:00.546)
-Sys:         0.468 seconds ( 0:00:00.468)
+ 23:56:36  Analysis started.
+ 23:56:36  Geometry access/verification to CAD part initiated (if needed).
+ 23:56:36  Geometry access/verification to CAD part successfully completed (if needed).
+ 23:56:36  Finite element model generation started.
+ 23:56:36  Finite element model generated 18 degrees of freedom.
+ 23:56:36  Finite element model generation successfully completed.
+ 23:56:36  Application of Loads and Boundary Conditions to the finite element model started.
+ 23:56:36  Application of Loads and Boundary Conditions to the finite element model successfully completed.
+ 23:56:36  Solution of the system equations for linear statics started.
+ 23:56:36  Solution of the system equations for linear statics successfully completed.
+ 23:56:36  Linear static analysis completed.
+ 23:56:37  22 records read from JID file "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatico6\estatico6.bdf"
+ 23:56:37  NSEXIT: EXIT(0)
+ 23:56:37  Analysis complete  0
+Real:        0.831 seconds ( 0:00:00.831)
+User:        0.359 seconds ( 0:00:00.359)
+Sys:         0.203 seconds ( 0:00:00.203)
  ==================================================
  OS:                           6.2
  OEM ID:                       9
@@ -131,4 +131,4 @@ Sys:         0.468 seconds ( 0:00:00.468)
  Detailed performance information can be found in the 
  "MSC Nastran High Performance Computing User's Guide"
  =====================================================
-MSC Nastran finished Thu Apr  1 17:31:37 RST 2021 
+MSC Nastran finished Thu Apr  1 23:56:37 RST 2021 

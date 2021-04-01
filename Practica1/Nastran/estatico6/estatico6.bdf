@@ -1,4 +1,4 @@
-$ MSC.Nastran input file created on April     01, 2021 at 17:31:32 by
+$ MSC.Nastran input file created on April     01, 2021 at 23:56:34 by
 $ Patran 2020  (Student Edition)
 $ Direct Text Input for Nastran System Cell Section
 $ Direct Text Input for File Management Section
@@ -9,6 +9,7 @@ CEND
 $ Direct Text Input for Global Case Control Data
 TITLE = MSC.Nastran job created on 01-Apr-21 at 16:52:57
 ECHO = NONE
+RIGID = LAGR
 TEMPERATURE(INITIAL) = 1
 SUBCASE 1
    SUBTITLE=Carga_termica
@@ -21,6 +22,7 @@ $ Direct Text Input for this Subcase
 BEGIN BULK
 $ Direct Text Input for Bulk Data
 MDLPRM   HDF5    0
+PARAM    POST    0
 PARAM   PRTMAXIM YES
 $ Elements and Element Properties for region : Varilla
 PROD*    1               1               9.9999997-5
@@ -42,10 +44,14 @@ GRID*    2                               0.             .176776692271233
 GRID     4               0.      0.      0.
 $ Loads for Load Case : Carga_termica
 SPCADD   2       1       3       4
+$ Grid Point Temperature Field Default for Load Case : Carga_termica
+TEMPD    3       0.
 $ Bar Element Temperatures of Load Set : Carga_termica
 TEMPRB   3       1       50.     50.
+$ Bar Element Temperatures of Load Set : Sin_carga_termica
+TEMPRB   3       2       0.      0.
 +
-         2       3
+         3
 $ Displacement Constraints of Load Set : BC_1
 SPC1     1       23      1
 $ Displacement Constraints of Load Set : BC_2
@@ -54,5 +60,7 @@ $ Displacement Constraints of Load Set : BC_3
 SPC1     4       13      2
 $ Initial Temperatures of Load Set : Temperatura_ini
 TEMP     1       1       0.      2       0.      4       0.
+$ Default Initial Temperature
+TEMPD    1       0.
 $ Referenced Coordinate Frames
-ENDDATA b46547f9
+ENDDATA 4a198f49
