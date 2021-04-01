@@ -1,0 +1,1491 @@
+$# Creating journal file 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoida
+$# l6.db.jou at 01-Apr-21 17:55:15
+uil_file_rebuild.start("D:\Archivos de programa\MSC.Software\NaPa_SE\2020\" // @
+"Patran/template.db","D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Prac" // @
+"tica1\Nastran\sinusoidal6.db")
+$# Synchronizing the User Data Manager
+set_current_dir( "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica" // @
+"1\Nastran" )
+$# The current working directory has been changed to the database location 
+$# shown.                                                                     
+$#                                                                            
+$#                                   
+db_set_pref( 303, 3, 0, FALSE, 0.00050000002, "" )
+STRING asm_create_grid_xyz_created_ids[VIRTUAL]
+asm_const_grid_xyz( "1", "[0 0 0]", "Coord 0", asm_create_grid_xyz_created_ids )
+$# 1 Point created: Point 1
+point_size( 9 )
+asm_const_grid_xyz( "2", "[0.450 0 0]", "Coord 0",  @
+asm_create_grid_xyz_created_ids )
+$# 1 Point created: Point 2
+STRING asm_line_2point_created_ids[VIRTUAL]
+asm_const_line_2point( "1", "Point 1", "Point 2", 0, "", 50., 1,  @
+asm_line_2point_created_ids )
+$# 1 Line created: Line 1
+material.create( "Analysis code ID", 1, "Analysis type ID", 1, "mat6", 0,  @
+"Date: 01-Apr-21           Time: 17:10:16", "Isotropic", 1, "Directionality",  @
+1, "Linearity", 1, "Homogeneous", 0, "Linear Elastic", 1,  @
+"Model Options & IDs", ["", "", "", "", ""], [0, 0, 0, 0, 0], "Active Flag",  @
+1, "Create", 10, "External Flag", FALSE, "Property IDs", ["Elastic Modulus",  @
+"Poisson Ratio", "Density"], [2, 5, 16, 0], "Property Values", ["200e9", "0.3" @
+, "7900", ""] )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+$# UNDO: Beam Section Create
+beam_section_create( "seccion_cuadrada20x20", "BAR", ["20e-3", "20e-3"] )
+$# Beam Section "seccion_cuadrada20x20" created.
+beam_section_create( "seccion_cuadrada20x20", "BAR", ["20e-3", "20e-3"] )
+$# Critical Decision requested from application ELEM_PROPS
+$#     Beam Section "seccion_cuadrada20x20" already exists. Do you wish to 
+$# overwrite?
+$? YES 29002040 
+$# Beam Section "seccion_cuadrada20x20" created.
+$# Acknowledgement requested from application ELEM_PROPS
+$#     The data entered for Property "Offset @ Node 1" cannot be parsed.   
+$# The data entered for Property "Offset @ Node 2" cannot be parsed.
+$? NO 20039 
+elementprops_create( "viga", 11, 2, 42, 1, 1, 20, [39, 13, 6, 4042, 4043,  @
+2047, 2048, 1, 10, 11, 4026, 1026, 4044, 4045, 4037, 4047, 4048, 4050, 4051,  @
+4053, 4054, 4056, 4057, 8112, 4061, 4303, 8111, 4403, 4404, 4410, 4411, 8200,  @
+8201, 8202], [11, 5, 2, 2, 2, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  @
+1, 1, 1, 6, 4, 4, 1, 1, 1, 6, 4, 4, 4], ["seccion_cuadrada20x20", "mat6",  @
+"< 1 0 0 >", "< 0 0 0 >", "< 0 0 0 >", "", "", "", "", "", "", "", "", "", "", @
+ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "Analysis",  @
+"Analysis", "Analysis"], "" )
+$# Property Set "viga" created.
+elementprops_create( "viga", 11, 2, 42, 1, 1, 20, [39, 13, 6, 4042, 4043,  @
+2047, 2048, 1, 10, 11, 4026, 1026, 4044, 4045, 4037, 4047, 4048, 4050, 4051,  @
+4053, 4054, 4056, 4057, 8112, 4061, 4303, 8111, 4403, 4404, 4410, 4411, 8200,  @
+8201, 8202], [11, 5, 2, 2, 2, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  @
+1, 1, 1, 6, 4, 4, 1, 1, 1, 6, 4, 4, 4], ["seccion_cuadrada20x20", "mat6",  @
+"< 1 0 0 >", "< 0 0 0 >", "< 0 0 0 >", "", "", "", "", "", "", "", "", "", "", @
+ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "Analysis",  @
+"Analysis", "Analysis"], "Curve 1" )
+$# Critical Decision requested from application ELEM_PROPS
+$#     Property Set "viga" Exists. Overwrite?
+$? YES 29002006 
+$# Property Set "viga" created.
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+STRING asm_delete_any_deleted_ids[VIRTUAL]
+asm_delete_point( "Point 1 2 Curve 1", asm_delete_any_deleted_ids )
+$# 2 Points Deleted: Point 1 2
+asm_delete_curve( "Point 1 2 Curve 1", asm_delete_any_deleted_ids )
+$# 1 Curve Deleted: Curve 1
+STRING asm_create_grid_xyz_created_ids[VIRTUAL]
+asm_const_grid_xyz( "1", "[0 0 0]", "Coord 0", asm_create_grid_xyz_created_ids )
+$# 1 Point created: Point 1
+asm_const_grid_xyz( "2", "[450e-3 0 0]", "Coord 0",  @
+asm_create_grid_xyz_created_ids )
+$# 1 Point created: Point 2
+asm_const_grid_xyz( "3", "[450e-3 0 0]", "Coord 0",  @
+asm_create_grid_xyz_created_ids )
+$# Question in application SGM by application Geometry
+$#     Point 2 already exists at the specified location to create the next 
+$# Point. Do you wish to create a duplicate Point?
+$? YES 1000034 
+$# 1 Point created: Point 3
+asm_const_grid_xyz( "2", "[225e-3 0 0]", "Coord 0",  @
+asm_create_grid_xyz_created_ids )
+$# Question from application Geometry
+$#     Point 2 already exists. Will you permit overwrite?
+$? YES 1000035 
+$# 1 Point created: Point 2
+STRING asm_line_2point_created_ids[VIRTUAL]
+asm_const_line_2point( "12", "Point 1", "Point 2", 0, "", 50., 1,  @
+asm_line_2point_created_ids )
+$# 1 Line created: Line 12
+asm_const_line_2point( "23", "Point 2", "Point 3", 0, "", 50., 1,  @
+asm_line_2point_created_ids )
+$# 1 Line created: Line 23
+uil_toolbar.labels_off(  )
+point_label( TRUE )
+curve_label( TRUE )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+loadcase_create2( "Carga_armonica", "Time Dependent",  @
+"This load case is the default load case that always appears", 1., [""], [0],  @
+[0.], "", 0., TRUE )
+$# Load Case "Carga_armonica" created.
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+loadsbcs_create2( "BC_1", "Displacement", "Nodal", "", "Time Dependent", [ @
+"Point 1"], "Geometry", "Coord 0", "1.", ["< 0 0 0   >", "<     >", "<     >", @
+ "<     >"], [" ", " ", " ", " "] )
+$# Load/BC set "BC_1" created.
+loadsbcs_create2( "BC_3", "Displacement", "Nodal", "", "Time Dependent", [ @
+"Point 3"], "Geometry", "Coord 0", "1.", ["< 0 0 0   >", "<     >", "<     >", @
+ "<     >"], [" ", " ", " ", " "] )
+$# Load/BC set "BC_3" created.
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+$# Error reported from application ELEM_PROPS
+$#     The Element Properties must be Entered to continue.
+$? NO 29002021 
+$# Acknowledgement requested from application ELEM_PROPS
+$#     The data entered for Property "Mass Orient. CID/CG" cannot be parsed.
+$? NO 20039 
+elementprops_create( "Masa_puntual", 1, 25, 18, 27, 2, 20, [2069, 4001, 4024,  @
+10, 4026, 11, 4028, 4029, 12], [1, 2, 2, 1, 1, 1, 1, 1, 1], ["50", "< 0 0 0>", @
+ "< 0 0 0>", "", "", "", "", "", ""], "Point 2" )
+$# Property Set "Masa_puntual" created.
+uil_toolbar.wireframe(  )
+uil_toolbar.wireframe(  )
+uil_toolbar.hidden_line(  )
+uil_toolbar.hidden_line(  )
+uil_toolbar.wireframe(  )
+uil_toolbar.shaded_smooth(  )
+uil_toolbar.shaded_smooth(  )
+uil_toolbar.wireframe(  )
+uil_imaging_bw_reverse(  )
+ui_repaint_tree( TRUE )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+mscnastran_subcase.create( "111", "Carga_armonica",  @
+"This is a default subcase." )
+mscnastran_subcase.create_char_param( "LOAD CASE", "Carga_armonica" )
+mscnastran_subcase.create_char_param( "SUBCASE TITLE",  @
+"This is a default subcase." )
+mscnastran_subcase.create_char_param( "SUBCASE SUBTITLE", "Carga_armonica" )
+mscnastran_subcase.create_char_param( "SUBCASE LABEL",  @
+"This load case is the default load case that always appears" )
+mscnastran_subcase.create_char_param( "SUBCASE TITLE FLAG", "OFF" )
+mscnastran_subcase.create_char_param( "SUBCASE SUBTITLE FLAG", "ON" )
+mscnastran_subcase.create_char_param( "SUBCASE LABEL FLAG", "OFF" )
+mscnastran_subcase.create_char_param( "Carga_armonica", "STRUCTURAL" )
+mscnastran_subcase.create_char_param( "DISPLACEMENTS", "1" )
+mscnastran_subcase.create_char_param( "DISPLACEMENTS 1",  @
+"DISPLACEMENT(SORT1,REAL)=0" )
+mscnastran_subcase.create_char_param( "CONSTRAINT FORCES", "1" )
+mscnastran_subcase.create_char_param( "CONSTRAINT FORCES 1",  @
+"SPCFORCES(SORT1,REAL)=0" )
+mscnastran_subcase.create_char_param( "SUBCASE WRITE", "ON" )
+mscnastran_subcase.create_char_param( "SUBCASE DIRECT TEXT POS", "OFF" )
+mscnastran_subcase.create_int_param( "SUBCASE INPUT 0", 0 )
+mscnastran_subcase.create_matrix_param( "FREQUENCY RESPONSE DATA", 5, 1, [[1.] @
+[5.][100.][96.][-1.]] )
+mscnastran_subcase.create_char_param( "ROTOR DYNAMICS", "OFF" )
+mscnastran_subcase.create_char_param( "ALL EXPLICIT MPCS", "ON" )
+mscnastran_subcase.create( "111", "Carga_armonica",  @
+"This is a default subcase." )
+$# Question from application APP INTERFACES
+$#     Subcase "Carga_armonica" already exists.  Do you wish to delete the 
+$# existing subcase and create a new one?
+$? NO 6022070 
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+loadcase_modify2( "Carga_armonica", "Carga_armonica", "Time Dependent",  @
+"This load case is the default load case that always appears", 1., ["BC_1",  @
+"BC_3"], [0, 0], [1., 1.], "", 0., TRUE )
+$# Load Case "Carga_armonica" modified.
+loadcase_modify2( "Carga_armonica", "Carga_armonica", "Time Dependent",  @
+"This load case is the default load case that always appears", 5., ["BC_1",  @
+"BC_3"], [0, 0], [1., 1.], "", 0., TRUE )
+$# Load Case "Carga_armonica" modified.
+loadcase_modify2( "Carga_armonica", "Carga_armonica", "Time Dependent",  @
+"This load case is the default load case that always appears", 5., ["BC_1",  @
+"BC_3"], [0, 0], [1., 1.], "", 0., TRUE )
+$# Load Case "Carga_armonica" modified.
+mesh_seed_create( "Curve 12", 1, 10, 0., 0., 0. )
+mesh_seed_create( "Curve 23", 1, 10, 0., 0., 0. )
+INTEGER fem_create_mesh_curve_num_nodes
+INTEGER fem_create_mesh_curve_num_elems
+STRING fem_create_mesh_c_nodes_created[VIRTUAL]
+STRING fem_create_mesh_c_elems_created[VIRTUAL]
+fem_create_mesh_curv_1( "Curve 12", 16384, 0.022500001, "Bar2", "#", "#",  @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes,  @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created,  @
+fem_create_mesh_c_elems_created )
+$# 11 nodes and 10 elements created for Curve 12.
+$# === 11 nodes created.  IDs  = 1:11.
+$# === 10 elements created.  IDs  = 1:10.
+fem_create_mesh_curv_1( "Curve 23", 16384, 0.022500001, "Bar2", "#", "#",  @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes,  @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created,  @
+fem_create_mesh_c_elems_created )
+$# 11 nodes and 10 elements created for Curve 23.
+$# === 11 nodes created.  IDs  = 12:22.
+$# === 10 elements created.  IDs  = 11:20.
+mesh_seed_display_mgr.erase(  )
+uil_toolbar.shaded_smooth(  )
+uil_toolbar.shaded_smooth(  )
+uil_toolbar.shaded_smooth(  )
+uil_toolbar.hidden_line(  )
+uil_toolbar.wireframe(  )
+ga_display_shrfem_set( "general", 0.30000001 )
+node_label( TRUE )
+bar_elem_label( TRUE )
+tri_elem_label( TRUE )
+quad_elem_label( TRUE )
+tet_elem_label( TRUE )
+wedge_elem_label( TRUE )
+hex_elem_label( TRUE )
+mpc_label( TRUE )
+point_label( TRUE )
+curve_label( TRUE )
+surface_label( TRUE )
+trim_surface_label( TRUE )
+solid_label( TRUE )
+volume_label( TRUE )
+body_label( TRUE )
+node_label( FALSE )
+bar_elem_label( FALSE )
+tri_elem_label( FALSE )
+quad_elem_label( FALSE )
+tet_elem_label( FALSE )
+wedge_elem_label( FALSE )
+hex_elem_label( FALSE )
+mpc_label( FALSE )
+node_label( TRUE )
+bar_elem_label( TRUE )
+tri_elem_label( TRUE )
+quad_elem_label( TRUE )
+tet_elem_label( TRUE )
+wedge_elem_label( TRUE )
+hex_elem_label( TRUE )
+mpc_label( TRUE )
+ga_view_center_set( 0.009178, 0.009760 )
+ga_view_zoom_set( 0.148634 )
+ga_view_center_set( 0.014914, 0.015804 )
+ga_view_zoom_set( 0.167213 )
+ga_view_center_set( 0.021430, 0.022351 )
+ga_view_zoom_set( 0.188115 )
+ga_view_center_set( 0.003427, 0.011379 )
+ga_view_zoom_set( 0.136811 )
+ga_view_center_set( -0.001907, 0.008129 )
+ga_view_zoom_set( 0.121610 )
+ga_view_center_set( -0.010442, 0.002927 )
+ga_view_zoom_set( 0.097288 )
+ga_view_center_set( -0.014430, 0.001202 )
+ga_view_zoom_set( 0.086478 )
+ga_view_center_set( -0.017976, -0.000332 )
+ga_view_zoom_set( 0.076869 )
+ga_view_center_set( -0.025711, -0.003616 )
+ga_view_zoom_set( 0.055905 )
+ga_view_center_set( -0.028003, -0.004589 )
+ga_view_zoom_set( 0.049693 )
+ga_view_center_set( -0.030157, -0.004589 )
+ga_view_zoom_set( 0.044172 )
+ga_view_center_set( -0.032071, -0.004589 )
+ga_view_zoom_set( 0.039264 )
+ga_view_center_set( -0.036248, -0.004589 )
+ga_view_zoom_set( 0.028556 )
+ga_view_center_set( -0.037486, -0.004589 )
+ga_view_zoom_set( 0.025383 )
+ga_view_center_set( -0.039536, -0.004570 )
+ga_view_zoom_set( 0.028556 )
+ga_view_center_set( -0.041766, -0.004505 )
+ga_view_zoom_set( 0.032125 )
+ga_view_center_set( -0.044276, -0.004433 )
+ga_view_zoom_set( 0.036141 )
+ga_view_center_set( -0.047100, -0.004351 )
+ga_view_zoom_set( 0.040658 )
+ga_view_center_set( -0.050276, -0.004259 )
+ga_view_zoom_set( 0.045740 )
+ga_view_center_set( -0.053850, -0.004156 )
+ga_view_zoom_set( 0.051458 )
+ga_view_center_set( -0.057870, -0.004040 )
+ga_view_zoom_set( 0.057890 )
+ga_view_center_set( -0.062392, -0.003909 )
+ga_view_zoom_set( 0.065127 )
+ga_view_center_set( -0.067235, -0.003958 )
+ga_view_zoom_set( 0.073267 )
+ga_view_center_set( -0.072683, -0.004013 )
+ga_view_zoom_set( 0.082426 )
+ga_view_center_set( -0.078813, -0.004075 )
+ga_view_zoom_set( 0.092729 )
+ga_view_center_set( -0.092603, -0.004215 )
+ga_view_zoom_set( 0.115911 )
+ga_view_center_set( -0.101222, -0.004302 )
+ga_view_zoom_set( 0.130400 )
+ga_view_center_set( -0.110526, -0.004891 )
+ga_view_zoom_set( 0.146700 )
+ga_view_center_set( -0.141926, -0.006880 )
+ga_view_zoom_set( 0.201713 )
+ga_view_center_set( -0.156318, -0.007791 )
+ga_view_zoom_set( 0.226927 )
+ga_view_center_set( -0.130413, -0.006151 )
+ga_view_zoom_set( 0.181541 )
+ga_view_center_set( -0.118960, -0.005482 )
+ga_view_zoom_set( 0.161370 )
+ga_view_center_set( -0.108780, -0.004888 )
+ga_view_zoom_set( 0.143440 )
+ga_view_aa_set( 0.000000, 1.000000, 0.000000 )
+mesh_seed_display_mgr.erase(  )
+mesh_seed_display_mgr.erase(  )
+REAL fem_equiv_all_x_equivtol_ab
+INTEGER fem_equiv_all_x_segment
+fem_equiv_all_group4( [" "], 0, "", 1, 1, 0.00050000002, FALSE,  @
+fem_equiv_all_x_equivtol_ab, fem_equiv_all_x_segment )
+$# Realigning database with new node numbers...
+$# Database realignment completed.
+$# Geometric equivalencing completed. 1 node deleted.
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+mscnastran_subcase.create( "111", "Carga_armonica",  @
+"This is a default subcase." )
+$# Question from application APP INTERFACES
+$#     Subcase "Carga_armonica" already exists.  Do you wish to delete the 
+$# existing subcase and create a new one?
+$? NO 6022070 
+$# Warning reported from application APP INTERFACES
+$#     For a multi-subcase Modal Frequency Response analysis, errors will 
+$# occur if subsequent subcases do not agree with the first subcase in the 
+$# specification of ...
+$#  	1) Boundary displacement constraints.
+$#  	2) Frequency-dependent modal damping table.
+$#  	3) Total number of solution frequencies requested, although values may 
+$# differ.
+$# UNDO: Analysis -- Analyze
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+$# Error reported from application ELEM_PROPS
+$#     The Element Properties must be Entered to continue.
+$? NO 29002021 
+elementprops_modify( "viga", "viga", 11, 2, 42, 1, 1, 20, [39, 13, 6, 4042,  @
+4043, 2047, 2048, 1, 10, 11, 4026, 1026, 4044, 4045, 4037, 4047, 4048, 4050,  @
+4051, 4053, 4054, 4056, 4057, 8112, 4061, 4303, 8111, 4403, 4404, 4410, 4411,  @
+8200, 8201, 8202], [11, 5, 2, 2, 2, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  @
+1, 1, 1, 1, 1, 6, 4, 4, 1, 1, 1, 6, 4, 4, 4], ["seccion_cuadrada20x20",  @
+"m:mat6", "<1. 0. 0.>", "<0. 0. 0.>", "<0. 0. 0.>", "", "", "", "", "", "", "" @
+, "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",  @
+"Analysis", "Analysis", "Analysis"], "Curve 12 23" )
+$# Property Set "viga" modified.
+$# Error reported from application ELEM_PROPS
+$#     The Element Properties must be Entered to continue.
+$? NO 29002021 
+$# Warning reported from application APP INTERFACES
+$#     For a multi-subcase Modal Frequency Response analysis, errors will 
+$# occur if subsequent subcases do not agree with the first subcase in the 
+$# specification of ...
+$#  	1) Boundary displacement constraints.
+$#  	2) Frequency-dependent modal damping table.
+$#  	3) Total number of solution frequencies requested, although values may 
+$# differ.
+$#  Beginning analysis of  sinusoidal6
+jobfile.open( "sinusoidal6", "ANALYZE NO JOBFILE" )
+msc_delete_old_files( "sinusoidal6", ".bdf", ".op2" )
+jobfile.write_spl( "/* Jobfile for PATNAS created %A% at %A% */", ["01-Apr-21" @
+, "20:19:30"] )
+jobfile.writec( "", "TRANSLATOR = pat3nas" )
+jobfile.writec( "DATABASE", "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_E" // @
+"UE\Practica1\Nastran\sinusoidal6.db" )
+jobfile.writec( "JOBNAME", "sinusoidal6" )
+jobfile.writec( "ANALYSIS TITLE", "MSC.Nastran job created on 01-Apr-21 at" // @
+" 17:58:06" )
+jobfile.writec( "ANALYSIS SUBTITLE", "" )
+jobfile.writec( "ANALYSIS LABEL", "" )
+jobfile.writec( "", "" )
+jobfile.writec( "OBJECT", "Entire Model" )
+jobfile.writec( "METHOD", "Full Run" )
+jobfile.writec( "", "" )
+jobfile.writec( "MODEL SUFFIX", ".bdf" )
+jobfile.writec( "RESULTS SUFFIX", ".op2" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * File Search Path Declaration" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\extra_files" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\bin\exe" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\bin" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\icons\RibbonIcons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\alters" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\helpfiles" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran" )
+jobfile.writec( "File Search Path", "C:\Users\Andrés" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\plb" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\lib" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\plb" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\dmap" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscexplore_files\" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * Translation Parameters" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "DATA OUTPUT", "HDF5+PRINT" )
+jobfile.writec( "OUTPUT2 REQUESTS", "P3 Built In" )
+jobfile.writec( "OUTPUT2 FORMAT", "Binary" )
+jobfile.writec( "DIVISION TOLERANCE", "1.0e-08" )
+jobfile.writec( "NUMERICAL TOLERANCE", "1.0e-04" )
+jobfile.writec( "WRITING TOLERANCE", "1.0e-21" )
+jobfile.writec( "GEOM CHECK", "INFORM" )
+jobfile.writec( "SORTED BULK", "NO" )
+jobfile.writec( "CARD FORMAT", "either" )
+jobfile.writec( "NODE COORDINATES", "reference frame" )
+jobfile.writec( "COORD COORDINATES", "global" )
+jobfile.writec( "MSC.Nastran VERSION", "2020." )
+jobfile.writec( "WRITE STORED PRECISION", "TRUE" )
+jobfile.writec( "WRITE IN FREE FORMAT", "FALSE" )
+jobfile.writec( "PROPS ON ELEM ENTRY", "FALSE" )
+jobfile.writec( "CONTINUATION ENTRY", "FALSE" )
+jobfile.writec( "PCOMPG ENTRY", "TRUE" )
+jobfile.writec( "CONVERT CBAR CBEAM", "FALSE" )
+jobfile.writec( "ITERATIVE SOLVER", "FALSE" )
+jobfile.writei( "SUPER ELEMENT 0", 0 )
+jobfile.writec( "SEALL WRITE", "FALSE" )
+jobfile.writec( "PART SUPERELEMENT CREATE", "TRUE" )
+jobfile.writec( "AUTOQSET", "FALSE" )
+jobfile.writec( "FIXEDB", "FALSE" )
+jobfile.writei( "SUPER TREE COUNT", 0 )
+jobfile.writec( "MODEL TOLERANCE", "0.00050000002" )
+jobfile.writec( "ELEMENT PROPERTY OFFSET", "0" )
+jobfile.writec( "MATERIAL PROPERTY OFFSET", "0" )
+jobfile.writec( "TABLE OFFSET", "0" )
+jobfile.writec( "LOAD SET OFFSET", "0" )
+jobfile.writec( "LOAD CASE OFFSET", "0" )
+jobfile.writec( "CONTROL SET OFFSET", "0" )
+jobfile.writec( "RIGID ELEMENT OFFSET", "0" )
+jobfile.writec( "SCALAR POINT OFFSET", "0" )
+jobfile.writec( "BEGINNING CONTINUATION MARKER", "+      A" )
+jobfile.writec( "NUMBER ONLY", "ON" )
+jobfile.writec( "BEGINNING NUMBER", "OFF" )
+jobfile.writec( "TRAILING NUMBER", "OFF" )
+jobfile.writec( "SYNTAX NUMBER", "ON" )
+jobfile.writec( "SYNTAX MARKER", "." )
+jobfile.writec( "EXTERNAL SUPERELEMENT METHOD", "NONE" )
+jobfile.writec( "GRID COORDINATES ROUNDING", "15" )
+jobfile.writec( "COORD DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "MPC DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "LBC DATA PRECISION ROUNDING", "7" )
+jobfile.writec( "MAT DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "PROP DATA PRECISION ROUNDING", "7" )
+jobfile.writec( "USE LEGACY PRECISION", "FALSE" )
+jobfile.writec( "EXPONENTIAL WRITE", "As Needed" )
+jobfile.writec( "EXPONENTIAL FORM", "Condensed" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * Solution Parameters" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "SOLUTION TYPE", "FREQUENCY RESPONSE" )
+jobfile.writei( "SOLUTION SEQUENCE", 111 )
+jobfile.writec( "CONTACT CHECK", "OFF" )
+jobfile.writec( "DATABASE RUN", "ON" )
+jobfile.writec( "FORMULATION", "Modal" )
+jobfile.writec( "CYCLIC SYMMETRY", "OFF" )
+jobfile.writec( "AUTOMATIC CONSTRAINTS", "ON" )
+jobfile.writec( "SHELL NORMAL TOLERANCE", "" )
+jobfile.writec( "MASS CALCULATION", "Lumped" )
+jobfile.writec( "DATA DECK ECHO", "None" )
+jobfile.writec( "PLATE RZ STIFFNESS FACTOR", "100.0" )
+jobfile.writec( "MAXIMUM PRINTED LINES", "" )
+jobfile.writec( "MAXIMUM RUN TIME", "" )
+jobfile.writec( "WT-MASS CONVERSION", "1.0" )
+jobfile.writec( "NODE ID FOR WT-GENER", "" )
+jobfile.writec( "RIGID ELEMENT TYPE", "LINEAR" )
+jobfile.writec( "STRUCTURAL DAMPING COEFF.", "" )
+jobfile.writec( "RESIDUAL VECTOR", "Nastran Default" )
+jobfile.writec( "NEFV STRESS UNITS", "MPA" )
+jobfile.writec( "NEFV STRESS COMBINATION", "ABSMAXPR" )
+jobfile.writec( "NEFV RESULT LOCATION", "NODA" )
+jobfile.writec( "NEFV RECOVERY LOCATION", "CORNER" )
+jobfile.writec( "NEFV LAYER LOCATION", "WORST" )
+jobfile.writec( "NEFV OUTPUT LEVEL", "0" )
+jobfile.writer( "NEFV TOP RMS STRESS FILTER", 100. )
+jobfile.writec( "NEFV RAINFLOW METHOD", "DIRLIK" )
+jobfile.writec( "NEFV MAX RMS STRESS", "10.0" )
+jobfile.writec( "NEFV CLIP LEVEL", "10.0" )
+jobfile.writec( "NEFV PEAK RMS LEVEL", "5.0" )
+jobfile.writec( "NEFV NUMBER OF STRESS BINS", "32" )
+jobfile.writer( "NEFV PERCENT FREQUENCY CONTENT", 99.900002 )
+jobfile.writec( "NEFV N CYCLES CALCULATION METHOD", "AVG" )
+jobfile.writec( "NEFV TIME HISTORY DIRECTORY", "C:\Users\Andrés" )
+jobfile.writec( "NEFV CHANNEL DATA FILE TYPE", "RPC" )
+jobfile.writei( "NEFV MAX FRF LOADS PER EVENT", 1 )
+jobfile.writei( "NEFV MAX PSD LOADS PER EVENT", 1 )
+jobfile.writei( "NEFV NUMBER OF CROSS TERMS", 0 )
+jobfile.writei( "NEFV NUMBER OF DETERMINISTIC LOADS", 1 )
+jobfile.writec( "NEFV EVENT DATA", "0" )
+jobfile.writec( "NEFV LOAD SEQUENCE DATA", "0" )
+jobfile.writec( "REAL EIGENVALUE EXTRACTION METHOD", "Lanczos" )
+jobfile.writec( "LOWER FREQUENCY RANGE", "" )
+jobfile.writec( "UPPER FREQUENCY RANGE", "" )
+jobfile.writec( "REAL EIGNVALUE NUMBER OF DESIRED ROOTS", "10" )
+jobfile.writec( "DIAGNOSTIC OUTPUT LEVEL", "0" )
+jobfile.writec( "USE CONTACT TABLE", "OFF" )
+jobfile.writec( "INITIAL CONTACTPAIR LOADCASE NAME", "" )
+jobfile.writei( "MDOF DATA", 0 )
+jobfile.writec( "CELL WRITE", "ON" )
+jobfile.writei( "CELL INPUT 0", 0 )
+jobfile.writec( "FMS WRITE", "ON" )
+jobfile.writei( "FMS INPUT 0", 0 )
+jobfile.writec( "EXEC WRITE", "ON" )
+jobfile.writei( "EXEC INPUT 0", 0 )
+jobfile.writec( "CASE WRITE", "ON" )
+jobfile.writei( "CASE INPUT 0", 0 )
+jobfile.writec( "BULK WRITE", "ON" )
+jobfile.writei( "BULK INPUT 0", 0 )
+jobfile.writec( "CELL DTI POSITION", "START" )
+jobfile.writec( "FMS DTI POSITION", "START" )
+jobfile.writec( "EXEC DTI POSITION", "START" )
+jobfile.writec( "CASE DTI POSITION", "START" )
+jobfile.writec( "BULK DTI POSITION", "START" )
+jobfile.writec( "", "END" )
+jobfile.close(  )
+mscnastran_job.associate_subcases( "111", "sinusoidal6", 1, ["Carga_armonica"] )
+analysis_submit_2( "MSC.Nastran", "sinusoidal6" )
+$# Patran 2020  (Student Edition) has obtained 0 concurrent license(s) from 
+$# FLEXlm per a request to execute on Windows node TEMIS(48a4728ba777) (
+$# Windows 6.2 (Build 9200: Service Pack 0)) at 01-Apr-21 20:19:30.
+$# 
+$# Reading model information from the specified database, 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoida
+$# l6.db.
+$# Messages output from the Patran 2020  (Student Edition) input deck 
+$# translator on April     01, 2021 at 20:19:30.
+$# 
+$# The NASTRAN input file, sinusoidal6.bdf, has been successfully opened.
+$# 
+$# Translating 20 elements from the element property region viga.
+$# 
+$# 1 property regions translated.
+$# 
+$# Translating 1 referenced material records.
+$# 
+$# Translating 21 nodes from the entire model.
+$# 
+$# Writing loads for Load Case : Carga_armonica.
+$# 
+$# Translating nodal constraints in load set : BC_1.
+$# 
+$# Translating nodal constraints in load set : BC_3.
+$# Writing interface element lbcs.
+$# Total execution time in real seconds: 0.01
+$# Total execution time in CPU seconds: 0.297119
+$# 
+$# End of NASTRAN input file translation.
+$# Student Edition Patran Nastran Preference Patran 2020  (Student Edition) 
+$# has released 0 license(s) to FLEXlm at 01-Apr-21 20:19:30.
+$# The translation has completed successfully.
+$# Executing /bin/sh -c D:\Archivos de 
+$# programa\MSC.Software\NaPa_SE\2020\Patran\bi
+$# n\MscNastranExecute.exe -j sinusoidal6 -m bdf -x 2020 -c 
+$# %%prog=edu%auth=edu%arc
+$# h=64% -v
+INTEGER fem_delete_any_nnode
+INTEGER fem_delete_any_idnodes(VIRTUAL)
+INTEGER fem_delete_any_nnon
+INTEGER fem_delete_any_idnoexist(VIRTUAL)
+fem_get_node_ids( "Node 1:93 Elm 1:90", fem_delete_any_nnode,  @
+fem_delete_any_idnodes, fem_delete_any_nnon, fem_delete_any_idnoexist )
+$# 72 FEM entities do not exist or are still associated and cannot be 
+$# deleted: Node 12,23:93
+INTEGER fem_delete_any_nnode_groups
+INTEGER fem_delete_node_assoc_group_ids(VIRTUAL)
+fem_get_node_assoc_groups( 21, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, @
+ 16, 17, 18, 19, 20, 21, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  @
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  @
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  @
+0, 0, 0, 0], fem_delete_any_nnode_groups, fem_delete_node_assoc_group_ids )
+INTEGER fem_delete_any_nelem
+INTEGER fem_delete_any_idelems(VIRTUAL)
+fem_get_elem_ids( "Node 1:93 Elm 1:90", fem_delete_any_nelem,  @
+fem_delete_any_idelems, fem_delete_any_nnon, fem_delete_any_idnoexist )
+$# 70 FEM entities do not exist or are still associated and cannot be 
+$# deleted: Element 21:90
+INTEGER fem_delete_any_nelem_groups
+INTEGER fem_delete_elem_assoc_group_ids(VIRTUAL)
+fem_get_elem_assoc_groups( 20, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, @
+ 15, 16, 17, 18, 19, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, @
+ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, @
+ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] @
+, fem_delete_any_nelem_groups, fem_delete_elem_assoc_group_ids )
+STRING fem_delete_any_deleted_ids[VIRTUAL]
+fem_delete_elem_and_node( "Node 1:93 Elm 1:90", fem_delete_any_deleted_ids )
+$# 20 elements deleted. IDs = Element 1:20
+$# 21 nodes deleted. IDs = Node 1:11 13:22
+STRING fem_delete_any_not_found_ids[VIRTUAL]
+fem_delete_free_node( "Node 1:93 Elm 1:90", fem_delete_any_deleted_ids,  @
+fem_delete_any_not_found_ids )
+$# No Nodes deleted.
+$# 93 FEM entities do not exist or are still associated and cannot be 
+$# deleted: Node 1:93
+fem_delete_assoc_group( 2, [1, 1], fem_delete_any_deleted_ids )
+$# No Groups deleted.
+mesh_seed_create( "Curve 23", 1, 1, 0., 0., 0. )
+$# Question from application FEM
+$#     Curve 23 already has a mesh seed. Do you wish to replace it?
+$? YESFORALL 2001026 
+mesh_seed_create( "Curve 12", 1, 1, 0., 0., 0. )
+$# Question from application FEM
+$#     Curve 12 already has a mesh seed. Do you wish to replace it?
+$? YESFORALL 2001026 
+INTEGER fem_create_mesh_curve_num_nodes
+INTEGER fem_create_mesh_curve_num_elems
+STRING fem_create_mesh_c_nodes_created[VIRTUAL]
+STRING fem_create_mesh_c_elems_created[VIRTUAL]
+fem_create_mesh_curv_1( "Curve 12", 16384, 0.022500001, "Bar2", "#", "#",  @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes,  @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created,  @
+fem_create_mesh_c_elems_created )
+$# 2 nodes and 1 element created for Curve 12.
+$# === 2 nodes created.  IDs  = 1,2.
+$# === 1 element created.  ID = 1.
+fem_create_mesh_curv_1( "Curve 23", 16384, 0.022500001, "Bar2", "#", "#",  @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes,  @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created,  @
+fem_create_mesh_c_elems_created )
+$# 2 nodes and 1 element created for Curve 23.
+$# === 2 nodes created.  IDs  = 3,4.
+$# === 1 element created.  ID = 2.
+ga_view_center_set( -0.042961, -0.008898 )
+ga_view_zoom_set( 0.161370 )
+ga_view_center_set( -0.055932, -0.006953 )
+ga_view_zoom_set( 0.181541 )
+ga_view_center_set( -0.070525, -0.004766 )
+ga_view_zoom_set( 0.204234 )
+ga_view_center_set( -0.055932, -0.006953 )
+ga_view_zoom_set( 0.181541 )
+ga_view_center_set( -0.042961, -0.008898 )
+ga_view_zoom_set( 0.161370 )
+ga_view_center_set( -0.022206, -0.012008 )
+ga_view_zoom_set( 0.129096 )
+ga_view_center_set( -0.005836, -0.014497 )
+ga_view_zoom_set( 0.103277 )
+ga_view_center_set( -0.000046, -0.014981 )
+ga_view_zoom_set( 0.091802 )
+ga_view_center_set( 0.004854, -0.015380 )
+ga_view_zoom_set( 0.081602 )
+ga_view_center_set( 0.014742, -0.016252 )
+ga_view_zoom_set( 0.059347 )
+ga_view_center_set( 0.009524, -0.016207 )
+ga_view_zoom_set( 0.066765 )
+ga_view_center_set( 0.009386, -0.016106 )
+ga_view_zoom_set( 0.075110 )
+ga_view_center_set( 0.009655, -0.015993 )
+ga_view_zoom_set( 0.084499 )
+ga_view_center_set( 0.010084, -0.015866 )
+ga_view_zoom_set( 0.095062 )
+mesh_seed_display_mgr.erase(  )
+REAL fem_equiv_all_x_equivtol_ab
+fem_equiv_all_group4( [" "], 0, "", 1, 1, 0.00050000002, FALSE,  @
+fem_equiv_all_x_equivtol_ab, fem_equiv_all_x_segment )
+$# Realigning database with new node numbers...
+$# Database realignment completed.
+$# Geometric equivalencing completed. 1 node deleted.
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+ga_view_center_set( -0.003964, -0.016510 )
+ga_view_zoom_set( 0.106944 )
+ga_view_center_set( -0.019728, -0.017155 )
+ga_view_zoom_set( 0.120312 )
+ga_view_center_set( -0.037190, -0.017743 )
+ga_view_zoom_set( 0.135352 )
+ga_view_center_set( -0.005758, -0.016765 )
+ga_view_zoom_set( 0.108281 )
+ga_view_center_set( 0.008212, -0.016330 )
+ga_view_zoom_set( 0.096250 )
+ga_view_center_set( 0.020598, -0.015944 )
+ga_view_zoom_set( 0.085556 )
+ga_view_center_set( 0.008212, -0.016330 )
+ga_view_zoom_set( 0.096250 )
+ga_view_center_set( -0.005721, -0.016765 )
+ga_view_zoom_set( 0.108281 )
+ga_view_center_set( -0.037072, -0.017743 )
+ga_view_zoom_set( 0.135352 )
+ga_view_center_set( -0.056667, -0.018355 )
+ga_view_zoom_set( 0.152270 )
+ga_view_center_set( -0.078710, -0.019043 )
+ga_view_zoom_set( 0.171304 )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+$# UNDO: Load Case Delete
+$#  Beginning analysis of  sinusoidal6
+jobfile.open( "sinusoidal6", "ANALYZE NO JOBFILE" )
+$# Question from application APP INTERFACES
+$#     The jobname (sinusoidal6) is already defined in the database. Do you 
+$# wish to overwrite?
+$? YES 6016027 
+msc_delete_old_files( "sinusoidal6", ".bdf", ".op2" )
+$# Question from application APP INTERFACES
+$#     Files from a previous analysis conflict with the current job name: 
+$# "sinusoidal6".  These files are sinusoidal6.f04, sinusoidal6.f06, 
+$# sinusoidal6.log, sinusoidal6.h5, sinusoidal6.bdf.  Will you permit 
+$# deletion of these files?
+$? YES 6022037 
+jobfile.write_spl( "/* Jobfile for PATNAS created %A% at %A% */", ["01-Apr-21" @
+, "20:25:29"] )
+jobfile.writec( "", "TRANSLATOR = pat3nas" )
+jobfile.writec( "DATABASE", "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_E" // @
+"UE\Practica1\Nastran\sinusoidal6.db" )
+jobfile.writec( "JOBNAME", "sinusoidal6" )
+jobfile.writec( "ANALYSIS TITLE", "MSC.Nastran job created on 01-Apr-21 at" // @
+" 17:58:06" )
+jobfile.writec( "ANALYSIS SUBTITLE", "" )
+jobfile.writec( "ANALYSIS LABEL", "" )
+jobfile.writec( "", "" )
+jobfile.writec( "OBJECT", "Entire Model" )
+jobfile.writec( "METHOD", "Full Run" )
+jobfile.writec( "", "" )
+jobfile.writec( "MODEL SUFFIX", ".bdf" )
+jobfile.writec( "RESULTS SUFFIX", ".op2" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * File Search Path Declaration" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "File Search Path", "C:\Users\Andrés" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\helpfiles" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\alters" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\icons\RibbonIcons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\bin" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\bin\exe" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscexplore_files\" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\dmap" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\plb" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\lib" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\plb" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\extra_files" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * Translation Parameters" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "DATA OUTPUT", "HDF5+PRINT" )
+jobfile.writec( "OUTPUT2 REQUESTS", "P3 Built In" )
+jobfile.writec( "OUTPUT2 FORMAT", "Binary" )
+jobfile.writec( "DIVISION TOLERANCE", "1.0e-08" )
+jobfile.writec( "NUMERICAL TOLERANCE", "1.0e-04" )
+jobfile.writec( "WRITING TOLERANCE", "1.0e-21" )
+jobfile.writec( "GEOM CHECK", "INFORM" )
+jobfile.writec( "SORTED BULK", "NO" )
+jobfile.writec( "CARD FORMAT", "either" )
+jobfile.writec( "NODE COORDINATES", "reference frame" )
+jobfile.writec( "COORD COORDINATES", "global" )
+jobfile.writec( "MSC.Nastran VERSION", "2020." )
+jobfile.writec( "WRITE STORED PRECISION", "TRUE" )
+jobfile.writec( "WRITE IN FREE FORMAT", "FALSE" )
+jobfile.writec( "PROPS ON ELEM ENTRY", "FALSE" )
+jobfile.writec( "CONTINUATION ENTRY", "FALSE" )
+jobfile.writec( "PCOMPG ENTRY", "TRUE" )
+jobfile.writec( "CONVERT CBAR CBEAM", "FALSE" )
+jobfile.writec( "ITERATIVE SOLVER", "FALSE" )
+jobfile.writei( "SUPER ELEMENT 0", 0 )
+jobfile.writec( "SEALL WRITE", "FALSE" )
+jobfile.writec( "PART SUPERELEMENT CREATE", "TRUE" )
+jobfile.writec( "AUTOQSET", "FALSE" )
+jobfile.writec( "FIXEDB", "FALSE" )
+jobfile.writei( "SUPER TREE COUNT", 0 )
+jobfile.writec( "MODEL TOLERANCE", "0.00050000002" )
+jobfile.writec( "ELEMENT PROPERTY OFFSET", "0" )
+jobfile.writec( "MATERIAL PROPERTY OFFSET", "0" )
+jobfile.writec( "TABLE OFFSET", "0" )
+jobfile.writec( "LOAD SET OFFSET", "0" )
+jobfile.writec( "LOAD CASE OFFSET", "0" )
+jobfile.writec( "CONTROL SET OFFSET", "0" )
+jobfile.writec( "RIGID ELEMENT OFFSET", "0" )
+jobfile.writec( "SCALAR POINT OFFSET", "0" )
+jobfile.writec( "BEGINNING CONTINUATION MARKER", "+      A" )
+jobfile.writec( "NUMBER ONLY", "ON" )
+jobfile.writec( "BEGINNING NUMBER", "OFF" )
+jobfile.writec( "TRAILING NUMBER", "OFF" )
+jobfile.writec( "SYNTAX NUMBER", "ON" )
+jobfile.writec( "SYNTAX MARKER", "." )
+jobfile.writec( "EXTERNAL SUPERELEMENT METHOD", "NONE" )
+jobfile.writec( "GRID COORDINATES ROUNDING", "15" )
+jobfile.writec( "COORD DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "MPC DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "LBC DATA PRECISION ROUNDING", "7" )
+jobfile.writec( "MAT DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "PROP DATA PRECISION ROUNDING", "7" )
+jobfile.writec( "USE LEGACY PRECISION", "FALSE" )
+jobfile.writec( "EXPONENTIAL WRITE", "As Needed" )
+jobfile.writec( "EXPONENTIAL FORM", "Condensed" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * Solution Parameters" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "SOLUTION TYPE", "FREQUENCY RESPONSE" )
+jobfile.writei( "SOLUTION SEQUENCE", 111 )
+jobfile.writec( "CONTACT CHECK", "OFF" )
+jobfile.writec( "DATABASE RUN", "ON" )
+jobfile.writec( "FORMULATION", "Modal" )
+jobfile.writec( "CYCLIC SYMMETRY", "OFF" )
+jobfile.writec( "AUTOMATIC CONSTRAINTS", "ON" )
+jobfile.writec( "SHELL NORMAL TOLERANCE", "" )
+jobfile.writec( "MASS CALCULATION", "Lumped" )
+jobfile.writec( "DATA DECK ECHO", "None" )
+jobfile.writec( "PLATE RZ STIFFNESS FACTOR", "100.0" )
+jobfile.writec( "MAXIMUM PRINTED LINES", "" )
+jobfile.writec( "MAXIMUM RUN TIME", "" )
+jobfile.writec( "WT-MASS CONVERSION", "1.0" )
+jobfile.writec( "NODE ID FOR WT-GENER", "" )
+jobfile.writec( "RIGID ELEMENT TYPE", "LINEAR" )
+jobfile.writec( "STRUCTURAL DAMPING COEFF.", "" )
+jobfile.writec( "RESIDUAL VECTOR", "Nastran Default" )
+jobfile.writec( "NEFV STRESS UNITS", "MPA" )
+jobfile.writec( "NEFV STRESS COMBINATION", "ABSMAXPR" )
+jobfile.writec( "NEFV RESULT LOCATION", "NODA" )
+jobfile.writec( "NEFV RECOVERY LOCATION", "CORNER" )
+jobfile.writec( "NEFV LAYER LOCATION", "WORST" )
+jobfile.writec( "NEFV OUTPUT LEVEL", "0" )
+jobfile.writer( "NEFV TOP RMS STRESS FILTER", 100. )
+jobfile.writec( "NEFV RAINFLOW METHOD", "DIRLIK" )
+jobfile.writec( "NEFV MAX RMS STRESS", "10.0" )
+jobfile.writec( "NEFV CLIP LEVEL", "10.0" )
+jobfile.writec( "NEFV PEAK RMS LEVEL", "5.0" )
+jobfile.writec( "NEFV NUMBER OF STRESS BINS", "32" )
+jobfile.writer( "NEFV PERCENT FREQUENCY CONTENT", 99.900002 )
+jobfile.writec( "NEFV N CYCLES CALCULATION METHOD", "AVG" )
+jobfile.writec( "NEFV TIME HISTORY DIRECTORY", "C:\Users\Andrés" )
+jobfile.writec( "NEFV CHANNEL DATA FILE TYPE", "RPC" )
+jobfile.writei( "NEFV MAX FRF LOADS PER EVENT", 1 )
+jobfile.writei( "NEFV MAX PSD LOADS PER EVENT", 1 )
+jobfile.writei( "NEFV NUMBER OF CROSS TERMS", 0 )
+jobfile.writei( "NEFV NUMBER OF DETERMINISTIC LOADS", 1 )
+jobfile.writec( "NEFV EVENT DATA", "0" )
+jobfile.writec( "NEFV LOAD SEQUENCE DATA", "0" )
+jobfile.writec( "REAL EIGENVALUE EXTRACTION METHOD", "Lanczos" )
+jobfile.writec( "LOWER FREQUENCY RANGE", "" )
+jobfile.writec( "UPPER FREQUENCY RANGE", "" )
+jobfile.writec( "REAL EIGNVALUE NUMBER OF DESIRED ROOTS", "10" )
+jobfile.writec( "DIAGNOSTIC OUTPUT LEVEL", "0" )
+jobfile.writec( "USE CONTACT TABLE", "OFF" )
+jobfile.writec( "INITIAL CONTACTPAIR LOADCASE NAME", "" )
+jobfile.writei( "MDOF DATA", 0 )
+jobfile.writec( "CELL WRITE", "ON" )
+jobfile.writei( "CELL INPUT 0", 0 )
+jobfile.writec( "FMS WRITE", "ON" )
+jobfile.writei( "FMS INPUT 0", 0 )
+jobfile.writec( "EXEC WRITE", "ON" )
+jobfile.writei( "EXEC INPUT 0", 0 )
+jobfile.writec( "CASE WRITE", "ON" )
+jobfile.writei( "CASE INPUT 0", 0 )
+jobfile.writec( "BULK WRITE", "ON" )
+jobfile.writei( "BULK INPUT 0", 0 )
+jobfile.writec( "CELL DTI POSITION", "START" )
+jobfile.writec( "FMS DTI POSITION", "START" )
+jobfile.writec( "EXEC DTI POSITION", "START" )
+jobfile.writec( "CASE DTI POSITION", "START" )
+jobfile.writec( "BULK DTI POSITION", "START" )
+jobfile.writec( "", "END" )
+jobfile.close(  )
+mscnastran_job.associate_subcases( "111", "sinusoidal6", 1, ["Carga_armonica"] )
+analysis_submit_2( "MSC.Nastran", "sinusoidal6" )
+$# Patran 2020  (Student Edition) has obtained 0 concurrent license(s) from 
+$# FLEXlm per a request to execute on Windows node TEMIS(48a4728ba777) (
+$# Windows 6.2 (Build 9200: Service Pack 0)) at 01-Apr-21 20:25:29.
+$# 
+$# Reading model information from the specified database, 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoida
+$# l6.db.
+$# Messages output from the Patran 2020  (Student Edition) input deck 
+$# translator on April     01, 2021 at 20:25:29.
+$# 
+$# The NASTRAN input file, sinusoidal6.bdf, has been successfully opened.
+$# 
+$# Translating 2 elements from the element property region viga.
+$# 
+$# 1 property regions translated.
+$# 
+$# Translating 1 referenced material records.
+$# 
+$# Translating 3 nodes from the entire model.
+$# 
+$# Writing loads for Load Case : Carga_armonica.
+$# 
+$# Translating nodal constraints in load set : BC_1.
+$# 
+$# Translating nodal constraints in load set : BC_3.
+$# Writing interface element lbcs.
+$# Total execution time in real seconds: 1
+$# Total execution time in CPU seconds: 0.172119
+$# 
+$# End of NASTRAN input file translation.
+$# Student Edition Patran Nastran Preference Patran 2020  (Student Edition) 
+$# has released 0 license(s) to FLEXlm at 01-Apr-21 20:25:30.
+$# The translation has completed successfully.
+$# Executing /bin/sh -c D:\Archivos de 
+$# programa\MSC.Software\NaPa_SE\2020\Patran\bi
+$# n\MscNastranExecute.exe -j sinusoidal6 -m bdf -x 2020 -c 
+$# %%prog=edu%auth=edu%arc
+$# h=64% -v
+INTEGER fem_delete_any_nnode
+INTEGER fem_delete_any_idnodes(VIRTUAL)
+INTEGER fem_delete_any_nnon
+INTEGER fem_delete_any_idnoexist(VIRTUAL)
+fem_get_node_ids( "Node 1 2 4 Elm 1 2", fem_delete_any_nnode,  @
+fem_delete_any_idnodes, fem_delete_any_nnon, fem_delete_any_idnoexist )
+INTEGER fem_delete_any_nnode_groups
+INTEGER fem_delete_node_assoc_group_ids(VIRTUAL)
+fem_get_node_assoc_groups( 3, [1, 2, 4], fem_delete_any_nnode_groups,  @
+fem_delete_node_assoc_group_ids )
+INTEGER fem_delete_any_nelem
+INTEGER fem_delete_any_idelems(VIRTUAL)
+fem_get_elem_ids( "Node 1 2 4 Elm 1 2", fem_delete_any_nelem,  @
+fem_delete_any_idelems, fem_delete_any_nnon, fem_delete_any_idnoexist )
+INTEGER fem_delete_any_nelem_groups
+INTEGER fem_delete_elem_assoc_group_ids(VIRTUAL)
+fem_get_elem_assoc_groups( 2, [1, 2], fem_delete_any_nelem_groups,  @
+fem_delete_elem_assoc_group_ids )
+STRING fem_delete_any_deleted_ids[VIRTUAL]
+fem_delete_elem_and_node( "Node 1 2 4 Elm 1 2", fem_delete_any_deleted_ids )
+$# 2 elements deleted. IDs = Element 1:2
+$# 3 nodes deleted. IDs = Node 1:2 4
+STRING fem_delete_any_not_found_ids[VIRTUAL]
+fem_delete_free_node( "Node 1 2 4 Elm 1 2", fem_delete_any_deleted_ids,  @
+fem_delete_any_not_found_ids )
+$# No Nodes deleted.
+$# 3 FEM entities do not exist or are still associated and cannot be deleted: 
+$# Node 1,2,4
+fem_delete_assoc_group( 2, [1, 1], fem_delete_any_deleted_ids )
+$# No Groups deleted.
+mesh_seed_create( "Curve 12", 1, 30, 0., 0., 0. )
+$# Question from application FEM
+$#     Curve 12 already has a mesh seed. Do you wish to replace it?
+$? YES 2001026 
+mesh_seed_create( "Curve 23", 1, 30, 0., 0., 0. )
+$# Question from application FEM
+$#     Curve 23 already has a mesh seed. Do you wish to replace it?
+$? YESFORALL 2001026 
+INTEGER fem_create_mesh_curve_num_nodes
+INTEGER fem_create_mesh_curve_num_elems
+STRING fem_create_mesh_c_nodes_created[VIRTUAL]
+STRING fem_create_mesh_c_elems_created[VIRTUAL]
+fem_create_mesh_curv_1( "Curve 12", 16384, 0.022500001, "Bar2", "#", "#",  @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes,  @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created,  @
+fem_create_mesh_c_elems_created )
+$# 31 nodes and 30 elements created for Curve 12.
+$# === 31 nodes created.  IDs  = 1:31.
+$# === 30 elements created.  IDs  = 1:30.
+fem_create_mesh_curv_1( "Curve 23", 16384, 0.022500001, "Bar2", "#", "#",  @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes,  @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created,  @
+fem_create_mesh_c_elems_created )
+$# 31 nodes and 30 elements created for Curve 23.
+$# === 31 nodes created.  IDs  = 32:62.
+$# === 30 elements created.  IDs  = 31:60.
+point_label( FALSE )
+curve_label( FALSE )
+surface_label( FALSE )
+trim_surface_label( FALSE )
+solid_label( FALSE )
+volume_label( FALSE )
+body_label( FALSE )
+node_label( FALSE )
+bar_elem_label( FALSE )
+tri_elem_label( FALSE )
+quad_elem_label( FALSE )
+tet_elem_label( FALSE )
+wedge_elem_label( FALSE )
+hex_elem_label( FALSE )
+mpc_label( FALSE )
+bar_elem_label( TRUE )
+tri_elem_label( TRUE )
+quad_elem_label( TRUE )
+tet_elem_label( TRUE )
+wedge_elem_label( TRUE )
+hex_elem_label( TRUE )
+mpc_label( TRUE )
+bar_elem_label( FALSE )
+tri_elem_label( FALSE )
+quad_elem_label( FALSE )
+tet_elem_label( FALSE )
+wedge_elem_label( FALSE )
+hex_elem_label( FALSE )
+mpc_label( FALSE )
+node_label( TRUE )
+node_label( FALSE )
+solid_label( TRUE )
+volume_label( TRUE )
+body_label( TRUE )
+solid_label( FALSE )
+volume_label( FALSE )
+body_label( FALSE )
+surface_label( TRUE )
+trim_surface_label( TRUE )
+surface_label( FALSE )
+trim_surface_label( FALSE )
+curve_label( TRUE )
+mesh_seed_display_mgr.erase(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+pointelem_marker( FALSE )
+pointelem_marker( TRUE )
+uil_toolbar.labels_on(  )
+uil_toolbar.labels_off(  )
+gm_visibility_widget( " Node 1:62 Element 1:60", TRUE )
+gm_visibility_widget( " Node 1:62 Element 1:60", FALSE )
+gm_visibility_widget( " Point 1:3 Curve 12 23", FALSE )
+gm_visibility_widget( " Point 1:3 Curve 12 23", TRUE )
+loadsbcs_plot_markers_v2( ["BC_1", "BC_3"], ["default_group"], TRUE, 0. )
+bar_elem_label( TRUE )
+tri_elem_label( TRUE )
+quad_elem_label( TRUE )
+tet_elem_label( TRUE )
+wedge_elem_label( TRUE )
+hex_elem_label( TRUE )
+mpc_label( TRUE )
+bar_elem_label( FALSE )
+tri_elem_label( FALSE )
+quad_elem_label( FALSE )
+tet_elem_label( FALSE )
+wedge_elem_label( FALSE )
+hex_elem_label( FALSE )
+mpc_label( FALSE )
+solid_label( TRUE )
+volume_label( TRUE )
+body_label( TRUE )
+solid_label( FALSE )
+volume_label( FALSE )
+body_label( FALSE )
+node_label( TRUE )
+bar_elem_label( TRUE )
+tri_elem_label( TRUE )
+quad_elem_label( TRUE )
+tet_elem_label( TRUE )
+wedge_elem_label( TRUE )
+hex_elem_label( TRUE )
+mpc_label( TRUE )
+node_label( FALSE )
+bar_elem_label( FALSE )
+tri_elem_label( FALSE )
+quad_elem_label( FALSE )
+tet_elem_label( FALSE )
+wedge_elem_label( FALSE )
+hex_elem_label( FALSE )
+mpc_label( FALSE )
+gm_visibility_widget( " Node 1:62 Element 1:60", TRUE )
+node_label( TRUE )
+bar_elem_label( TRUE )
+tri_elem_label( TRUE )
+quad_elem_label( TRUE )
+tet_elem_label( TRUE )
+wedge_elem_label( TRUE )
+hex_elem_label( TRUE )
+mpc_label( TRUE )
+node_label( FALSE )
+bar_elem_label( FALSE )
+tri_elem_label( FALSE )
+quad_elem_label( FALSE )
+tet_elem_label( FALSE )
+wedge_elem_label( FALSE )
+hex_elem_label( FALSE )
+mpc_label( FALSE )
+node_label( TRUE )
+bar_elem_label( TRUE )
+tri_elem_label( TRUE )
+quad_elem_label( TRUE )
+tet_elem_label( TRUE )
+wedge_elem_label( TRUE )
+hex_elem_label( TRUE )
+mpc_label( TRUE )
+node_label( FALSE )
+bar_elem_label( FALSE )
+tri_elem_label( FALSE )
+quad_elem_label( FALSE )
+tet_elem_label( FALSE )
+wedge_elem_label( FALSE )
+hex_elem_label( FALSE )
+mpc_label( FALSE )
+gm_visibility_widget( " Point 1:3 Curve 12 23", FALSE )
+gm_visibility_widget( " Point 1:3 Curve 12 23", TRUE )
+bar_elem_label( TRUE )
+tri_elem_label( TRUE )
+quad_elem_label( TRUE )
+tet_elem_label( TRUE )
+wedge_elem_label( TRUE )
+hex_elem_label( TRUE )
+mpc_label( TRUE )
+bar_elem_label( FALSE )
+tri_elem_label( FALSE )
+quad_elem_label( FALSE )
+tet_elem_label( FALSE )
+wedge_elem_label( FALSE )
+hex_elem_label( FALSE )
+mpc_label( FALSE )
+node_label( TRUE )
+node_label( FALSE )
+solid_label( TRUE )
+volume_label( TRUE )
+body_label( TRUE )
+solid_label( FALSE )
+volume_label( FALSE )
+body_label( FALSE )
+mpc_marker( FALSE )
+pointelem_marker( FALSE )
+pointelem_marker( TRUE )
+conn_2dmarker( FALSE )
+conn_3dmarker( FALSE )
+conn_2dmarker( TRUE )
+conn_3dmarker( TRUE )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+mesh_seed_display_mgr.erase(  )
+mesh_seed_display_mgr.erase(  )
+REAL fem_equiv_all_x_equivtol_ab
+fem_equiv_all_group4( [" "], 0, "", 1, 1, 0.00050000002, FALSE,  @
+fem_equiv_all_x_equivtol_ab, fem_equiv_all_x_segment )
+$# Realigning database with new node numbers...
+$# Database realignment completed.
+$# Geometric equivalencing completed. 1 node deleted.
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+mscnastran_subcase.create( "111", "Carga_armonica",  @
+"This is a default subcase." )
+$# Question from application APP INTERFACES
+$#     Subcase "Carga_armonica" already exists.  Do you wish to delete the 
+$# existing subcase and create a new one?
+$? YES 6022070 
+mscnastran_subcase.create_char_param( "LOAD CASE", "Carga_armonica" )
+mscnastran_subcase.create_char_param( "SUBCASE TITLE",  @
+"This is a default subcase." )
+mscnastran_subcase.create_char_param( "SUBCASE SUBTITLE", "Carga_armonica" )
+mscnastran_subcase.create_char_param( "SUBCASE LABEL",  @
+"This load case is the default load case that always appears" )
+mscnastran_subcase.create_char_param( "SUBCASE TITLE FLAG", "OFF" )
+mscnastran_subcase.create_char_param( "SUBCASE SUBTITLE FLAG", "ON" )
+mscnastran_subcase.create_char_param( "SUBCASE LABEL FLAG", "OFF" )
+mscnastran_subcase.create_char_param( "Carga_armonica", "STRUCTURAL" )
+mscnastran_subcase.create_char_param( "DISPLACEMENTS", "1" )
+mscnastran_subcase.create_char_param( "DISPLACEMENTS 1",  @
+"DISPLACEMENT(SORT1,REAL)=0" )
+mscnastran_subcase.create_char_param( "CONSTRAINT FORCES", "1" )
+mscnastran_subcase.create_char_param( "CONSTRAINT FORCES 1",  @
+"SPCFORCES(SORT1,REAL)=0" )
+mscnastran_subcase.create_char_param( "SUBCASE WRITE", "ON" )
+mscnastran_subcase.create_char_param( "SUBCASE DIRECT TEXT POS", "OFF" )
+mscnastran_subcase.create_int_param( "SUBCASE INPUT 0", 0 )
+mscnastran_subcase.create_matrix_param( "FREQUENCY RESPONSE DATA", 5, 1, [[1.] @
+[5.][100.][96.][-1.]] )
+mscnastran_subcase.create_char_param( "ROTOR DYNAMICS", "OFF" )
+mscnastran_subcase.create_char_param( "ALL EXPLICIT MPCS", "ON" )
+$#  Beginning analysis of  sinusoidal6
+jobfile.open( "sinusoidal6", "ANALYZE NO JOBFILE" )
+$# Question from application APP INTERFACES
+$#     The jobname (sinusoidal6) is already defined in the database. Do you 
+$# wish to overwrite?
+$? YES 6016027 
+msc_delete_old_files( "sinusoidal6", ".bdf", ".op2" )
+$# Question from application APP INTERFACES
+$#     Files from a previous analysis conflict with the current job name: 
+$# "sinusoidal6".  These files are sinusoidal6.f04, sinusoidal6.f06, 
+$# sinusoidal6.log, sinusoidal6.h5, sinusoidal6.bdf.  Will you permit 
+$# deletion of these files?
+$? YES 6022037 
+jobfile.write_spl( "/* Jobfile for PATNAS created %A% at %A% */", ["01-Apr-21" @
+, "20:35:34"] )
+jobfile.writec( "", "TRANSLATOR = pat3nas" )
+jobfile.writec( "DATABASE", "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_E" // @
+"UE\Practica1\Nastran\sinusoidal6.db" )
+jobfile.writec( "JOBNAME", "sinusoidal6" )
+jobfile.writec( "ANALYSIS TITLE", "MSC.Nastran job created on 01-Apr-21 at" // @
+" 17:58:06" )
+jobfile.writec( "ANALYSIS SUBTITLE", "" )
+jobfile.writec( "ANALYSIS LABEL", "" )
+jobfile.writec( "", "" )
+jobfile.writec( "OBJECT", "Entire Model" )
+jobfile.writec( "METHOD", "Full Run" )
+jobfile.writec( "", "" )
+jobfile.writec( "MODEL SUFFIX", ".bdf" )
+jobfile.writec( "RESULTS SUFFIX", ".op2" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * File Search Path Declaration" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscexplore_files\" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\bin\exe" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\bin" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\icons\RibbonIcons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\alters" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\helpfiles" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\extra_files" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\plb" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\lib" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\plb" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\dmap" )
+jobfile.writec( "File Search Path", "C:\Users\Andrés" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * Translation Parameters" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "DATA OUTPUT", "HDF5+PRINT" )
+jobfile.writec( "OUTPUT2 REQUESTS", "P3 Built In" )
+jobfile.writec( "OUTPUT2 FORMAT", "Binary" )
+jobfile.writec( "DIVISION TOLERANCE", "1.0e-08" )
+jobfile.writec( "NUMERICAL TOLERANCE", "1.0e-04" )
+jobfile.writec( "WRITING TOLERANCE", "1.0e-21" )
+jobfile.writec( "GEOM CHECK", "INFORM" )
+jobfile.writec( "SORTED BULK", "NO" )
+jobfile.writec( "CARD FORMAT", "either" )
+jobfile.writec( "NODE COORDINATES", "reference frame" )
+jobfile.writec( "COORD COORDINATES", "global" )
+jobfile.writec( "MSC.Nastran VERSION", "2020." )
+jobfile.writec( "WRITE STORED PRECISION", "TRUE" )
+jobfile.writec( "WRITE IN FREE FORMAT", "FALSE" )
+jobfile.writec( "PROPS ON ELEM ENTRY", "FALSE" )
+jobfile.writec( "CONTINUATION ENTRY", "FALSE" )
+jobfile.writec( "PCOMPG ENTRY", "TRUE" )
+jobfile.writec( "CONVERT CBAR CBEAM", "FALSE" )
+jobfile.writec( "ITERATIVE SOLVER", "FALSE" )
+jobfile.writei( "SUPER ELEMENT 0", 0 )
+jobfile.writec( "SEALL WRITE", "FALSE" )
+jobfile.writec( "PART SUPERELEMENT CREATE", "TRUE" )
+jobfile.writec( "AUTOQSET", "FALSE" )
+jobfile.writec( "FIXEDB", "FALSE" )
+jobfile.writei( "SUPER TREE COUNT", 0 )
+jobfile.writec( "MODEL TOLERANCE", "0.00050000002" )
+jobfile.writec( "ELEMENT PROPERTY OFFSET", "0" )
+jobfile.writec( "MATERIAL PROPERTY OFFSET", "0" )
+jobfile.writec( "TABLE OFFSET", "0" )
+jobfile.writec( "LOAD SET OFFSET", "0" )
+jobfile.writec( "LOAD CASE OFFSET", "0" )
+jobfile.writec( "CONTROL SET OFFSET", "0" )
+jobfile.writec( "RIGID ELEMENT OFFSET", "0" )
+jobfile.writec( "SCALAR POINT OFFSET", "0" )
+jobfile.writec( "BEGINNING CONTINUATION MARKER", "+      A" )
+jobfile.writec( "NUMBER ONLY", "ON" )
+jobfile.writec( "BEGINNING NUMBER", "OFF" )
+jobfile.writec( "TRAILING NUMBER", "OFF" )
+jobfile.writec( "SYNTAX NUMBER", "ON" )
+jobfile.writec( "SYNTAX MARKER", "." )
+jobfile.writec( "EXTERNAL SUPERELEMENT METHOD", "NONE" )
+jobfile.writec( "GRID COORDINATES ROUNDING", "15" )
+jobfile.writec( "COORD DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "MPC DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "LBC DATA PRECISION ROUNDING", "7" )
+jobfile.writec( "MAT DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "PROP DATA PRECISION ROUNDING", "7" )
+jobfile.writec( "USE LEGACY PRECISION", "FALSE" )
+jobfile.writec( "EXPONENTIAL WRITE", "As Needed" )
+jobfile.writec( "EXPONENTIAL FORM", "Condensed" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * Solution Parameters" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "SOLUTION TYPE", "FREQUENCY RESPONSE" )
+jobfile.writei( "SOLUTION SEQUENCE", 111 )
+jobfile.writec( "CONTACT CHECK", "OFF" )
+jobfile.writec( "DATABASE RUN", "ON" )
+jobfile.writec( "FORMULATION", "Modal" )
+jobfile.writec( "CYCLIC SYMMETRY", "OFF" )
+jobfile.writec( "AUTOMATIC CONSTRAINTS", "ON" )
+jobfile.writec( "SHELL NORMAL TOLERANCE", "" )
+jobfile.writec( "MASS CALCULATION", "Lumped" )
+jobfile.writec( "DATA DECK ECHO", "None" )
+jobfile.writec( "PLATE RZ STIFFNESS FACTOR", "100.0" )
+jobfile.writec( "MAXIMUM PRINTED LINES", "" )
+jobfile.writec( "MAXIMUM RUN TIME", "" )
+jobfile.writec( "WT-MASS CONVERSION", "1.0" )
+jobfile.writec( "NODE ID FOR WT-GENER", "" )
+jobfile.writec( "RIGID ELEMENT TYPE", "LINEAR" )
+jobfile.writec( "STRUCTURAL DAMPING COEFF.", "" )
+jobfile.writec( "RESIDUAL VECTOR", "Nastran Default" )
+jobfile.writec( "NEFV STRESS UNITS", "MPA" )
+jobfile.writec( "NEFV STRESS COMBINATION", "ABSMAXPR" )
+jobfile.writec( "NEFV RESULT LOCATION", "NODA" )
+jobfile.writec( "NEFV RECOVERY LOCATION", "CORNER" )
+jobfile.writec( "NEFV LAYER LOCATION", "WORST" )
+jobfile.writec( "NEFV OUTPUT LEVEL", "0" )
+jobfile.writer( "NEFV TOP RMS STRESS FILTER", 100. )
+jobfile.writec( "NEFV RAINFLOW METHOD", "DIRLIK" )
+jobfile.writec( "NEFV MAX RMS STRESS", "10.0" )
+jobfile.writec( "NEFV CLIP LEVEL", "10.0" )
+jobfile.writec( "NEFV PEAK RMS LEVEL", "5.0" )
+jobfile.writec( "NEFV NUMBER OF STRESS BINS", "32" )
+jobfile.writer( "NEFV PERCENT FREQUENCY CONTENT", 99.900002 )
+jobfile.writec( "NEFV N CYCLES CALCULATION METHOD", "AVG" )
+jobfile.writec( "NEFV TIME HISTORY DIRECTORY", "C:\Users\Andrés" )
+jobfile.writec( "NEFV CHANNEL DATA FILE TYPE", "RPC" )
+jobfile.writei( "NEFV MAX FRF LOADS PER EVENT", 1 )
+jobfile.writei( "NEFV MAX PSD LOADS PER EVENT", 1 )
+jobfile.writei( "NEFV NUMBER OF CROSS TERMS", 0 )
+jobfile.writei( "NEFV NUMBER OF DETERMINISTIC LOADS", 1 )
+jobfile.writec( "NEFV EVENT DATA", "0" )
+jobfile.writec( "NEFV LOAD SEQUENCE DATA", "0" )
+jobfile.writec( "REAL EIGENVALUE EXTRACTION METHOD", "Lanczos" )
+jobfile.writec( "LOWER FREQUENCY RANGE", "" )
+jobfile.writec( "UPPER FREQUENCY RANGE", "" )
+jobfile.writec( "REAL EIGNVALUE NUMBER OF DESIRED ROOTS", "10" )
+jobfile.writec( "DIAGNOSTIC OUTPUT LEVEL", "0" )
+jobfile.writec( "USE CONTACT TABLE", "OFF" )
+jobfile.writec( "INITIAL CONTACTPAIR LOADCASE NAME", "" )
+jobfile.writei( "MDOF DATA", 0 )
+jobfile.writec( "CELL WRITE", "ON" )
+jobfile.writei( "CELL INPUT 0", 0 )
+jobfile.writec( "FMS WRITE", "ON" )
+jobfile.writei( "FMS INPUT 0", 0 )
+jobfile.writec( "EXEC WRITE", "ON" )
+jobfile.writei( "EXEC INPUT 0", 0 )
+jobfile.writec( "CASE WRITE", "ON" )
+jobfile.writei( "CASE INPUT 0", 0 )
+jobfile.writec( "BULK WRITE", "ON" )
+jobfile.writei( "BULK INPUT 0", 0 )
+jobfile.writec( "CELL DTI POSITION", "START" )
+jobfile.writec( "FMS DTI POSITION", "START" )
+jobfile.writec( "EXEC DTI POSITION", "START" )
+jobfile.writec( "CASE DTI POSITION", "START" )
+jobfile.writec( "BULK DTI POSITION", "START" )
+jobfile.writec( "", "END" )
+jobfile.close(  )
+mscnastran_job.associate_subcases( "111", "sinusoidal6", 1, ["Carga_armonica"] )
+analysis_submit_2( "MSC.Nastran", "sinusoidal6" )
+$# Patran 2020  (Student Edition) has obtained 0 concurrent license(s) from 
+$# FLEXlm per a request to execute on Windows node TEMIS(48a4728ba777) (
+$# Windows 6.2 (Build 9200: Service Pack 0)) at 01-Apr-21 20:35:35.
+$# 
+$# Reading model information from the specified database, 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoida
+$# l6.db.
+$# Messages output from the Patran 2020  (Student Edition) input deck 
+$# translator on April     01, 2021 at 20:35:35.
+$# 
+$# The NASTRAN input file, sinusoidal6.bdf, has been successfully opened.
+$# 
+$# Translating 60 elements from the element property region viga.
+$# 
+$# 1 property regions translated.
+$# 
+$# Translating 1 referenced material records.
+$# 
+$# Translating 61 nodes from the entire model.
+$# 
+$# Writing loads for Load Case : Carga_armonica.
+$# 
+$# Translating nodal constraints in load set : BC_1.
+$# 
+$# Translating nodal constraints in load set : BC_3.
+$# Writing interface element lbcs.
+$# Total execution time in real seconds: 1
+$# Total execution time in CPU seconds: 0.343018
+$# 
+$# End of NASTRAN input file translation.
+$# Student Edition Patran Nastran Preference Patran 2020  (Student Edition) 
+$# has released 0 license(s) to FLEXlm at 01-Apr-21 20:35:36.
+$# The translation has completed successfully.
+$# Executing /bin/sh -c D:\Archivos de 
+$# programa\MSC.Software\NaPa_SE\2020\Patran\bi
+$# n\MscNastranExecute.exe -j sinusoidal6 -m bdf -x 2020 -c 
+$# %%prog=edu%auth=edu%arc
+$# h=64% -v
+$# Flushing the User Data Manager
+$# Journal file stopped recording at 01-Apr-21 22:42:52
