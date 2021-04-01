@@ -1,0 +1,433 @@
+1
+ 
+ 
+ 
+ 
+                      Warning: This computer program is protected by copyright law and international treaties.       
+                  Unauthorized use, reproduction or distribution of this computer program, or any portion of it, may 
+                                          result in severe civil and criminal penalties.                             
+                         Copyright (C) 2020 MSC Software Corporation and its licensors. All rights reserved.         
+ 
+ 
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * *                                 * *
+                                              * *           MSC Software          * *
+                                              * *               CORP              * *
+                                              * *                                 * *
+                                              * *      M S C   N a s t r a n      * *
+                                              * *                                 * *
+                                              * *  S T U D E N T   E D I T I O N  * *
+                                              * *                                 * *
+                                              * *     Version 2020SP1-CL749017    * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *          AUG  4, 2020           * *
+                                              * *                                 * *
+                                              * *              Intel              * *
+                                              * *     MODEL Xeon/1400 (temis)     * *
+                                              * *     Windows 10 Pro 6.2 9200     * *
+                                              * * Compiled for 8664 (SINGLE Mode) * *
+                                              * *                                 * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+
+ 
+ 
+                                                 This Student Edition version is  
+                                                    valid until APR 30, 2022.     
+ 
+ 
+                  This program is being distributed as part of the MSC Software Student Edition. Use of this program 
+                     or its results at a commercial installation, for commercial purposes, or for production work    
+                                             I S   S T R I C T L Y  P R O H I B I T E D.                             
+                  ==================================== FOR EDUCATIONAL USE ONLY =====================================
+ 
+ 
+1News file - July 31, 2020)
+  
+               Welcome to MSC Nastran 2020 Service Pack 1 (2020 SP1)
+  
+  
+   MSC Nastran brings powerful new features and enhancements for engineering
+   solutions.
+  
+     MSC Nastran 2020 SP1 corrects four defects, evident in version 2020,
+     that concern the import of Nastran Embedded Fatigue and acoustic pressure
+     results into Patran, corrects a licensing defect concerning the
+     TABLRPC entry, and shell elements SFRP failure indicator output in
+     the Digimat-to-SOL 400 MATDIGI interface.
+  
+     MSC Nastran 2020 SP1 Features and Enhancements
+  
+     Dynamics
+     - Data recovery of Poroelastic material (PEM) trim parts interior grids.
+     - New PLTSURF entry introduced for easier PEM parts coupling surface
+       defintions.
+     - Restart support for models with invariant PEM components.
+     - Temperature dependency added for frequency dependent materials.
+     - SOL 108 (direct frequency response) support added for models with PEM
+       parts.
+  
+     Rotordynamics
+     - New 2D Bush (CBUSH2DA) and Squeeze File Damper (NLRSFDA) user-defined
+       subroutines enabled to include inertia & acceleration terms respectively.
+     - Integration of user-defined squeeze file damper libraries.
+     - Cross-coupling inertia terms specification for 2D Bush (CBUSH2D) element.
+     - Frequency dependent 2D Bush (PBSH2DT) property with tabular input.
+  
+     Composites
+     - Layered Solid and Solid-Shell elements available in linear solutions.
+  
+     Fatigue
+     - Control of the number of angles to be analyzed when using critical plane
+       analysis.
+     - New stress/strain output requests via FATIGUE case control.
+     - More control over the amound of results data returned at critical
+       locations.
+     - Significant performance improvement of SOL 112 duty cycle jobs.
+     - Direct access to dynamic load data in multi-channel time histroy files via
+       new TABLRPC entry.
+  
+     Topology Optimization
+     - Anisotropic materials support added.
+     - Over-hang constraints for additive manufacturing.
+     - New DRESP2 response types: Magnigtude of Displacement and
+       maximization of stiffness and frequency.
+1 
+     Nonlinear
+     - Nonlinear Buckling available in SOL 400
+     - Allow represtentation of imperfect structural geometry through
+       use modification of grid coordinates based on displacements or
+       modes from a previous run.
+     - MATVE limitation of five scale factor/time constraint data pairs
+       removed.
+  
+     HPC
+     - CASI (Iterative) Solver support available for inertia relief analysis.
+     - Faster Global Transformation Matrix for ACMS to speed up Nastran
+       interface to MSC Adams and AVL EXCITE.
+     - Improved GPU acceleration for FASTFR (Fast Frequency Response) and
+       MPYAD for large models.
+  
+     Nastran HDF5
+     - Support NLLOAD outputs in HDF5
+     - Add KHH/MHH/BHH matrix output control
+     - Support nonlinear buckling and imperfection outputs
+     - Support layered solid and solid shell composite elements
+  
+  
+     Documentation
+     The complete documentation set is provided in a separate installer and
+     when installed is available at: MSC_DOC_DIR/doc/pdf_nastran directory.
+     Where MSC_DOC_DIR is the directory where documentation was installed
+     This help set has cross references between documents, links to how-to
+     videos, and example files.
+  
+     Individual MSC Nastran documents are available for download from the
+       Simcompanion Website at:
+       http://simcompanion.mscsoftware.com/
+  
+     These documents were updated for the MSC Nastran 2020 SP1 Release
+  
+         1.  Installation and Operations Guide
+         2.  Quick Reference Guide
+         3.  Release Guide
+         4.  Linear Statics Analysis User's Guide
+         5.  Dynamic Analysis User's Guide
+         6.  Superelements User's Guide
+         7.  Rotordynamics User's Guide
+         8.  Demonstration Problems Manual
+         9.  Nastran Embedded Fatigue User's Guide
+        10.  Design Sensitivity and Optimization
+        11.   Nonlinear User's Guide SOL 400
+        12.  DMAP Programmer's Guide
+        13.  High Performance Computing User's Guide
+        14.  DEMATD Guide
+1       15.  Explicit Nonlinear (SOL 700) User's Guide
+  
+   Please refer to  MSC_DOC_DIR/doc/pdf_nastran/nastran_library.pdf
+   for the complete document set:
+  
+  
+   Feature Deprecation List
+   To streamline the MSC Nastran program and simplify ongoing maintenance
+   activiy, some obsolete capabilities have been identified and tagged for
+   removal from a future release of the program in late 2020. Please review
+   the list of features marked for deprecation below to ensure that there
+   will be no disruption to your use of MSC Nastran. If you see a feature
+   that you currently use and do not wish to lose, contact MSC Technical
+   Support to report it.
+  
+     Features tagged for removal:
+     - P-elements
+     - SOL 600 nonlinear solution sequence
+     - Unstructured one- and two-digit solution sequences (e.g. SOL 3, SOL 24)
+     - SOL 190 (DBTRANS)
+     - TAUCS solver
+     - MSGMESH
+     - Obsolete DMAP modules
+     - SSSALTERS
+  
+     Refer to the MSC Nastran 2020 Release Guide for more details.
+  
+  
+   Additional information about the release can be found at the MSC Nastran
+   Product Support page: http://simcompanion.mscsoftware.com
+  
+   The support page provides links to these valuable information:
+      * A searchable Knowledge Base containing examples and answers to thousands
+        of frequently asked questions written by MSC Software subject-matter
+        experts.
+      * Peer-to-peer Discussion Forums enabling you to post questions for your
+        MSC Software products and receive answers from other users worldwide.
+      * A list of known issues with the product and any workarounds.
+      * Instructions on how to contact technical support
+      * A mechanism for sending us product feedback or enhancement requests.
+      * Hardware and software requirements.
+      * Examples and Tutorials
+      * and much more.
+  
+   For information on training, please visit our Training web site
+  
+      http://www.mscsoftware.com/Contents/Services/Training/
+  
+1                                                       **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     1
+                                                                                                                                    
+0        N A S T R A N    F I L E    A N D    S Y S T E M    P A R A M E T E R    E C H O                                           
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     NASTRAN BUFFSIZE=8193 $(D:/ARCHIVOS DE PROGRAMA/MSC.SOFTWARE/NAPA_SE/2020/NASTRA
+     NASTRAN DBCFACT=4                                                               
+     ASSIGN DBC='model_sine_z.xdb',RECL=32768,UNIT=40,DELETE                         
+1                                                       **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     2
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    E C H O                                                             
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID SINE,TEST                                                                            
+     SOL 111                                                                                 
+     TIME 1000                                                                               
+     CEND                                                                                    
+1    SINE VIBRATION Y                                   **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     3
+      MODEL SINE VIBRATION Y                                                                                                        
+0     Z-DIRECTION SINE INPUT                                                                                                        
+0                                        C A S E    C O N T R O L    E C H O                                                        
+                 COMMAND                                                                                                            
+                 COUNT                                                                                                              
+                  1      AUTOSPC(NOPRINT)=YES                                                                    
+                  2      LINES=50000                                                                             
+                  3           TITLE = SINE VIBRATION Y                                                           
+                  4           SUBTITLE = MODEL SINE VIBRATION Y                                                  
+                  5           LABEL = Z-DIRECTION SINE INPUT                                                     
+                  6           ECHO = NONE                                                                        
+                  7           SPC      = 1                                                                       
+                  8           METHOD   = 1                                                                       
+                  9           DLOAD    = 10                                                                      
+                 10           SDAMPING = 20                                                                      
+                 11           FREQ     = 40                                                                      
+                 12           SET 99 = 859999, 30                                                                
+                 13           SET 102 = 1,60                                                                     
+                 14           ACCELERATION(SORT2,PRINT,PHASE) = 99                                               
+                 15           FORCES(SORT2,PRINT,PHASE)=102                                                      
+                 16           STRESS(PLOT,VONMISES)=ALL                                                          
+                 17      BEGIN BULK                                                                              
+1    SINE VIBRATION Y                                   **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     4
+      MODEL SINE VIBRATION Y                                                                                                        
+0     Z-DIRECTION SINE INPUT                                                                                                        
+                                              I N P U T   B U L K   D A T A   E C H O                                               
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+ *** USER INFORMATION MESSAGE 9991 (SDLWIF)
+     Messages are being generated at include level 0.
+     File: d:/0_andres/1_universidad/muse/eue/trabajos_eue/practica1/nastran/sinusoidal6/seno.dat
+ *** USER FATAL MESSAGE 9994 (BULKPM)
+     TABLED1 with TID=12 near line 33
+     User information:  Y:0 is an integer in a real field.
+     User action:  Enter a real value or set system 444 to 9 to have the program convert the integer to a real value
+                              $INCLUDE "d:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf"
+ *** USER INFORMATION MESSAGE 9991 (SDLWIF)
+     Messages are being generated at include level 0.
+     File: d:/0_andres/1_universidad/muse/eue/trabajos_eue/practica1/nastran/sinusoidal6/seno.dat
+ *** USER FATAL MESSAGE 9994 (BULKIN)
+      First Field Violation near line 7
+      First Field Parent identification string "SOL 111" must be contiguous, check start of field two.
+ *** USER FATAL MESSAGE 9994 (BULKPM)
+     RBE2 with EID=860000 near line 56
+     User information:  GN required field was not supplied.
+ *** USER FATAL MESSAGE 9994 (BULKPM)
+     RBE2 with EID=860000 near line 56
+     User information:  CM required field was not supplied.
+ *** USER FATAL MESSAGE 9994 (BULKPM)
+
+  RBE2 with EID=860000 near line 56
+  User information:  Minimum number of GM's is not provided; supplied is 0 and required is 1.
+
+ *** USER INFORMATION MESSAGE 9991 (SDLWIF)
+     Messages are being generated at include level 1.
+     File: d:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf
+ *** USER FATAL MESSAGE 9994 (BULKIN)
+     Error near line 15
+     User information:  Fixed Field violation, string "D = 1" should be contiguous; trailing characters will temporarily be ignored.
+ *** USER FATAL MESSAGE 9994 (BULKIN)
+     Error near line 16
+     User information:  Fixed Field violation, string "ENCY = 1" should be contiguous; trailing characters will temporarily be ignored.
+ *** USER WARNING MESSAGE 9994 (BULKIN)
+     Unexpected BEGIN BULK found near line 20 is skipped.
+ *** USER FATAL MESSAGE 9994 (BULKPM)
+     PARAM with NAME=POST near line 24
+     Entry was found previously with the same key(s).
+ *** USER FATAL MESSAGE 9994 (BULKPM)
+     PARAM with NAME=PRTMAXIM near line 25
+     Entry was found previously with the same key(s).
+ *** USER FATAL MESSAGE 9994 (BULKPM)
+     EIGRL with SID=1 near line 30
+     Entry was found previously with the same key(s).
+ *** USER WARNING MESSAGE 9994 (BULKEF)
+      The following lines could not be processed by the current IFPSTAR rule base.
+      They are being passed to Classic IFP for an additional attempt at resolution.
+                              CEND
+                              TITLE*= MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 17:58:06
+                              ECHO = NONE
+                              SUBCASE 1
+                                 SUBTITLE=CARGA_ARMONICA
+                                 METHOD = 1
+                                 FREQUENCY = 1
+                                 SPC = 2
+                                 DISPLACEMENT(SORT1,REAL)=ALL
+                                 SPCFORCES(SORT1,REAL)=ALL
+1    SINE VIBRATION Y                                   **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     5
+      MODEL SINE VIBRATION Y                                                                                                        
+0     Z-DIRECTION SINE INPUT                                                                                                        
+ *** USER FATAL MESSAGE 208 (SCA.MDSolver.Io.AccessAccess:AccessAccess::StreamToBinary)
+     Fatal messages were encountered while converting the stream input file d:/0_andres/1_universidad/muse/eue/trabajos_eue/practica1/nastran/sinusoidal6/seno.dat.
+ *** USER FATAL MESSAGE 102 (SCA.MDSolver.Obj.InputFile:InputFile::read)
+Severe fatal Errors occured while reading the input file d:/0_andres/1_universidad/muse/eue/trabajos_eue/practica1/nastran/sinusoidal6/seno.dat.
+Check the MDSolver.System.PrintListener output.
+                                        M O D E L   S U M M A R Y          BULK = 0
+                                   ENTRY NAME        NUMBER OF ENTRIES
+                                   ----------        -----------------
+                                         CBAR                       60
+                                          DTI                        1
+                                        EIGRL                        1
+                                        FREQ1                        2
+                                        FREQ4                        1
+                                         GRID                       62
+                                         MAT1                        1
+                                       MDLPRM                        1
+                                        PARAM                        3
+                                        PBARL                        1
+                                     REJ_BULK                       56
+                                       RLOAD2                        1
+                                         SPC1                        4
+                                       SPCADD                        1
+                                         SPCD                        1
+                                      TABDMP1                        1
+
+ *** USER WARNING MESSAGE 285 (DML)
+     FATAL ERRORS WERE FOUND WHILE READING THIS BEGIN SECTION
+      MODEL SUMMARY DOES NOT INCLUDE COUNT OF FATAL ENTITIES
+ *** USER FATAL MESSAGE 5199 (XSBFF)
+     THE BULK DATA FREE FIELD ENTRY BELOW HAS AN INTEGER OR A CHARACTER FIELD WITH MORE THAN EIGHT CHARACTERS.
+     TITLE*= MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 17:58:06
+ *** USER FATAL MESSAGE 307 (IFPDRV)
+     ILLEGAL NAME FOR BULK DATA ENTRY CEND
+ *** USER FATAL MESSAGE 307 (IFPDRV)
+     ILLEGAL NAME FOR BULK DATA ENTRY DISPL
+ *** USER FATAL MESSAGE 300 (RCARD)
+     DATA ERROR IN FIELD UNDERLINED.
+     EMBEDDED BLANK.
+          .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .
+          FREQU   ENCY = 1                                                         +000001
+                  ========                                                                
+ *** USER FATAL MESSAGE 307 (IFPDRV)
+     ILLEGAL NAME FOR BULK DATA ENTRY FREQU
+ *** USER FATAL MESSAGE 300 (RCARD)
+     DATA ERROR IN FIELD UNDERLINED.
+     EMBEDDED BLANK.
+          .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .
+          METHO   D = 1                                                                   
+                  ========                                                                
+ *** USER FATAL MESSAGE 307 (IFPDRV)
+     ILLEGAL NAME FOR BULK DATA ENTRY METHO
+ *** USER FATAL MESSAGE 307 (IFPDRV)
+     ILLEGAL NAME FOR BULK DATA ENTRY SPCFO
+ *** USER FATAL MESSAGE 307 (IFPDRV)
+     ILLEGAL NAME FOR BULK DATA ENTRY SUBCASE
+ *** USER FATAL MESSAGE 307 (IFPDRV)
+     ILLEGAL NAME FOR BULK DATA ENTRY SUBTI
+ *** USER FATAL MESSAGE 300 (RCARD)
+     DATA ERROR IN FIELD UNDERLINED.
+     EMBEDDED BLANK.
+          .   1  ..   2  AND  3  ..   4  AND  5  ..   6  AND  7  ..   8  AND  9  ..  10  .
+          TITLE =*MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 17:58:06                        
+                  ================                                                        
+ *** USER FATAL MESSAGE 300 (RCARD)
+     DATA ERROR IN FIELD UNDERLINED.
+     EMBEDDED BLANK.
+          .   1  ..   2  AND  3  ..   4  AND  5  ..   6  AND  7  ..   8  AND  9  ..  10  .
+          TITLE =*MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 17:58:06                        
+                                  ================                                        
+ *** USER FATAL MESSAGE 300 (RCARD)
+     DATA ERROR IN FIELD UNDERLINED.
+     EMBEDDED BLANK.
+          .   1  ..   2  AND  3  ..   4  AND  5  ..   6  AND  7  ..   8  AND  9  ..  10  .
+          TITLE =*MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 17:58:06                        
+                                                  ================                        
+ *** USER FATAL MESSAGE 307 (IFPDRV)
+     ILLEGAL NAME FOR BULK DATA ENTRY TITLE =*
+ ^^^     
+ ^^^ >>> IFP OPERATIONS COMPLETE <<< 
+ ^^^     
+ ^^^     
+ *** USER FATAL MESSAGE 9002 (SUBDMAP IFPS)
+     ERROR(S) ENCOUNTERED IN THE MAIN BULK DATA SECTION
+     SEE MESSAGES ABOVE. ERROR ENCOUNTERED IN MODULE IFP,
+ ^^^     
+1    SINE VIBRATION Y                                   **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     6
+      MODEL SINE VIBRATION Y                                                                                                        
+0     Z-DIRECTION SINE INPUT                                                                                                        
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+ *** USER INFORMATION MESSAGE 4425 (PRTPRN)
+     ONE OR MORE FATAL ERRORS HAVE OCCURRED.  THERE MAY BE MORE ERROR MESSAGES IN THE PRECEDING OUTPUT
+1    SINE VIBRATION Y                                   **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     7
+      MODEL SINE VIBRATION Y                                                                                                        
+0     Z-DIRECTION SINE INPUT                                                                                                        
+ * * * *  D B D I C T   P R I N T  * * * *      SUBDMAP = PRTSUM  ,  DMAP STATEMENT NO.     71
+
+
+
+0                                   * * * *  A N A L Y S I S  S U M M A R Y  T A B L E  * * * *
+0 SEID  PEID PROJ VERS APRCH      SEMG SEMR SEKR SELG SELR MODES DYNRED SOLLIN PVALID SOLNL LOOPID DESIGN CYCLE SENSITIVITY
+ --------------------------------------------------------------------------------------------------------------------------
+0SEID = SUPERELEMENT ID.
+ PEID = PRIMARY SUPERELEMENT ID OF IMAGE SUPERELEMENT.
+ PROJ = PROJECT ID NUMBER.
+ VERS = VERSION ID.
+ APRCH = BLANK FOR STRUCTURAL ANALYSIS.  HEAT FOR HEAT TRANSFER ANALYSIS.
+ SEMG = STIFFNESS AND MASS MATRIX GENERATION STEP.
+ SEMR = MASS MATRIX REDUCTION STEP (INCLUDES EIGENVALUE SOLUTION FOR MODES).
+ SEKR = STIFFNESS MATRIX REDUCTION STEP.
+ SELG = LOAD MATRIX GENERATION STEP.
+ SELR = LOAD MATRIX REDUCTION STEP. 
+ MODES = T (TRUE) IF NORMAL MODES OR BUCKLING MODES CALCULATED.
+ DYNRED = T (TRUE) MEANS GENERALIZED DYNAMIC AND/OR COMPONENT MODE REDUCTION PERFORMED.
+ SOLLIN = T (TRUE) IF LINEAR SOLUTION EXISTS IN DATABASE.
+ PVALID = P-DISTRIBUTION ID OF P-VALUE FOR P-ELEMENTS
+ LOOPID = THE LAST LOOPID VALUE USED IN THE NONLINEAR ANALYSIS.  USEFUL FOR RESTARTS.
+ SOLNL = T (TRUE) IF NONLINEAR SOLUTION EXISTS IN DATABASE.
+ DESIGN CYCLE = THE LAST DESIGN CYCLE (ONLY VALID IN OPTIMIZATION).
+ SENSITIVITY = SENSITIVITY MATRIX GENERATION FLAG.
+ 
+ No PARAM values were set in the Control File.
+ 
+1                                        * * * END OF JOB * * *
+ 
+ 
+ No Symbolic Replacement variables or values were specified.
+
