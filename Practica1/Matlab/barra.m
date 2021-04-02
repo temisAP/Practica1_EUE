@@ -4,9 +4,11 @@ classdef barra < material & handle
         L;
         theta ;
         nodes;
+        displacements;
         K;
         T;
         F;
+        sigma;
     end
     %% Métodos
      
