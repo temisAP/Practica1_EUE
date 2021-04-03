@@ -7,7 +7,7 @@ MEM=527MB      $
 MACH='Intel'
 OPER='Windows 10 Pro'
 OSV='6.2 9200'
-MODEL='Xeon/3067 (temis)'
+MODEL='Xeon/2994 (temis)'
 NPROC='8'
 CONFIG=6
 NPROC=8
@@ -15,8 +15,8 @@ symbol=DELDIR='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc2020
 symbol=DEMODIR='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/nast/demo' $(program default)
 symbol=SSSALTERDIR='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/nast/sssalter' $(program default)
 symbol=TPLDIR='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/nast/tpl' $(program default)
-SDIR='d:/archivos_de_programa/scratch/sinusoidal6.T16028_36'
-DBS='d:/archivos_de_programa/scratch/sinusoidal6.T16028_36'
+SDIR='d:/archivos_de_programa/scratch/sinusoidal6.T8688_39'
+DBS='d:/archivos_de_programa/scratch/sinusoidal6.T8688_39'
 SCR='yes'
 SMEM=100
 BPOOL=150
@@ -47,32 +47,32 @@ FPE:         yes
 ----------------------------------------------------------------- 
 Current resource limits:
  Physical memory:                     8101 MB
- Physical memory available:           1632 MB
- Paging file size:                   19745 MB
- Paging file size available:          4053 MB
+ Physical memory available:           2153 MB
+ Paging file size:                   15269 MB
+ Paging file size available:          5011 MB
  Virtual memory:                 134217727 MB
  Virtual memory available:       134213510 MB
 ----------------------------------------------------------------- 
 System configuration:
- Hostname:         temis
+ Hostname:         temis.home
  Architecture:     win64i8
  Platform:         Intel Windows 10 Pro 6.2 9200 (Windows Compute Cluster)
- Model:            Xeon/2725
- Clock freq.:      2721 MHz
+ Model:            Xeon/3050
+ Clock freq.:      3067 MHz
  Number of CPUs:   8
  Executable:       standard
  Raw model ID:     6
  Config number:    6
  Physical memory:  8101 MB
- Virtual memory:   19745 MB
+ Virtual memory:   15269 MB
  Numeric format:   64-bit little-endian IEEE.
  Bytes per word:   8
  Disk block size:  512 bytes (64 words)
  Remote shell cmd: "d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/win64i8/mscrmtcmd.exe" (Windows non-CCS nodes, UNIX)
                    <ccs_cmd> (Windows CCS nodes)
 ----------------------------------------------------------------- 
-MSC Nastran started  Fri Apr  2 00:31:36 RST 2021 
- 00:31:39  Beginning Analysis
+MSC Nastran started  Sat Apr  3 18:59:39 RST 2021 
+ 18:59:40  Beginning Analysis
 SCA Kernel 24.7.714370 successfully initialized
 BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\libimalloc.dll" has been loaded.
 BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\mkl_core.dll" has been loaded.
@@ -80,14 +80,14 @@ BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc2
 BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\mkl_rt.dll" has been loaded.
 BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\MSCblas.dll" has been loaded.
 
- 00:31:39  MSC Authorization Information - Checkout Successful (1016, 0)
- 00:31:39  -------------------------------------------------------------
- 00:31:39  Acquired 1 license for Student Edition Nastran
+ 18:59:40  MSC Authorization Information - Checkout Successful (1016, 0)
+ 18:59:40  -------------------------------------------------------------
+ 18:59:40  Acquired 1 license for Student Edition Nastran
 
 
- 00:31:39  MSC Authorization Information - System Attributes (1004, 0)
- 00:31:39  -----------------------------------------------------------
-  Date:          Fri Apr  2 00:31:39 2021
+ 18:59:40  MSC Authorization Information - System Attributes (1004, 0)
+ 18:59:40  -----------------------------------------------------------
+  Date:          Sat Apr  3 18:59:40 2021
   LAPI Version:  LAPI 10.6.4 (CL 714361) (FLEXlm 11.16.3.0)
   License Mode:  Student Edition
 
@@ -95,42 +95,51 @@ BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc2
   * * * * * * * * * * * * * * * * * * * *
   * *                                 * *
   * *   MSC Customer Entitlement ID   * *
-  * *        03147c8e-G5CA836C        * *
+  * *        03147c8e-GA2E48B0        * *
   * *                                 * *
   * * * * * * * * * * * * * * * * * * * *
   * * * * * * * * * * * * * * * * * * * *
 
- 00:31:39  MSC Authorization Information - Checkout Successful (1016, 0)
- 00:31:39  -------------------------------------------------------------
- 00:31:39  Acquired 1 license for Student Edition Nastran Dynamics
+ 18:59:40  MSC Authorization Information - Checkout Successful (1016, 0)
+ 18:59:40  -------------------------------------------------------------
+ 18:59:40  Acquired 1 license for Student Edition Nastran Dynamics
 
 
 Beginning bulk data processing using the IFPStar component.
 For more information on IFPStar, please see KB article KB8019200
 on our support pages, at http://simcompanion.mscsoftware.com.
 
- 00:31:39  291 records read from JID file "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf"
+ 18:59:41  61 records read from JID file "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf"
 
 Processing of bulk data entries is complete.
 
- 00:31:39  Analysis started.
- 00:31:39  Geometry access/verification to CAD part initiated (if needed).
- 00:31:39  Geometry access/verification to CAD part successfully completed (if needed).
- 00:31:40  Finite element model generation started.
+ 18:59:41  Analysis started.
+ 18:59:41  Geometry access/verification to CAD part initiated (if needed).
+ 18:59:41  Geometry access/verification to CAD part successfully completed (if needed).
+ 18:59:41  Finite element model generation started.
+ 18:59:41  Finite element model generated 18 degrees of freedom.
+ 18:59:41  Finite element model generation successfully completed.
+ 18:59:41  Application of Loads and Boundary Conditions to the finite element model started.
+ 18:59:41  Application of Loads and Boundary Conditions to the finite element model successfully completed.
+ 18:59:41  Solution of the system equations for normal modes started.
+ 18:59:41  Solution of the system equations for normal modes successfully completed.
+
+ 18:59:41  MSC Authorization Information - Checkout Successful (1016, 0)
+ 18:59:41  -------------------------------------------------------------
+ 18:59:41  Acquired 1 license for Student Edition Nastran Dynamics
+
+ 18:59:41  Solution of the system equations for frequency response started.
  ================================================== 
  Warning/Fatal Message Summary           Occurrence
-       USER WARNING MESSAGE     5487.0          1 
-       USER WARNING MESSAGE     5487.0         59 
-         USER FATAL MESSAGE     2026.0         50 
-       USER WARNING MESSAGE     9031.0          1 
+         USER FATAL MESSAGE     3046.1          1 
  ================================================== 
- 00:31:41  21 records read from JID file "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf"
- 00:31:41  NSEXIT: EXIT(20)
- 00:31:41  Analysis complete  -20
+ 18:59:41  21 records read from JID file "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf"
+ 18:59:41  NSEXIT: EXIT(20)
+ 18:59:41  Analysis complete  -20
 20
-Real:        2.017 seconds ( 0:00:02.017)
-User:        0.343 seconds ( 0:00:00.343)
-Sys:         0.250 seconds ( 0:00:00.250)
+Real:        0.759 seconds ( 0:00:00.759)
+User:        0.515 seconds ( 0:00:00.515)
+Sys:         0.234 seconds ( 0:00:00.234)
  ==================================================
  OS:                           6.2
  OEM ID:                       9
@@ -152,4 +161,4 @@ Sys:         0.250 seconds ( 0:00:00.250)
  Detailed performance information can be found in the 
  "MSC Nastran High Performance Computing User's Guide"
  =====================================================
-MSC Nastran finished Fri Apr  2 00:31:41 RST 2021 
+MSC Nastran finished Sat Apr  3 18:59:41 RST 2021 

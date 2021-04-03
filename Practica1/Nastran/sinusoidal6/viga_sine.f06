@@ -26,7 +26,7 @@
                                               * *          AUG  4, 2020           * *
                                               * *                                 * *
                                               * *              Intel              * *
-                                              * *     MODEL Xeon/1400 (temis)     * *
+                                              * *     MODEL Xeon/3074 (temis)     * *
                                               * *     Windows 10 Pro 6.2 9200     * *
                                               * * Compiled for 8664 (SINGLE Mode) * *
                                               * *                                 * *
@@ -193,7 +193,7 @@
   
       http://www.mscsoftware.com/Contents/Services/Training/
   
-1                                                       **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     1
+1                                                       **STUDENT EDITION*    APRIL   3, 2021  MSC Nastran  8/ 4/20   PAGE     1
                                                                                                                                     
 0        N A S T R A N    F I L E    A N D    S Y S T E M    P A R A M E T E R    E C H O                                           
 0                                                                                                                                   
@@ -201,8 +201,8 @@
                                                                                                                                     
      NASTRAN BUFFSIZE=8193 $(D:/ARCHIVOS DE PROGRAMA/MSC.SOFTWARE/NAPA_SE/2020/NASTRA
      NASTRAN DBCFACT=4                                                               
-     ASSIGN DBC='model_sine_z.xdb',RECL=32768,UNIT=40,DELETE                         
-1                                                       **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     2
+     ASSIGN DBC='viga_sine.xdb',RECL=32768,UNIT=40,DELETE                            
+1                                                       **STUDENT EDITION*    APRIL   3, 2021  MSC Nastran  8/ 4/20   PAGE     2
                                                                                                                                     
 0        N A S T R A N    E X E C U T I V E    C O N T R O L    E C H O                                                             
 0                                                                                                                                   
@@ -212,185 +212,127 @@
      SOL 111                                                                                 
      TIME 1000                                                                               
      CEND                                                                                    
-1    SINE VIBRATION Y                                   **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     3
-      MODEL SINE VIBRATION Y                                                                                                        
+1    SINE VIBRATION Z                                   **STUDENT EDITION*    APRIL   3, 2021  MSC Nastran  8/ 4/20   PAGE     3
+      MODEL SINE VIBRATION Z                                                                                                        
 0     Z-DIRECTION SINE INPUT                                                                                                        
 0                                        C A S E    C O N T R O L    E C H O                                                        
                  COMMAND                                                                                                            
                  COUNT                                                                                                              
                   1      AUTOSPC(NOPRINT)=YES                                                                    
                   2      LINES=50000                                                                             
-                  3           TITLE = SINE VIBRATION Y                                                           
-                  4           SUBTITLE = MODEL SINE VIBRATION Y                                                  
+                  3           TITLE = SINE VIBRATION Z                                                           
+                  4           SUBTITLE = MODEL SINE VIBRATION Z                                                  
                   5           LABEL = Z-DIRECTION SINE INPUT                                                     
                   6           ECHO = NONE                                                                        
-                  7           SPC      = 1                                                                       
+                  7           SPC      = 2                                                                       
                   8           METHOD   = 1                                                                       
                   9           DLOAD    = 10                                                                      
                  10           SDAMPING = 20                                                                      
                  11           FREQ     = 40                                                                      
-                 12           SET 99 = 859999, 30                                                                
-                 13           SET 102 = 1,60                                                                     
+                 12           SET 99 = 859999, 1, 2, 3                                                           
+                 13           SET 102 = 1,2,3                                                                    
                  14           ACCELERATION(SORT2,PRINT,PHASE) = 99                                               
-                 15           FORCES(SORT2,PRINT,PHASE)=102                                                      
+                 15           FORCES(SORT2,PRINT,PHASE)=ALL                                                      
                  16           STRESS(PLOT,VONMISES)=ALL                                                          
                  17      BEGIN BULK                                                                              
-1    SINE VIBRATION Y                                   **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     4
-      MODEL SINE VIBRATION Y                                                                                                        
+1    SINE VIBRATION Z                                   **STUDENT EDITION*    APRIL   3, 2021  MSC Nastran  8/ 4/20   PAGE     4
+      MODEL SINE VIBRATION Z                                                                                                        
 0     Z-DIRECTION SINE INPUT                                                                                                        
                                               I N P U T   B U L K   D A T A   E C H O                                               
                  ENTRY                                                                                                              
                  COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
                               $INCLUDE "d:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf"
- *** USER INFORMATION MESSAGE 9991 (SDLWIF)
-     Messages are being generated at include level 0.
-     File: d:/0_andres/1_universidad/muse/eue/trabajos_eue/practica1/nastran/sinusoidal6/seno.dat
- *** USER FATAL MESSAGE 9994 (BULKIN)
-      First Field Violation near line 7
-      First Field Parent identification string "SOL 111" must be contiguous, check start of field two.
- *** USER FATAL MESSAGE 9994 (BULKPM)
-     RBE2 with EID=860000 near line 48
-     User information:  GN required field was not supplied.
- *** USER FATAL MESSAGE 9994 (BULKPM)
-     RBE2 with EID=860000 near line 48
-     User information:  CM required field was not supplied.
- *** USER FATAL MESSAGE 9994 (BULKPM)
-
-  RBE2 with EID=860000 near line 48
-  User information:  Minimum number of GM's is not provided; supplied is 0 and required is 1.
-
- *** USER INFORMATION MESSAGE 9991 (SDLWIF)
-     Messages are being generated at include level 1.
-     File: d:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf
- *** USER FATAL MESSAGE 9994 (BULKIN)
-     Error near line 15
-     User information:  Fixed Field violation, string "D = 1" should be contiguous; trailing characters will temporarily be ignored.
- *** USER FATAL MESSAGE 9994 (BULKIN)
-     Error near line 16
-     User information:  Fixed Field violation, string "ENCY = 1" should be contiguous; trailing characters will temporarily be ignored.
- *** USER WARNING MESSAGE 9994 (BULKIN)
-     Unexpected BEGIN BULK found near line 20 is skipped.
- *** USER FATAL MESSAGE 9994 (BULKPM)
-     PARAM with NAME=POST near line 24
-     Entry was found previously with the same key(s).
- *** USER FATAL MESSAGE 9994 (BULKPM)
-     PARAM with NAME=PRTMAXIM near line 25
-     Entry was found previously with the same key(s).
- *** USER FATAL MESSAGE 9994 (BULKPM)
-     EIGRL with SID=1 near line 30
-     Entry was found previously with the same key(s).
- *** USER WARNING MESSAGE 9994 (BULKEF)
-      The following lines could not be processed by the current IFPSTAR rule base.
-      They are being passed to Classic IFP for an additional attempt at resolution.
-                              CEND
-                              TITLE*= MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 17:58:06
-                              ECHO = NONE
-                              SUBCASE 1
-                                 SUBTITLE=CARGA_ARMONICA
-                                 METHOD = 1
-                                 FREQUENCY = 1
-                                 SPC = 2
-                                 DISPLACEMENT(SORT1,REAL)=ALL
-                                 SPCFORCES(SORT1,REAL)=ALL
-1    SINE VIBRATION Y                                   **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     5
-      MODEL SINE VIBRATION Y                                                                                                        
+                              $END OF INCLUDE "d:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf"
+1    SINE VIBRATION Z                                   **STUDENT EDITION*    APRIL   3, 2021  MSC Nastran  8/ 4/20   PAGE     5
+      MODEL SINE VIBRATION Z                                                                                                        
 0     Z-DIRECTION SINE INPUT                                                                                                        
- *** USER FATAL MESSAGE 208 (SCA.MDSolver.Io.AccessAccess:AccessAccess::StreamToBinary)
-     Fatal messages were encountered while converting the stream input file d:/0_andres/1_universidad/muse/eue/trabajos_eue/practica1/nastran/sinusoidal6/seno.dat.
- *** USER FATAL MESSAGE 102 (SCA.MDSolver.Obj.InputFile:InputFile::read)
-Severe fatal Errors occured while reading the input file d:/0_andres/1_universidad/muse/eue/trabajos_eue/practica1/nastran/sinusoidal6/seno.dat.
-Check the MDSolver.System.PrintListener output.
                                         M O D E L   S U M M A R Y          BULK = 0
                                    ENTRY NAME        NUMBER OF ENTRIES
                                    ----------        -----------------
-                                         CBAR                       60
+                                         CBAR                        2
                                           DTI                        1
                                         EIGRL                        1
-                                        FREQ1                        2
+                                        FREQ1                        1
                                         FREQ4                        1
-                                         GRID                       62
+                                         GRID                        4
                                          MAT1                        1
-                                       MDLPRM                        1
                                         PARAM                        3
                                         PBARL                        1
-                                     REJ_BULK                       56
+                                         RBE2                        1
                                        RLOAD2                        1
-                                         SPC1                        4
+                                         SPC1                        2
                                        SPCADD                        1
                                          SPCD                        1
                                       TABDMP1                        1
                                       TABLED1                        1
 
- *** USER WARNING MESSAGE 285 (DML)
-     FATAL ERRORS WERE FOUND WHILE READING THIS BEGIN SECTION
-      MODEL SUMMARY DOES NOT INCLUDE COUNT OF FATAL ENTITIES
- *** USER FATAL MESSAGE 5199 (XSBFF)
-     THE BULK DATA FREE FIELD ENTRY BELOW HAS AN INTEGER OR A CHARACTER FIELD WITH MORE THAN EIGHT CHARACTERS.
-     TITLE*= MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 17:58:06
- *** USER FATAL MESSAGE 307 (IFPDRV)
-     ILLEGAL NAME FOR BULK DATA ENTRY CEND
- *** USER FATAL MESSAGE 307 (IFPDRV)
-     ILLEGAL NAME FOR BULK DATA ENTRY DISPL
- *** USER FATAL MESSAGE 300 (RCARD)
-     DATA ERROR IN FIELD UNDERLINED.
-     EMBEDDED BLANK.
-          .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .
-          FREQU   ENCY = 1                                                         +000001
-                  ========                                                                
- *** USER FATAL MESSAGE 307 (IFPDRV)
-     ILLEGAL NAME FOR BULK DATA ENTRY FREQU
- *** USER FATAL MESSAGE 300 (RCARD)
-     DATA ERROR IN FIELD UNDERLINED.
-     EMBEDDED BLANK.
-          .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .
-          METHO   D = 1                                                                   
-                  ========                                                                
- *** USER FATAL MESSAGE 307 (IFPDRV)
-     ILLEGAL NAME FOR BULK DATA ENTRY METHO
- *** USER FATAL MESSAGE 307 (IFPDRV)
-     ILLEGAL NAME FOR BULK DATA ENTRY SPCFO
- *** USER FATAL MESSAGE 307 (IFPDRV)
-     ILLEGAL NAME FOR BULK DATA ENTRY SUBCASE
- *** USER FATAL MESSAGE 307 (IFPDRV)
-     ILLEGAL NAME FOR BULK DATA ENTRY SUBTI
- *** USER FATAL MESSAGE 300 (RCARD)
-     DATA ERROR IN FIELD UNDERLINED.
-     EMBEDDED BLANK.
-          .   1  ..   2  AND  3  ..   4  AND  5  ..   6  AND  7  ..   8  AND  9  ..  10  .
-          TITLE =*MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 17:58:06                        
-                  ================                                                        
- *** USER FATAL MESSAGE 300 (RCARD)
-     DATA ERROR IN FIELD UNDERLINED.
-     EMBEDDED BLANK.
-          .   1  ..   2  AND  3  ..   4  AND  5  ..   6  AND  7  ..   8  AND  9  ..  10  .
-          TITLE =*MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 17:58:06                        
-                                  ================                                        
- *** USER FATAL MESSAGE 300 (RCARD)
-     DATA ERROR IN FIELD UNDERLINED.
-     EMBEDDED BLANK.
-          .   1  ..   2  AND  3  ..   4  AND  5  ..   6  AND  7  ..   8  AND  9  ..  10  .
-          TITLE =*MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 17:58:06                        
-                                                  ================                        
- *** USER FATAL MESSAGE 307 (IFPDRV)
-     ILLEGAL NAME FOR BULK DATA ENTRY TITLE =*
  ^^^     
  ^^^ >>> IFP OPERATIONS COMPLETE <<< 
  ^^^     
- ^^^     
- *** USER FATAL MESSAGE 9002 (SUBDMAP IFPS)
-     ERROR(S) ENCOUNTERED IN THE MAIN BULK DATA SECTION
-     SEE MESSAGES ABOVE. ERROR ENCOUNTERED IN MODULE IFP,
- ^^^     
-1    SINE VIBRATION Y                                   **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     6
-      MODEL SINE VIBRATION Y                                                                                                        
+ *** USER WARNING MESSAGE 2053 (GP4)
+     UNDEFINED SINGLE-POINT CONSTRAINT SET         3
+     User Information:
+     A single point constraint set selected in the Case Control could
+     not be found on either an SPCADD, SPC or SPC1 entry, or a set referenced
+     on an SPCADD entry could not be found on either an SPC or SPC1 entry.
+1    SINE VIBRATION Z                                   **STUDENT EDITION*    APRIL   3, 2021  MSC Nastran  8/ 4/20   PAGE     6
+      MODEL SINE VIBRATION Z                                                                                                        
+0                                                                                                                                   
+ *** USER INFORMATION MESSAGE 7310 (VECPRN)
+     ORIGIN OF SUPERELEMENT OR MODULE BASIC COORDINATE SYSTEM WILL BE USED AS REFERENCE LOCATION.
+     RESULTANTS ABOUT ORIGIN OF SUPERELEMENT OR MODULE BASIC COORDINATE SYSTEM IN SUPERELEMENT OR MODULE
+     BASIC SYSTEM COORDINATES.
+0                                                  OLOAD    RESULTANT       
+  SUBCASE/    LOAD
+  DAREA ID    TYPE       T1            T2            T3            R1            R2            R3
+0       11     FX    0.000000E+00     ----          ----          ----       0.000000E+00  0.000000E+00                             
+               FY       ----       0.000000E+00     ----       0.000000E+00     ----       0.000000E+00                             
+               FZ       ----          ----       0.000000E+00  0.000000E+00  0.000000E+00     ----                                  
+               MX       ----          ----          ----       0.000000E+00     ----          ----                                  
+               MY       ----          ----          ----          ----       0.000000E+00     ----                                  
+               MZ       ----          ----          ----          ----          ----       0.000000E+00                             
+             TOTALS  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+1    SINE VIBRATION Z                                   **STUDENT EDITION*    APRIL   3, 2021  MSC Nastran  8/ 4/20   PAGE     7
+      MODEL SINE VIBRATION Z                                                                                                        
+0     Z-DIRECTION SINE INPUT                                                                                                        
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+ *** USER INFORMATION MESSAGE 4415 (PRTPRN)
+     THE FOLLOWING A-SET DEGREES OF FREEDOM HAVE EITHER NULL MASSES OR NULL MASSES AND STIFFNESS.
+1    SINE VIBRATION Z                                   **STUDENT EDITION*    APRIL   3, 2021  MSC Nastran  8/ 4/20   PAGE     8
+      MODEL SINE VIBRATION Z                                                                                                        
+0     Z-DIRECTION SINE INPUT                                                                                                        
+0                VAXW                                                                                                               
+     POINT           VALUE     POINT           VALUE     POINT           VALUE     POINT           VALUE     POINT           VALUE  
+                                                                                                                                    
+
+ COLUMN           1
+          2 R1  1.00000E+00         2 R2  1.00000E+00         2 R3  1.00000E+00         3 R1  1.00000E+00         3 R2  1.00000E+00
+          3 R3  1.00000E+00
+ *** USER INFORMATION MESSAGE 5458 (REIG)
+     QL HOUSEHOLDER METHOD IS AUTOMATICALLY SELECTED .
+ *** SYSTEM WARNING MESSAGE 6636 (LAPEIGS)
+      EITHER NO MODES EXIST BETWEEN -9.783552E+01 HZ AND 1.500000E+02 HZ
+      OR THE EIGENSOLVER WAS UNABLE TO FIND ALL MODES IN THAT RANGE.
+1    SINE VIBRATION Z                                   **STUDENT EDITION*    APRIL   3, 2021  MSC Nastran  8/ 4/20   PAGE     9
+      MODEL SINE VIBRATION Z                                                                                                        
+0     Z-DIRECTION SINE INPUT                                                                                                        
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+ *** USER FATAL MESSAGE 4405 (PRTPRN)
+     NO EIGENVECTORS COMPUTED FOR COMPONENT MODE SYNTHESIS OR SYSTEM SOLUTION.
+1    SINE VIBRATION Z                                   **STUDENT EDITION*    APRIL   3, 2021  MSC Nastran  8/ 4/20   PAGE    10
+      MODEL SINE VIBRATION Z                                                                                                        
 0     Z-DIRECTION SINE INPUT                                                                                                        
 0                                                                                                                                   
                                                                                                                                     
                                                                                                                                     
  *** USER INFORMATION MESSAGE 4425 (PRTPRN)
      ONE OR MORE FATAL ERRORS HAVE OCCURRED.  THERE MAY BE MORE ERROR MESSAGES IN THE PRECEDING OUTPUT
-1    SINE VIBRATION Y                                   **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE     7
-      MODEL SINE VIBRATION Y                                                                                                        
+1    SINE VIBRATION Z                                   **STUDENT EDITION*    APRIL   3, 2021  MSC Nastran  8/ 4/20   PAGE    11
+      MODEL SINE VIBRATION Z                                                                                                        
 0     Z-DIRECTION SINE INPUT                                                                                                        
  * * * *  D B D I C T   P R I N T  * * * *      SUBDMAP = PRTSUM  ,  DMAP STATEMENT NO.     71
 
@@ -399,6 +341,7 @@ Check the MDSolver.System.PrintListener output.
 0                                   * * * *  A N A L Y S I S  S U M M A R Y  T A B L E  * * * *
 0 SEID  PEID PROJ VERS APRCH      SEMG SEMR SEKR SELG SELR MODES DYNRED SOLLIN PVALID SOLNL LOOPID DESIGN CYCLE SENSITIVITY
  --------------------------------------------------------------------------------------------------------------------------
+     0     0    1    1 '        '    T    T    T    T    T     F      F      F      0     F     -1            0           F
 0SEID = SUPERELEMENT ID.
  PEID = PRIMARY SUPERELEMENT ID OF IMAGE SUPERELEMENT.
  PROJ = PROJECT ID NUMBER.

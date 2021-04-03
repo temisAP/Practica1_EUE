@@ -5840,3 +5840,25 @@ ui_exec_function( "mesh_seed_display_mgr", "init" )
 mesh_seed_display_mgr.erase(  )
 $# Flushing the User Data Manager
 $# Journal file stopped recording at 03-Apr-21 00:54:38
+$# Appending to existing journal file 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatico6
+$# \estatico6.db.jou at 03-Apr-21 13:21:09
+$# Synchronizing the User Data Manager
+set_current_dir( "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica" // @
+"1\Nastran\estatico6" )
+$# The current working directory has been changed to the database location 
+$# shown.                                                                     
+$#                                                                            
+$#                                   
+uil_file_open.go( "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practic" // @
+"a1\Nastran\sinusoidal6\sinusoidal6.db" )
+$# uil_file_open.go( "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practic" 
+$# "a1\Nastran\sinusoidal6\sinusoidal6.db" )
+$# Question from application FILE
+$#     A database is already open.
+$# Do you want to open database 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoida
+$# l6\sinusoidal6.db anyway ?
+$? YES 36000036 
+$# Flushing the User Data Manager
+$# Journal file stopped recording at 03-Apr-21 13:23:54
