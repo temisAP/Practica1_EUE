@@ -15,8 +15,8 @@ LINES=50000
      DLOAD    = 10
      SDAMPING = 20
      FREQ     = 40
-     SET 99 = 859999, 1, 2, 3
-     SET 102 = 1,2,3
+     SET 99 = 859999, 1, 61, 122
+     SET 102 = 1, 61, 122
      ACCELERATION(sort2,print,phase) = 99
      FORCES(sort2,PRINT,phase)=all
      STRESS(plot,vonmises)=all
@@ -45,7 +45,7 @@ $ Definition of the node for the SHAKER
 GRID     859999           0.225    0.0     0.0
 $------$$------$$------$$------$$------$$------$$------$$------$$------$$------$
 $ Multipoint Constraints to join I/Fs to the Shaker
-RBE2     860000  859999   123     2       3
+RBE2     860000  859999   123     1       122
 $------$$------$$------$$------$$------$$------$$------$$------$$------$$------$
 $ Referenced Coordinate Frames
 $
