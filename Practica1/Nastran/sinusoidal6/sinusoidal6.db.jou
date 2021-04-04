@@ -5288,3 +5288,857 @@ mpc_label( FALSE )
 gm_hilight_clear(  )
 gm_hilight_clear(  )
 gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+loadsbcs_delete( ["BC_2"] )
+$# 1 Load/BC set(s) deleted.
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+msc_dra_init_stream(  )
+msc_dra_add_param( "DATABASE", "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajo" // @
+"s_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.db" )
+msc_dra_add_param( "JOBNAME", "" )
+msc_dra_add_param( "RESULTS FILE", "D:\0_Andres\1_Universidad\MUSE\EUE\Tra" // @
+"bajos_EUE\Practica1\Nastran\sinusoidal6\viga_sine.xdb" )
+msc_dra_add_param( "OBJECT", "Result Entities" )
+msc_dra_add_param( "ANALYSIS TYPE", "Structural" )
+msc_dra_add_param( "DIVISION TOLERANCE", "1.0E-8" )
+msc_dra_add_param( "NUMERICAL TOLERANCE", "1.0E-4" )
+msc_dra_add_param( "MODEL TOLERANCE", "0.00050000002" )
+msc_dra_add_param( "ROTATIONAL NODAL RESULTS", "OFF" )
+msc_dra_add_param( "STRESS/STRAIN INVARIANTS", "OFF" )
+msc_dra_add_param( "PRINCIPAL DIRECTIONS", "OFF" )
+msc_dra_add_param( "ELEMENT RESULTS POSITIONS", "Nodal       " )
+msc_dra_add_param( "TITLE DESCRIPTION", "ON" )
+msc_dra_finish_stream(  )
+analysis_import( "MSC.Nastran", "", "Attach Results File No Job",  @
+"D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoi" // @
+"dal6\viga_sine.xdb", TRUE )
+$# Attaching Direct Results Access file: 
+$# "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoid
+$# al6\viga_sine.xdb"
+$# XDB file created by "MSC.NASTRAN V2020" on 4/3/2021 using "VENDOR:INTEL    
+$#             MODEL:XEON/3050 (TEMIS)    OPSYS:WINDOWS 10 PRO 6.2"
+$# *** Begin: Attach Result File ***
+$# Processing result load case: SC1: MODEL SINE VIBRATION Z
+$# Processing result sub-case: Freq.= 5.
+$# Processing result sub-case: Freq.= 6.
+$# Processing result sub-case: Freq.= 7.
+$# Processing result sub-case: Freq.= 8.
+$# Processing result sub-case: Freq.= 9.
+$# Processing result sub-case: Freq.= 10.
+$# Processing result sub-case: Freq.= 11.
+$# Processing result sub-case: Freq.= 12.
+$# Processing result sub-case: Freq.= 13.
+$# Processing result sub-case: Freq.= 14.
+$# Processing result sub-case: Freq.= 15.
+$# Processing result sub-case: Freq.= 16.
+$# Processing result sub-case: Freq.= 17.
+$# Processing result sub-case: Freq.= 18.
+$# Processing result sub-case: Freq.= 19.
+$# Processing result sub-case: Freq.= 20.
+$# Processing result sub-case: Freq.= 21.
+$# Processing result sub-case: Freq.= 22.
+$# Processing result sub-case: Freq.= 23.
+$# Processing result sub-case: Freq.= 24.
+$# Processing result sub-case: Freq.= 25.
+$# Processing result sub-case: Freq.= 26.
+$# Processing result sub-case: Freq.= 27.
+$# Processing result sub-case: Freq.= 28.
+$# Processing result sub-case: Freq.= 29.
+$# Processing result sub-case: Freq.= 30.
+$# Processing result sub-case: Freq.= 31.
+$# Processing result sub-case: Freq.= 32.
+$# Processing result sub-case: Freq.= 33.
+$# Processing result sub-case: Freq.= 34.
+$# Processing result sub-case: Freq.= 35.
+$# Processing result sub-case: Freq.= 36.
+$# Processing result sub-case: Freq.= 37.
+$# Processing result sub-case: Freq.= 38.
+$# Processing result sub-case: Freq.= 39.
+$# Processing result sub-case: Freq.= 40.
+$# Processing result sub-case: Freq.= 41.
+$# Processing result sub-case: Freq.= 42.
+$# Processing result sub-case: Freq.= 43.
+$# Processing result sub-case: Freq.= 44.
+$# Processing result sub-case: Freq.= 45.
+$# Processing result sub-case: Freq.= 46.
+$# Processing result sub-case: Freq.= 47.
+$# Processing result sub-case: Freq.= 48.
+$# Processing result sub-case: Freq.= 49.
+$# Processing result sub-case: Freq.= 50.
+$# Processing result sub-case: Freq.= 51.
+$# Processing result sub-case: Freq.= 52.
+$# Processing result sub-case: Freq.= 53.
+$# Processing result sub-case: Freq.= 54.
+$# Processing result sub-case: Freq.= 55.
+$# Processing result sub-case: Freq.= 56.
+$# Processing result sub-case: Freq.= 57.
+$# Processing result sub-case: Freq.= 58.
+$# Processing result sub-case: Freq.= 59.
+$# Processing result sub-case: Freq.= 60.
+$# Processing result sub-case: Freq.= 61.
+$# Processing result sub-case: Freq.= 62.
+$# Processing result sub-case: Freq.= 63.
+$# Processing result sub-case: Freq.= 64.
+$# Processing result sub-case: Freq.= 65.
+$# Processing result sub-case: Freq.= 66.
+$# Processing result sub-case: Freq.= 67.
+$# Processing result sub-case: Freq.= 68.
+$# Processing result sub-case: Freq.= 69.
+$# Processing result sub-case: Freq.= 70.
+$# Processing result sub-case: Freq.= 71.
+$# Processing result sub-case: Freq.= 72.
+$# Processing result sub-case: Freq.= 73.
+$# Processing result sub-case: Freq.= 74.
+$# Processing result sub-case: Freq.= 75.
+$# Processing result sub-case: Freq.= 76.
+$# Processing result sub-case: Freq.= 77.
+$# Processing result sub-case: Freq.= 78.
+$# Processing result sub-case: Freq.= 79.
+$# Processing result sub-case: Freq.= 80.
+$# Processing result sub-case: Freq.= 81.
+$# Processing result sub-case: Freq.= 82.
+$# Processing result sub-case: Freq.= 83.
+$# Processing result sub-case: Freq.= 84.
+$# Processing result sub-case: Freq.= 85.
+$# Processing result sub-case: Freq.= 86.
+$# Processing result sub-case: Freq.= 87.
+$# Processing result sub-case: Freq.= 88.
+$# Processing result sub-case: Freq.= 89.
+$# Processing result sub-case: Freq.= 90.
+$# Processing result sub-case: Freq.= 91.
+$# Processing result sub-case: Freq.= 92.
+$# Processing result sub-case: Freq.= 93.
+$# Processing result sub-case: Freq.= 94.
+$# Processing result sub-case: Freq.= 95.
+$# Processing result sub-case: Freq.= 96.
+$# Processing result sub-case: Freq.= 97.
+$# Processing result sub-case: Freq.= 98.
+$# Processing result sub-case: Freq.= 99.
+$# Processing result sub-case: Freq.= 100.
+$# Total execution time in real seconds:        0.000
+$# Total execution time in CPU  seconds:        0.094
+$# *** End:   Attach Result File ***
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 95.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"Default", "DeriveAverage", "All", "ShapeFunc" )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN "] )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 95.", "Accelerations", "Translational", "(NON-LAYERED)", "",  @
+"Global", "", "", "" )
+res_data_title( 0, "Nodal", "Vector", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL"] )
+res_display_deformation_create( "", "Elements", 0, [""], 9, [ @
+"DeformedStyle:White,Solid,1,Wireframe", "DeformedScale:Model=0.1",  @
+"UndeformedStyle:ON,Blue,Solid,1,Wireframe", "TitleDisplay:ON",  @
+"MinMaxDisplay:ON", "ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3",  @
+"DeformDisplay:Resultant", "DeformComps:OFF,OFF,OFF"] )
+res_display_deformation_post( "", 0 )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 95.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"Default", "DeriveAverage", "All", "ShapeFunc" )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN "] )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 95.", "Accelerations", "Translational", "(NON-LAYERED)", "",  @
+"Global", "", "", "" )
+res_data_title( 0, "Nodal", "Vector", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL"] )
+res_display_deformation_create( "", "Elements", 0, [""], 9, [ @
+"DeformedStyle:White,Solid,1,Wireframe", "DeformedScale:Model=0.1",  @
+"UndeformedStyle:ON,Blue,Solid,1,Wireframe", "TitleDisplay:ON",  @
+"MinMaxDisplay:ON", "ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3",  @
+"DeformDisplay:Resultant", "DeformComps:OFF,OFF,OFF"] )
+res_display_deformation_post( "", 0 )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 26.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"Default", "DeriveAverage", "All", "ShapeFunc" )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN "] )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 26.", "Accelerations", "Translational", "(NON-LAYERED)", "",  @
+"Global", "", "", "" )
+res_data_title( 0, "Nodal", "Vector", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL"] )
+res_display_deformation_create( "", "Elements", 0, [""], 9, [ @
+"DeformedStyle:White,Solid,1,Wireframe", "DeformedScale:Model=0.1",  @
+"UndeformedStyle:ON,Blue,Solid,1,Wireframe", "TitleDisplay:ON",  @
+"MinMaxDisplay:ON", "ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3",  @
+"DeformDisplay:Resultant", "DeformComps:OFF,OFF,OFF"] )
+res_display_deformation_post( "", 0 )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 27.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"Default", "DeriveAverage", "All", "ShapeFunc" )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN "] )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 27.", "Accelerations", "Translational", "(NON-LAYERED)", "",  @
+"Global", "", "", "" )
+res_data_title( 0, "Nodal", "Vector", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL"] )
+res_display_deformation_create( "", "Elements", 0, [""], 9, [ @
+"DeformedStyle:White,Solid,1,Wireframe", "DeformedScale:Model=0.1",  @
+"UndeformedStyle:ON,Blue,Solid,1,Wireframe", "TitleDisplay:ON",  @
+"MinMaxDisplay:ON", "ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3",  @
+"DeformDisplay:Resultant", "DeformComps:OFF,OFF,OFF"] )
+res_display_deformation_post( "", 0 )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 28.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"Default", "DeriveAverage", "All", "ShapeFunc" )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN "] )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 28.", "Accelerations", "Translational", "(NON-LAYERED)", "",  @
+"Global", "", "", "" )
+res_data_title( 0, "Nodal", "Vector", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL"] )
+res_display_deformation_create( "", "Elements", 0, [""], 9, [ @
+"DeformedStyle:White,Solid,1,Wireframe", "DeformedScale:Model=0.1",  @
+"UndeformedStyle:ON,Blue,Solid,1,Wireframe", "TitleDisplay:ON",  @
+"MinMaxDisplay:ON", "ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3",  @
+"DeformDisplay:Resultant", "DeformComps:OFF,OFF,OFF"] )
+res_display_deformation_post( "", 0 )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 24.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"Default", "DeriveAverage", "All", "ShapeFunc" )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN "] )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 24.", "Accelerations", "Translational", "(NON-LAYERED)", "",  @
+"Global", "", "", "" )
+res_data_title( 0, "Nodal", "Vector", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL"] )
+res_display_deformation_create( "", "Elements", 0, [""], 9, [ @
+"DeformedStyle:White,Solid,1,Wireframe", "DeformedScale:Model=0.1",  @
+"UndeformedStyle:ON,Blue,Solid,1,Wireframe", "TitleDisplay:ON",  @
+"MinMaxDisplay:ON", "ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3",  @
+"DeformDisplay:Resultant", "DeformComps:OFF,OFF,OFF"] )
+res_display_deformation_post( "", 0 )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 97.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"Default", "DeriveAverage", "All", "ShapeFunc" )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN "] )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 97.", "Accelerations", "Translational", "(NON-LAYERED)", "",  @
+"Global", "", "", "" )
+res_data_title( 0, "Nodal", "Vector", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL"] )
+res_display_deformation_create( "", "Elements", 0, [""], 9, [ @
+"DeformedStyle:White,Solid,1,Wireframe", "DeformedScale:Model=0.1",  @
+"UndeformedStyle:ON,Blue,Solid,1,Wireframe", "TitleDisplay:ON",  @
+"MinMaxDisplay:ON", "ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3",  @
+"DeformDisplay:Resultant", "DeformComps:OFF,OFF,OFF"] )
+res_display_deformation_post( "", 0 )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 100.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"Default", "DeriveAverage", "All", "ShapeFunc" )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN "] )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 100.", "Accelerations", "Translational", "(NON-LAYERED)", "",  @
+"Global", "", "", "" )
+res_data_title( 0, "Nodal", "Vector", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL"] )
+res_display_deformation_create( "", "Elements", 0, [""], 9, [ @
+"DeformedStyle:White,Solid,1,Wireframe", "DeformedScale:Model=0.1",  @
+"UndeformedStyle:ON,Blue,Solid,1,Wireframe", "TitleDisplay:ON",  @
+"MinMaxDisplay:ON", "ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3",  @
+"DeformDisplay:Resultant", "DeformComps:OFF,OFF,OFF"] )
+res_display_deformation_post( "", 0 )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 98.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"Default", "DeriveAverage", "All", "ShapeFunc" )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN "] )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 98.", "Accelerations", "Translational", "(NON-LAYERED)", "",  @
+"Global", "", "", "" )
+res_data_title( 0, "Nodal", "Vector", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL"] )
+res_display_deformation_create( "", "Elements", 0, [""], 9, [ @
+"DeformedStyle:White,Solid,1,Wireframe", "DeformedScale:Model=0.1",  @
+"UndeformedStyle:ON,Blue,Solid,1,Wireframe", "TitleDisplay:ON",  @
+"MinMaxDisplay:ON", "ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3",  @
+"DeformDisplay:Resultant", "DeformComps:OFF,OFF,OFF"] )
+res_display_deformation_post( "", 0 )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 95.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"Default", "DeriveAverage", "All", "ShapeFunc" )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN "] )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 95.", "Accelerations", "Translational", "(NON-LAYERED)", "",  @
+"Global", "", "", "" )
+res_data_title( 0, "Nodal", "Vector", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL"] )
+res_display_deformation_create( "", "Elements", 0, [""], 9, [ @
+"DeformedStyle:White,Solid,1,Wireframe", "DeformedScale:Model=0.1",  @
+"UndeformedStyle:ON,Blue,Solid,1,Wireframe", "TitleDisplay:ON",  @
+"MinMaxDisplay:ON", "ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3",  @
+"DeformDisplay:Resultant", "DeformComps:OFF,OFF,OFF"] )
+res_display_deformation_post( "", 0 )
+res_display_tool_delete( "Fringe", "default_Fringe" )
+res_display_tool_delete( "Deformation", "default_Deformation" )
+$# Error reported from application Results
+$#     No result selected
+$? NO 4000809 
+db_drop_res_index(  )
+INTEGER res_create_demo_lcid
+res_db_create_loadcase_c( "Combine", 1, "Assign Results To A Load Case",  @
+res_create_demo_lcid )
+INTEGER res_create_demo_scid
+INTEGER res_create_demo_rcid
+res_db_create_subcase_c( 4, "Subcase 97", res_create_demo_scid,  @
+res_create_demo_rcid )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 5.", "Accelerations", "Translational", "(NON-LAYERED)", "", "", "", @
+ "", "", "", 0. )
+res_data_dbres_list( 0, "Nodal", "Vector", 95, ["SC1: MODEL SINE VIBRATION Z", @
+ "SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z"], ["A1:Freq.= 6." @
+, "A1:Freq.= 7.", "A1:Freq.= 8.", "A1:Freq.= 9.", "A1:Freq.= 10.",  @
+"A1:Freq.= 11.", "A1:Freq.= 12.", "A1:Freq.= 13.", "A1:Freq.= 14.",  @
+"A1:Freq.= 15.", "A1:Freq.= 16.", "A1:Freq.= 17.", "A1:Freq.= 18.",  @
+"A1:Freq.= 19.", "A1:Freq.= 20.", "A1:Freq.= 21.", "A1:Freq.= 22.",  @
+"A1:Freq.= 23.", "A1:Freq.= 24.", "A1:Freq.= 25.", "A1:Freq.= 26.",  @
+"A1:Freq.= 27.", "A1:Freq.= 28.", "A1:Freq.= 29.", "A1:Freq.= 30.",  @
+"A1:Freq.= 31.", "A1:Freq.= 32.", "A1:Freq.= 33.", "A1:Freq.= 34.",  @
+"A1:Freq.= 35.", "A1:Freq.= 36.", "A1:Freq.= 37.", "A1:Freq.= 38.",  @
+"A1:Freq.= 39.", "A1:Freq.= 40.", "A1:Freq.= 41.", "A1:Freq.= 42.",  @
+"A1:Freq.= 43.", "A1:Freq.= 44.", "A1:Freq.= 45.", "A1:Freq.= 46.",  @
+"A1:Freq.= 47.", "A1:Freq.= 48.", "A1:Freq.= 49.", "A1:Freq.= 50.",  @
+"A1:Freq.= 51.", "A1:Freq.= 52.", "A1:Freq.= 53.", "A1:Freq.= 54.",  @
+"A1:Freq.= 55.", "A1:Freq.= 56.", "A1:Freq.= 57.", "A1:Freq.= 58.",  @
+"A1:Freq.= 59.", "A1:Freq.= 60.", "A1:Freq.= 61.", "A1:Freq.= 62.",  @
+"A1:Freq.= 63.", "A1:Freq.= 64.", "A1:Freq.= 65.", "A1:Freq.= 66.",  @
+"A1:Freq.= 67.", "A1:Freq.= 68.", "A1:Freq.= 69.", "A1:Freq.= 70.",  @
+"A1:Freq.= 71.", "A1:Freq.= 72.", "A1:Freq.= 73.", "A1:Freq.= 74.",  @
+"A1:Freq.= 75.", "A1:Freq.= 76.", "A1:Freq.= 77.", "A1:Freq.= 78.",  @
+"A1:Freq.= 79.", "A1:Freq.= 80.", "A1:Freq.= 81.", "A1:Freq.= 82.",  @
+"A1:Freq.= 83.", "A1:Freq.= 84.", "A1:Freq.= 85.", "A1:Freq.= 86.",  @
+"A1:Freq.= 87.", "A1:Freq.= 88.", "A1:Freq.= 89.", "A1:Freq.= 90.",  @
+"A1:Freq.= 91.", "A1:Freq.= 92.", "A1:Freq.= 93.", "A1:Freq.= 94.",  @
+"A1:Freq.= 95.", "A1:Freq.= 96.", "A1:Freq.= 97.", "A1:Freq.= 98.",  @
+"A1:Freq.= 99.", "A1:Freq.= 100."], ["Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations"], ["Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational"], [ @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)"] )
+res_data_list_sum( 0, "Nodal", "Vector", 96, [1., 1., 1., 1., 1., 1., 1., 1.,  @
+1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,  @
+1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,  @
+1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,  @
+1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,  @
+1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.] )
+res_data_save( 0, "Nodal", "Vector", "Combine", "Subcase 97", "(NON-LAYERED)", @
+ "Accelerations", "Translational" )
+db_post_results_load(  )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 5.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"AsIs", "DeriveAverage", "All", "ShapeFunc", "Real", 0. )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN"] )
+res_data_dbres_list( 0, "Nodal", "Scalar", 95, ["SC1: MODEL SINE VIBRATION Z", @
+ "SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z"], ["A1:Freq.= 6." @
+, "A1:Freq.= 7.", "A1:Freq.= 8.", "A1:Freq.= 9.", "A1:Freq.= 10.",  @
+"A1:Freq.= 11.", "A1:Freq.= 12.", "A1:Freq.= 13.", "A1:Freq.= 14.",  @
+"A1:Freq.= 15.", "A1:Freq.= 16.", "A1:Freq.= 17.", "A1:Freq.= 18.",  @
+"A1:Freq.= 19.", "A1:Freq.= 20.", "A1:Freq.= 21.", "A1:Freq.= 22.",  @
+"A1:Freq.= 23.", "A1:Freq.= 24.", "A1:Freq.= 25.", "A1:Freq.= 26.",  @
+"A1:Freq.= 27.", "A1:Freq.= 28.", "A1:Freq.= 29.", "A1:Freq.= 30.",  @
+"A1:Freq.= 31.", "A1:Freq.= 32.", "A1:Freq.= 33.", "A1:Freq.= 34.",  @
+"A1:Freq.= 35.", "A1:Freq.= 36.", "A1:Freq.= 37.", "A1:Freq.= 38.",  @
+"A1:Freq.= 39.", "A1:Freq.= 40.", "A1:Freq.= 41.", "A1:Freq.= 42.",  @
+"A1:Freq.= 43.", "A1:Freq.= 44.", "A1:Freq.= 45.", "A1:Freq.= 46.",  @
+"A1:Freq.= 47.", "A1:Freq.= 48.", "A1:Freq.= 49.", "A1:Freq.= 50.",  @
+"A1:Freq.= 51.", "A1:Freq.= 52.", "A1:Freq.= 53.", "A1:Freq.= 54.",  @
+"A1:Freq.= 55.", "A1:Freq.= 56.", "A1:Freq.= 57.", "A1:Freq.= 58.",  @
+"A1:Freq.= 59.", "A1:Freq.= 60.", "A1:Freq.= 61.", "A1:Freq.= 62.",  @
+"A1:Freq.= 63.", "A1:Freq.= 64.", "A1:Freq.= 65.", "A1:Freq.= 66.",  @
+"A1:Freq.= 67.", "A1:Freq.= 68.", "A1:Freq.= 69.", "A1:Freq.= 70.",  @
+"A1:Freq.= 71.", "A1:Freq.= 72.", "A1:Freq.= 73.", "A1:Freq.= 74.",  @
+"A1:Freq.= 75.", "A1:Freq.= 76.", "A1:Freq.= 77.", "A1:Freq.= 78.",  @
+"A1:Freq.= 79.", "A1:Freq.= 80.", "A1:Freq.= 81.", "A1:Freq.= 82.",  @
+"A1:Freq.= 83.", "A1:Freq.= 84.", "A1:Freq.= 85.", "A1:Freq.= 86.",  @
+"A1:Freq.= 87.", "A1:Freq.= 88.", "A1:Freq.= 89.", "A1:Freq.= 90.",  @
+"A1:Freq.= 91.", "A1:Freq.= 92.", "A1:Freq.= 93.", "A1:Freq.= 94.",  @
+"A1:Freq.= 95.", "A1:Freq.= 96.", "A1:Freq.= 97.", "A1:Freq.= 98.",  @
+"A1:Freq.= 99.", "A1:Freq.= 100."], ["Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations"], ["Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational"], [ @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)"] )
+res_data_list_max( 0, "Nodal", "Scalar", "Algebraic", "MAG" )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 5.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"AsIs", "DeriveAverage", "All", "ShapeFunc", "Real", 0. )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN"] )
+res_data_dbres_list( 0, "Nodal", "Scalar", 95, ["SC1: MODEL SINE VIBRATION Z", @
+ "SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z"], ["A1:Freq.= 6." @
+, "A1:Freq.= 7.", "A1:Freq.= 8.", "A1:Freq.= 9.", "A1:Freq.= 10.",  @
+"A1:Freq.= 11.", "A1:Freq.= 12.", "A1:Freq.= 13.", "A1:Freq.= 14.",  @
+"A1:Freq.= 15.", "A1:Freq.= 16.", "A1:Freq.= 17.", "A1:Freq.= 18.",  @
+"A1:Freq.= 19.", "A1:Freq.= 20.", "A1:Freq.= 21.", "A1:Freq.= 22.",  @
+"A1:Freq.= 23.", "A1:Freq.= 24.", "A1:Freq.= 25.", "A1:Freq.= 26.",  @
+"A1:Freq.= 27.", "A1:Freq.= 28.", "A1:Freq.= 29.", "A1:Freq.= 30.",  @
+"A1:Freq.= 31.", "A1:Freq.= 32.", "A1:Freq.= 33.", "A1:Freq.= 34.",  @
+"A1:Freq.= 35.", "A1:Freq.= 36.", "A1:Freq.= 37.", "A1:Freq.= 38.",  @
+"A1:Freq.= 39.", "A1:Freq.= 40.", "A1:Freq.= 41.", "A1:Freq.= 42.",  @
+"A1:Freq.= 43.", "A1:Freq.= 44.", "A1:Freq.= 45.", "A1:Freq.= 46.",  @
+"A1:Freq.= 47.", "A1:Freq.= 48.", "A1:Freq.= 49.", "A1:Freq.= 50.",  @
+"A1:Freq.= 51.", "A1:Freq.= 52.", "A1:Freq.= 53.", "A1:Freq.= 54.",  @
+"A1:Freq.= 55.", "A1:Freq.= 56.", "A1:Freq.= 57.", "A1:Freq.= 58.",  @
+"A1:Freq.= 59.", "A1:Freq.= 60.", "A1:Freq.= 61.", "A1:Freq.= 62.",  @
+"A1:Freq.= 63.", "A1:Freq.= 64.", "A1:Freq.= 65.", "A1:Freq.= 66.",  @
+"A1:Freq.= 67.", "A1:Freq.= 68.", "A1:Freq.= 69.", "A1:Freq.= 70.",  @
+"A1:Freq.= 71.", "A1:Freq.= 72.", "A1:Freq.= 73.", "A1:Freq.= 74.",  @
+"A1:Freq.= 75.", "A1:Freq.= 76.", "A1:Freq.= 77.", "A1:Freq.= 78.",  @
+"A1:Freq.= 79.", "A1:Freq.= 80.", "A1:Freq.= 81.", "A1:Freq.= 82.",  @
+"A1:Freq.= 83.", "A1:Freq.= 84.", "A1:Freq.= 85.", "A1:Freq.= 86.",  @
+"A1:Freq.= 87.", "A1:Freq.= 88.", "A1:Freq.= 89.", "A1:Freq.= 90.",  @
+"A1:Freq.= 91.", "A1:Freq.= 92.", "A1:Freq.= 93.", "A1:Freq.= 94.",  @
+"A1:Freq.= 95.", "A1:Freq.= 96.", "A1:Freq.= 97.", "A1:Freq.= 98.",  @
+"A1:Freq.= 99.", "A1:Freq.= 100."], ["Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations"], ["Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational"], [ @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)"] )
+res_data_list_max( 0, "Nodal", "Scalar", "Algebraic", "MAG" )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_display_tool_animate_gv( "Fringe", "", "Frequency", 5., 100. )
+res_display_anim_setup_2d( 8, "Linear", "" )
+res_display_anim_run( 10 )
+res_display_anim_step(  )
+uil_primary_file.db_save(  )
+$# Flushing the User Data Manager
+$# Journal file stopped recording at 03-Apr-21 19:29:22

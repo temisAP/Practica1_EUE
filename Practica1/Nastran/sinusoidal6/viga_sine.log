@@ -7,7 +7,7 @@ MEM=527MB      $
 MACH='Intel'
 OPER='Windows 10 Pro'
 OSV='6.2 9200'
-MODEL='Xeon/3074 (temis)'
+MODEL='Xeon/3050 (temis)'
 NPROC='8'
 CONFIG=6
 NPROC=8
@@ -15,8 +15,8 @@ symbol=DELDIR='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc2020
 symbol=DEMODIR='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/nast/demo' $(program default)
 symbol=SSSALTERDIR='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/nast/sssalter' $(program default)
 symbol=TPLDIR='d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/nast/tpl' $(program default)
-SDIR='d:/archivos_de_programa/scratch/viga_sine.T18572_39'
-DBS='d:/archivos_de_programa/scratch/viga_sine.T18572_39'
+SDIR='d:/archivos_de_programa/scratch/viga_sine.T19724_34'
+DBS='d:/archivos_de_programa/scratch/viga_sine.T19724_34'
 SCR='yes'
 SMEM=100
 BPOOL=150
@@ -46,9 +46,9 @@ FPE:         yes
 ----------------------------------------------------------------- 
 Current resource limits:
  Physical memory:                     8101 MB
- Physical memory available:           2272 MB
+ Physical memory available:           1107 MB
  Paging file size:                   15269 MB
- Paging file size available:          5038 MB
+ Paging file size available:          3999 MB
  Virtual memory:                 134217727 MB
  Virtual memory available:       134213510 MB
 ----------------------------------------------------------------- 
@@ -56,8 +56,8 @@ System configuration:
  Hostname:         temis.home
  Architecture:     win64i8
  Platform:         Intel Windows 10 Pro 6.2 9200 (Windows Compute Cluster)
- Model:            Xeon/2050
- Clock freq.:      2390 MHz
+ Model:            Xeon/3050
+ Clock freq.:      3067 MHz
  Number of CPUs:   8
  Executable:       standard
  Raw model ID:     6
@@ -70,8 +70,8 @@ System configuration:
  Remote shell cmd: "d:/archivos de programa/msc.software/napa_se/2020/nastran/msc20200/win64i8/mscrmtcmd.exe" (Windows non-CCS nodes, UNIX)
                    <ccs_cmd> (Windows CCS nodes)
 ----------------------------------------------------------------- 
-MSC Nastran started  Sat Apr  3 19:03:39 RST 2021 
- 19:03:40  Beginning Analysis
+MSC Nastran started  Sat Apr  3 19:15:35 RST 2021 
+ 19:15:41  Beginning Analysis
 SCA Kernel 24.7.714370 successfully initialized
 BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\libimalloc.dll" has been loaded.
 BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\mkl_core.dll" has been loaded.
@@ -79,14 +79,14 @@ BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc2
 BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\mkl_rt.dll" has been loaded.
 BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc20200\win64i8\MSCblas.dll" has been loaded.
 
- 19:03:40  MSC Authorization Information - Checkout Successful (1016, 0)
- 19:03:40  -------------------------------------------------------------
- 19:03:40  Acquired 1 license for Student Edition Nastran
+ 19:15:43  MSC Authorization Information - Checkout Successful (1016, 0)
+ 19:15:43  -------------------------------------------------------------
+ 19:15:43  Acquired 1 license for Student Edition Nastran
 
 
- 19:03:40  MSC Authorization Information - System Attributes (1004, 0)
- 19:03:40  -----------------------------------------------------------
-  Date:          Sat Apr  3 19:03:40 2021
+ 19:15:43  MSC Authorization Information - System Attributes (1004, 0)
+ 19:15:43  -----------------------------------------------------------
+  Date:          Sat Apr  3 19:15:43 2021
   LAPI Version:  LAPI 10.6.4 (CL 714361) (FLEXlm 11.16.3.0)
   License Mode:  Student Edition
 
@@ -94,49 +94,59 @@ BLAS/LAPACK .dll "d:\archivos de programa\msc.software\napa_se\2020\nastran\msc2
   * * * * * * * * * * * * * * * * * * * *
   * *                                 * *
   * *   MSC Customer Entitlement ID   * *
-  * *        03147c8e-G7F68571        * *
+  * *        03147c8e-G2907892        * *
   * *                                 * *
   * * * * * * * * * * * * * * * * * * * *
   * * * * * * * * * * * * * * * * * * * *
 
- 19:03:40  MSC Authorization Information - Checkout Successful (1016, 0)
- 19:03:40  -------------------------------------------------------------
- 19:03:40  Acquired 1 license for Student Edition Nastran Dynamics
+ 19:15:43  MSC Authorization Information - Checkout Successful (1016, 0)
+ 19:15:43  -------------------------------------------------------------
+ 19:15:43  Acquired 1 license for Student Edition Nastran Dynamics
 
 
 Beginning bulk data processing using the IFPStar component.
 For more information on IFPStar, please see KB article KB8019200
 on our support pages, at http://simcompanion.mscsoftware.com.
 
- 19:03:40  Reading INCLUDE file "d:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf"
- 19:03:40  25 records read from INCLUDE file "d:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf"
- 19:03:40  54 records read from JID file "d:/0_andres/1_universidad/muse/eue/trabajos_eue/practica1/nastran/sinusoidal6/viga_sine.dat"
- 19:03:40  A total of 79 records were read from 2 files.
+ 19:15:48  Reading INCLUDE file "d:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf"
+ 19:15:48  23 records read from INCLUDE file "d:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.bdf"
+ 19:15:48  54 records read from JID file "d:/0_andres/1_universidad/muse/eue/trabajos_eue/practica1/nastran/sinusoidal6/viga_sine.dat"
+ 19:15:48  A total of 77 records were read from 2 files.
 
 Processing of bulk data entries is complete.
 
- 19:03:40  Analysis started.
- 19:03:40  Geometry access/verification to CAD part initiated (if needed).
- 19:03:40  Geometry access/verification to CAD part successfully completed (if needed).
- 19:03:40  Finite element model generation started.
- 19:03:40  Finite element model generated 24 degrees of freedom.
- 19:03:40  Finite element model generation successfully completed.
- 19:03:40  Application of Loads and Boundary Conditions to the finite element model started.
- 19:03:40  Application of Loads and Boundary Conditions to the finite element model successfully completed.
- 19:03:40  Solution of the system equations for normal modes started.
- 19:03:40  Solution of the system equations for normal modes successfully completed.
+ 19:15:49  Analysis started.
+ 19:15:49  Geometry access/verification to CAD part initiated (if needed).
+ 19:15:49  Geometry access/verification to CAD part successfully completed (if needed).
+ 19:15:50  Finite element model generation started.
+ 19:15:50  Finite element model generated 24 degrees of freedom.
+ 19:15:50  Finite element model generation successfully completed.
+ 19:15:50  Application of Loads and Boundary Conditions to the finite element model started.
+ 19:15:51  Application of Loads and Boundary Conditions to the finite element model successfully completed.
+ 19:15:51  Solution of the system equations for normal modes started.
+ 19:15:52  Solution of the system equations for normal modes successfully completed.
+
+ 19:15:52  MSC Authorization Information - Checkout Successful (1016, 0)
+ 19:15:52  -------------------------------------------------------------
+ 19:15:52  Acquired 1 license for Student Edition Nastran Dynamics
+
+ 19:15:52  Solution of the system equations for frequency response started.
+ 19:15:52  Solution of the system equations for frequency response successfully completed.
+ 19:15:52  Frequency response analysis completed.
  ================================================== 
  Warning/Fatal Message Summary           Occurrence
        USER WARNING MESSAGE     2053.0          1 
-     SYSTEM WARNING MESSAGE     6636.5          1 
-         USER FATAL MESSAGE     4405.0          1 
+       USER WARNING MESSAGE     2053.0          1 
+       USER WARNING MESSAGE     4698.0          2 
+       USER WARNING MESSAGE     6644.1          1 
+       USER WARNING MESSAGE     7697.0          1 
  ================================================== 
- 19:03:40  23 records read from JID file "d:/0_andres/1_universidad/muse/eue/trabajos_eue/practica1/nastran/sinusoidal6/viga_sine.dat"
- 19:03:40  NSEXIT: EXIT(0)
- 19:03:40  Analysis complete  0
-Real:        0.768 seconds ( 0:00:00.768)
-User:        0.359 seconds ( 0:00:00.359)
-Sys:         0.343 seconds ( 0:00:00.343)
+ 19:15:53  23 records read from JID file "d:/0_andres/1_universidad/muse/eue/trabajos_eue/practica1/nastran/sinusoidal6/viga_sine.dat"
+ 19:15:53  NSEXIT: EXIT(0)
+ 19:15:53  Analysis complete  0
+Real:       17.550 seconds ( 0:00:17.550)
+User:        0.562 seconds ( 0:00:00.562)
+Sys:         0.515 seconds ( 0:00:00.515)
  ==================================================
  OS:                           6.2
  OEM ID:                       9
@@ -158,4 +168,4 @@ Sys:         0.343 seconds ( 0:00:00.343)
  Detailed performance information can be found in the 
  "MSC Nastran High Performance Computing User's Guide"
  =====================================================
-MSC Nastran finished Sat Apr  3 19:03:41 RST 2021 
+MSC Nastran finished Sat Apr  3 19:15:54 RST 2021 
