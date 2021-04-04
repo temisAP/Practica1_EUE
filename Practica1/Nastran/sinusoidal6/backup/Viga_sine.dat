@@ -1,24 +1,24 @@
 NASTRAN DBCFACT=4
-ASSIGN DBC='model_sine_z.xdb',RECL=32768,UNIT=40,DELETE
+ASSIGN DBC='viga_sine.xdb',RECL=32768,UNIT=40,DELETE
 ID SINE,TEST
 SOL 111
 TIME 1000
 CEND
 AUTOSPC(NOPRINT)=YES
 LINES=50000
-     TITLE = SINE VIBRATION Y
-     SUBTITLE = MODEL SINE VIBRATION Y
+     TITLE = SINE VIBRATION Z
+     SUBTITLE = MODEL SINE VIBRATION Z
      LABEL = Z-DIRECTION SINE INPUT
      ECHO = NONE
-     SPC      = 1
+     SPC      = 2
      METHOD   = 1
      DLOAD    = 10
      SDAMPING = 20
      FREQ     = 40
-     SET 99 = 859999, 30
-     SET 102 = 1,60
+     SET 99 = 859999, 1, 2, 3
+     SET 102 = 1,2,3
      ACCELERATION(sort2,print,phase) = 99
-     FORCES(sort2,PRINT,phase)=102
+     FORCES(sort2,PRINT,phase)=all
      STRESS(plot,vonmises)=all
 BEGIN BULK
 $
@@ -26,25 +26,26 @@ PARAM,POST,0
 PARAM,RESVEC,YES
 PARAM,PRTMAXIM,YES
 $------$$------$$------$$------$$------$$------$$------$$------$$------$$------$
-SPC1           1  123456  859999
+SPC1           1  123    859999
 RLOAD2,10,11,,,12,,ACCE
 SPCD,11,859999,2,9.81
 $------$$------$$------$$------$$------$$------$$------$$------$$------$$------$
 TABLED1  12      
-         1.0     0.0      4.99     0.0    5.0     5.0     100.0   5.0
-         100.01  0.0      ENDT
+          0.0      0.0    4.999   0.0     5.0     5.0    100.00   5.0   
+          100.01   0.0    ENDT
 $------$$------$$------$$------$$------$$------$$------$$------$$------$$------$
 TABDMP1 20      CRIT                                                    
-        0.      0.02     2000.   0.02     ENDT
+        0.      0.02    2000.   0.02    ENDT
 $------$$------$$------$$------$$------$$------$$------$$------$$------$$------$
 FREQ1,40,5.0,1.0,95
 FREQ4,40,5.,100.,0.3,5
 $
 EIGRL          1      0.    150.               0                    
 $ Definition of the node for the SHAKER
-GRID     859999          .225    0.0     0.0
+GRID     859999           0.225    0.0     0.0
 $------$$------$$------$$------$$------$$------$$------$$------$$------$$------$
 $ Multipoint Constraints to join I/Fs to the Shaker
+RBE2     860000  859999   123     2       3
 $------$$------$$------$$------$$------$$------$$------$$------$$------$$------$
 $ Referenced Coordinate Frames
 $

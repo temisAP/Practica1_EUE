@@ -36,7 +36,7 @@ mv = L*b*b * rho;
 % Coeficientes (1gdl)
 M = Mp + mv;
 K = Kv;
-F = chi * (K*M)^0.5;
+F = chi * 2*(K*M)^0.5;
 
 w0 = (K/M)^0.5;
 chi = chi;
@@ -57,6 +57,7 @@ theta = atan((2*chi*w/w0) ./ (1-(w/w0).^2));%Argumento
 %% Bode de la aceleración
 
 Acc = -w.^2.*P;
+Acc = Acc';
 
 h = figure(1);
 title('Aceleración')
