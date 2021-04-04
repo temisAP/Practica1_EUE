@@ -1,17 +1,32 @@
+$ MSC.Nastran input file created on April     04, 2021 at 15:35:43 by
+$ Patran 2020  (Student Edition)
+$ Direct Text Input for Nastran System Cell Section
+$ Direct Text Input for File Management Section
+$ Direct Text Input for Executive Control
+$ Frequency Response Analysis, Modal Formulation, Database
+SOL 111
+CEND
+$ Direct Text Input for Global Case Control Data
+TITLE = MSC.Nastran job created on 01-Apr-21 at 17:58:06
+ECHO = NONE
+$ Using Nastran default values for RESVEC
+SUBCASE 1
+   SUBTITLE=Carga_armonica
+   METHOD = 1
+   FREQUENCY = 1
+   SPC = 2
+$ Direct Text Input for this Subcase
+BEGIN BULK
+$ Direct Text Input for Bulk Data
+MDLPRM   HDF5    0
+PARAM    POST    0
+PARAM    G       .02
+PARAM   PRTMAXIM YES
 $ Start Embedded Fatigue Parameters & Load Sequences:
 DTI      UNITS   1                                       MPA
-$ Elements and Element Properties for region : viga
-PBARL    1       1               BAR
-         .02     .02
-$ Pset: "viga" will be imported as: "pbarl.1"
-CBAR     1       1       1       2       0.      1.      0.
-                         0.      0.      0.      0.      0.      0.
-CBAR     2       1       3       1       0.      1.      0.
-                         0.      0.      0.      0.      0.      0.
-$ Referenced Material Records
-$ Material Record : mat6
-$ Description of Material : Date: 01-Apr-21           Time: 17:10:16
-MAT1     1       2.+11           .3      7900.
+$ End Embedded Fatigue Parameters & Load Sequences
+FREQ1    1       5.     .9895833 96
+EIGRL    1                       10      0
 $ Nodes of the Entire Model
 GRID*    1                              .224999994039536 0.
 *        0.
@@ -19,5 +34,12 @@ GRID*    2                              .449999988079071 0.
 *        0.
 GRID     3               0.      0.      0.
 $ Loads for Load Case : Carga_armonica
-SPCADD   2       1       3       4
-
+SPCADD   2       1       3
+$ Displacement Constraints of Load Set : BC_1
+SPC1     1       123     3
+$ Displacement Constraints of Load Set : BC_3
+SPC1     3       123     2
+$ Referenced Coordinate Frames
+$
+$
+ENDDATA 284f5d81
