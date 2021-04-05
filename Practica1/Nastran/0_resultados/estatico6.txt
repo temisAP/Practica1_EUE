@@ -4,7 +4,16 @@
              1      G      8.237622E-05   0.0            0.0            0.0            0.0            0.0
              2      G      0.0            8.237622E-05   0.0            0.0            0.0            0.0
              4      G      0.0            0.0            0.0            0.0            0.0            0.0
-1    MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 16:52:57   **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE    13
+1    MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 16:52:57   **STUDENT EDITION*    APRIL   5, 2021  MSC Nastran  8/ 4/20   PAGE    13
+     CARGA_TERMICA                                                                                                                  
+0                                                                                                            SUBCASE 1              
+ 
+                                                     L O A D   V E C T O R
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G      5.568466E+03  -5.568466E+03   0.0            0.0            0.0            0.0
+             2      G     -5.568466E+03   5.568466E+03   0.0            0.0            0.0            0.0
+1    MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 16:52:57   **STUDENT EDITION*    APRIL   5, 2021  MSC Nastran  8/ 4/20   PAGE    14
      CARGA_TERMICA                                                                                                                  
 0                                                                                                            SUBCASE 1              
  
@@ -14,7 +23,7 @@
              1      G      0.0            3.261932E+03   0.0            0.0            0.0            0.0
              2      G      3.261932E+03   0.0            0.0            0.0            0.0            0.0
              4      G     -3.261932E+03  -3.261932E+03   0.0            0.0            0.0            0.0
-1    MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 16:52:57   **STUDENT EDITION*    APRIL   2, 2021  MSC Nastran  8/ 4/20   PAGE    14
+1    MSC.NASTRAN JOB CREATED ON 01-APR-21 AT 16:52:57   **STUDENT EDITION*    APRIL   5, 2021  MSC Nastran  8/ 4/20   PAGE    15
      CARGA_TERMICA                                                                                                                  
 0                                                                                                            SUBCASE 1              
  
@@ -22,4 +31,4 @@
        ELEMENT       AXIAL       SAFETY      TORSIONAL     SAFETY       ELEMENT       AXIAL       SAFETY      TORSIONAL     SAFETY
          ID.        STRESS       MARGIN        STRESS      MARGIN         ID.        STRESS       MARGIN        STRESS      MARGIN
              1   -4.613068E+07              0.0                               2    3.261932E+07              0.0           
-             3    3.261932E+07              0.0  
+             3    3.261932E+07              0.0           

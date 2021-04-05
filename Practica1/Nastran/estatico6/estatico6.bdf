@@ -1,4 +1,4 @@
-$ MSC.Nastran input file created on April     01, 2021 at 23:56:34 by
+$ MSC.Nastran input file created on April     05, 2021 at 00:52:37 by
 $ Patran 2020  (Student Edition)
 $ Direct Text Input for Nastran System Cell Section
 $ Direct Text Input for File Management Section
@@ -17,7 +17,9 @@ SUBCASE 1
    TEMPERATURE(LOAD) = 3
    DISPLACEMENT(SORT1,REAL)=ALL
    SPCFORCES(SORT1,REAL)=ALL
+   OLOAD(SORT1,REAL)=ALL
    STRESS(SORT1,REAL,VONMISES,BILIN)=ALL
+   BOUTPUT(SORT1,REAL)=ALL
 $ Direct Text Input for this Subcase
 BEGIN BULK
 $ Direct Text Input for Bulk Data

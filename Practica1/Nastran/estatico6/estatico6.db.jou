@@ -5862,3 +5862,412 @@ $# l6\sinusoidal6.db anyway ?
 $? YES 36000036 
 $# Flushing the User Data Manager
 $# Journal file stopped recording at 03-Apr-21 13:23:54
+$# Appending to existing journal file 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatico6
+$# \estatico6.db.jou at 05-Apr-21 00:36:14
+$# Synchronizing the User Data Manager
+set_current_dir( "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica" // @
+"1\Nastran\estatico6" )
+$# The current working directory has been changed to the database location 
+$# shown.                                                                     
+$#                                                                            
+$#                                   
+$# Warning reported from application APP INTERFACES
+$#     The selected result type already exists.
+$# Warning reported from application APP INTERFACES
+$#     The selected result type already exists.
+$# Warning reported from application APP INTERFACES
+$#     The selected result type already exists.
+$# Warning reported from application APP INTERFACES
+$#     The selected result type already exists.
+$# Warning reported from application APP INTERFACES
+$#     The selected result type already exists.
+$# Warning reported from application APP INTERFACES
+$#     The selected result type already exists.
+$# Warning reported from application APP INTERFACES
+$#     The selected result type already exists.
+$# Warning reported from application APP INTERFACES
+$#     The selected result type already exists.
+$# Warning reported from application APP INTERFACES
+$#     The selected result type already exists.
+$# Warning reported from application APP INTERFACES
+$#     The selected result type already exists.
+$# Warning reported from application APP INTERFACES
+$#     The selected result type already exists.
+mscnastran_subcase.create( "101", "Carga_termica",  @
+"This is a default subcase." )
+$# Question from application APP INTERFACES
+$#     Subcase "Carga_termica" already exists.  Do you wish to delete the 
+$# existing subcase and create a new one?
+$? YES 6022070 
+mscnastran_subcase.create_char_param( "LOAD CASE", "Carga_termica" )
+mscnastran_subcase.create_char_param( "SUBCASE TITLE",  @
+"This is a default subcase." )
+mscnastran_subcase.create_char_param( "SUBCASE SUBTITLE", "Carga_termica" )
+mscnastran_subcase.create_char_param( "SUBCASE LABEL", "" )
+mscnastran_subcase.create_char_param( "SUBCASE TITLE FLAG", "OFF" )
+mscnastran_subcase.create_char_param( "SUBCASE SUBTITLE FLAG", "ON" )
+mscnastran_subcase.create_char_param( "SUBCASE LABEL FLAG", "OFF" )
+mscnastran_subcase.create_char_param( "Carga_termica", "STRUCTURAL" )
+mscnastran_subcase.create_char_param( "DISPLACEMENTS", "1" )
+mscnastran_subcase.create_char_param( "DISPLACEMENTS 1",  @
+"DISPLACEMENT(SORT1,REAL)=0" )
+mscnastran_subcase.create_char_param( "ELEMENT STRESSES", "1" )
+mscnastran_subcase.create_char_param( "ELEMENT STRESSES 1",  @
+"STRESS(SORT1,REAL,VONMISES,BILIN)=0;PARAM,NOCOMPS,1" )
+mscnastran_subcase.create_char_param( "CONSTRAINT FORCES", "1" )
+mscnastran_subcase.create_char_param( "CONSTRAINT FORCES 1",  @
+"SPCFORCES(SORT1,REAL)=0" )
+mscnastran_subcase.create_char_param( "APPLIED LOADS", "1" )
+mscnastran_subcase.create_char_param( "APPLIED LOADS 1", "OLOAD(SORT1,REAL)=0" )
+mscnastran_subcase.create_char_param( "CONTACT RESULTS", "1" )
+mscnastran_subcase.create_char_param( "CONTACT RESULTS 1",  @
+"BOUTPUT(SORT1,REAL)=0" )
+mscnastran_subcase.create_char_param( "SUBCASE WRITE", "ON" )
+mscnastran_subcase.create_char_param( "SUBCASE DIRECT TEXT POS", "OFF" )
+mscnastran_subcase.create_int_param( "SUBCASE INPUT 0", 0 )
+mscnastran_subcase.create_char_param( "INCREMENT TYPE CODE SOL 101",  @
+"LCNTSTAT" )
+mscnastran_subcase.create_char_param( "INCREMENT TYPE SOL 101",  @
+"Linear Contact (LCNT)" )
+mscnastran_subcase.create_char_param( "ANALYSIS PREFERENCE CTRLDEF SOL 101",  @
+"Default (Blank)" )
+mscnastran_subcase.create_char_param( "PERFORM ERROR ANALYSIS", "ON" )
+mscnastran_subcase.create_char_param( "DEFAULT MODEL TEMPERATURE", "0" )
+mscnastran_subcase.create_char_param( "ROTOR DYNAMICS", "OFF" )
+mscnastran_subcase.create_char_param( "ALL EXPLICIT MPCS", "ON" )
+$#  Beginning analysis of  estatico6
+jobfile.open( "estatico6", "ANALYZE NO JOBFILE" )
+$# Question from application APP INTERFACES
+$#     The jobname (estatico6) is already defined in the database. Do you 
+$# wish to overwrite?
+$? YES 6016027 
+msc_delete_old_files( "estatico6", ".bdf", ".op2" )
+$# Question from application APP INTERFACES
+$#     Files from a previous analysis conflict with the current job name: 
+$# "estatico6".  These files are estatico6.xdb, estatico6.f04, estatico6.f06, 
+$# estatico6.log, estatico6.h5, estatico6.bdf.  Will you permit deletion of 
+$# these files?
+$? YES 6022037 
+$# Warning reported from application APP INTERFACES
+$#     The attachment to the file 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatico6
+$# \estatico6.h5 has been deleted because that file is being deleted.
+jobfile.write_spl( "/* Jobfile for PATNAS created %A% at %A% */", ["05-Apr-21" @
+, "00:52:36"] )
+jobfile.writec( "", "TRANSLATOR = pat3nas" )
+jobfile.writec( "DATABASE", "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_E" // @
+"UE\Practica1\Nastran\estatico6\estatico6.db" )
+jobfile.writec( "JOBNAME", "estatico6" )
+jobfile.writec( "ANALYSIS TITLE", "MSC.Nastran job created on 01-Apr-21 at" // @
+" 16:52:57" )
+jobfile.writec( "ANALYSIS SUBTITLE", "" )
+jobfile.writec( "ANALYSIS LABEL", "" )
+jobfile.writec( "", "" )
+jobfile.writec( "OBJECT", "Entire Model" )
+jobfile.writec( "METHOD", "Full Run" )
+jobfile.writec( "", "" )
+jobfile.writec( "MODEL SUFFIX", ".bdf" )
+jobfile.writec( "RESULTS SUFFIX", ".op2" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * File Search Path Declaration" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "File Search Path", "C:\Users\Andrés" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\helpfiles" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\alters" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\icons\RibbonIcons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\bin" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\bin\exe" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscexplore_files\" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\dmap" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\plb" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\lib" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\plb" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\extra_files" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * Translation Parameters" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "DATA OUTPUT", "XDB+PRINT+HDF5" )
+jobfile.writec( "OUTPUT2 REQUESTS", "P3 Built In" )
+jobfile.writec( "OUTPUT2 FORMAT", "Binary" )
+jobfile.writec( "DIVISION TOLERANCE", "1.0e-08" )
+jobfile.writec( "NUMERICAL TOLERANCE", "1.0e-04" )
+jobfile.writec( "WRITING TOLERANCE", "1.0e-21" )
+jobfile.writec( "GEOM CHECK", "INFORM" )
+jobfile.writec( "SORTED BULK", "NO" )
+jobfile.writec( "CARD FORMAT", "either" )
+jobfile.writec( "NODE COORDINATES", "reference frame" )
+jobfile.writec( "COORD COORDINATES", "global" )
+jobfile.writec( "MSC.Nastran VERSION", "2020." )
+jobfile.writec( "WRITE STORED PRECISION", "TRUE" )
+jobfile.writec( "WRITE IN FREE FORMAT", "FALSE" )
+jobfile.writec( "PROPS ON ELEM ENTRY", "FALSE" )
+jobfile.writec( "CONTINUATION ENTRY", "FALSE" )
+jobfile.writec( "PCOMPG ENTRY", "TRUE" )
+jobfile.writec( "CONVERT CBAR CBEAM", "FALSE" )
+jobfile.writec( "ITERATIVE SOLVER", "FALSE" )
+jobfile.writei( "SUPER ELEMENT 0", 0 )
+jobfile.writec( "SEALL WRITE", "FALSE" )
+jobfile.writec( "PART SUPERELEMENT CREATE", "TRUE" )
+jobfile.writec( "AUTOQSET", "FALSE" )
+jobfile.writec( "FIXEDB", "FALSE" )
+jobfile.writei( "SUPER TREE COUNT", 0 )
+jobfile.writec( "MODEL TOLERANCE", "0.00050000002" )
+jobfile.writec( "ELEMENT PROPERTY OFFSET", "0" )
+jobfile.writec( "MATERIAL PROPERTY OFFSET", "0" )
+jobfile.writec( "TABLE OFFSET", "0" )
+jobfile.writec( "LOAD SET OFFSET", "0" )
+jobfile.writec( "LOAD CASE OFFSET", "0" )
+jobfile.writec( "CONTROL SET OFFSET", "0" )
+jobfile.writec( "RIGID ELEMENT OFFSET", "0" )
+jobfile.writec( "SCALAR POINT OFFSET", "0" )
+jobfile.writec( "BEGINNING CONTINUATION MARKER", "+      A" )
+jobfile.writec( "NUMBER ONLY", "ON" )
+jobfile.writec( "BEGINNING NUMBER", "OFF" )
+jobfile.writec( "TRAILING NUMBER", "OFF" )
+jobfile.writec( "SYNTAX NUMBER", "ON" )
+jobfile.writec( "SYNTAX MARKER", "." )
+jobfile.writec( "EXTERNAL SUPERELEMENT METHOD", "NONE" )
+jobfile.writec( "GRID COORDINATES ROUNDING", "15" )
+jobfile.writec( "COORD DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "MPC DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "LBC DATA PRECISION ROUNDING", "7" )
+jobfile.writec( "MAT DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "PROP DATA PRECISION ROUNDING", "7" )
+jobfile.writec( "USE LEGACY PRECISION", "FALSE" )
+jobfile.writec( "EXPONENTIAL WRITE", "As Needed" )
+jobfile.writec( "EXPONENTIAL FORM", "Condensed" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * Solution Parameters" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "SOLUTION TYPE", "LINEAR STATIC" )
+jobfile.writei( "SOLUTION SEQUENCE", 101 )
+jobfile.writec( "DATABASE RUN", "ON" )
+jobfile.writec( "CYCLIC SYMMETRY", "OFF" )
+jobfile.writec( "AUTOMATIC CONSTRAINTS", "ON" )
+jobfile.writec( "INERTIA RELIEF", "OFF" )
+jobfile.writec( "ALTERNATE REDUCTION", "OFF" )
+jobfile.writec( "SHELL NORMAL TOLERANCE", "" )
+jobfile.writec( "MASS CALCULATION", "Lumped" )
+jobfile.writec( "DATA DECK ECHO", "None" )
+jobfile.writec( "PLATE RZ STIFFNESS FACTOR", "100.0" )
+jobfile.writec( "MAXIMUM PRINTED LINES", "" )
+jobfile.writec( "MAXIMUM RUN TIME", "" )
+jobfile.writec( "WT-MASS CONVERSION", "1.0" )
+jobfile.writec( "NODE ID FOR WT-GENER", "" )
+jobfile.writec( "DEFAULT INITIAL TEMPERATURE", "0" )
+jobfile.writec( "RIGID ELEMENT TYPE", "LAGR" )
+jobfile.writec( "USE SOL600", "OFF" )
+jobfile.writei( "CONTACT-SEGMENT-CONTROL METHOD", 0 )
+jobfile.writei( "CONTACT-DEFORMABLE-DEFORMABLE METHOD", 0 )
+jobfile.writec( "CONTACT CHECK", "OFF" )
+jobfile.writei( "CONTACT-CRITERION", 0 )
+jobfile.writei( "CONTACT-DERIVATION", 0 )
+jobfile.writei( "CONTACT-REL_ABS", 0 )
+jobfile.writec( "USE SOL700", "OFF" )
+jobfile.writec( "SN MEAN STRESS CORRECTION", "NONE" )
+jobfile.writec( "NEF FATIGUE STRESS OUTPUT", "NONE" )
+jobfile.writec( "NEF STRESS UNITS", "MPA" )
+jobfile.writec( "NEF STRESS COMBINATION", "ABSMAXPR" )
+jobfile.writec( "NEF RESULT LOCATION", "NODA" )
+jobfile.writec( "NEF RECOVERY LOCATION", "CORNER" )
+jobfile.writec( "NEF LAYER LOCATION", "WORST" )
+jobfile.writec( "NEF INTERPOLATION LIMIT", "0" )
+jobfile.writec( "NEF LEVEL OF MESSAGE", "0" )
+jobfile.writec( "NEF NUMBER OF THREADS", "1" )
+jobfile.writer( "NEF CERTAINTY OF SURVIVAL", 50. )
+jobfile.writer( "NEF OVERALL SCALE FACTOR", 1. )
+jobfile.writer( "NEF TOP STRESS PERCENTAGE FILTER", 100. )
+jobfile.writer( "NEF TOP DAMAGE PERCENTAGE FILTER", 100. )
+jobfile.writec( "NEF TIME HISTORY DIRECTORY", "C:\Users\Andrés" )
+jobfile.writei( "NEF MAX LOAD PER EVENT", 1 )
+jobfile.writec( "NEF EVENT DATA", "0" )
+jobfile.writec( "NEF LOAD SEQUENCE DATA", "0" )
+jobfile.writec( "USE CONTACT TABLE", "OFF" )
+jobfile.writec( "INITIAL CONTACTPAIR LOADCASE NAME", "" )
+jobfile.writei( "MDOF DATA", 0 )
+jobfile.writec( "CELL WRITE", "ON" )
+jobfile.writei( "CELL INPUT 0", 0 )
+jobfile.writec( "FMS WRITE", "ON" )
+jobfile.writei( "FMS INPUT 0", 0 )
+jobfile.writec( "EXEC WRITE", "ON" )
+jobfile.writei( "EXEC INPUT 0", 0 )
+jobfile.writec( "CASE WRITE", "ON" )
+jobfile.writei( "CASE INPUT 0", 0 )
+jobfile.writec( "BULK WRITE", "ON" )
+jobfile.writei( "BULK INPUT 0", 0 )
+jobfile.writec( "CELL DTI POSITION", "START" )
+jobfile.writec( "FMS DTI POSITION", "START" )
+jobfile.writec( "EXEC DTI POSITION", "START" )
+jobfile.writec( "CASE DTI POSITION", "START" )
+jobfile.writec( "BULK DTI POSITION", "START" )
+jobfile.writec( "", "END" )
+jobfile.close(  )
+mscnastran_job.associate_subcases( "101", "estatico6", 1, ["Carga_termica"] )
+analysis_submit_2( "MSC.Nastran", "estatico6" )
+$# Patran 2020  (Student Edition) has obtained 0 concurrent license(s) from 
+$# FLEXlm per a request to execute on Windows node TEMIS(48a4728ba777) (
+$# Windows 6.2 (Build 9200: Service Pack 0)) at 05-Apr-21 00:52:37.
+$# 
+$# Reading model information from the specified database, 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatico6
+$# \estatico6.db.
+$# Messages output from the Patran 2020  (Student Edition) input deck 
+$# translator on April     05, 2021 at 00:52:37.
+$# 
+$# The NASTRAN input file, estatico6.bdf, has been successfully opened.
+$# 
+$# Translating 3 elements from the element property region Varilla.
+$# 
+$# 1 property regions translated.
+$# 
+$# Translating 1 referenced material records.
+$# 
+$# Translating 3 nodes from the entire model.
+$# 
+$# Writing loads for Load Case : Carga_termica.
+$# 
+$# Translating static bar element temperatures of load set : Carga_termica.
+$# 
+$# Translating static bar element temperatures of load set : Sin_carga_termica.
+$# 
+$# Translating nodal constraints in load set : BC_1.
+$# 
+$# Translating nodal constraints in load set : BC_2.
+$# 
+$# Translating nodal constraints in load set : BC_3.
+$# Writing interface element lbcs.
+$# 
+$# Translating initial temperatures in load set : Temperatura_ini.
+$# Total execution time in real seconds: 1
+$# Total execution time in CPU seconds: 0.187012
+$# 
+$# End of NASTRAN input file translation.
+$# Student Edition Patran Nastran Preference Patran 2020  (Student Edition) 
+$# has released 0 license(s) to FLEXlm at 05-Apr-21 00:52:38.
+$# The translation has completed successfully.
+$# Executing /bin/sh -c D:\Archivos de 
+$# programa\MSC.Software\NaPa_SE\2020\Patran\bi
+$# n\MscNastranExecute.exe -j estatico6 -m bdf -x 2020 -c 
+$# %%prog=edu%auth=edu%arch=
+$# 64% -v
+msc_dra_init_stream(  )
+msc_dra_add_param( "DATABASE", "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajo" // @
+"s_EUE\Practica1\Nastran\estatico6\estatico6.db" )
+msc_dra_add_param( "JOBNAME", "estatico6" )
+msc_dra_add_param( "RESULTS FILE", "D:\0_Andres\1_Universidad\MUSE\EUE\Tra" // @
+"bajos_EUE\Practica1\Nastran\estatico6\estatico6.xdb" )
+msc_dra_add_param( "OBJECT", "Result Entities" )
+msc_dra_add_param( "ANALYSIS TYPE", "Structural" )
+msc_dra_add_param( "DIVISION TOLERANCE", "1.0E-8" )
+msc_dra_add_param( "NUMERICAL TOLERANCE", "1.0E-4" )
+msc_dra_add_param( "MODEL TOLERANCE", "0.00050000002" )
+msc_dra_add_param( "ROTATIONAL NODAL RESULTS", "OFF" )
+msc_dra_add_param( "STRESS/STRAIN INVARIANTS", "OFF" )
+msc_dra_add_param( "PRINCIPAL DIRECTIONS", "OFF" )
+msc_dra_add_param( "ELEMENT RESULTS POSITIONS", "Nodal       " )
+msc_dra_add_param( "TITLE DESCRIPTION", "ON" )
+msc_dra_finish_stream(  )
+analysis_import( "MSC.Nastran", "estatico6", "Attach Results File No Job",  @
+"D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatic" // @
+"o6\estatico6.xdb", TRUE )
+$# Attaching Direct Results Access file: 
+$# "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\estatico
+$# 6\estatico6.xdb"
+$# XDB file created by "MSC.NASTRAN V2020" on 4/5/2021 using "VENDOR:INTEL    
+$#             MODEL:XEON/691 (TEMIS)     OPSYS:WINDOWS 10 PRO 6.2"
+$# *** Begin: Attach Result File ***
+$# Processing result sub-case: Static Subcase
+$# Total execution time in real seconds:        0.000
+$# Total execution time in CPU  seconds:        0.000
+$# *** End:   Attach Result File ***
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1:CARGA_TERMICA",  @
+"A2:Static Subcase", "Applied Loads", "Translational", "(NON-LAYERED)", "MAG", @
+ "Default", "DeriveAverage", "All", "ShapeFunc" )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN "] )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1:CARGA_TERMICA",  @
+"A2:Static Subcase", "Applied Loads", "Translational", "(NON-LAYERED)", "",  @
+"Global", "", "", "" )
+res_data_title( 0, "Nodal", "Vector", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL"] )
+res_display_deformation_create( "", "Elements", 0, [""], 9, [ @
+"DeformedStyle:White,Solid,1,Wireframe", "DeformedScale:Model=0.1",  @
+"UndeformedStyle:ON,Blue,Solid,1,Wireframe", "TitleDisplay:ON",  @
+"MinMaxDisplay:ON", "ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3",  @
+"DeformDisplay:Resultant", "DeformComps:OFF,OFF,OFF"] )
+res_display_deformation_post( "", 0 )
+ga_view_center_set( 0.023801, -0.004319 )
+ga_view_zoom_set( 0.094281 )
+ga_view_center_set( 0.044721, -0.008728 )
+ga_view_zoom_set( 0.083805 )
+ga_view_center_set( 0.026360, -0.003561 )
+ga_view_zoom_set( 0.094281 )
+ga_view_center_set( 0.005705, 0.002252 )
+ga_view_zoom_set( 0.106066 )
+ga_view_center_set( -0.017492, 0.008791 )
+ga_view_zoom_set( 0.119324 )
+ga_view_center_set( -0.032025, 0.015157 )
+ga_view_zoom_set( 0.134240 )
+ga_view_center_set( -0.048374, 0.022320 )
+ga_view_zoom_set( 0.151020 )
+ga_view_center_set( -0.066768, 0.030378 )
+ga_view_zoom_set( 0.169897 )
+ga_view_center_set( -0.087460, 0.039443 )
+ga_view_zoom_set( 0.191134 )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1:CARGA_TERMICA",  @
+"A2:Static Subcase", "Constraint Forces", "Translational", "(NON-LAYERED)",  @
+"MAG", "Default", "DeriveAverage", "All", "ShapeFunc" )
+res_data_title( 0, "Nodal", "Scalar", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL, @@@$LN "] )
+res_display_fringe_create( "", "FreeFaces", 0, [""], 12, [ @
+"Range:Fri_default_Fringe", "RangeOverwrite:ON", "FringeStyle:Discrete/Smooth" @
+, "Shade:None", "ElemEdge:FreeEdge,Blue,Solid,1", "Shrink:0",  @
+"TitleDisplay:ON", "MinMaxDisplay:ON", "ValueDisplay:OFF", "Filter:None",  @
+"ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3"], TRUE )
+res_display_fringe_post( "", 0, "Nodal", TRUE, TRUE )
+res_data_load_dbresult( 0, "Nodal", "Vector", "SC1:CARGA_TERMICA",  @
+"A2:Static Subcase", "Constraint Forces", "Translational", "(NON-LAYERED)", "" @
+, "Global", "", "", "" )
+res_data_title( 0, "Nodal", "Vector", 1, [ @
+"$POFF@@@$PT: @@@$LCN, @@@$SCN, @@@$PRN, @@@$SRN, @@@$DRVL"] )
+res_display_deformation_create( "", "Elements", 0, [""], 9, [ @
+"DeformedStyle:White,Solid,1,Wireframe", "DeformedScale:Model=0.1",  @
+"UndeformedStyle:ON,Blue,Solid,1,Wireframe", "TitleDisplay:ON",  @
+"MinMaxDisplay:ON", "ScaleFactor:1.", "LabelStyle:Exponential, 12, White, 3",  @
+"DeformDisplay:Resultant", "DeformComps:OFF,OFF,OFF"] )
+res_display_deformation_post( "", 0 )
+uil_primary_file.db_save(  )
+$# Flushing the User Data Manager
+$# Journal file stopped recording at 05-Apr-21 02:14:12
