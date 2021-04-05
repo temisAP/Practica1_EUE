@@ -66,7 +66,7 @@ u1 = U(1);
 u2 = U(3);
 
 b12.F = b12.K * [u1 0 u2 0]';
-b12.sigma = (b12.F(3)-b12.F(1))/2 / b12.A;
+b12.sigma = (b12.F(3)-b12.F(1))/2 / b12.A - sigma_t;
 
 % Varilla 1-3
 
@@ -133,8 +133,8 @@ y_fin = [U_fin(2:2:end), U_fin(2)];
 h=figure();
     hold on
     for i=1:length(x_ini)-1
-        plot(x_ini([i,i+1]), y_ini([i,i+1]),'-.', 'LineWidth', 1.5, 'Color','k');
-        plot(x_fin([i,i+1]), y_fin([i,i+1]),'-', 'LineWidth', 1.5, 'Color','k');
+        plot(x_ini([i,i+1]), y_ini([i,i+1]),'-', 'LineWidth', 1.5, 'Color','k');
+        plot(x_fin([i,i+1]), y_fin([i,i+1]),'-.', 'LineWidth', 1.5, 'Color','k');
     end
     plot(x_ini, y_ini,'o', 'LineWidth', 1.5, 'Color','k');
     plot(x_fin, y_fin,'o', 'LineWidth', 1.5, 'Color','k');
@@ -193,8 +193,8 @@ h=figure();
     hold on
     for i=1:length(x_ini)-1
         plot(x_ini([i,i+1]), y_ini([i,i+1]),'-', 'LineWidth', 1.5, 'Color','k');
-        plot(x_fin([i,i+1]), y_fin([i,i+1]),'-.', 'LineWidth', 1.5, 'Color','c');
-        plot(x_fin_num([i,i+1]), y_fin_num([i,i+1]),'--', 'LineWidth', 1.5, 'Color','r');
+        plot(x_fin([i,i+1]), y_fin([i,i+1]),'-.', 'LineWidth', 1.5, 'Color','[0 1 1]');
+        plot(x_fin_num([i,i+1]), y_fin_num([i,i+1]),'--', 'LineWidth', 1.5, 'Color','[1 0.64706 0]');
     end
     plot(x_ini, y_ini,'o', 'LineWidth', 1.5, 'Color','k');
     plot(x_fin, y_fin,'o', 'LineWidth', 1.5, 'Color','k');
