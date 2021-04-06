@@ -4718,3 +4718,7 @@ ds_write_xy.ds_write_xy_curves2( 1, ["modulo30"], FALSE, "" )
 $# Calling ds_write_xy_curves2
 $# Writing curve data for 1 curves to individual files
 $# File modulo30.xyd written
+$# UNDO: Beam Section Create
+uil_primary_file.db_save(  )
+$# Flushing the User Data Manager
+$# Journal file stopped recording at 06-Apr-21 18:32:15

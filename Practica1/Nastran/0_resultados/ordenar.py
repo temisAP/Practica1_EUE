@@ -25,6 +25,6 @@ def readdata(data):
                 argumentos.append(float(p[1]))
         return [frecuencias, modulos, argumentos]
 
-name = 'sinusoidal6.txt'
+name = 'sinusoidal6_sin_masa.txt'
 data_read = readdata(name)
-savedata('sinusoidal6',data_read)
+savedata('sinusoidal6_sin_masa',data_read)
