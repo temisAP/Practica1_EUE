@@ -51,8 +51,14 @@ theta = atan((2*chi*w/w0) ./ (1-(w/w0).^2));
 
 % Respuesta en frecuencia
 
-P = H*A;                                    %Módulo
-theta = atan((2*chi*w/w0) ./ (1-(w/w0).^2));%Argumento
+P = H*A;                                        %Módulo
+theta = atan((2*chi*w/w0) ./ (1-(w/w0).^2));    %Argumento
+
+for i = 1:length(w)
+    if w(i)>w0
+        theta(i) = theta(i) + deg2rad(180);
+    end
+end
 
 %% Bode de la aceleración
 

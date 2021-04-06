@@ -1,0 +1,41 @@
+$# Creating journal file 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica2\Sat.db.jou at 
+$# 06-Apr-21 12:18:45
+uil_file_rebuild.start("D:\Archivos de programa\MSC.Software\NaPa_SE\2020\" // @
+"Patran/template.db","D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Prac" // @
+"tica2\Sat.db")
+$# Synchronizing the User Data Manager
+set_current_dir( "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica2" )
+$# The current working directory has been changed to the database location 
+$# shown.                                                                     
+$#                                                                            
+$#                                   
+sys_poll_option( 2 )
+ga_group_create( "Bandeja_A" )
+ga_group_current_set( "Bandeja_A" )
+$# Group "Bandeja_A" created.
+sys_poll_option( 0 )
+sys_poll_option( 2 )
+$# Question from application Group Applications
+$#     Group name "default_group" already exists and may not be empty. Any 
+$# existing members will be overwritten. Do you wish to continue?
+$? YES 11001017 
+ga_group_clear( "default_group" )
+ga_group_current_set( "default_group" )
+$# Group "default_group" created.
+sys_poll_option( 0 )
+sys_poll_option( 2 )
+$# Question from application Group Applications
+$#     Group name "Bandeja_A" already exists and may not be empty. Any 
+$# existing members will be overwritten. Do you wish to continue?
+$? YES 11001017 
+ga_group_clear( "Bandeja_A" )
+ga_group_current_set( "Bandeja_A" )
+$# Group "Bandeja_A" created.
+sys_poll_option( 0 )
+STRING asm_create_grid_xyz_created_ids[VIRTUAL]
+asm_const_grid_xyz( "1", "[0 0 0]", "Coord 0", asm_create_grid_xyz_created_ids )
+$# 1 Point created: Point 1
+point_size( 9 )
+$# Flushing the User Data Manager
+$# Journal file stopped recording at 06-Apr-21 13:45:39
