@@ -874,3 +874,3472 @@ uil_primary_file.db_save(  )
 uil_primary_file.db_save(  )
 $# Flushing the User Data Manager
 $# Journal file stopped recording at 04-Apr-21 20:28:11
+$# Appending to existing journal file 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoida
+$# l6\sinusoidal6.db.jou at 06-Apr-21 15:58:57
+$# Synchronizing the User Data Manager
+set_current_dir( "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica" // @
+"1\Nastran\sinusoidal6" )
+$# The current working directory has been changed to the database location 
+$# shown.                                                                     
+$#                                                                            
+$#                                   
+msc_dra_init_stream(  )
+msc_dra_add_param( "DATABASE", "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajo" // @
+"s_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.db" )
+msc_dra_add_param( "JOBNAME", "" )
+msc_dra_add_param( "RESULTS FILE", "D:\0_Andres\1_Universidad\MUSE\EUE\Tra" // @
+"bajos_EUE\Practica1\Nastran\sinusoidal6\viga_sine.xdb" )
+msc_dra_add_param( "OBJECT", "Result Entities" )
+msc_dra_add_param( "ANALYSIS TYPE", "Structural" )
+msc_dra_add_param( "DIVISION TOLERANCE", "1.0E-8" )
+msc_dra_add_param( "NUMERICAL TOLERANCE", "1.0E-4" )
+msc_dra_add_param( "MODEL TOLERANCE", "0.0049999999" )
+msc_dra_add_param( "ROTATIONAL NODAL RESULTS", "OFF" )
+msc_dra_add_param( "STRESS/STRAIN INVARIANTS", "OFF" )
+msc_dra_add_param( "PRINCIPAL DIRECTIONS", "OFF" )
+msc_dra_add_param( "ELEMENT RESULTS POSITIONS", "Nodal       " )
+msc_dra_add_param( "TITLE DESCRIPTION", "ON" )
+msc_dra_finish_stream(  )
+analysis_import( "MSC.Nastran", "", "Attach Results File No Job",  @
+"D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoi" // @
+"dal6\viga_sine.xdb", TRUE )
+$# Attaching Direct Results Access file: 
+$# "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoid
+$# al6\viga_sine.xdb"
+$# XDB file created by "MSC.NASTRAN V2020" on 4/4/2021 using "VENDOR:INTEL    
+$#             MODEL:XEON/1400 (TEMIS)    OPSYS:WINDOWS 10 PRO 6.2"
+$# *** Begin: Attach Result File ***
+$# Processing result load case: SC1: MODEL SINE VIBRATION Z
+$# Processing result sub-case: Freq.= 5.
+$# Processing result sub-case: Freq.= 6.
+$# Processing result sub-case: Freq.= 7.
+$# Processing result sub-case: Freq.= 8.
+$# Processing result sub-case: Freq.= 9.
+$# Processing result sub-case: Freq.= 10.
+$# Processing result sub-case: Freq.= 11.
+$# Processing result sub-case: Freq.= 12.
+$# Processing result sub-case: Freq.= 13.
+$# Processing result sub-case: Freq.= 14.
+$# Processing result sub-case: Freq.= 15.
+$# Processing result sub-case: Freq.= 16.
+$# Processing result sub-case: Freq.= 17.
+$# Processing result sub-case: Freq.= 18.
+$# Processing result sub-case: Freq.= 18.48894
+$# Processing result sub-case: Freq.= 18.49899
+$# Processing result sub-case: Freq.= 19.
+$# Processing result sub-case: Freq.= 20.
+$# Processing result sub-case: Freq.= 21.
+$# Processing result sub-case: Freq.= 22.
+$# Processing result sub-case: Freq.= 22.45086
+$# Processing result sub-case: Freq.= 22.46305
+$# Processing result sub-case: Freq.= 23.
+$# Processing result sub-case: Freq.= 24.
+$# Processing result sub-case: Freq.= 25.
+$# Processing result sub-case: Freq.= 26.
+$# Processing result sub-case: Freq.= 26.41277
+$# Processing result sub-case: Freq.= 26.42712
+$# Processing result sub-case: Freq.= 27.
+$# Processing result sub-case: Freq.= 28.
+$# Processing result sub-case: Freq.= 29.
+$# Processing result sub-case: Freq.= 30.
+$# Processing result sub-case: Freq.= 30.37469
+$# Processing result sub-case: Freq.= 30.39119
+$# Processing result sub-case: Freq.= 31.
+$# Processing result sub-case: Freq.= 32.
+$# Processing result sub-case: Freq.= 33.
+$# Processing result sub-case: Freq.= 34.
+$# Processing result sub-case: Freq.= 34.3366
+$# Processing result sub-case: Freq.= 34.35526
+$# Processing result sub-case: Freq.= 35.
+$# Processing result sub-case: Freq.= 36.
+$# Processing result sub-case: Freq.= 37.
+$# Processing result sub-case: Freq.= 38.
+$# Processing result sub-case: Freq.= 39.
+$# Processing result sub-case: Freq.= 40.
+$# Processing result sub-case: Freq.= 41.
+$# Processing result sub-case: Freq.= 42.
+$# Processing result sub-case: Freq.= 43.
+$# Processing result sub-case: Freq.= 44.
+$# Processing result sub-case: Freq.= 45.
+$# Processing result sub-case: Freq.= 46.
+$# Processing result sub-case: Freq.= 47.
+$# Processing result sub-case: Freq.= 48.
+$# Processing result sub-case: Freq.= 49.
+$# Processing result sub-case: Freq.= 50.
+$# Processing result sub-case: Freq.= 51.
+$# Processing result sub-case: Freq.= 52.
+$# Processing result sub-case: Freq.= 53.
+$# Processing result sub-case: Freq.= 54.
+$# Processing result sub-case: Freq.= 55.
+$# Processing result sub-case: Freq.= 56.
+$# Processing result sub-case: Freq.= 57.
+$# Processing result sub-case: Freq.= 58.
+$# Processing result sub-case: Freq.= 59.
+$# Processing result sub-case: Freq.= 60.
+$# Processing result sub-case: Freq.= 61.
+$# Processing result sub-case: Freq.= 62.
+$# Processing result sub-case: Freq.= 63.
+$# Processing result sub-case: Freq.= 64.
+$# Processing result sub-case: Freq.= 65.
+$# Processing result sub-case: Freq.= 66.
+$# Processing result sub-case: Freq.= 67.
+$# Processing result sub-case: Freq.= 68.
+$# Processing result sub-case: Freq.= 69.
+$# Processing result sub-case: Freq.= 70.
+$# Processing result sub-case: Freq.= 71.
+$# Processing result sub-case: Freq.= 72.
+$# Processing result sub-case: Freq.= 73.
+$# Processing result sub-case: Freq.= 74.
+$# Processing result sub-case: Freq.= 75.
+$# Processing result sub-case: Freq.= 76.
+$# Processing result sub-case: Freq.= 77.
+$# Processing result sub-case: Freq.= 78.
+$# Processing result sub-case: Freq.= 79.
+$# Processing result sub-case: Freq.= 80.
+$# Processing result sub-case: Freq.= 81.
+$# Processing result sub-case: Freq.= 82.
+$# Processing result sub-case: Freq.= 83.
+$# Processing result sub-case: Freq.= 84.
+$# Processing result sub-case: Freq.= 85.
+$# Processing result sub-case: Freq.= 86.
+$# Processing result sub-case: Freq.= 87.
+$# Processing result sub-case: Freq.= 88.
+$# Processing result sub-case: Freq.= 89.
+$# Processing result sub-case: Freq.= 90.
+$# Processing result sub-case: Freq.= 91.
+$# Processing result sub-case: Freq.= 92.
+$# Processing result sub-case: Freq.= 93.
+$# Processing result sub-case: Freq.= 94.
+$# Processing result sub-case: Freq.= 95.
+$# Processing result sub-case: Freq.= 96.
+$# Processing result sub-case: Freq.= 97.
+$# Processing result sub-case: Freq.= 98.
+$# Processing result sub-case: Freq.= 99.
+$# Processing result sub-case: Freq.= 100.
+$# Total execution time in real seconds:        0.000
+$# Total execution time in CPU  seconds:        0.141
+$# *** End:   Attach Result File ***
+msc_dra_init_stream(  )
+msc_dra_add_param( "DATABASE", "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajo" // @
+"s_EUE\Practica1\Nastran\sinusoidal6\sinusoidal6.db" )
+msc_dra_add_param( "JOBNAME", "" )
+msc_dra_add_param( "RESULTS FILE", "D:\0_Andres\1_Universidad\MUSE\EUE\Tra" // @
+"bajos_EUE\Practica1\Nastran\sinusoidal6\viga_sine.xdb" )
+msc_dra_add_param( "OBJECT", "Result Entities" )
+msc_dra_add_param( "ANALYSIS TYPE", "Structural" )
+msc_dra_add_param( "DIVISION TOLERANCE", "1.0E-8" )
+msc_dra_add_param( "NUMERICAL TOLERANCE", "1.0E-4" )
+msc_dra_add_param( "MODEL TOLERANCE", "0.0049999999" )
+msc_dra_add_param( "ROTATIONAL NODAL RESULTS", "OFF" )
+msc_dra_add_param( "STRESS/STRAIN INVARIANTS", "OFF" )
+msc_dra_add_param( "PRINCIPAL DIRECTIONS", "OFF" )
+msc_dra_add_param( "ELEMENT RESULTS POSITIONS", "Nodal       " )
+msc_dra_add_param( "TITLE DESCRIPTION", "ON" )
+msc_dra_finish_stream(  )
+analysis_import( "MSC.Nastran", "", "Attach Results File No Job",  @
+"D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoi" // @
+"dal6\viga_sine.xdb", TRUE )
+$# Error reported from application Results
+$#     Direct Results Access file is already attached. To re-attach with 
+$# different Translation Parameters, please detach the file using the 
+$# Analysis form option Delete "Attachment" then re-attach. File: 
+$# "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoid
+$# al6\viga_sine.xdb"
+$? NO 4012005 
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 5.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"AsIs", "DeriveAverage", "All", "ShapeFunc", "Magnitude", 0. )
+res_data_title( 0, "Nodal", "Scalar", 1, ["Accelerations, Translational, MAG"] )
+res_data_dbres_list( 0, "Nodal", "Scalar", 105, ["SC1: MODEL SINE VIBRATION Z" @
+, "SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z"], ["A1:Freq.= 6." @
+, "A1:Freq.= 7.", "A1:Freq.= 8.", "A1:Freq.= 9.", "A1:Freq.= 10.",  @
+"A1:Freq.= 11.", "A1:Freq.= 12.", "A1:Freq.= 13.", "A1:Freq.= 14.",  @
+"A1:Freq.= 15.", "A1:Freq.= 16.", "A1:Freq.= 17.", "A1:Freq.= 18.",  @
+"A1:Freq.= 18.48894", "A1:Freq.= 18.49899", "A1:Freq.= 19.", "A1:Freq.= 20.",  @
+"A1:Freq.= 21.", "A1:Freq.= 22.", "A1:Freq.= 22.45086", "A1:Freq.= 22.46305",  @
+"A1:Freq.= 23.", "A1:Freq.= 24.", "A1:Freq.= 25.", "A1:Freq.= 26.",  @
+"A1:Freq.= 26.41277", "A1:Freq.= 26.42712", "A1:Freq.= 27.", "A1:Freq.= 28.",  @
+"A1:Freq.= 29.", "A1:Freq.= 30.", "A1:Freq.= 30.37469", "A1:Freq.= 30.39119",  @
+"A1:Freq.= 31.", "A1:Freq.= 32.", "A1:Freq.= 33.", "A1:Freq.= 34.",  @
+"A1:Freq.= 34.3366", "A1:Freq.= 34.35526", "A1:Freq.= 35.", "A1:Freq.= 36.",  @
+"A1:Freq.= 37.", "A1:Freq.= 38.", "A1:Freq.= 39.", "A1:Freq.= 40.",  @
+"A1:Freq.= 41.", "A1:Freq.= 42.", "A1:Freq.= 43.", "A1:Freq.= 44.",  @
+"A1:Freq.= 45.", "A1:Freq.= 46.", "A1:Freq.= 47.", "A1:Freq.= 48.",  @
+"A1:Freq.= 49.", "A1:Freq.= 50.", "A1:Freq.= 51.", "A1:Freq.= 52.",  @
+"A1:Freq.= 53.", "A1:Freq.= 54.", "A1:Freq.= 55.", "A1:Freq.= 56.",  @
+"A1:Freq.= 57.", "A1:Freq.= 58.", "A1:Freq.= 59.", "A1:Freq.= 60.",  @
+"A1:Freq.= 61.", "A1:Freq.= 62.", "A1:Freq.= 63.", "A1:Freq.= 64.",  @
+"A1:Freq.= 65.", "A1:Freq.= 66.", "A1:Freq.= 67.", "A1:Freq.= 68.",  @
+"A1:Freq.= 69.", "A1:Freq.= 70.", "A1:Freq.= 71.", "A1:Freq.= 72.",  @
+"A1:Freq.= 73.", "A1:Freq.= 74.", "A1:Freq.= 75.", "A1:Freq.= 76.",  @
+"A1:Freq.= 77.", "A1:Freq.= 78.", "A1:Freq.= 79.", "A1:Freq.= 80.",  @
+"A1:Freq.= 81.", "A1:Freq.= 82.", "A1:Freq.= 83.", "A1:Freq.= 84.",  @
+"A1:Freq.= 85.", "A1:Freq.= 86.", "A1:Freq.= 87.", "A1:Freq.= 88.",  @
+"A1:Freq.= 89.", "A1:Freq.= 90.", "A1:Freq.= 91.", "A1:Freq.= 92.",  @
+"A1:Freq.= 93.", "A1:Freq.= 94.", "A1:Freq.= 95.", "A1:Freq.= 96.",  @
+"A1:Freq.= 97.", "A1:Freq.= 98.", "A1:Freq.= 99.", "A1:Freq.= 100."], [ @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations"], ["Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational"], ["(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)"] )
+res_display_graph_create( "modulo", "DataGV", "Nodes", 1, ["NO:Node 61"], 18,  @
+["curveFitMethod:Linear", "curveStyle:Solid", "symbolDisplay:OFF",  @
+"xAxisLabelDisplay:ON", "xAxisLabel:Frequency", "xAxisScale:Linear",  @
+"xAxisLabelFormat:Exponential, 12, White, 3", "yAxisLabelDisplay:ON",  @
+"yAxisLabel:Accelerations, Translational", "yAxisScale:Linear",  @
+"yAxisLabelFormat:Exponential, 12, White, 3", "ScaleFactor:1.", "Filter:None", @
+ "sortPtsByXCoord:ON", "LocationCID:Coord 0.1", "xAxisGV:Frequency",  @
+"yAxisGV:", "WindowName:3"] )
+res_display_graph_post( "modulo", "Nodal", 0, -1, "3", FALSE )
+xy_window_location_set( "3", 1.777559, 0.564304, 1 )
+xy_window_location_set( "3", 1.777559, 0.465551, 1 )
+xy_window_location_set( "3", 0.000000, 0.000000, 1 )
+uil_primary_file.db_save(  )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 5.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"AsIs", "DeriveAverage", "All", "ShapeFunc", "Phase", 0. )
+res_data_title( 0, "Nodal", "Scalar", 1, ["Accelerations, Translational, MAG"] )
+res_data_dbres_list( 0, "Nodal", "Scalar", 105, ["SC1: MODEL SINE VIBRATION Z" @
+, "SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z"], ["A1:Freq.= 6." @
+, "A1:Freq.= 7.", "A1:Freq.= 8.", "A1:Freq.= 9.", "A1:Freq.= 10.",  @
+"A1:Freq.= 11.", "A1:Freq.= 12.", "A1:Freq.= 13.", "A1:Freq.= 14.",  @
+"A1:Freq.= 15.", "A1:Freq.= 16.", "A1:Freq.= 17.", "A1:Freq.= 18.",  @
+"A1:Freq.= 18.48894", "A1:Freq.= 18.49899", "A1:Freq.= 19.", "A1:Freq.= 20.",  @
+"A1:Freq.= 21.", "A1:Freq.= 22.", "A1:Freq.= 22.45086", "A1:Freq.= 22.46305",  @
+"A1:Freq.= 23.", "A1:Freq.= 24.", "A1:Freq.= 25.", "A1:Freq.= 26.",  @
+"A1:Freq.= 26.41277", "A1:Freq.= 26.42712", "A1:Freq.= 27.", "A1:Freq.= 28.",  @
+"A1:Freq.= 29.", "A1:Freq.= 30.", "A1:Freq.= 30.37469", "A1:Freq.= 30.39119",  @
+"A1:Freq.= 31.", "A1:Freq.= 32.", "A1:Freq.= 33.", "A1:Freq.= 34.",  @
+"A1:Freq.= 34.3366", "A1:Freq.= 34.35526", "A1:Freq.= 35.", "A1:Freq.= 36.",  @
+"A1:Freq.= 37.", "A1:Freq.= 38.", "A1:Freq.= 39.", "A1:Freq.= 40.",  @
+"A1:Freq.= 41.", "A1:Freq.= 42.", "A1:Freq.= 43.", "A1:Freq.= 44.",  @
+"A1:Freq.= 45.", "A1:Freq.= 46.", "A1:Freq.= 47.", "A1:Freq.= 48.",  @
+"A1:Freq.= 49.", "A1:Freq.= 50.", "A1:Freq.= 51.", "A1:Freq.= 52.",  @
+"A1:Freq.= 53.", "A1:Freq.= 54.", "A1:Freq.= 55.", "A1:Freq.= 56.",  @
+"A1:Freq.= 57.", "A1:Freq.= 58.", "A1:Freq.= 59.", "A1:Freq.= 60.",  @
+"A1:Freq.= 61.", "A1:Freq.= 62.", "A1:Freq.= 63.", "A1:Freq.= 64.",  @
+"A1:Freq.= 65.", "A1:Freq.= 66.", "A1:Freq.= 67.", "A1:Freq.= 68.",  @
+"A1:Freq.= 69.", "A1:Freq.= 70.", "A1:Freq.= 71.", "A1:Freq.= 72.",  @
+"A1:Freq.= 73.", "A1:Freq.= 74.", "A1:Freq.= 75.", "A1:Freq.= 76.",  @
+"A1:Freq.= 77.", "A1:Freq.= 78.", "A1:Freq.= 79.", "A1:Freq.= 80.",  @
+"A1:Freq.= 81.", "A1:Freq.= 82.", "A1:Freq.= 83.", "A1:Freq.= 84.",  @
+"A1:Freq.= 85.", "A1:Freq.= 86.", "A1:Freq.= 87.", "A1:Freq.= 88.",  @
+"A1:Freq.= 89.", "A1:Freq.= 90.", "A1:Freq.= 91.", "A1:Freq.= 92.",  @
+"A1:Freq.= 93.", "A1:Freq.= 94.", "A1:Freq.= 95.", "A1:Freq.= 96.",  @
+"A1:Freq.= 97.", "A1:Freq.= 98.", "A1:Freq.= 99.", "A1:Freq.= 100."], [ @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations"], ["Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational"], ["(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)"] )
+res_display_graph_create( "fase", "DataGV", "Nodes", 1, ["NO:Node 61"], 18, [ @
+"curveFitMethod:Linear", "curveStyle:Solid", "symbolDisplay:OFF",  @
+"xAxisLabelDisplay:ON", "xAxisLabel:Frequency", "xAxisScale:Linear",  @
+"xAxisLabelFormat:Exponential, 12, White, 3", "yAxisLabelDisplay:ON",  @
+"yAxisLabel:Accelerations, Translational", "yAxisScale:Linear",  @
+"yAxisLabelFormat:Exponential, 12, White, 3", "ScaleFactor:1.", "Filter:None", @
+ "sortPtsByXCoord:ON", "LocationCID:Coord 0.1", "xAxisGV:Frequency",  @
+"yAxisGV:", "WindowName:4"] )
+res_display_graph_post( "fase", "Nodal", 0, -1, "4", FALSE )
+xy_window_location_set( "4", 1.601214, 0.000000, 1 )
+xy_window_location_set( "4", 1.572999, 0.000000, 1 )
+xy_window_location_set( "4", 0.000000, 0.000000, 1 )
+ga_view_aa_set( 0., 0., 0. )
+ga_view_aa_set( 0., 180., 0. )
+ga_view_aa_set( 180., -90., 180. )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 5.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"AsIs", "DeriveAverage", "All", "ShapeFunc", "Angle", 0. )
+res_data_title( 0, "Nodal", "Scalar", 1, ["Accelerations, Translational, MAG"] )
+res_data_dbres_list( 0, "Nodal", "Scalar", 105, ["SC1: MODEL SINE VIBRATION Z" @
+, "SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z"], ["A1:Freq.= 6." @
+, "A1:Freq.= 7.", "A1:Freq.= 8.", "A1:Freq.= 9.", "A1:Freq.= 10.",  @
+"A1:Freq.= 11.", "A1:Freq.= 12.", "A1:Freq.= 13.", "A1:Freq.= 14.",  @
+"A1:Freq.= 15.", "A1:Freq.= 16.", "A1:Freq.= 17.", "A1:Freq.= 18.",  @
+"A1:Freq.= 18.48894", "A1:Freq.= 18.49899", "A1:Freq.= 19.", "A1:Freq.= 20.",  @
+"A1:Freq.= 21.", "A1:Freq.= 22.", "A1:Freq.= 22.45086", "A1:Freq.= 22.46305",  @
+"A1:Freq.= 23.", "A1:Freq.= 24.", "A1:Freq.= 25.", "A1:Freq.= 26.",  @
+"A1:Freq.= 26.41277", "A1:Freq.= 26.42712", "A1:Freq.= 27.", "A1:Freq.= 28.",  @
+"A1:Freq.= 29.", "A1:Freq.= 30.", "A1:Freq.= 30.37469", "A1:Freq.= 30.39119",  @
+"A1:Freq.= 31.", "A1:Freq.= 32.", "A1:Freq.= 33.", "A1:Freq.= 34.",  @
+"A1:Freq.= 34.3366", "A1:Freq.= 34.35526", "A1:Freq.= 35.", "A1:Freq.= 36.",  @
+"A1:Freq.= 37.", "A1:Freq.= 38.", "A1:Freq.= 39.", "A1:Freq.= 40.",  @
+"A1:Freq.= 41.", "A1:Freq.= 42.", "A1:Freq.= 43.", "A1:Freq.= 44.",  @
+"A1:Freq.= 45.", "A1:Freq.= 46.", "A1:Freq.= 47.", "A1:Freq.= 48.",  @
+"A1:Freq.= 49.", "A1:Freq.= 50.", "A1:Freq.= 51.", "A1:Freq.= 52.",  @
+"A1:Freq.= 53.", "A1:Freq.= 54.", "A1:Freq.= 55.", "A1:Freq.= 56.",  @
+"A1:Freq.= 57.", "A1:Freq.= 58.", "A1:Freq.= 59.", "A1:Freq.= 60.",  @
+"A1:Freq.= 61.", "A1:Freq.= 62.", "A1:Freq.= 63.", "A1:Freq.= 64.",  @
+"A1:Freq.= 65.", "A1:Freq.= 66.", "A1:Freq.= 67.", "A1:Freq.= 68.",  @
+"A1:Freq.= 69.", "A1:Freq.= 70.", "A1:Freq.= 71.", "A1:Freq.= 72.",  @
+"A1:Freq.= 73.", "A1:Freq.= 74.", "A1:Freq.= 75.", "A1:Freq.= 76.",  @
+"A1:Freq.= 77.", "A1:Freq.= 78.", "A1:Freq.= 79.", "A1:Freq.= 80.",  @
+"A1:Freq.= 81.", "A1:Freq.= 82.", "A1:Freq.= 83.", "A1:Freq.= 84.",  @
+"A1:Freq.= 85.", "A1:Freq.= 86.", "A1:Freq.= 87.", "A1:Freq.= 88.",  @
+"A1:Freq.= 89.", "A1:Freq.= 90.", "A1:Freq.= 91.", "A1:Freq.= 92.",  @
+"A1:Freq.= 93.", "A1:Freq.= 94.", "A1:Freq.= 95.", "A1:Freq.= 96.",  @
+"A1:Freq.= 97.", "A1:Freq.= 98.", "A1:Freq.= 99.", "A1:Freq.= 100."], [ @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations"], ["Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational"], ["(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)"] )
+res_display_graph_create( "", "DataGV", "Nodes", 1, ["NO:Node 61"], 18, [ @
+"curveFitMethod:Linear", "curveStyle:Solid", "symbolDisplay:OFF",  @
+"xAxisLabelDisplay:ON", "xAxisLabel:Frequency", "xAxisScale:Linear",  @
+"xAxisLabelFormat:Exponential, 12, White, 3", "yAxisLabelDisplay:ON",  @
+"yAxisLabel:Accelerations, Translational", "yAxisScale:Linear",  @
+"yAxisLabelFormat:Exponential, 12, White, 3", "ScaleFactor:1.", "Filter:None", @
+ "sortPtsByXCoord:ON", "LocationCID:Coord 0.1", "xAxisGV:Frequency",  @
+"yAxisGV:", "WindowName:4"] )
+res_display_graph_post( "", "Nodal", 0, -1, "4", FALSE )
+xy_window_current_set( "3" )
+xy_window_current_set( "4" )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 5.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"AsIs", "DeriveAverage", "All", "ShapeFunc", "Phase", 0. )
+res_data_title( 0, "Nodal", "Scalar", 1, ["Accelerations, Translational, MAG"] )
+res_data_dbres_list( 0, "Nodal", "Scalar", 105, ["SC1: MODEL SINE VIBRATION Z" @
+, "SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z"], ["A1:Freq.= 6." @
+, "A1:Freq.= 7.", "A1:Freq.= 8.", "A1:Freq.= 9.", "A1:Freq.= 10.",  @
+"A1:Freq.= 11.", "A1:Freq.= 12.", "A1:Freq.= 13.", "A1:Freq.= 14.",  @
+"A1:Freq.= 15.", "A1:Freq.= 16.", "A1:Freq.= 17.", "A1:Freq.= 18.",  @
+"A1:Freq.= 18.48894", "A1:Freq.= 18.49899", "A1:Freq.= 19.", "A1:Freq.= 20.",  @
+"A1:Freq.= 21.", "A1:Freq.= 22.", "A1:Freq.= 22.45086", "A1:Freq.= 22.46305",  @
+"A1:Freq.= 23.", "A1:Freq.= 24.", "A1:Freq.= 25.", "A1:Freq.= 26.",  @
+"A1:Freq.= 26.41277", "A1:Freq.= 26.42712", "A1:Freq.= 27.", "A1:Freq.= 28.",  @
+"A1:Freq.= 29.", "A1:Freq.= 30.", "A1:Freq.= 30.37469", "A1:Freq.= 30.39119",  @
+"A1:Freq.= 31.", "A1:Freq.= 32.", "A1:Freq.= 33.", "A1:Freq.= 34.",  @
+"A1:Freq.= 34.3366", "A1:Freq.= 34.35526", "A1:Freq.= 35.", "A1:Freq.= 36.",  @
+"A1:Freq.= 37.", "A1:Freq.= 38.", "A1:Freq.= 39.", "A1:Freq.= 40.",  @
+"A1:Freq.= 41.", "A1:Freq.= 42.", "A1:Freq.= 43.", "A1:Freq.= 44.",  @
+"A1:Freq.= 45.", "A1:Freq.= 46.", "A1:Freq.= 47.", "A1:Freq.= 48.",  @
+"A1:Freq.= 49.", "A1:Freq.= 50.", "A1:Freq.= 51.", "A1:Freq.= 52.",  @
+"A1:Freq.= 53.", "A1:Freq.= 54.", "A1:Freq.= 55.", "A1:Freq.= 56.",  @
+"A1:Freq.= 57.", "A1:Freq.= 58.", "A1:Freq.= 59.", "A1:Freq.= 60.",  @
+"A1:Freq.= 61.", "A1:Freq.= 62.", "A1:Freq.= 63.", "A1:Freq.= 64.",  @
+"A1:Freq.= 65.", "A1:Freq.= 66.", "A1:Freq.= 67.", "A1:Freq.= 68.",  @
+"A1:Freq.= 69.", "A1:Freq.= 70.", "A1:Freq.= 71.", "A1:Freq.= 72.",  @
+"A1:Freq.= 73.", "A1:Freq.= 74.", "A1:Freq.= 75.", "A1:Freq.= 76.",  @
+"A1:Freq.= 77.", "A1:Freq.= 78.", "A1:Freq.= 79.", "A1:Freq.= 80.",  @
+"A1:Freq.= 81.", "A1:Freq.= 82.", "A1:Freq.= 83.", "A1:Freq.= 84.",  @
+"A1:Freq.= 85.", "A1:Freq.= 86.", "A1:Freq.= 87.", "A1:Freq.= 88.",  @
+"A1:Freq.= 89.", "A1:Freq.= 90.", "A1:Freq.= 91.", "A1:Freq.= 92.",  @
+"A1:Freq.= 93.", "A1:Freq.= 94.", "A1:Freq.= 95.", "A1:Freq.= 96.",  @
+"A1:Freq.= 97.", "A1:Freq.= 98.", "A1:Freq.= 99.", "A1:Freq.= 100."], [ @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations"], ["Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational"], ["(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)"] )
+res_display_graph_create( "", "DataGV", "Nodes", 1, ["NO:Node 61"], 18, [ @
+"curveFitMethod:Linear", "curveStyle:Solid", "symbolDisplay:OFF",  @
+"xAxisLabelDisplay:ON", "xAxisLabel:Frequency", "xAxisScale:Linear",  @
+"xAxisLabelFormat:Exponential, 12, White, 3", "yAxisLabelDisplay:ON",  @
+"yAxisLabel:Accelerations, Translational", "yAxisScale:Linear",  @
+"yAxisLabelFormat:Exponential, 12, White, 3", "ScaleFactor:1.", "Filter:None", @
+ "sortPtsByXCoord:ON", "LocationCID:Coord 0.1", "xAxisGV:Frequency",  @
+"yAxisGV:", "WindowName:4"] )
+res_display_graph_post( "", "Nodal", 0, -1, "4", FALSE )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 5.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"AsIs", "DeriveAverage", "All", "ShapeFunc", "Imaginary", 0. )
+res_data_title( 0, "Nodal", "Scalar", 1, ["Accelerations, Translational, MAG"] )
+res_data_dbres_list( 0, "Nodal", "Scalar", 105, ["SC1: MODEL SINE VIBRATION Z" @
+, "SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z"], ["A1:Freq.= 6." @
+, "A1:Freq.= 7.", "A1:Freq.= 8.", "A1:Freq.= 9.", "A1:Freq.= 10.",  @
+"A1:Freq.= 11.", "A1:Freq.= 12.", "A1:Freq.= 13.", "A1:Freq.= 14.",  @
+"A1:Freq.= 15.", "A1:Freq.= 16.", "A1:Freq.= 17.", "A1:Freq.= 18.",  @
+"A1:Freq.= 18.48894", "A1:Freq.= 18.49899", "A1:Freq.= 19.", "A1:Freq.= 20.",  @
+"A1:Freq.= 21.", "A1:Freq.= 22.", "A1:Freq.= 22.45086", "A1:Freq.= 22.46305",  @
+"A1:Freq.= 23.", "A1:Freq.= 24.", "A1:Freq.= 25.", "A1:Freq.= 26.",  @
+"A1:Freq.= 26.41277", "A1:Freq.= 26.42712", "A1:Freq.= 27.", "A1:Freq.= 28.",  @
+"A1:Freq.= 29.", "A1:Freq.= 30.", "A1:Freq.= 30.37469", "A1:Freq.= 30.39119",  @
+"A1:Freq.= 31.", "A1:Freq.= 32.", "A1:Freq.= 33.", "A1:Freq.= 34.",  @
+"A1:Freq.= 34.3366", "A1:Freq.= 34.35526", "A1:Freq.= 35.", "A1:Freq.= 36.",  @
+"A1:Freq.= 37.", "A1:Freq.= 38.", "A1:Freq.= 39.", "A1:Freq.= 40.",  @
+"A1:Freq.= 41.", "A1:Freq.= 42.", "A1:Freq.= 43.", "A1:Freq.= 44.",  @
+"A1:Freq.= 45.", "A1:Freq.= 46.", "A1:Freq.= 47.", "A1:Freq.= 48.",  @
+"A1:Freq.= 49.", "A1:Freq.= 50.", "A1:Freq.= 51.", "A1:Freq.= 52.",  @
+"A1:Freq.= 53.", "A1:Freq.= 54.", "A1:Freq.= 55.", "A1:Freq.= 56.",  @
+"A1:Freq.= 57.", "A1:Freq.= 58.", "A1:Freq.= 59.", "A1:Freq.= 60.",  @
+"A1:Freq.= 61.", "A1:Freq.= 62.", "A1:Freq.= 63.", "A1:Freq.= 64.",  @
+"A1:Freq.= 65.", "A1:Freq.= 66.", "A1:Freq.= 67.", "A1:Freq.= 68.",  @
+"A1:Freq.= 69.", "A1:Freq.= 70.", "A1:Freq.= 71.", "A1:Freq.= 72.",  @
+"A1:Freq.= 73.", "A1:Freq.= 74.", "A1:Freq.= 75.", "A1:Freq.= 76.",  @
+"A1:Freq.= 77.", "A1:Freq.= 78.", "A1:Freq.= 79.", "A1:Freq.= 80.",  @
+"A1:Freq.= 81.", "A1:Freq.= 82.", "A1:Freq.= 83.", "A1:Freq.= 84.",  @
+"A1:Freq.= 85.", "A1:Freq.= 86.", "A1:Freq.= 87.", "A1:Freq.= 88.",  @
+"A1:Freq.= 89.", "A1:Freq.= 90.", "A1:Freq.= 91.", "A1:Freq.= 92.",  @
+"A1:Freq.= 93.", "A1:Freq.= 94.", "A1:Freq.= 95.", "A1:Freq.= 96.",  @
+"A1:Freq.= 97.", "A1:Freq.= 98.", "A1:Freq.= 99.", "A1:Freq.= 100."], [ @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations"], ["Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational"], ["(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)"] )
+res_display_graph_create( "", "DataGV", "Nodes", 1, ["NO:Node 61"], 18, [ @
+"curveFitMethod:Linear", "curveStyle:Solid", "symbolDisplay:OFF",  @
+"xAxisLabelDisplay:ON", "xAxisLabel:Frequency", "xAxisScale:Linear",  @
+"xAxisLabelFormat:Exponential, 12, White, 3", "yAxisLabelDisplay:ON",  @
+"yAxisLabel:Accelerations, Translational", "yAxisScale:Linear",  @
+"yAxisLabelFormat:Exponential, 12, White, 3", "ScaleFactor:1.", "Filter:None", @
+ "sortPtsByXCoord:ON", "LocationCID:Coord 0.1", "xAxisGV:Frequency",  @
+"yAxisGV:", "WindowName:4"] )
+res_display_graph_post( "", "Nodal", 0, -1, "4", FALSE )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 5.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"AsIs", "DeriveAverage", "All", "ShapeFunc", "Phase", 0. )
+res_data_title( 0, "Nodal", "Scalar", 1, ["Accelerations, Translational, MAG"] )
+res_data_dbres_list( 0, "Nodal", "Scalar", 105, ["SC1: MODEL SINE VIBRATION Z" @
+, "SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z"], ["A1:Freq.= 6." @
+, "A1:Freq.= 7.", "A1:Freq.= 8.", "A1:Freq.= 9.", "A1:Freq.= 10.",  @
+"A1:Freq.= 11.", "A1:Freq.= 12.", "A1:Freq.= 13.", "A1:Freq.= 14.",  @
+"A1:Freq.= 15.", "A1:Freq.= 16.", "A1:Freq.= 17.", "A1:Freq.= 18.",  @
+"A1:Freq.= 18.48894", "A1:Freq.= 18.49899", "A1:Freq.= 19.", "A1:Freq.= 20.",  @
+"A1:Freq.= 21.", "A1:Freq.= 22.", "A1:Freq.= 22.45086", "A1:Freq.= 22.46305",  @
+"A1:Freq.= 23.", "A1:Freq.= 24.", "A1:Freq.= 25.", "A1:Freq.= 26.",  @
+"A1:Freq.= 26.41277", "A1:Freq.= 26.42712", "A1:Freq.= 27.", "A1:Freq.= 28.",  @
+"A1:Freq.= 29.", "A1:Freq.= 30.", "A1:Freq.= 30.37469", "A1:Freq.= 30.39119",  @
+"A1:Freq.= 31.", "A1:Freq.= 32.", "A1:Freq.= 33.", "A1:Freq.= 34.",  @
+"A1:Freq.= 34.3366", "A1:Freq.= 34.35526", "A1:Freq.= 35.", "A1:Freq.= 36.",  @
+"A1:Freq.= 37.", "A1:Freq.= 38.", "A1:Freq.= 39.", "A1:Freq.= 40.",  @
+"A1:Freq.= 41.", "A1:Freq.= 42.", "A1:Freq.= 43.", "A1:Freq.= 44.",  @
+"A1:Freq.= 45.", "A1:Freq.= 46.", "A1:Freq.= 47.", "A1:Freq.= 48.",  @
+"A1:Freq.= 49.", "A1:Freq.= 50.", "A1:Freq.= 51.", "A1:Freq.= 52.",  @
+"A1:Freq.= 53.", "A1:Freq.= 54.", "A1:Freq.= 55.", "A1:Freq.= 56.",  @
+"A1:Freq.= 57.", "A1:Freq.= 58.", "A1:Freq.= 59.", "A1:Freq.= 60.",  @
+"A1:Freq.= 61.", "A1:Freq.= 62.", "A1:Freq.= 63.", "A1:Freq.= 64.",  @
+"A1:Freq.= 65.", "A1:Freq.= 66.", "A1:Freq.= 67.", "A1:Freq.= 68.",  @
+"A1:Freq.= 69.", "A1:Freq.= 70.", "A1:Freq.= 71.", "A1:Freq.= 72.",  @
+"A1:Freq.= 73.", "A1:Freq.= 74.", "A1:Freq.= 75.", "A1:Freq.= 76.",  @
+"A1:Freq.= 77.", "A1:Freq.= 78.", "A1:Freq.= 79.", "A1:Freq.= 80.",  @
+"A1:Freq.= 81.", "A1:Freq.= 82.", "A1:Freq.= 83.", "A1:Freq.= 84.",  @
+"A1:Freq.= 85.", "A1:Freq.= 86.", "A1:Freq.= 87.", "A1:Freq.= 88.",  @
+"A1:Freq.= 89.", "A1:Freq.= 90.", "A1:Freq.= 91.", "A1:Freq.= 92.",  @
+"A1:Freq.= 93.", "A1:Freq.= 94.", "A1:Freq.= 95.", "A1:Freq.= 96.",  @
+"A1:Freq.= 97.", "A1:Freq.= 98.", "A1:Freq.= 99.", "A1:Freq.= 100."], [ @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations"], ["Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational"], ["(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)"] )
+res_display_graph_create( "", "DataGV", "Nodes", 1, ["NO:Node 61"], 18, [ @
+"curveFitMethod:Linear", "curveStyle:Solid", "symbolDisplay:OFF",  @
+"xAxisLabelDisplay:ON", "xAxisLabel:Frequency", "xAxisScale:Linear",  @
+"xAxisLabelFormat:Exponential, 12, White, 3", "yAxisLabelDisplay:ON",  @
+"yAxisLabel:Accelerations, Translational", "yAxisScale:Linear",  @
+"yAxisLabelFormat:Exponential, 12, White, 3", "ScaleFactor:1.", "Filter:None", @
+ "sortPtsByXCoord:ON", "LocationCID:Coord 0.1", "xAxisGV:Frequency",  @
+"yAxisGV:", "WindowName:4"] )
+res_display_graph_post( "", "Nodal", 0, -1, "4", FALSE )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 5.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"AsIs", "DeriveAverage", "All", "ShapeFunc", "Magnitude", 0. )
+res_data_title( 0, "Nodal", "Scalar", 1, ["Accelerations, Translational, MAG"] )
+res_data_dbres_list( 0, "Nodal", "Scalar", 105, ["SC1: MODEL SINE VIBRATION Z" @
+, "SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z"], ["A1:Freq.= 6." @
+, "A1:Freq.= 7.", "A1:Freq.= 8.", "A1:Freq.= 9.", "A1:Freq.= 10.",  @
+"A1:Freq.= 11.", "A1:Freq.= 12.", "A1:Freq.= 13.", "A1:Freq.= 14.",  @
+"A1:Freq.= 15.", "A1:Freq.= 16.", "A1:Freq.= 17.", "A1:Freq.= 18.",  @
+"A1:Freq.= 18.48894", "A1:Freq.= 18.49899", "A1:Freq.= 19.", "A1:Freq.= 20.",  @
+"A1:Freq.= 21.", "A1:Freq.= 22.", "A1:Freq.= 22.45086", "A1:Freq.= 22.46305",  @
+"A1:Freq.= 23.", "A1:Freq.= 24.", "A1:Freq.= 25.", "A1:Freq.= 26.",  @
+"A1:Freq.= 26.41277", "A1:Freq.= 26.42712", "A1:Freq.= 27.", "A1:Freq.= 28.",  @
+"A1:Freq.= 29.", "A1:Freq.= 30.", "A1:Freq.= 30.37469", "A1:Freq.= 30.39119",  @
+"A1:Freq.= 31.", "A1:Freq.= 32.", "A1:Freq.= 33.", "A1:Freq.= 34.",  @
+"A1:Freq.= 34.3366", "A1:Freq.= 34.35526", "A1:Freq.= 35.", "A1:Freq.= 36.",  @
+"A1:Freq.= 37.", "A1:Freq.= 38.", "A1:Freq.= 39.", "A1:Freq.= 40.",  @
+"A1:Freq.= 41.", "A1:Freq.= 42.", "A1:Freq.= 43.", "A1:Freq.= 44.",  @
+"A1:Freq.= 45.", "A1:Freq.= 46.", "A1:Freq.= 47.", "A1:Freq.= 48.",  @
+"A1:Freq.= 49.", "A1:Freq.= 50.", "A1:Freq.= 51.", "A1:Freq.= 52.",  @
+"A1:Freq.= 53.", "A1:Freq.= 54.", "A1:Freq.= 55.", "A1:Freq.= 56.",  @
+"A1:Freq.= 57.", "A1:Freq.= 58.", "A1:Freq.= 59.", "A1:Freq.= 60.",  @
+"A1:Freq.= 61.", "A1:Freq.= 62.", "A1:Freq.= 63.", "A1:Freq.= 64.",  @
+"A1:Freq.= 65.", "A1:Freq.= 66.", "A1:Freq.= 67.", "A1:Freq.= 68.",  @
+"A1:Freq.= 69.", "A1:Freq.= 70.", "A1:Freq.= 71.", "A1:Freq.= 72.",  @
+"A1:Freq.= 73.", "A1:Freq.= 74.", "A1:Freq.= 75.", "A1:Freq.= 76.",  @
+"A1:Freq.= 77.", "A1:Freq.= 78.", "A1:Freq.= 79.", "A1:Freq.= 80.",  @
+"A1:Freq.= 81.", "A1:Freq.= 82.", "A1:Freq.= 83.", "A1:Freq.= 84.",  @
+"A1:Freq.= 85.", "A1:Freq.= 86.", "A1:Freq.= 87.", "A1:Freq.= 88.",  @
+"A1:Freq.= 89.", "A1:Freq.= 90.", "A1:Freq.= 91.", "A1:Freq.= 92.",  @
+"A1:Freq.= 93.", "A1:Freq.= 94.", "A1:Freq.= 95.", "A1:Freq.= 96.",  @
+"A1:Freq.= 97.", "A1:Freq.= 98.", "A1:Freq.= 99.", "A1:Freq.= 100."], [ @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations"], ["Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational"], ["(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)"] )
+res_display_graph_create( "", "DataGV", "Nodes", 1, ["NO:Node 61"], 18, [ @
+"curveFitMethod:Linear", "curveStyle:Solid", "symbolDisplay:OFF",  @
+"xAxisLabelDisplay:ON", "xAxisLabel:Frequency", "xAxisScale:Linear",  @
+"xAxisLabelFormat:Exponential, 12, White, 3", "yAxisLabelDisplay:ON",  @
+"yAxisLabel:Accelerations, Translational", "yAxisScale:Linear",  @
+"yAxisLabelFormat:Exponential, 12, White, 3", "ScaleFactor:1.", "Filter:None", @
+ "sortPtsByXCoord:ON", "LocationCID:Coord 0.1", "xAxisGV:Frequency",  @
+"yAxisGV:", "WindowName:4"] )
+res_display_graph_post( "", "Nodal", 0, -1, "4", FALSE )
+res_data_load_dbresult( 0, "Nodal", "Scalar", "SC1: MODEL SINE VIBRATION Z",  @
+"A1:Freq.= 5.", "Accelerations", "Translational", "(NON-LAYERED)", "MAG",  @
+"AsIs", "DeriveAverage", "All", "ShapeFunc", "Magnitude", 0. )
+res_data_title( 0, "Nodal", "Scalar", 1, ["Accelerations, Translational, MAG"] )
+res_data_dbres_list( 0, "Nodal", "Scalar", 105, ["SC1: MODEL SINE VIBRATION Z" @
+, "SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z",  @
+"SC1: MODEL SINE VIBRATION Z", "SC1: MODEL SINE VIBRATION Z"], ["A1:Freq.= 6." @
+, "A1:Freq.= 7.", "A1:Freq.= 8.", "A1:Freq.= 9.", "A1:Freq.= 10.",  @
+"A1:Freq.= 11.", "A1:Freq.= 12.", "A1:Freq.= 13.", "A1:Freq.= 14.",  @
+"A1:Freq.= 15.", "A1:Freq.= 16.", "A1:Freq.= 17.", "A1:Freq.= 18.",  @
+"A1:Freq.= 18.48894", "A1:Freq.= 18.49899", "A1:Freq.= 19.", "A1:Freq.= 20.",  @
+"A1:Freq.= 21.", "A1:Freq.= 22.", "A1:Freq.= 22.45086", "A1:Freq.= 22.46305",  @
+"A1:Freq.= 23.", "A1:Freq.= 24.", "A1:Freq.= 25.", "A1:Freq.= 26.",  @
+"A1:Freq.= 26.41277", "A1:Freq.= 26.42712", "A1:Freq.= 27.", "A1:Freq.= 28.",  @
+"A1:Freq.= 29.", "A1:Freq.= 30.", "A1:Freq.= 30.37469", "A1:Freq.= 30.39119",  @
+"A1:Freq.= 31.", "A1:Freq.= 32.", "A1:Freq.= 33.", "A1:Freq.= 34.",  @
+"A1:Freq.= 34.3366", "A1:Freq.= 34.35526", "A1:Freq.= 35.", "A1:Freq.= 36.",  @
+"A1:Freq.= 37.", "A1:Freq.= 38.", "A1:Freq.= 39.", "A1:Freq.= 40.",  @
+"A1:Freq.= 41.", "A1:Freq.= 42.", "A1:Freq.= 43.", "A1:Freq.= 44.",  @
+"A1:Freq.= 45.", "A1:Freq.= 46.", "A1:Freq.= 47.", "A1:Freq.= 48.",  @
+"A1:Freq.= 49.", "A1:Freq.= 50.", "A1:Freq.= 51.", "A1:Freq.= 52.",  @
+"A1:Freq.= 53.", "A1:Freq.= 54.", "A1:Freq.= 55.", "A1:Freq.= 56.",  @
+"A1:Freq.= 57.", "A1:Freq.= 58.", "A1:Freq.= 59.", "A1:Freq.= 60.",  @
+"A1:Freq.= 61.", "A1:Freq.= 62.", "A1:Freq.= 63.", "A1:Freq.= 64.",  @
+"A1:Freq.= 65.", "A1:Freq.= 66.", "A1:Freq.= 67.", "A1:Freq.= 68.",  @
+"A1:Freq.= 69.", "A1:Freq.= 70.", "A1:Freq.= 71.", "A1:Freq.= 72.",  @
+"A1:Freq.= 73.", "A1:Freq.= 74.", "A1:Freq.= 75.", "A1:Freq.= 76.",  @
+"A1:Freq.= 77.", "A1:Freq.= 78.", "A1:Freq.= 79.", "A1:Freq.= 80.",  @
+"A1:Freq.= 81.", "A1:Freq.= 82.", "A1:Freq.= 83.", "A1:Freq.= 84.",  @
+"A1:Freq.= 85.", "A1:Freq.= 86.", "A1:Freq.= 87.", "A1:Freq.= 88.",  @
+"A1:Freq.= 89.", "A1:Freq.= 90.", "A1:Freq.= 91.", "A1:Freq.= 92.",  @
+"A1:Freq.= 93.", "A1:Freq.= 94.", "A1:Freq.= 95.", "A1:Freq.= 96.",  @
+"A1:Freq.= 97.", "A1:Freq.= 98.", "A1:Freq.= 99.", "A1:Freq.= 100."], [ @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations", "Accelerations", "Accelerations", "Accelerations",  @
+"Accelerations"], ["Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational", "Translational", "Translational",  @
+"Translational", "Translational"], ["(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)",  @
+"(NON-LAYERED)", "(NON-LAYERED)", "(NON-LAYERED)"] )
+res_display_graph_create( "", "DataGV", "Nodes", 1, ["NO:Node 61"], 18, [ @
+"curveFitMethod:Linear", "curveStyle:Solid", "symbolDisplay:OFF",  @
+"xAxisLabelDisplay:ON", "xAxisLabel:Frequency", "xAxisScale:Linear",  @
+"xAxisLabelFormat:Exponential, 12, White, 3", "yAxisLabelDisplay:ON",  @
+"yAxisLabel:Accelerations, Translational", "yAxisScale:Linear",  @
+"yAxisLabelFormat:Exponential, 12, White, 3", "ScaleFactor:1.", "Filter:None", @
+ "sortPtsByXCoord:ON", "LocationCID:Coord 0.1", "xAxisGV:Frequency",  @
+"yAxisGV:", "WindowName:4"] )
+res_display_graph_post( "", "Nodal", 0, -1, "4", FALSE )
+xy_window_current_set( "3" )
+xy_window_current_set( "4" )
+$# Checking for Patran 2020  (Student Edition) module license...
+res_display_tool_unpost( "Graph", "default_Graph" )
+xy_window_current_set( "3" )
+$# Journal file stopped recording at 06-Apr-21 16:06:33
+$# Appending to existing journal file 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica1\Nastran\sinusoida
+$# l6\sinusoidal6.db.jou at 06-Apr-21 16:07:10
+$# Synchronizing the User Data Manager
+set_current_dir( "D:\0_Andres\1_Universidad\MUSE\EUE\Trabajos_EUE\Practica" // @
+"1\Nastran\sinusoidal6" )
+$# The current working directory has been changed to the database location 
+$# shown.                                                                     
+$#                                                                            
+$#                                   
+xy_window_current_set( "3" )
+ga_view_zoom_set( 0.33641106 )
+ga_view_zoom_set( 0.16820553 )
+ga_view_zoom_set( 0.084102765 )
+ga_view_zoom_set( 0.042051382 )
+ga_view_zoom_set( 0.084102765 )
+ga_view_zoom_set( 0.16820553 )
+ga_view_zoom_set( 0.33641106 )
+ga_view_zoom_set( 0.67282212 )
+ga_view_center_set( -0.160293, -0.002894 )
+ga_view_zoom_set( 0.756925 )
+ga_view_center_set( -0.230690, -0.033895 )
+ga_view_zoom_set( 1.135387 )
+ga_view_center_set( -0.283487, -0.050364 )
+ga_view_zoom_set( 1.419234 )
+ga_view_center_set( -0.316486, -0.054602 )
+ga_view_zoom_set( 1.596638 )
+ga_view_center_set( -0.416616, -0.017819 )
+ga_view_zoom_set( 1.995798 )
+ga_view_center_set( -0.541779, 0.028159 )
+ga_view_zoom_set( 2.494748 )
+ga_view_center_set( -0.620006, 0.056895 )
+ga_view_zoom_set( 2.806591 )
+ga_view_center_set( -0.708012, 0.089224 )
+ga_view_zoom_set( 3.157415 )
+ga_view_center_set( -0.807017, 0.125593 )
+ga_view_zoom_set( 3.552092 )
+ga_view_center_set( -1.029781, 0.207425 )
+ga_view_zoom_set( 4.440115 )
+ga_view_center_set( -1.308235, 0.309714 )
+ga_view_zoom_set( 5.550144 )
+ga_view_center_set( -1.670509, 0.451782 )
+ga_view_zoom_set( 6.937680 )
+ga_view_center_set( -2.141109, 0.694483 )
+ga_view_zoom_set( 8.672100 )
+ga_view_center_set( -2.773760, 1.094051 )
+ga_view_zoom_set( 10.840125 )
+ga_view_center_set( -3.169165, 1.343780 )
+ga_view_zoom_set( 12.195141 )
+ga_view_center_set( -3.645212, 1.640335 )
+ga_view_zoom_set( 13.719534 )
+ga_view_center_set( -4.728025, 2.330994 )
+ga_view_zoom_set( 17.149418 )
+ga_view_center_set( -6.096170, 3.223583 )
+ga_view_zoom_set( 21.436771 )
+ga_view_center_set( -6.978697, 3.799741 )
+ga_view_zoom_set( 24.116367 )
+ga_view_center_set( -7.971548, 4.447919 )
+ga_view_zoom_set( 27.130913 )
+ga_view_center_set( -10.026045, 5.813724 )
+ga_view_zoom_set( 30.522278 )
+ga_view_center_set( -12.337347, 7.350255 )
+ga_view_zoom_set( 34.337563 )
+ga_view_center_set( -14.937567, 9.078854 )
+ga_view_zoom_set( 38.629757 )
+ga_view_center_set( -20.788069, 12.968199 )
+ga_view_zoom_set( 48.287197 )
+ga_view_center_set( -24.444609, 15.399036 )
+ga_view_zoom_set( 54.323097 )
+ga_view_center_set( -23.630903, 15.419636 )
+ga_view_zoom_set( 48.287197 )
+ga_view_center_set( -22.907598, 15.437946 )
+ga_view_zoom_set( 42.921951 )
+ga_view_center_set( -22.264662, 15.454224 )
+ga_view_zoom_set( 38.152847 )
+ga_view_center_set( -21.693159, 15.468693 )
+ga_view_zoom_set( 33.913643 )
+ga_view_center_set( -20.786489, 14.915682 )
+ga_view_zoom_set( 30.145460 )
+ga_view_center_set( -19.534712, 13.863964 )
+ga_view_zoom_set( 26.795965 )
+ga_view_center_set( -16.507589, 11.632491 )
+ga_view_zoom_set( 21.436771 )
+ga_view_center_set( -14.601286, 10.559433 )
+ga_view_zoom_set( 19.054909 )
+ga_view_center_set( -12.820078, 9.872965 )
+ga_view_zoom_set( 16.937696 )
+ga_view_center_set( -9.970156, 8.774616 )
+ga_view_zoom_set( 13.550158 )
+ga_view_center_set( -6.861151, 7.576416 )
+ga_view_zoom_set( 9.854660 )
+ga_view_center_set( -5.203012, 6.937377 )
+ga_view_zoom_set( 7.883728 )
+ga_view_center_set( -4.466064, 6.653360 )
+ga_view_zoom_set( 7.007758 )
+ga_view_center_set( -3.286943, 6.198932 )
+ga_view_zoom_set( 5.606206 )
+ga_view_center_set( -3.505787, 6.473980 )
+ga_view_zoom_set( 6.306982 )
+ga_view_center_set( -3.998184, 7.092839 )
+ga_view_zoom_set( 7.883728 )
+ga_view_center_set( -4.305933, 7.479626 )
+ga_view_zoom_set( 8.869193 )
+ga_view_center_set( -3.152938, -1.478260 )
+ga_view_center_set( -2.411314, -1.520638 )
+ga_view_zoom_set( 7.095355 )
+ga_view_center_set( -2.081705, -1.539473 )
+ga_view_zoom_set( 6.306982 )
+ga_view_center_set( -1.788721, -1.556216 )
+ga_view_zoom_set( 5.606206 )
+ga_view_center_set( -1.528286, -1.562593 )
+ga_view_zoom_set( 4.983294 )
+ga_view_center_set( -1.111596, -1.572798 )
+ga_view_zoom_set( 3.986636 )
+ga_view_center_set( -0.660733, -1.580220 )
+ga_view_zoom_set( 2.899371 )
+ga_view_center_set( -0.581019, -1.453778 )
+ga_view_zoom_set( 2.577219 )
+ga_view_center_set( -0.510163, -1.341385 )
+ga_view_zoom_set( 2.290861 )
+ga_view_center_set( -0.355567, -1.096164 )
+ga_view_zoom_set( 1.666081 )
+ga_view_center_set( -0.309761, -1.023506 )
+ga_view_zoom_set( 1.480961 )
+ga_view_center_set( -0.274660, -0.939265 )
+ga_view_zoom_set( 1.316410 )
+ga_view_center_set( -0.243460, -0.863885 )
+ga_view_zoom_set( 1.170142 )
+ga_view_center_set( -0.175386, -0.699419 )
+ga_view_zoom_set( 0.851012 )
+ga_view_center_set( -0.200619, -0.746980 )
+ga_view_zoom_set( 0.957389 )
+ga_view_center_set( -0.229006, -0.800485 )
+ga_view_zoom_set( 1.077062 )
+ga_view_center_set( -0.292876, -0.918117 )
+ga_view_zoom_set( 1.346328 )
+ga_view_center_set( -0.333944, -0.989914 )
+ga_view_zoom_set( 1.514619 )
+ga_view_center_set( -0.380790, -1.068746 )
+ga_view_zoom_set( 1.703946 )
+ga_view_center_set( -0.435674, -1.146529 )
+ga_view_zoom_set( 1.916940 )
+ga_view_center_set( -0.620908, -1.409045 )
+ga_view_zoom_set( 2.635792 )
+ga_view_center_set( -0.705806, -1.529365 )
+ga_view_zoom_set( 2.965266 )
+ga_view_center_set( -0.830413, -1.638159 )
+ga_view_zoom_set( 3.335924 )
+ga_view_center_set( -1.255231, -1.983991 )
+ga_view_zoom_set( 4.586896 )
+ga_view_center_set( -1.695525, -2.191419 )
+ga_view_zoom_set( 5.733620 )
+ga_view_center_set( -2.022077, -2.279478 )
+ga_view_zoom_set( 6.450322 )
+ga_view_center_set( -2.756820, -2.477610 )
+ga_view_zoom_set( 8.062902 )
+ga_view_center_set( -3.675246, -2.725277 )
+ga_view_zoom_set( 10.078629 )
+ga_view_center_set( -4.249265, -2.880068 )
+ga_view_zoom_set( 11.338457 )
+ga_view_center_set( -4.895036, -3.054208 )
+ga_view_zoom_set( 12.755764 )
+ga_view_center_set( -6.348016, -3.446022 )
+ga_view_zoom_set( 15.944705 )
+ga_view_center_set( -7.256135, -3.690908 )
+ga_view_zoom_set( 17.937794 )
+ga_view_center_set( -8.277761, -3.966402 )
+ga_view_zoom_set( 20.180017 )
+ga_view_center_set( -10.576417, -4.586267 )
+ga_view_zoom_set( 25.225021 )
+ga_view_center_set( -13.449739, -5.361094 )
+ga_view_zoom_set( 31.531277 )
+ga_view_center_set( -15.406991, -5.710848 )
+ga_view_zoom_set( 35.472687 )
+ga_view_center_set( -19.810799, -6.406984 )
+ga_view_zoom_set( 44.340858 )
+ga_view_center_set( -25.391228, -7.012320 )
+ga_view_zoom_set( 55.426071 )
+ga_view_center_set( -28.878990, -7.296076 )
+ga_view_zoom_set( 62.354332 )
+ga_view_center_set( -34.478661, -7.189672 )
+ga_view_zoom_set( 70.148621 )
+ga_view_center_set( -47.077858, -6.950254 )
+ga_view_zoom_set( 87.685776 )
+ga_view_center_set( -70.701393, -6.389128 )
+ga_view_zoom_set( 120.567940 )
+ga_view_center_set( -81.528847, -6.131948 )
+ga_view_zoom_set( 135.638931 )
+ga_view_center_set( -93.709724, -5.842611 )
+ga_view_zoom_set( 152.593796 )
+ga_view_center_set( -107.413246, -5.517111 )
+ga_view_zoom_set( 171.668015 )
+ga_view_center_set( -122.829628, -5.150915 )
+ga_view_zoom_set( 193.126511 )
+ga_view_center_set( -140.173065, -4.738958 )
+ga_view_zoom_set( 217.267319 )
+ga_view_center_set( -159.684479, -4.275518 )
+ga_view_zoom_set( 244.425735 )
+ga_view_center_set( -181.634735, -3.754126 )
+ga_view_zoom_set( 274.978943 )
+ga_view_center_set( -237.181976, 3.988459 )
+ga_view_zoom_set( 309.351318 )
+ga_view_center_set( -362.163055, 21.409266 )
+ga_view_zoom_set( 386.689148 )
+ga_view_center_set( -440.276215, 32.297264 )
+ga_view_zoom_set( 435.025299 )
+ga_view_center_set( -528.153809, 44.546257 )
+ga_view_zoom_set( 489.403473 )
+ga_view_center_set( -561.455688, 54.985771 )
+ga_view_zoom_set( 550.578918 )
+ga_view_center_set( -529.158447, 61.327751 )
+ga_view_zoom_set( 619.401306 )
+ga_view_center_set( -446.580444, 66.877068 )
+ga_view_zoom_set( 696.826477 )
+ga_view_center_set( -352.491089, 73.119926 )
+ga_view_zoom_set( 783.929810 )
+ga_view_center_set( -246.640625, 80.143181 )
+ga_view_zoom_set( 881.921021 )
+ga_view_center_set( -127.558716, 88.044365 )
+ga_view_zoom_set( 992.161133 )
+ga_view_center_set( 6.408325, 96.933281 )
+ga_view_zoom_set( 1116.181274 )
+ga_view_center_set( 157.121582, 106.933220 )
+ga_view_zoom_set( 1255.703979 )
+ga_view_center_set( 326.138306, 118.183220 )
+ga_view_zoom_set( 1412.666992 )
+ga_view_center_set( 456.014282, 131.442017 )
+ga_view_zoom_set( 1589.250366 )
+ga_view_center_set( 565.512573, 146.358154 )
+ga_view_zoom_set( 1787.906616 )
+ga_view_center_set( 681.833618, 163.901733 )
+ga_view_zoom_set( 2011.394897 )
+ga_view_center_set( 812.694458, 183.637939 )
+ga_view_zoom_set( 2262.819336 )
+ga_view_center_set( 950.259399, 205.841309 )
+ga_view_zoom_set( 2545.671875 )
+ga_view_center_set( 829.166626, 223.218018 )
+ga_view_zoom_set( 2863.880859 )
+ga_view_center_set( 691.714966, 245.209961 )
+ga_view_zoom_set( 3221.865967 )
+ga_view_center_set( 519.213989, 269.951416 )
+ga_view_zoom_set( 3624.599121 )
+ga_view_center_set( 325.149536, 297.785400 )
+ga_view_zoom_set( 4077.674072 )
+ga_view_center_set( 106.826294, 329.098389 )
+ga_view_zoom_set( 4587.383301 )
+ga_view_center_set( -93.774292, 366.282959 )
+ga_view_zoom_set( 5160.806152 )
+ga_view_center_set( -319.449097, 408.115479 )
+ga_view_zoom_set( 5805.906738 )
+ga_view_center_set( -573.333862, 455.177002 )
+ga_view_zoom_set( 6531.645020 )
+ga_view_center_set( -858.954956, 508.121338 )
+ga_view_zoom_set( 7348.100586 )
+ga_view_center_set( -1130.117065, 567.684326 )
+ga_view_zoom_set( 8266.613281 )
+ga_view_center_set( -1740.242065, 701.698975 )
+ga_view_zoom_set( 10333.266602 )
+ga_view_center_set( -2121.566406, 785.458740 )
+ga_view_zoom_set( 11624.924805 )
+ga_view_center_set( -2550.560547, 879.687256 )
+ga_view_zoom_set( 13078.040039 )
+ga_view_center_set( -3033.177734, 985.695068 )
+ga_view_zoom_set( 14712.794922 )
+ga_view_center_set( -4119.056641, 1224.213623 )
+ga_view_zoom_set( 18390.994141 )
+ga_view_center_set( -5476.408203, 1522.362061 )
+ga_view_zoom_set( 22988.742188 )
+ga_view_center_set( -6324.759766, 1708.701904 )
+ga_view_zoom_set( 25862.335938 )
+ga_view_center_set( -7279.150391, 1918.338623 )
+ga_view_zoom_set( 29095.128906 )
+ga_view_center_set( -9426.533203, 2390.016357 )
+ga_view_zoom_set( 36368.910156 )
+ga_view_center_set( -10768.642578, 2684.813232 )
+ga_view_zoom_set( 40915.023438 )
+ga_view_center_set( -12278.501953, 3051.371826 )
+ga_view_zoom_set( 46029.402344 )
+ga_view_center_set( -13977.134766, 3463.750732 )
+ga_view_zoom_set( 51783.078125 )
+ga_view_center_set( -15888.056641, 3927.680420 )
+ga_view_zoom_set( 58255.960938 )
+ga_view_center_set( -18037.869141, 4449.598633 )
+ga_view_zoom_set( 65537.953125 )
+ga_view_center_set( -20456.400391, 5036.747070 )
+ga_view_zoom_set( 73730.195313 )
+ga_view_center_set( -23177.244141, 5697.301758 )
+ga_view_zoom_set( 82946.468750 )
+ga_view_center_set( -32360.103516, 7926.661133 )
+ga_view_zoom_set( 114051.390625 )
+ga_view_center_set( -36568.882813, 8948.458008 )
+ga_view_zoom_set( 128307.812500 )
+ga_view_center_set( -46038.726563, 11247.497070 )
+ga_view_zoom_set( 160384.765625 )
+ga_view_center_set( -51957.320313, 12684.387695 )
+ga_view_zoom_set( 180432.859375 )
+ga_view_center_set( -71932.757813, 17533.902344 )
+ga_view_zoom_set( 248095.187500 )
+ga_view_center_set( -90243.507813, 21979.308594 )
+ga_view_zoom_set( 310119.000000 )
+ga_view_center_set( -101687.757813, 24757.683594 )
+ga_view_zoom_set( 348883.875000 )
+ga_view_center_set( -140312.000000, 34134.683594 )
+ga_view_zoom_set( 479715.312500 )
+ga_view_center_set( -158014.875000, 38432.433594 )
+ga_view_zoom_set( 539679.750000 )
+ga_view_center_set( -177930.500000, 43267.464844 )
+ga_view_zoom_set( 607139.750000 )
+ga_view_center_set( -222740.875000, 54146.214844 )
+ga_view_zoom_set( 758924.687500 )
+ga_view_center_set( -334766.375000, 81343.156250 )
+ga_view_zoom_set( 1138387.000000 )
+ga_view_center_set( -460795.125000, 111939.656250 )
+ga_view_zoom_set( 1565282.125000 )
+ga_view_center_set( -518558.125000, 125963.156250 )
+ga_view_zoom_set( 1760942.375000 )
+ga_view_center_set( -583541.625000, 141739.406250 )
+ga_view_zoom_set( 1981060.125000 )
+ga_view_center_set( -802861.625000, 194984.656250 )
+ga_view_zoom_set( 2723957.750000 )
+ga_view_center_set( -1003904.125000, 243792.656250 )
+ga_view_zoom_set( 3404947.250000 )
+ga_view_center_set( -1129555.125000, 274297.656250 )
+ga_view_zoom_set( 3830565.750000 )
+ga_view_center_set( -1694989.125000, 411570.906250 )
+ga_view_zoom_set( 5745848.500000 )
+ga_view_center_set( -1907026.125000, 463047.906250 )
+ga_view_zoom_set( 6464079.500000 )
+ga_view_center_set( -2145568.000000, 520960.406250 )
+ga_view_zoom_set( 7272089.500000 )
+ga_view_center_set( -2950648.000000, 716413.875000 )
+ga_view_zoom_set( 9999123.000000 )
+ga_view_center_set( -4426624.000000, 1074743.875000 )
+ga_view_zoom_set( 14998684.000000 )
+ga_view_center_set( -4980120.000000, 1209117.875000 )
+ga_view_zoom_set( 16873520.000000 )
+ga_view_center_set( -5602796.000000, 1360288.875000 )
+ga_view_zoom_set( 18982710.000000 )
+ga_view_center_set( -6303312.000000, 1530354.875000 )
+ga_view_zoom_set( 21355548.000000 )
+ga_view_center_set( -7091392.000000, 1721680.875000 )
+ga_view_zoom_set( 24024992.000000 )
+ga_view_center_set( -11524328.000000, 2797885.000000 )
+ga_view_zoom_set( 39040612.000000 )
+ga_view_center_set( -14405736.000000, 3497417.000000 )
+ga_view_zoom_set( 48800764.000000 )
+ga_view_center_set( -16206616.000000, 3934625.000000 )
+ga_view_zoom_set( 54900860.000000 )
+ga_view_center_set( -24310568.000000, 5902065.000000 )
+ga_view_zoom_set( 82351288.000000 )
+ga_view_center_set( -27349528.000000, 6639857.000000 )
+ga_view_zoom_set( 92645200.000000 )
+ga_view_center_set( -30768392.000000, 7469865.000000 )
+ga_view_zoom_set( 104225848.000000 )
+ga_view_center_set( -34614632.000000, 8403625.000000 )
+ga_view_zoom_set( 117254080.000000 )
+ga_view_center_set( -38941640.000000, 9454113.000000 )
+ga_view_zoom_set( 131910840.000000 )
+ga_view_center_set( -58413064.000000, 14181289.000000 )
+ga_view_zoom_set( 197866256.000000 )
+ga_view_center_set( -65714888.000000, 15953977.000000 )
+ga_view_zoom_set( 222599536.000000 )
+ga_view_center_set( -90358472.000000, 21936808.000000 )
+ga_view_zoom_set( 306074368.000000 )
+ga_view_center_set( -112948360.000000, 27421096.000000 )
+ga_view_zoom_set( 382592960.000000 )
+ga_view_center_set( -101123848.000000, 24374280.000000 )
+ga_view_zoom_set( 340082624.000000 )
+ga_view_center_set( -82204488.000000, 19499384.000000 )
+ga_view_zoom_set( 272066112.000000 )
+ga_view_center_set( -73796040.000000, 17332744.000000 )
+ga_view_zoom_set( 241836544.000000 )
+ga_view_center_set( -66229960.000000, 15406872.000000 )
+ga_view_zoom_set( 214965824.000000 )
+ga_view_center_set( -54124424.000000, 12325464.000000 )
+ga_view_zoom_set( 171972656.000000 )
+ga_view_center_set( -48744168.000000, 10955912.000000 )
+ga_view_zoom_set( 152864576.000000 )
+ga_view_center_set( -40135720.000000, 8764672.000000 )
+ga_view_zoom_set( 122291664.000000 )
+ga_view_center_set( -36309768.000000, 7790792.000000 )
+ga_view_zoom_set( 108703704.000000 )
+ga_view_center_set( -32908936.000000, 6925120.000000 )
+ga_view_zoom_set( 96625512.000000 )
+ga_view_center_set( -29885944.000000, 6155632.000000 )
+ga_view_zoom_set( 85889344.000000 )
+ga_view_center_set( -23290360.000000, 4476756.000000 )
+ga_view_zoom_set( 62464976.000000 )
+ga_view_center_set( -21336104.000000, 3979308.000000 )
+ga_view_zoom_set( 55524424.000000 )
+ga_view_center_set( -19598968.000000, 3537136.000000 )
+ga_view_zoom_set( 49355044.000000 )
+ga_view_center_set( -18054856.000000, 3144092.000000 )
+ga_view_zoom_set( 43871152.000000 )
+ga_view_center_set( -14685920.000000, 2286542.000000 )
+ga_view_zoom_set( 31906292.000000 )
+ga_view_center_set( -13687704.000000, 2032456.000000 )
+ga_view_zoom_set( 28361148.000000 )
+ga_view_center_set( -12090584.000000, 1625912.000000 )
+ga_view_zoom_set( 22688918.000000 )
+ga_view_center_set( -10812880.000000, 1300678.000000 )
+ga_view_zoom_set( 18151134.000000 )
+ga_view_center_set( -9790716.000000, 1040491.000000 )
+ga_view_zoom_set( 14520907.000000 )
+ga_view_center_set( -9336420.000000, 924853.000000 )
+ga_view_zoom_set( 12907473.000000 )
+ga_view_center_set( -8932602.000000, 822063.000000 )
+ga_view_zoom_set( 11473309.000000 )
+ga_view_center_set( -8573656.000000, 730695.000000 )
+ga_view_zoom_set( 10198497.000000 )
+ga_view_center_set( -8254590.000000, 649478.000000 )
+ga_view_zoom_set( 9065331.000000 )
+ga_view_center_set( -7970978.000000, 577285.000000 )
+ga_view_zoom_set( 8058072.000000 )
+ga_view_center_set( -7517196.000000, 461777.000000 )
+ga_view_zoom_set( 6446457.500000 )
+ga_view_center_set( -5934306.000000, 535115.000000 )
+ga_view_zoom_set( 5730184.500000 )
+ga_view_center_set( -3464262.000000, 628988.000000 )
+ga_view_zoom_set( 4584147.500000 )
+ga_view_center_set( -2373420.000000, 668971.250000 )
+ga_view_zoom_set( 4074797.750000 )
+ga_view_center_set( -633633.000000, 732944.250000 )
+ga_view_zoom_set( 3259838.250000 )
+ga_view_center_set( 133424.500000, 758904.250000 )
+ga_view_zoom_set( 2897634.000000 )
+ga_view_center_set( -225345.750000, 687479.875000 )
+ga_view_zoom_set( 2575674.750000 )
+ga_view_center_set( -511043.500000, 610317.000000 )
+ga_view_zoom_set( 2289488.750000 )
+ga_view_center_set( -758051.250000, 541727.875000 )
+ga_view_zoom_set( 2035101.125000 )
+ga_view_center_set( -974526.500000, 477672.875000 )
+ga_view_zoom_set( 1808978.750000 )
+ga_view_center_set( -635986.000000, 390551.000000 )
+ga_view_zoom_set( 1607981.125000 )
+ga_view_center_set( -335061.500000, 313109.375000 )
+ga_view_zoom_set( 1429316.500000 )
+ga_view_center_set( -74077.500000, 239936.125000 )
+ga_view_zoom_set( 1270503.500000 )
+ga_view_center_set( -20838.500000, 189347.312500 )
+ga_view_zoom_set( 1129336.500000 )
+ga_view_center_set( 11495.750000, 142238.125000 )
+ga_view_zoom_set( 1003854.687500 )
+ga_view_center_set( -24859.375000, 134624.437500 )
+ga_view_zoom_set( 892315.250000 )
+ga_view_center_set( -57175.250000, 127856.750000 )
+ga_view_zoom_set( 793169.125000 )
+ga_view_center_set( -58227.875000, 118231.687500 )
+ga_view_zoom_set( 705039.250000 )
+ga_view_center_set( -59163.625000, 109408.625000 )
+ga_view_zoom_set( 626701.562500 )
+ga_view_center_set( -35754.500000, 93010.281250 )
+ga_view_zoom_set( 557068.062500 )
+ga_view_center_set( -22128.750000, 79701.531250 )
+ga_view_zoom_set( 495171.625000 )
+ga_view_center_set( -10392.625000, 67871.468750 )
+ga_view_zoom_set( 440152.562500 )
+ga_view_center_set( -7838.812500, 51947.843750 )
+ga_view_zoom_set( 352122.062500 )
+ga_view_center_set( -6703.812500, 44870.687500 )
+ga_view_zoom_set( 312997.375000 )
+ga_view_center_set( -4887.875000, 33547.218750 )
+ga_view_zoom_set( 250397.906250 )
+ga_view_center_set( -4080.750000, 28514.578125 )
+ga_view_zoom_set( 222575.921875 )
+ga_view_center_set( -3363.281250, 25222.765625 )
+ga_view_zoom_set( 197845.265625 )
+ga_view_center_set( -2725.562500, 22296.734375 )
+ga_view_zoom_set( 175862.453125 )
+ga_view_center_set( -2158.687500, 19695.812500 )
+ga_view_zoom_set( 156322.187500 )
+ga_view_center_set( -1654.812500, 17383.875000 )
+ga_view_zoom_set( 138953.062500 )
+ga_view_center_set( -1206.906250, 15328.828125 )
+ga_view_zoom_set( 123513.835938 )
+ga_view_center_set( -490.281250, 12040.750000 )
+ga_view_zoom_set( 98811.070313 )
+ga_view_center_set( -254.203125, 9612.632813 )
+ga_view_zoom_set( 79048.859375 )
+ga_view_center_set( -209.250000, 8533.464844 )
+ga_view_zoom_set( 70265.656250 )
+ga_view_center_set( -222.562500, 7574.203125 )
+ga_view_zoom_set( 62458.359375 )
+ga_view_center_set( -234.421875, 6721.531250 )
+ga_view_zoom_set( 55518.542969 )
+ga_view_center_set( -253.359375, 5357.253906 )
+ga_view_zoom_set( 44414.835938 )
+ga_view_center_set( -261.781250, 4750.910156 )
+ga_view_zoom_set( 39479.855469 )
+ga_view_center_set( -269.265625, 4211.933594 )
+ga_view_zoom_set( 35093.203125 )
+ga_view_center_set( -285.593750, 3035.990234 )
+ga_view_zoom_set( 25522.330078 )
+ga_view_center_set( -294.312500, 2408.820313 )
+ga_view_zoom_set( 20417.863281 )
+ga_view_center_set( -298.179688, 2130.079102 )
+ga_view_zoom_set( 18149.210938 )
+ga_view_center_set( -304.378906, 1684.090820 )
+ga_view_zoom_set( 14519.369141 )
+ga_view_center_set( -309.333984, 1327.300781 )
+ga_view_zoom_set( 11615.495117 )
+ga_view_center_set( -314.738281, 938.075195 )
+ga_view_zoom_set( 8447.632813 )
+ga_view_center_set( -316.341797, 822.749023 )
+ga_view_zoom_set( 7509.006836 )
+ga_view_center_set( -317.765625, 720.236816 )
+ga_view_zoom_set( 6674.672852 )
+ga_view_center_set( -319.031250, 629.115234 )
+ga_view_zoom_set( 5933.042480 )
+ga_view_center_set( -321.792969, 430.303711 )
+ga_view_zoom_set( 4314.939941 )
+ga_view_center_set( -322.610352, 371.396973 )
+ga_view_zoom_set( 3835.502197 )
+ga_view_center_set( -323.337891, 319.035156 )
+ga_view_zoom_set( 3409.335205 )
+ga_view_center_set( -324.501953, 235.256104 )
+ga_view_zoom_set( 2727.468262 )
+ga_view_center_set( -325.770996, 143.861084 )
+ga_view_zoom_set( 1983.613281 )
+ga_view_center_set( -323.890625, 118.285400 )
+ga_view_zoom_set( 1763.211792 )
+ga_view_center_set( -320.881592, 77.364502 )
+ga_view_zoom_set( 1410.569458 )
+ga_view_center_set( -318.474365, 44.627747 )
+ga_view_zoom_set( 1128.455566 )
+ga_view_center_set( -281.886475, 30.505920 )
+ga_view_zoom_set( 1003.071594 )
+ga_view_center_set( -249.363770, 17.953308 )
+ga_view_zoom_set( 891.619202 )
+ga_view_center_set( -220.454834, 6.795349 )
+ga_view_zoom_set( 792.550415 )
+ga_view_center_set( -174.200195, -11.057312 )
+ga_view_zoom_set( 634.040344 )
+ga_view_center_set( -153.642456, -18.991821 )
+ga_view_zoom_set( 563.591431 )
+ga_view_center_set( -135.369263, -26.044769 )
+ga_view_zoom_set( 500.970154 )
+ga_view_center_set( -95.500000, -41.432892 )
+ga_view_zoom_set( 364.341919 )
+ga_view_center_set( -83.686829, -45.992340 )
+ga_view_zoom_set( 323.859497 )
+ga_view_center_set( -73.186218, -50.045181 )
+ga_view_zoom_set( 287.875122 )
+ga_view_center_set( -50.276001, -58.887756 )
+ga_view_zoom_set( 209.363724 )
+ga_view_center_set( -43.487732, -61.507767 )
+ga_view_zoom_set( 186.101089 )
+ga_view_center_set( -38.512390, -52.615585 )
+ga_view_zoom_set( 165.423187 )
+ga_view_center_set( -30.551758, -38.388062 )
+ga_view_zoom_set( 132.338547 )
+ga_view_center_set( -27.214447, -32.064728 )
+ga_view_zoom_set( 117.634262 )
+ga_view_center_set( -22.677673, -20.261139 )
+ga_view_zoom_set( 94.107407 )
+ga_view_center_set( -19.048294, -10.818275 )
+ga_view_zoom_set( 75.285927 )
+ga_view_center_set( -17.435226, -6.621460 )
+ga_view_zoom_set( 66.920822 )
+ga_view_center_set( -14.681763, -7.585812 )
+ga_view_zoom_set( 59.485176 )
+ga_view_center_set( -12.234238, -8.443005 )
+ga_view_zoom_set( 52.875713 )
+ga_view_center_set( -10.058640, -9.204960 )
+ga_view_zoom_set( 47.000633 )
+ga_view_center_set( -7.572258, -8.210407 )
+ga_view_zoom_set( 37.600506 )
+ga_view_center_set( -6.509979, -7.782642 )
+ga_view_zoom_set( 33.422672 )
+ga_view_center_set( -4.855965, -7.121035 )
+ga_view_zoom_set( 26.738138 )
+ga_view_center_set( -4.120834, -6.786427 )
+ga_view_zoom_set( 23.767235 )
+ga_view_center_set( -2.944641, -6.251055 )
+ga_view_zoom_set( 19.013788 )
+ga_view_center_set( -2.421886, -6.013113 )
+ga_view_zoom_set( 16.901146 )
+ga_view_center_set( -1.585487, -5.632404 )
+ga_view_zoom_set( 13.520917 )
+ga_view_center_set( -1.213749, -5.463199 )
+ga_view_zoom_set( 12.018593 )
+ga_view_center_set( -0.883320, -5.312797 )
+ga_view_zoom_set( 10.683193 )
+ga_view_center_set( -0.646320, -4.741568 )
+ga_view_zoom_set( 9.496172 )
+ga_view_center_set( -0.267122, -3.827602 )
+ga_view_zoom_set( 7.596938 )
+ga_view_center_set( 0.036237, -3.096429 )
+ga_view_zoom_set( 6.077550 )
+ga_view_center_set( -0.036362, -2.424372 )
+ga_view_zoom_set( 4.862040 )
+ga_view_center_set( -0.068627, -2.125680 )
+ga_view_zoom_set( 4.321814 )
+ga_view_center_set( -0.097310, -1.860177 )
+ga_view_zoom_set( 3.841612 )
+ga_view_center_set( -0.122803, -1.624173 )
+ga_view_zoom_set( 3.414766 )
+ga_view_center_set( -0.145465, -1.414392 )
+ga_view_zoom_set( 3.035348 )
+ga_view_center_set( -0.181724, -1.078743 )
+ga_view_zoom_set( 2.428278 )
+ga_view_center_set( -0.197838, -0.929565 )
+ga_view_zoom_set( 2.158470 )
+ga_view_center_set( -0.212162, -0.796963 )
+ga_view_zoom_set( 1.918640 )
+ga_view_center_set( -0.145589, -0.717657 )
+ga_view_zoom_set( 1.705457 )
+ga_view_center_set( -0.039071, -0.597751 )
+ga_view_zoom_set( 1.364366 )
+ga_view_center_set( 0.046144, -0.501826 )
+ga_view_zoom_set( 1.091493 )
+ga_view_center_set( 0.060424, -0.452156 )
+ga_view_zoom_set( 0.970216 )
+ga_view_center_set( 0.071278, -0.408005 )
+ga_view_zoom_set( 0.862414 )
+ga_view_center_set( 0.080598, -0.368760 )
+ga_view_zoom_set( 0.766590 )
+ga_view_center_set( 0.091326, -0.306491 )
+ga_view_zoom_set( 0.613272 )
+ga_view_center_set( 0.087256, -0.269746 )
+ga_view_zoom_set( 0.545131 )
+ga_view_center_set( 0.083638, -0.237083 )
+ga_view_zoom_set( 0.484561 )
+ga_view_center_set( 0.080422, -0.208050 )
+ga_view_zoom_set( 0.430721 )
+ga_view_center_set( 0.075277, -0.161597 )
+ga_view_zoom_set( 0.344577 )
+ga_view_center_set( 0.064105, -0.127492 )
+ga_view_zoom_set( 0.275661 )
+ga_view_center_set( 0.058826, -0.112648 )
+ga_view_zoom_set( 0.245032 )
+ga_view_center_set( 0.053855, -0.099546 )
+ga_view_zoom_set( 0.217806 )
+ga_view_center_set( 0.049353, -0.087900 )
+ga_view_zoom_set( 0.193606 )
+ga_view_center_set( 0.042151, -0.069266 )
+ga_view_zoom_set( 0.154885 )
+ga_view_center_set( 0.036389, -0.054359 )
+ga_view_zoom_set( 0.123908 )
+ga_view_center_set( 0.033828, -0.047734 )
+ga_view_zoom_set( 0.110140 )
+ga_view_center_set( 0.028241, -0.033279 )
+ga_view_zoom_set( 0.080102 )
+ga_view_center_set( 0.025261, -0.025569 )
+ga_view_zoom_set( 0.064082 )
+ga_view_center_set( 0.023936, -0.022143 )
+ga_view_zoom_set( 0.056961 )
+ga_view_center_set( 0.022759, -0.019097 )
+ga_view_zoom_set( 0.050632 )
+ga_view_center_set( 0.020191, -0.012452 )
+ga_view_zoom_set( 0.036824 )
+ga_view_center_set( 0.018670, -0.009008 )
+ga_view_zoom_set( 0.029459 )
+ga_view_center_set( 0.017961, -0.007489 )
+ga_view_zoom_set( 0.026186 )
+ga_view_center_set( 0.016718, -0.005058 )
+ga_view_zoom_set( 0.020948 )
+ga_view_center_set( 0.015539, -0.004176 )
+ga_view_zoom_set( 0.018621 )
+ga_view_center_set( 0.014384, -0.003484 )
+ga_view_zoom_set( 0.016552 )
+ga_view_center_set( 0.011126, -0.002575 )
+ga_view_zoom_set( 0.012038 )
+ga_view_center_set( 0.008918, -0.002411 )
+ga_view_zoom_set( 0.010700 )
+ga_view_center_set( 0.005321, -0.002185 )
+ga_view_zoom_set( 0.008560 )
+ga_view_center_set( 0.002426, -0.002021 )
+ga_view_zoom_set( 0.006848 )
+ga_view_center_set( 0.001139, -0.001948 )
+ga_view_zoom_set( 0.006087 )
+ga_view_center_set( 0.000058, -0.001851 )
+ga_view_zoom_set( 0.005411 )
+ga_view_center_set( -0.002642, -0.001617 )
+ga_view_zoom_set( 0.003607 )
+ga_view_center_set( -0.002432, -0.001393 )
+ga_view_zoom_set( 0.003206 )
+ga_view_center_set( -0.002096, -0.001034 )
+ga_view_zoom_set( 0.002565 )
+ga_view_center_set( -0.001827, -0.000747 )
+ga_view_zoom_set( 0.002052 )
+ga_view_center_set( -0.001470, -0.000651 )
+ga_view_zoom_set( 0.001824 )
+ga_view_center_set( -0.001153, -0.000566 )
+ga_view_zoom_set( 0.001621 )
+ga_view_center_set( -0.000315, -0.000347 )
+ga_view_zoom_set( 0.001081 )
+ga_view_center_set( -0.000175, -0.000298 )
+ga_view_zoom_set( 0.000961 )
+ga_view_center_set( -0.000055, -0.000258 )
+ga_view_zoom_set( 0.000854 )
+ga_view_center_set( 0.000186, -0.000184 )
+ga_view_zoom_set( 0.000621 )
+ga_view_center_set( 0.000207, -0.000162 )
+ga_view_zoom_set( 0.000552 )
+ga_view_center_set( 0.000245, -0.000117 )
+ga_view_zoom_set( 0.000402 )
+ga_view_center_set( 0.000255, -0.000104 )
+ga_view_zoom_set( 0.000357 )
+ga_view_center_set( 0.000136, -0.000078 )
+ga_view_zoom_set( 0.000286 )
+ga_view_center_set( 0.000082, -0.000067 )
+ga_view_zoom_set( 0.000254 )
+ga_view_center_set( 0.000086, -0.000058 )
+ga_view_zoom_set( 0.000226 )
+ga_view_center_set( 0.000089, -0.000050 )
+ga_view_zoom_set( 0.000201 )
+ga_view_center_set( 0.000094, -0.000037 )
+ga_view_zoom_set( 0.000160 )
+ga_view_center_set( 0.000096, -0.000031 )
+ga_view_zoom_set( 0.000143 )
+ga_view_center_set( 0.000111, -0.000037 )
+ga_view_zoom_set( 0.000160 )
+ga_view_center_set( 0.000096, -0.000031 )
+ga_view_zoom_set( 0.000143 )
+ga_view_center_set( 0.000069, -0.000023 )
+ga_view_zoom_set( 0.000114 )
+ga_view_center_set( 0.000057, -0.000020 )
+ga_view_zoom_set( 0.000101 )
+ga_view_center_set( 0.000046, -0.000017 )
+ga_view_zoom_set( 0.000090 )
+ga_view_center_set( 0.000035, -0.000013 )
+ga_view_zoom_set( 0.000080 )
+ga_view_center_set( 0.000026, -0.000011 )
+ga_view_zoom_set( 0.000071 )
+ga_view_center_set( 0.000018, -0.000008 )
+ga_view_zoom_set( 0.000063 )
+ga_view_center_set( 0.000005, -0.000004 )
+ga_view_zoom_set( 0.000051 )
+ga_view_center_set( -0.000000, -0.000004 )
+ga_view_zoom_set( 0.000045 )
+ga_view_center_set( -0.000005, -0.000004 )
+ga_view_zoom_set( 0.000040 )
+ga_view_center_set( -0.000009, -0.000004 )
+ga_view_zoom_set( 0.000036 )
+ga_view_center_set( -0.000018, -0.000004 )
+ga_view_zoom_set( 0.000026 )
+ga_view_center_set( -0.000015, -0.000004 )
+ga_view_zoom_set( 0.000023 )
+ga_view_center_set( -0.000009, -0.000004 )
+ga_view_zoom_set( 0.000017 )
+ga_view_center_set( -0.000005, -0.000005 )
+ga_view_zoom_set( 0.000013 )
+ga_view_center_set( -0.000005, -0.000005 )
+ga_view_zoom_set( 0.000012 )
+ga_view_center_set( -0.000005, -0.000005 )
+ga_view_zoom_set( 0.000011 )
+ga_view_center_set( -0.000004, -0.000005 )
+ga_view_zoom_set( 0.000008 )
+ga_view_center_set( -0.000004, -0.000005 )
+ga_view_zoom_set( 0.000008 )
+ga_view_center_set( -0.000004, -0.000005 )
+ga_view_zoom_set( 0.000007 )
+ga_view_center_set( -0.000003, -0.000004 )
+ga_view_zoom_set( 0.000006 )
+ga_view_center_set( -0.000003, -0.000003 )
+ga_view_zoom_set( 0.000005 )
+ga_view_center_set( -0.000002, -0.000003 )
+ga_view_zoom_set( 0.000005 )
+ga_view_center_set( -0.000002, -0.000002 )
+ga_view_zoom_set( 0.000004 )
+ga_view_center_set( -0.000002, -0.000002 )
+ga_view_zoom_set( 0.000004 )
+ga_view_center_set( -0.000001, -0.000002 )
+ga_view_zoom_set( 0.000003 )
+ga_view_center_set( -0.000001, -0.000002 )
+ga_view_zoom_set( 0.000003 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000002 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000002 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000002 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000000, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000000, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000000, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000000, -0.000000 )
+ga_view_zoom_set( 0.000000 )
+ga_view_center_set( -0.000000, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000000, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000001 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000002 )
+ga_view_center_set( -0.000001, -0.000001 )
+ga_view_zoom_set( 0.000002 )
+ga_view_center_set( -0.000002, -0.000001 )
+ga_view_zoom_set( 0.000002 )
+ga_view_center_set( -0.000002, -0.000002 )
+ga_view_zoom_set( 0.000002 )
+ga_view_center_set( -0.000003, -0.000002 )
+ga_view_zoom_set( 0.000003 )
+ga_view_center_set( -0.000003, -0.000002 )
+ga_view_zoom_set( 0.000004 )
+ga_view_center_set( -0.000004, -0.000002 )
+ga_view_zoom_set( 0.000005 )
+ga_view_center_set( -0.000004, -0.000003 )
+ga_view_zoom_set( 0.000005 )
+ga_view_center_set( -0.000006, -0.000003 )
+ga_view_zoom_set( 0.000007 )
+ga_view_center_set( -0.000007, -0.000004 )
+ga_view_zoom_set( 0.000008 )
+ga_view_center_set( -0.000008, -0.000004 )
+ga_view_zoom_set( 0.000009 )
+ga_view_center_set( -0.000010, -0.000005 )
+ga_view_zoom_set( 0.000011 )
+ga_view_center_set( -0.000014, -0.000006 )
+ga_view_zoom_set( 0.000015 )
+ga_view_center_set( -0.000012, -0.000006 )
+ga_view_zoom_set( 0.000014 )
+ga_view_center_set( -0.000010, -0.000005 )
+ga_view_zoom_set( 0.000012 )
+ga_view_center_set( -0.000012, -0.000006 )
+ga_view_zoom_set( 0.000014 )
+ga_view_center_set( -0.000016, -0.000007 )
+ga_view_zoom_set( 0.000017 )
+ga_view_center_set( -0.000020, -0.000009 )
+ga_view_zoom_set( 0.000021 )
+ga_view_center_set( -0.000023, -0.000010 )
+ga_view_zoom_set( 0.000024 )
+ga_view_center_set( -0.000026, -0.000011 )
+ga_view_zoom_set( 0.000027 )
+ga_view_center_set( -0.000030, -0.000013 )
+ga_view_zoom_set( 0.000030 )
+ga_view_center_set( -0.000034, -0.000014 )
+ga_view_zoom_set( 0.000034 )
+ga_view_center_set( -0.000043, -0.000018 )
+ga_view_zoom_set( 0.000043 )
+ga_view_center_set( -0.000049, -0.000020 )
+ga_view_zoom_set( 0.000048 )
+ga_view_center_set( -0.000062, -0.000025 )
+ga_view_zoom_set( 0.000060 )
+ga_view_center_set( -0.000078, -0.000032 )
+ga_view_zoom_set( 0.000075 )
+ga_view_center_set( -0.000108, -0.000043 )
+ga_view_zoom_set( 0.000103 )
+ga_view_center_set( -0.000121, -0.000049 )
+ga_view_zoom_set( 0.000116 )
+ga_view_center_set( -0.000153, -0.000061 )
+ga_view_zoom_set( 0.000144 )
+ga_view_center_set( -0.000211, -0.000084 )
+ga_view_zoom_set( 0.000199 )
+ga_view_center_set( -0.000264, -0.000105 )
+ga_view_zoom_set( 0.000248 )
+ga_view_center_set( -0.000364, -0.000144 )
+ga_view_zoom_set( 0.000341 )
+ga_view_center_set( -0.000410, -0.000163 )
+ga_view_zoom_set( 0.000384 )
+ga_view_center_set( -0.000461, -0.000183 )
+ga_view_zoom_set( 0.000432 )
+ga_view_center_set( -0.000577, -0.000229 )
+ga_view_zoom_set( 0.000540 )
+ga_view_center_set( -0.000650, -0.000257 )
+ga_view_zoom_set( 0.000608 )
+ga_view_center_set( -0.001057, -0.000418 )
+ga_view_zoom_set( 0.000988 )
+ga_view_center_set( -0.001455, -0.000575 )
+ga_view_zoom_set( 0.001358 )
+ga_view_center_set( -0.002002, -0.000790 )
+ga_view_zoom_set( 0.001867 )
+ga_view_center_set( -0.003004, -0.001185 )
+ga_view_zoom_set( 0.002801 )
+ga_view_center_set( -0.003755, -0.001482 )
+ga_view_zoom_set( 0.003501 )
+ga_view_center_set( -0.004225, -0.001667 )
+ga_view_zoom_set( 0.003939 )
+ga_view_center_set( -0.007396, -0.002917 )
+ga_view_zoom_set( 0.006893 )
+ga_view_center_set( -0.008321, -0.003282 )
+ga_view_zoom_set( 0.007754 )
+ga_view_center_set( -0.009361, -0.003692 )
+ga_view_zoom_set( 0.008723 )
+ga_view_center_set( -0.011702, -0.004615 )
+ga_view_zoom_set( 0.010904 )
+ga_view_center_set( -0.019017, -0.007499 )
+ga_view_zoom_set( 0.017720 )
+ga_view_center_set( -0.021395, -0.008436 )
+ga_view_zoom_set( 0.019934 )
+ga_view_center_set( -0.024069, -0.009491 )
+ga_view_zoom_set( 0.022426 )
+ga_view_center_set( -0.027078, -0.010677 )
+ga_view_zoom_set( 0.025230 )
+ga_view_center_set( -0.033848, -0.013347 )
+ga_view_zoom_set( 0.031537 )
+ga_view_center_set( -0.055005, -0.021688 )
+ga_view_zoom_set( 0.051247 )
+ga_view_center_set( -0.075633, -0.029821 )
+ga_view_zoom_set( 0.070465 )
+ga_view_center_set( -0.094542, -0.037277 )
+ga_view_zoom_set( 0.088082 )
+ga_view_center_set( -0.153633, -0.060575 )
+ga_view_zoom_set( 0.143133 )
+ga_view_center_set( -0.211246, -0.083290 )
+ga_view_zoom_set( 0.196807 )
+ga_view_center_set( -0.290465, -0.114524 )
+ga_view_zoom_set( 0.270610 )
+ga_view_center_set( -0.435698, -0.171787 )
+ga_view_zoom_set( 0.405915 )
+ga_view_center_set( -0.595969, -0.234648 )
+ga_view_zoom_set( 0.558134 )
+ga_view_center_set( -0.668474, -0.262745 )
+ga_view_zoom_set( 0.627900 )
+ga_view_center_set( -0.994746, -0.389182 )
+ga_view_zoom_set( 0.941850 )
+ga_view_center_set( -1.484155, -0.578838 )
+ga_view_zoom_set( 1.412776 )
+ga_view_center_set( -1.667683, -0.649959 )
+ga_view_zoom_set( 1.589372 )
+ga_view_center_set( -1.874153, -0.729970 )
+ga_view_zoom_set( 1.788044 )
+ga_view_center_set( -3.267818, -1.270045 )
+ga_view_zoom_set( 3.129077 )
+ga_view_center_set( -3.674304, -1.427568 )
+ga_view_zoom_set( 3.520212 )
+ga_view_center_set( -4.131601, -1.604779 )
+ga_view_zoom_set( 3.960238 )
+ga_view_center_set( -4.646062, -1.804143 )
+ga_view_zoom_set( 4.455268 )
+ga_view_center_set( -5.224828, -2.028427 )
+ga_view_zoom_set( 5.012177 )
+ga_view_center_set( -8.480391, -3.290025 )
+ga_view_zoom_set( 8.144787 )
+ga_view_center_set( -10.596508, -4.110064 )
+ga_view_zoom_set( 10.180984 )
+ga_view_center_set( -13.241650, -5.135112 )
+ga_view_zoom_set( 12.726230 )
+ga_view_center_set( -18.201298, -7.057075 )
+ga_view_zoom_set( 17.498566 )
+ga_view_center_set( -20.474476, -7.937976 )
+ga_view_zoom_set( 19.685886 )
+ga_view_center_set( -23.031788, -8.928988 )
+ga_view_zoom_set( 22.146622 )
+ga_view_center_set( -25.908764, -10.043880 )
+ga_view_zoom_set( 24.914949 )
+ga_view_center_set( -42.091785, -16.315132 )
+ga_view_zoom_set( 40.486794 )
+ga_view_center_set( -47.351292, -18.353294 )
+ga_view_zoom_set( 45.547642 )
+ga_view_center_set( -53.268192, -20.646217 )
+ga_view_zoom_set( 51.241096 )
+ga_view_center_set( -66.581253, -25.805305 )
+ga_view_zoom_set( 64.051369 )
+ga_view_center_set( -74.901917, -29.029732 )
+ga_view_zoom_set( 72.057793 )
+ga_view_center_set( -112.344910, -43.539665 )
+ga_view_zoom_set( 108.086685 )
+ga_view_center_set( -126.386047, -48.980888 )
+ga_view_zoom_set( 121.597519 )
+ga_view_center_set( -142.182343, -55.102257 )
+ga_view_zoom_set( 136.797211 )
+ga_view_center_set( -248.807037, -96.421532 )
+ga_view_zoom_set( 239.395111 )
+ga_view_center_set( -279.905853, -108.472984 )
+ga_view_zoom_set( 269.319489 )
+ga_view_center_set( -349.878326, -135.588776 )
+ga_view_zoom_set( 336.649353 )
+ga_view_center_set( -481.076691, -186.430847 )
+ga_view_zoom_set( 462.892853 )
+ga_view_center_set( -601.341919, -233.036133 )
+ga_view_zoom_set( 578.616089 )
+ga_view_center_set( -676.507690, -262.164490 )
+ga_view_zoom_set( 650.943115 )
+ga_view_center_set( -930.192017, -360.472473 )
+ga_view_zoom_set( 895.046753 )
+ga_view_center_set( -1162.736694, -450.588074 )
+ga_view_zoom_set( 1118.808472 )
+ga_view_center_set( -1308.076538, -506.910339 )
+ga_view_zoom_set( 1258.659546 )
+ga_view_center_set( -1798.598999, -696.997864 )
+ga_view_zoom_set( 1730.656860 )
+ga_view_center_set( -2473.067871, -958.368713 )
+ga_view_zoom_set( 2379.653076 )
+ga_view_center_set( -2782.200684, -1078.163330 )
+ga_view_zoom_set( 2677.109619 )
+ga_view_center_set( -3825.519043, -1482.470703 )
+ga_view_zoom_set( 3681.025635 )
+ga_view_center_set( -4781.895020, -1853.085938 )
+ga_view_zoom_set( 4601.282227 )
+ga_view_center_set( -6575.100098, -2547.989746 )
+ga_view_zoom_set( 6326.763184 )
+ga_view_center_set( -9862.638672, -3821.979004 )
+ga_view_zoom_set( 9490.144531 )
+ga_view_center_set( -12328.298828, -4777.470215 )
+ga_view_zoom_set( 11862.680664 )
+ga_view_center_set( -15410.365234, -5971.835449 )
+ga_view_zoom_set( 14828.350586 )
+ga_view_center_set( -17336.662109, -6718.313965 )
+ga_view_zoom_set( 16681.894531 )
+ga_view_center_set( -23837.904297, -9237.679688 )
+ga_view_zoom_set( 22937.605469 )
+ga_view_center_set( -26817.638672, -10392.390625 )
+ga_view_zoom_set( 25804.806641 )
+ga_view_center_set( -36874.250000, -14289.531250 )
+ga_view_zoom_set( 35481.609375 )
+ga_view_center_set( -50702.078125, -19648.101563 )
+ga_view_zoom_set( 48787.210938 )
+ga_view_center_set( -63377.578125, -24560.125000 )
+ga_view_zoom_set( 60984.015625 )
+ga_view_center_set( -87144.171875, -33770.164063 )
+ga_view_zoom_set( 83853.023438 )
+ga_view_center_set( -119823.234375, -46433.984375 )
+ga_view_zoom_set( 115297.906250 )
+ga_view_center_set( -149779.015625, -58042.468750 )
+ga_view_zoom_set( 144122.375000 )
+ga_view_center_set( -187223.796875, -72553.093750 )
+ga_view_zoom_set( 180152.968750 )
+ga_view_center_set( -210626.796875, -81622.234375 )
+ga_view_zoom_set( 202672.093750 )
+ga_view_center_set( -236955.109375, -91824.984375 )
+ga_view_zoom_set( 228006.109375 )
+ga_view_center_set( -266574.500000, -103303.078125 )
+ga_view_zoom_set( 256506.875000 )
+ga_view_center_set( -399861.875000, -154954.609375 )
+ga_view_zoom_set( 384760.312500 )
+ga_view_center_set( -599792.750000, -232431.984375 )
+ga_view_zoom_set( 577140.500000 )
+ga_view_center_set( -674767.125000, -261485.984375 )
+ga_view_zoom_set( 649283.062500 )
+ga_view_center_set( -759112.875000, -294171.750000 )
+ga_view_zoom_set( 730443.437500 )
+ga_view_center_set( -948890.625000, -367714.750000 )
+ga_view_zoom_set( 913054.312500 )
+ga_view_center_set( -1186113.375000, -459643.500000 )
+ga_view_zoom_set( 1141317.875000 )
+ga_view_center_set( -1630905.875000, -632009.625000 )
+ga_view_zoom_set( 1569312.125000 )
+ga_view_center_set( -2242496.000000, -869013.375000 )
+ga_view_zoom_set( 2157804.250000 )
+ga_view_center_set( -2522806.500000, -977639.875000 )
+ga_view_zoom_set( 2427529.750000 )
+ga_view_center_set( -2838158.500000, -1099844.625000 )
+ga_view_zoom_set( 2730971.000000 )
+ga_view_center_set( -3192928.500000, -1237325.125000 )
+ga_view_zoom_set( 3072342.500000 )
+ga_view_center_set( -4789392.500000, -1855988.125000 )
+ga_view_zoom_set( 4608514.000000 )
+ga_view_center_set( -5388067.500000, -2087986.625000 )
+ga_view_zoom_set( 5184578.000000 )
+ga_view_center_set( -8082103.500000, -3131980.000000 )
+ga_view_zoom_set( 7776867.000000 )
+ga_view_center_set( -9092366.000000, -3523478.000000 )
+ga_view_zoom_set( 8748975.000000 )
+ga_view_center_set( -10228910.000000, -3963912.000000 )
+ga_view_zoom_set( 9842597.000000 )
+ga_view_center_set( -14064750.000000, -5450377.000000 )
+ga_view_zoom_set( 13533571.000000 )
+ga_view_center_set( -15822842.000000, -6131675.000000 )
+ga_view_zoom_set( 15225267.000000 )
+ga_view_center_set( -19778550.000000, -7664593.000000 )
+ga_view_zoom_set( 19031584.000000 )
+ga_view_center_set( -27195510.000000, -10538817.000000 )
+ga_view_zoom_set( 26168428.000000 )
+ga_view_center_set( -37393824.000000, -14490877.000000 )
+ga_view_zoom_set( 35981588.000000 )
+ga_view_center_set( -46742264.000000, -18113592.000000 )
+ga_view_zoom_set( 44976984.000000 )
+ga_view_center_set( -58427864.000000, -22641996.000000 )
+ga_view_zoom_set( 56221232.000000 )
+ga_view_center_set( -87641768.000000, -33962996.000000 )
+ga_view_zoom_set( 84331848.000000 )
+ga_view_center_set( -98597000.000000, -38208388.000000 )
+ga_view_zoom_set( 94873328.000000 )
+ga_view_center_set( -110921608.000000, -42984428.000000 )
+ga_view_zoom_set( 106732496.000000 )
+ga_view_center_set( -138652000.000000, -53730524.000000 )
+ga_view_zoom_set( 133415616.000000 )
+ga_view_center_set( -207977984.000000, -80595792.000000 )
+ga_view_zoom_set( 200123424.000000 )
+ga_view_center_set( -233975296.000000, -90670256.000000 )
+ga_view_zoom_set( 225138848.000000 )
+ga_view_center_set( -263222144.000000, -102004048.000000 )
+ga_view_zoom_set( 253281200.000000 )
+ga_view_center_set( -296125056.000000, -114754544.000000 )
+ga_view_zoom_set( 284941344.000000 )
+ga_view_center_set( -481203136.000000, -186476048.000000 )
+ga_view_zoom_set( 463029696.000000 )
+ga_view_center_set( -541353664.000000, -209785552.000000 )
+ga_view_zoom_set( 520908416.000000 )
+ga_view_center_set( -676691904.000000, -262231952.000000 )
+ga_view_zoom_set( 651135488.000000 )
+ga_view_center_set( -845864896.000000, -327790016.000000 )
+ga_view_zoom_set( 813919360.000000 )
+ga_view_center_set( -1268797184.000000, -491684800.000000 )
+ga_view_zoom_set( 1220879104.000000 )
+ga_view_center_set( -1427397376.000000, -553145664.000000 )
+ga_view_zoom_set( 1373489024.000000 )
+ga_view_center_set( -1605821696.000000, -622288960.000000 )
+ga_view_zoom_set( 1545175168.000000 )
+ga_view_center_set( -2609460480.000000, -1011219520.000000 )
+ga_view_zoom_set( 2510909696.000000 )
+ga_view_center_set( -2935642368.000000, -1137622016.000000 )
+ga_view_zoom_set( 2824773376.000000 )
+ga_view_center_set( -3302598912.000000, -1279824384.000000 )
+ga_view_zoom_set( 3177870080.000000 )
+ga_view_center_set( -4128249088.000000, -1599780864.000000 )
+ga_view_zoom_set( 3972337664.000000 )
+ga_view_center_set( -4644279296.000000, -1799753216.000000 )
+ga_view_zoom_set( 4468879872.000000 )
+ga_view_center_set( -6966418432.000000, -2699630080.000000 )
+ga_view_zoom_set( 6703320064.000000 )
+ga_view_center_set( -7837221888.000000, -3037083136.000000 )
+ga_view_zoom_set( 7541235200.000000 )
+ga_view_center_set( -8816874496.000000, -3416718848.000000 )
+ga_view_zoom_set( 8483889664.000000 )
+ga_view_center_set( -14327424000.000000, -5552167424.000000 )
+ga_view_zoom_set( 13786320896.000000 )
+ga_view_center_set( -16118350848.000000, -6246189568.000000 )
+ga_view_zoom_set( 15509610496.000000 )
+ga_view_center_set( -20147933184.000000, -7807736320.000000 )
+ga_view_zoom_set( 19387013120.000000 )
+ga_view_center_set( -27703414784.000000, -10735640576.000000 )
+ga_view_zoom_set( 26657142784.000000 )
+ga_view_center_set( -38092181504.000000, -14761504768.000000 )
+ga_view_zoom_set( 36653572096.000000 )
+ga_view_center_set( -42853699584.000000, -16606695424.000000 )
+ga_view_zoom_set( 41235267584.000000 )
+ga_view_center_set( -53567148032.000000, -20758368256.000000 )
+ga_view_zoom_set( 51544084480.000000 )
+ga_view_center_set( -73654812672.000000, -28542750720.000000 )
+ga_view_zoom_set( 70873112576.000000 )
+ga_view_center_set( -82861670400.000000, -32110596096.000000 )
+ga_view_zoom_set( 79732252672.000000 )
+ga_view_center_set( -93219340288.000000, -36124422144.000000 )
+ga_view_zoom_set( 89698787328.000000 )
+ga_view_center_set( -128176668672.000000, -49671081984.000000 )
+ga_view_zoom_set( 123335835648.000000 )
+ga_view_center_set( -144198811648.000000, -55879962624.000000 )
+ga_view_zoom_set( 138752819200.000000 )
+ga_view_center_set( -198273286144.000000, -76834947072.000000 )
+ga_view_zoom_set( 190785126400.000000 )
+ga_view_center_set( -223057494016.000000, -86439329792.000000 )
+ga_view_zoom_set( 214633267200.000000 )
+ga_view_center_set( -278821797888.000000, -108049137664.000000 )
+ga_view_zoom_set( 268291588096.000000 )
+ga_view_center_set( -348527263744.000000, -135061471232.000000 )
+ga_view_zoom_set( 335364489216.000000 )
+ga_view_center_set( -479224922112.000000, -185709461504.000000 )
+ga_view_zoom_set( 461126172672.000000 )
+ga_view_center_set( -539128102912.000000, -208923164672.000000 )
+ga_view_zoom_set( 518766952448.000000 )
+ga_view_center_set( -673909964800.000000, -261153980416.000000 )
+ga_view_zoom_set( 648458665984.000000 )
+ga_view_center_set( -758148890624.000000, -293798313984.000000 )
+ga_view_zoom_set( 729516015616.000000 )
+ga_view_center_set( -1042454544384.000000, -403972653056.000000 )
+ga_view_zoom_set( 1003084513280.000000 )
+ga_view_center_set( -1303068147712.000000, -504965726208.000000 )
+ga_view_zoom_set( 1253855592448.000000 )
+ga_view_center_set( -1465951846400.000000, -568086495232.000000 )
+ga_view_zoom_set( 1410587557888.000000 )
+ga_view_center_set( -1649195745280.000000, -639097372672.000000 )
+ga_view_zoom_set( 1586910986240.000000 )
+ga_view_center_set( -1855345262592.000000, -718984445952.000000 )
+ga_view_zoom_set( 1785274826752.000000 )
+ga_view_center_set( -3246853718016.000000, -1258222780416.000000 )
+ga_view_zoom_set( 3124230881280.000000 )
+ga_view_center_set( -4058567933952.000000, -1572778803200.000000 )
+ga_view_zoom_set( 3905288667136.000000 )
+ga_view_center_set( -5073209917440.000000, -1965972783104.000000 )
+ga_view_zoom_set( 4881610964992.000000 )
+ga_view_center_set( -5707359322112.000000, -2211720200192.000000 )
+ga_view_zoom_set( 5491812466688.000000 )
+ga_view_center_set( -8561042128896.000000, -3317579907072.000000 )
+ga_view_zoom_set( 8237718962176.000000 )
+ga_view_center_set( -9631174754304.000000, -3732278083584.000000 )
+ga_view_zoom_set( 9267434225664.000000 )
+ga_view_center_set( -12038969491456.000000, -4665346359296.000000 )
+ga_view_zoom_set( 11584292257792.000000 )
+ga_view_center_set( -15048709767168.000000, -5831683735552.000000 )
+ga_view_zoom_set( 14480364797952.000000 )
+ga_view_center_set( -18810887208960.000000, -7289604931584.000000 )
+ga_view_zoom_set( 18100455997440.000000 )
+ga_view_center_set( -21162243391488.000000, -8200802795520.000000 )
+ga_view_zoom_set( 20363012472832.000000 )
+ga_view_center_set( -29098084663296.000000, -11276102139904.000000 )
+ga_view_zoom_set( 27999141363712.000000 )
+ga_view_center_set( -40009860120576.000000, -15504644243456.000000 )
+ga_view_zoom_set( 38498820161536.000000 )
+ga_view_center_set( -45011097878528.000000, -17442723069952.000000 )
+ga_view_zoom_set( 43311171633152.000000 )
+ga_view_center_set( -56263861862400.000000, -21803405672448.000000 )
+ga_view_zoom_set( 54138964541440.000000 )
+ga_view_center_set( -63296837255168.000000, -24528830857216.000000 )
+ga_view_zoom_set( 60906335633408.000000 )
+ga_view_center_set( -87033175343104.000000, -33727149244416.000000 )
+ga_view_zoom_set( 83746208350208.000000 )
+ga_view_center_set( -108791479664640.000000, -42158933409792.000000 )
+ga_view_zoom_set( 104682764632064.000000 )
+ga_view_center_set( -122390386311168.000000, -47428791173120.000000 )
+ga_view_zoom_set( 117768112308224.000000 )
+ga_view_center_set( -198884433330176.000000, -77071795617792.000000 )
+ga_view_zoom_set( 191373189840896.000000 )
+ga_view_center_set( -223745046216704.000000, -86705809915904.000000 )
+ga_view_zoom_set( 215294832279552.000000 )
+ga_view_center_set( -251713067941888.000000, -97543992115200.000000 )
+ga_view_zoom_set( 242206694703104.000000 )
+ga_view_center_set( -314641318150144.000000, -121930011115520.000000 )
+ga_view_zoom_set( 302758351601664.000000 )
+ga_view_center_set( -471961943670784.000000, -182895025061888.000000 )
+ga_view_zoom_set( 454137527402496.000000 )
+ga_view_center_set( -530957077577728.000000, -205756867543040.000000 )
+ga_view_zoom_set( 510904714133504.000000 )
+ga_view_center_set( -597326938767360.000000, -231476540997632.000000 )
+ga_view_zoom_set( 574767824371712.000000 )
+ga_view_center_set( -671992797724672.000000, -260411064582144.000000 )
+ga_view_zoom_set( 646613768863744.000000 )
+ga_view_center_set( -1007989163032576.000000, -390616538152960.000000 )
+ga_view_zoom_set( 969920653295616.000000 )
+ga_view_center_set( -1133987598696448.000000, -439443605422080.000000 )
+ga_view_zoom_set( 1091160734957568.000000 )
+ga_view_center_set( -1275736283414528.000000, -494374089654272.000000 )
+ga_view_zoom_set( 1227555877158912.000000 )
+ga_view_center_set( -1435203050405888.000000, -556170750197760.000000 )
+ga_view_zoom_set( 1381000294694912.000000 )
+ga_view_center_set( -1794004081442816.000000, -695213337083904.000000 )
+ga_view_zoom_set( 1726250435477504.000000 )
+ga_view_center_set( -2466755410657280.000000, -955918388822016.000000 )
+ga_view_zoom_set( 2373594348781568.000000 )
+ga_view_center_set( -2775099702771712.000000, -1075408405528576.000000 )
+ga_view_zoom_set( 2670293642379264.000000 )
+ga_view_center_set( -3815762762399744.000000, -1478686775705600.000000 )
+ga_view_zoom_set( 3671653724717056.000000 )
+ga_view_center_set( -4769703989870592.000000, -1848358905839616.000000 )
+ga_view_zoom_set( 4589567155896320.000000 )
+ga_view_center_set( -5365916317515776.000000, -2079403450302464.000000 )
+ga_view_zoom_set( 5163263117492224.000000 )
+ga_view_center_set( -6036657065164800.000000, -2339328562823168.000000 )
+ga_view_zoom_set( 5808671074287616.000000 )
+ga_view_center_set( -7545820526149632.000000, -2924160837746688.000000 )
+ga_view_zoom_set( 7260838708641792.000000 )
+ga_view_center_set( -9432279684218880.000000, -3655201852489728.000000 )
+ga_view_zoom_set( 9076048654237696.000000 )
+ga_view_center_set( -12969382820970496.000000, -5025902010302464.000000 )
+ga_view_zoom_set( 12479566496923648.000000 )
+ga_view_center_set( -14590552586584064.000000, -5654138687848448.000000 )
+ga_view_zoom_set( 14039512577474560.000000 )
+ga_view_center_set( -18238192075407360.000000, -7067672554504192.000000 )
+ga_view_zoom_set( 17549390990278656.000000 )
+ga_view_center_set( -22797742241742848.000000, -8834589887823872.000000 )
+ga_view_zoom_set( 21936738737848320.000000 )
+ga_view_center_set( -34196602625196032.000000, -13251884294864896.000000 )
+ga_view_zoom_set( 32905108106772480.000000 )
+ga_view_center_set( -38471186006409216.000000, -14908367281586176.000000 )
+ga_view_zoom_set( 37018245814812672.000000 )
+ga_view_center_set( -43280063319244800.000000, -16771910641647616.000000 )
+ga_view_zoom_set( 41645527615406080.000000 )
+ga_view_center_set( -54100065190412288.000000, -20964890717978624.000000 )
+ga_view_zoom_set( 52056910592999424.000000 )
+ga_view_center_set( -60862594277179392.000000, -23585507963305984.000000 )
+ga_view_zoom_set( 58564026564608000.000000 )
+ga_view_center_set( -98901723753480192.000000, -38326462788403200.000000 )
+ga_view_zoom_set( 95166545314971648.000000 )
+ga_view_center_set( -123627128922046464.000000, -47908070969311232.000000 )
+ga_view_zoom_set( 118958181643714560.000000 )
+ga_view_center_set( -139080558692007936.000000, -53896578229862400.000000 )
+ga_view_zoom_set( 133827951127953408.000000 )
+ga_view_center_set( -173850655415336960.000000, -67370715271135232.000000 )
+ga_view_zoom_set( 167284938909941760.000000 )
+ga_view_center_set( -195582021701992448.000000, -75792050921930752.000000 )
+ga_view_zoom_set( 188195554126200832.000000 )
+ga_view_center_set( -268925357149650944.000000, -104214117262295040.000000 )
+ga_view_zoom_set( 258768893365977088.000000 )
+ga_view_center_set( -336156713616932864.000000, -130267629397999616.000000 )
+ga_view_zoom_set( 323461133887340544.000000 )
+ga_view_center_set( -420195960740642816.000000, -162834545337434112.000000 )
+ga_view_zoom_set( 404326434539044864.000000 )
+ga_view_center_set( -577769308579430400.000000, -223897435414462464.000000 )
+ga_view_zoom_set( 555948847491186688.000000 )
+ga_view_center_set( -530438768977510400.000000, -203236512416923648.000000 )
+ga_view_zoom_set( 494176738054504448.000000 )
+ga_view_center_set( -454709905614438400.000000, -170178905053855744.000000 )
+ga_view_zoom_set( 395341397315551232.000000 )
+ga_view_center_set( -394126952362934272.000000, -143732832907296768.000000 )
+ga_view_zoom_set( 316273110980493312.000000 )
+ga_view_center_set( -354727808607453184.000000, -130899642425540608.000000 )
+ga_view_zoom_set( 281131654204882944.000000 )
+ga_view_center_set( -249663356540026880.000000, -96677703788265472.000000 )
+ga_view_zoom_set( 187421102803255296.000000 )
+ga_view_center_set( -226315708160540672.000000, -89072811355668480.000000 )
+ga_view_zoom_set( 166596541551738880.000000 )
+ga_view_center_set( -205309572871618560.000000, -81870683776221184.000000 )
+ga_view_zoom_set( 148085816621531136.000000 )
+ga_view_center_set( -159477873776787456.000000, -66156961808252928.000000 )
+ga_view_zoom_set( 107698778848362496.000000 )
+ga_view_center_set( -145898149259509760.000000, -61501036870762496.000000 )
+ga_view_zoom_set( 95732244047462400.000000 )
+ga_view_center_set( -133827229573447680.000000, -57362449334009856.000000 )
+ga_view_zoom_set( 85095328042188800.000000 )
+ga_view_center_set( -123065278480252928.000000, -53425544871542784.000000 )
+ga_view_zoom_set( 75640292547493888.000000 )
+ga_view_center_set( -113499046282264576.000000, -49926065648304128.000000 )
+ga_view_zoom_set( 67235814643335168.000000 )
+ga_view_center_set( -88142195021840384.000000, -40747110651396096.000000 )
+ga_view_zoom_set( 44823876428890112.000000 )
+ga_view_center_set( -77999457953644544.000000, -37075527793639424.000000 )
+ga_view_zoom_set( 35859100713615360.000000 )
+ga_view_center_set( -64598197917450240.000000, -32261672613707776.000000 )
+ga_view_zoom_set( 23906067142410240.000000 )
+ga_view_center_set( -59237687890018304.000000, -30352452276453376.000000 )
+ga_view_zoom_set( 19124853713928192.000000 )
+ga_view_center_set( -54949279009079296.000000, -28838132707229696.000000 )
+ga_view_zoom_set( 15299882541645824.000000 )
+ga_view_center_set( -53043314257035264.000000, -28165094152077312.000000 )
+ga_view_zoom_set( 13599895831183360.000000 )
+ga_view_center_set( -51349125752422400.000000, -27566848157417472.000000 )
+ga_view_zoom_set( 12088796413689856.000000 )
+ga_view_center_set( -48638425863028736.000000, -26634397872553984.000000 )
+ga_view_zoom_set( 9671036916203520.000000 )
+ga_view_center_set( -47433678946566144.000000, -26227312282304512.000000 )
+ga_view_zoom_set( 8596477437804544.000000 )
+ga_view_center_set( -46366044566061056.000000, -25865459140132864.000000 )
+ga_view_zoom_set( 7641313218396160.000000 )
+ga_view_center_set( -44036660463140864.000000, -25075960399265792.000000 )
+ga_view_zoom_set( 5557318850707456.000000 )
+ga_view_center_set( -42306359873503232.000000, -24475912665825280.000000 )
+ga_view_zoom_set( 4041686363668480.000000 )
+ga_view_center_set( -41793673922347008.000000, -24298122494607360.000000 )
+ga_view_zoom_set( 3592610220343296.000000 )
+ga_view_center_set( -40973378118483968.000000, -24011203646849024.000000 )
+ga_view_zoom_set( 2874088229961728.000000 )
+ga_view_center_set( -40297526359752704.000000, -23714969015025664.000000 )
+ga_view_zoom_set( 2299270476595200.000000 )
+ga_view_center_set( -39997149231972352.000000, -23583306792566784.000000 )
+ga_view_zoom_set( 2043796023934976.000000 )
+ga_view_center_set( -39520729984663552.000000, -23375441112858624.000000 )
+ga_view_zoom_set( 1635036872835072.000000 )
+ga_view_center_set( -39308988096970752.000000, -23283674841612288.000000 )
+ga_view_zoom_set( 1453366064447488.000000 )
+ga_view_center_set( -38957303289872384.000000, -23128912137551872.000000 )
+ga_view_zoom_set( 1162692878401536.000000 )
+ga_view_center_set( -38801000840036352.000000, -23060570617937920.000000 )
+ga_view_zoom_set( 1033504758431744.000000 )
+ga_view_center_set( -38662848921993216.000000, -23000606432034816.000000 )
+ga_view_zoom_set( 918670888927232.000000 )
+ga_view_center_set( -38443053970620416.000000, -22906542353285120.000000 )
+ga_view_zoom_set( 734936684298240.000000 )
+ga_view_center_set( -38345373529407488.000000, -22865016461983744.000000 )
+ga_view_zoom_set( 653277075079168.000000 )
+ga_view_center_set( -38258537880616960.000000, -22828105513041920.000000 )
+ga_view_zoom_set( 580690718490624.000000 )
+ga_view_center_set( -38119608573493248.000000, -22769045417754624.000000 )
+ga_view_zoom_set( 464552588214272.000000 )
+ga_view_zoom_set( 0 )
+ga_view_center_set( -38067377476206592.000000, -22777150021042176.000000 )
+ga_view_zoom_set( 412935637696512.000000 )
+ga_view_center_set( -38020944584769536.000000, -22784350533713920.000000 )
+ga_view_zoom_set( 367053911359488.000000 )
+ga_view_center_set( -38067377476206592.000000, -22777147873558528.000000 )
+ga_view_zoom_set( 412935637696512.000000 )
+ga_view_center_set( -38119608573493248.000000, -22769043270270976.000000 )
+ga_view_zoom_set( 464552588214272.000000 )
+ga_view_center_set( -38176190472650752.000000, -22759925054701568.000000 )
+ga_view_zoom_set( 522621653352448.000000 )
+ga_view_zoom_set( 0000 )
+ga_view_center_set( -36064806024773632.000000, -21975986148999168.000000 )
+ga_view_center_set( 0000, 000000 )
+ga_view_aa_set( 180., -90., 180. )
+ga_view_aa_set( 0., 0., 0. )
+ga_view_aa_set( 180., -90., 180. )
+ga_view_aa_set( 0., 0., 0. )
+ga_view_center_set( 7246146699264.000000, 5574028689408.000000 )
+ga_view_zoom_set( 587949347438592.000000 )
+ga_view_center_set( 14896422977536.000000, 11594029334528.000000 )
+ga_view_zoom_set( 661443015868416.000000 )
+ga_view_center_set( 7246146699264.000000, 5574162907136.000000 )
+ga_view_zoom_set( 587949347438592.000000 )
+ga_view_center_set( 445871292416.000000, 223136972800.000000 )
+ga_view_zoom_set( 522621653352448.000000 )
+ga_view_center_set( -5598892523520.000000, -4533371535360.000000 )
+ga_view_zoom_set( 464552588214272.000000 )
+ga_view_center_set( -10972097937408.000000, -8761397739520.000000 )
+ga_view_zoom_set( 412935637696512.000000 )
+ga_view_center_set( -5598959632384.000000, -4533371535360.000000 )
+ga_view_zoom_set( 464552588214272.000000 )
+ga_view_center_set( 445669965824.000000, 223136972800.000000 )
+ga_view_zoom_set( 522621653352448.000000 )
+ga_view_center_set( 7245945372672.000000, 5574196461568.000000 )
+ga_view_zoom_set( 587949347438592.000000 )
+ga_view_center_set( 14896221650944.000000, 11594129997824.000000 )
+ga_view_zoom_set( 661443015868416.000000 )
+ga_view_center_set( 23502933458944.000000, 18366622334976.000000 )
+ga_view_zoom_set( 744123418017792.000000 )
+ga_view_center_set( 33185400356864.000000, 25985625882624.000000 )
+ga_view_zoom_set( 837138853658624.000000 )
+ga_view_center_set( 44078376943616.000000, 34557038428160.000000 )
+ga_view_zoom_set( 941781235531776.000000 )
+ga_view_center_set( 56332455510016.000000, 44199776878592.000000 )
+ga_view_zoom_set( 1059503873196032.000000 )
+ga_view_center_set( 70118763659264.000000, 55048058961920.000000 )
+ga_view_zoom_set( 1191941874122752.000000 )
+ga_view_center_set( 85628159000576.000000, 67252141424640.000000 )
+ga_view_zoom_set( 1340934558056448.000000 )
+ga_view_center_set( 120524499845120.000000, 94711477960704.000000 )
+ga_view_zoom_set( 1676168164016128.000000 )
+ga_view_center_set( 164145798316032.000000, 129035782848512.000000 )
+ga_view_zoom_set( 2095210137911296.000000 )
+ga_view_center_set( 191407566356480.000000, 150488204967936.000000 )
+ga_view_zoom_set( 2357111338041344.000000 )
+ga_view_center_set( 222079001559040.000000, 174622699945984.000000 )
+ga_view_zoom_set( 2651750389514240.000000 )
+ga_view_center_set( 154200801542144.000000, 125750803955712.000000 )
+ga_view_zoom_set( 2121400311611392.000000 )
+ga_view_center_set( 121619716505600.000000, 103225579536384.000000 )
+ga_view_zoom_set( 1885689150963712.000000 )
+ga_view_center_set( 92657946722304.000000, 83203113091072.000000 )
+ga_view_zoom_set( 1676168164016128.000000 )
+ga_view_center_set( 66279062896640.000000, 65405573922816.000000 )
+ga_view_zoom_set( 1489927241990144.000000 )
+ga_view_center_set( 41701112545280.000000, 49585196105728.000000 )
+ga_view_zoom_set( 1324379740831744.000000 )
+ga_view_center_set( 19853956087808.000000, 35522667872256.000000 )
+ga_view_zoom_set( 1177226376642560.000000 )
+ga_view_center_set( 434529894400.000000, 23022702428160.000000 )
+ga_view_zoom_set( 1046423416078336.000000 )
+ga_view_center_set( -16827212103680.000000, 11911622033408.000000 )
+ga_view_zoom_set( 930154155081728.000000 )
+ga_view_center_set( -44446267736064.000000, -5866052911104.000000 )
+ga_view_zoom_set( 744123350908928.000000 )
+ga_view_center_set( -56721284268032.000000, -13767249231872.000000 )
+ga_view_zoom_set( 661442948759552.000000 )
+ga_view_center_set( -67632514465792.000000, -20790527393792.000000 )
+ga_view_zoom_set( 587949280329728.000000 )
+ga_view_center_set( -77331490144256.000000, -26810494484480.000000 )
+ga_view_zoom_set( 522621586243584.000000 )
+ga_view_center_set( -92849609637888.000000, -36442428407808.000000 )
+ga_view_zoom_set( 418097282416640.000000 )
+ga_view_center_set( -99746588917760.000000, -40723269287936.000000 )
+ga_view_zoom_set( 371642043727872.000000 )
+ga_view_center_set( -84032578650112.000000, -33676603686912.000000 )
+ga_view_zoom_set( 330348483313664.000000 )
+ga_view_center_set( -70064405479424.000000, -27412863647744.000000 )
+ga_view_zoom_set( 293643088822272.000000 )
+ga_view_center_set( -51323449901056.000000, -20397537886208.000000 )
+ga_view_zoom_set( 234914477768704.000000 )
+ga_view_center_set( -38094480867328.000000, -15907703226368.000000 )
+ga_view_zoom_set( 187931578859520.000000 )
+ga_view_center_set( -32571287142400.000000, -14054760382464.000000 )
+ga_view_zoom_set( 167050286727168.000000 )
+ga_view_center_set( -27788505513984.000000, -12407707533312.000000 )
+ga_view_zoom_set( 148489149349888.000000 )
+ga_view_center_set( -23649700544512.000000, -10999948115968.000000 )
+ga_view_zoom_set( 131990351249408.000000 )
+ga_view_center_set( -19970792620032.000000, -9748619460608.000000 )
+ga_view_zoom_set( 117324757598208.000000 )
+ga_view_center_set( -16745104408576.000000, -8636323594240.000000 )
+ga_view_zoom_set( 104288676216832.000000 )
+ga_view_center_set( -11655266172928.000000, -6856655241216.000000 )
+ga_view_zoom_set( 83430939295744.000000 )
+ga_view_center_set( -9393110253568.000000, -6065693392896.000000 )
+ga_view_zoom_set( 74160831201280.000000 )
+ga_view_center_set( -7776021512192.000000, -5362602213376.000000 )
+ga_view_zoom_set( 65920739311616.000000 )
+ga_view_center_set( -5593674809344.000000, -4417659076608.000000 )
+ga_view_zoom_set( 52736590610432.000000 )
+ga_view_center_set( -3955782320128.000000, -3661707083776.000000 )
+ga_view_zoom_set( 42189270810624.000000 )
+ga_view_center_set( -3259829846016.000000, -3325730750464.000000 )
+ga_view_zoom_set( 37501574053888.000000 )
+ga_view_center_set( -2197496528896.000000, -2788163584000.000000 )
+ga_view_zoom_set( 30001258823680.000000 )
+ga_view_center_set( -1725352116224.000000, -2549245542400.000000 )
+ga_view_zoom_set( 26667785388032.000000 )
+ga_view_center_set( -1305665863680.000000, -2336873250816.000000 )
+ga_view_zoom_set( 23704698355712.000000 )
+ga_view_center_set( -650352001024.000000, -1997080100864.000000 )
+ga_view_zoom_set( 18963759104000.000000 )
+ga_view_center_set( -126097555456.000000, -1725245161472.000000 )
+ga_view_zoom_set( 15171007283200.000000 )
+ga_view_center_set( 106900226048.000000, -1604429283328.000000 )
+ga_view_zoom_set( 13485339574272.000000 )
+ga_view_center_set( 323219357696.000000, -1383509000192.000000 )
+ga_view_zoom_set( 10788272078848.000000 )
+ga_view_center_set( 407086563328.000000, -1293504479232.000000 )
+ga_view_zoom_set( 9589575647232.000000 )
+ga_view_center_set( 508544679936.000000, -1149496721408.000000 )
+ga_view_zoom_set( 7671660412928.000000 )
+ga_view_center_set( 524545949696.000000, -1085493739520.000000 )
+ga_view_zoom_set( 6819253583872.000000 )
+ga_view_center_set( 531528417280.000000, -978433605632.000000 )
+ga_view_zoom_set( 5455402762240.000000 )
+ga_view_center_set( 534633250816.000000, -930850799616.000000 )
+ga_view_zoom_set( 4849246666752.000000 )
+ga_view_center_set( 539597209600.000000, -854719725568.000000 )
+ga_view_zoom_set( 3879397228544.000000 )
+ga_view_center_set( 541804462080.000000, -820883750912.000000 )
+ga_view_zoom_set( 3448353062912.000000 )
+ga_view_center_set( 543765299200.000000, -790806921216.000000 )
+ga_view_zoom_set( 3065202606080.000000 )
+ga_view_center_set( 523888492544.000000, -696653709312.000000 )
+ga_view_zoom_set( 2452162084864.000000 )
+ga_view_center_set( 511334416384.000000, -654807924736.000000 )
+ga_view_zoom_set( 2179699572736.000000 )
+ga_view_center_set( 496869310464.000000, -617611788288.000000 )
+ga_view_zoom_set( 1937510760448.000000 )
+ga_view_center_set( 440661180416.000000, -512543948800.000000 )
+ga_view_zoom_set( 1722231816192.000000 )
+ga_view_center_set( 350729273344.000000, -344435326976.000000 )
+ga_view_zoom_set( 1377785479168.000000 )
+ga_view_center_set( 310759129088.000000, -269720354816.000000 )
+ga_view_zoom_set( 1224698232832.000000 )
+ga_view_center_set( 241791926272.000000, -152684331008.000000 )
+ga_view_zoom_set( 979758612480.000000 )
+ga_view_center_set( 185280233472.000000, -59724267520.000000 )
+ga_view_zoom_set( 783806889984.000000 )
+ga_view_center_set( 160163954688.000000, -40403992576.000000 )
+ga_view_zoom_set( 696717213696.000000 )
+ga_view_center_set( 139951996928.000000, -40932409344.000000 )
+ga_view_zoom_set( 619304189952.000000 )
+ga_view_center_set( 121985826816.000000, -54788653056.000000 )
+ga_view_zoom_set( 550492635136.000000 )
+ga_view_center_set( 106015883264.000000, -67314122752.000000 )
+ga_view_zoom_set( 489326772224.000000 )
+ga_view_center_set( 91449196544.000000, -72138719232.000000 )
+ga_view_zoom_set( 434957123584.000000 )
+ga_view_center_set( 78501249024.000000, -76427231232.000000 )
+ga_view_zoom_set( 386628550656.000000 )
+ga_view_center_set( 57784139776.000000, -83288915968.000000 )
+ga_view_zoom_set( 309302853632.000000 )
+ga_view_center_set( 48576724992.000000, -86338535424.000000 )
+ga_view_zoom_set( 274935873536.000000 )
+ga_view_center_set( 38098468864.000000, -80812703744.000000 )
+ga_view_zoom_set( 244387446784.000000 )
+ga_view_center_set( 28784427008.000000, -75900878848.000000 )
+ga_view_zoom_set( 217233293312.000000 )
+ga_view_center_set( 8463089664.000000, -65184120832.000000 )
+ga_view_zoom_set( 157987848192.000000 )
+ga_view_center_set( -1727954944.000000, -58390102016.000000 )
+ga_view_zoom_set( 126390280192.000000 )
+ga_view_center_set( -6257311744.000000, -55370547200.000000 )
+ga_view_zoom_set( 112346914816.000000 )
+ga_view_center_set( -10283384832.000000, -52686503936.000000 )
+ga_view_zoom_set( 99863920640.000000 )
+ga_view_center_set( -13862125568.000000, -50300665856.000000 )
+ga_view_zoom_set( 88767930368.000000 )
+ga_view_center_set( -12734447616.000000, -45352296448.000000 )
+ga_view_zoom_set( 78904827904.000000 )
+ga_view_center_set( -11732058112.000000, -40953733120.000000 )
+ga_view_zoom_set( 70137626624.000000 )
+ga_view_center_set( -10814439424.000000, -37017305088.000000 )
+ga_view_zoom_set( 62344556544.000000 )
+ga_view_center_set( -8107409408.000000, -30421131264.000000 )
+ga_view_zoom_set( 55417384960.000000 )
+ga_view_center_set( -5701140480.000000, -24557846528.000000 )
+ga_view_zoom_set( 49259896832.000000 )
+ga_view_center_set( -5314461696.000000, -18572681216.000000 )
+ga_view_zoom_set( 39407919104.000000 )
+ga_view_center_set( -5139619840.000000, -13945950208.000000 )
+ga_view_zoom_set( 31526334464.000000 )
+ga_view_center_set( -5085814784.000000, -11937443840.000000 )
+ga_view_zoom_set( 28023408640.000000 )
+ga_view_center_set( -5037989888.000000, -10152108032.000000 )
+ga_view_zoom_set( 24909697024.000000 )
+ga_view_center_set( -4961480704.000000, -7363581952.000000 )
+ga_view_zoom_set( 19927756800.000000 )
+ga_view_center_set( -3988897792.000000, -5241581568.000000 )
+ga_view_zoom_set( 15942205440.000000 )
+ga_view_center_set( -3199950848.000000, -3576627200.000000 )
+ga_view_zoom_set( 12753764352.000000 )
+ga_view_center_set( -2568794112.000000, -2253369344.000000 )
+ga_view_zoom_set( 10203011072.000000 )
+ga_view_center_set( -2288279552.000000, -1676862464.000000 )
+ga_view_zoom_set( 9069342720.000000 )
+ga_view_center_set( -1839454208.000000, -803976192.000000 )
+ga_view_zoom_set( 7255474176.000000 )
+ga_view_center_set( -1642727424.000000, -446293504.000000 )
+ga_view_zoom_set( 6449310208.000000 )
+ga_view_center_set( -1132800000.000000, 463506944.000000 )
+ga_view_zoom_set( 4299539968.000000 )
+ga_view_center_set( -1003177984.000000, 592313856.000000 )
+ga_view_zoom_set( 3821813248.000000 )
+ga_view_center_set( -808826880.000000, 777535232.000000 )
+ga_view_zoom_set( 3057450496.000000 )
+ga_view_center_set( -608190976.000000, 956826880.000000 )
+ga_view_zoom_set( 2223600384.000000 )
+ga_view_center_set( -507424768.000000, 949238016.000000 )
+ga_view_zoom_set( 1976533632.000000 )
+ga_view_center_set( -348897280.000000, 933047936.000000 )
+ga_view_zoom_set( 1581226880.000000 )
+ga_view_center_set( -192148992.000000, 860928704.000000 )
+ga_view_zoom_set( 1149983232.000000 )
+ga_view_center_set( -150065920.000000, 780687104.000000 )
+ga_view_zoom_set( 1022207296.000000 )
+ga_view_center_set( -123900416.000000, 669822016.000000 )
+ga_view_zoom_set( 908628736.000000 )
+ga_view_center_set( -100986368.000000, 571275264.000000 )
+ga_view_zoom_set( 807670016.000000 )
+ga_view_center_set( -65978112.000000, 413600416.000000 )
+ga_view_zoom_set( 646136000.000000 )
+ga_view_center_set( -51644160.000000, 343522720.000000 )
+ga_view_zoom_set( 574343104.000000 )
+ga_view_center_set( -47179136.000000, 289943488.000000 )
+ga_view_zoom_set( 510527200.000000 )
+ga_view_center_set( -43210368.000000, 242511104.000000 )
+ga_view_zoom_set( 453801952.000000 )
+ga_view_center_set( -35818368.000000, 139444704.000000 )
+ga_view_zoom_set( 330037792.000000 )
+ga_view_center_set( -44942336.000000, 113537312.000000 )
+ga_view_zoom_set( 264030240.000000 )
+ga_view_center_set( -48997376.000000, 102022912.000000 )
+ga_view_zoom_set( 234693552.000000 )
+ga_view_center_set( -52601856.000000, 91876880.000000 )
+ga_view_zoom_set( 208616496.000000 )
+ga_view_center_set( -39746336.000000, 76845728.000000 )
+ga_view_zoom_set( 185436880.000000 )
+ga_view_center_set( -28319136.000000, 63484712.000000 )
+ga_view_zoom_set( 164832784.000000 )
+ga_view_center_set( -18224128.000000, 51545744.000000 )
+ga_view_zoom_set( 146518032.000000 )
+ga_view_center_set( -9250784.000000, 40933328.000000 )
+ga_view_zoom_set( 130238248.000000 )
+ga_view_center_set( -2094336.000000, 29554156.000000 )
+ga_view_zoom_set( 104190600.000000 )
+ga_view_center_set( 928256.000000, 24496736.000000 )
+ga_view_zoom_set( 92613864.000000 )
+ga_view_center_set( 5068992.000000, 16468092.000000 )
+ga_view_zoom_set( 74091088.000000 )
+ga_view_center_set( 5054944.000000, 14107964.000000 )
+ga_view_zoom_set( 65858744.000000 )
+ga_view_center_set( 5032464.000000, 10331764.000000 )
+ga_view_zoom_set( 52686996.000000 )
+ga_view_center_set( 5014488.000000, 7310804.000000 )
+ga_view_zoom_set( 42149596.000000 )
+ga_view_center_set( 4958544.000000, 6000122.000000 )
+ga_view_zoom_set( 37466308.000000 )
+ga_view_center_set( 4908816.000000, 4835074.000000 )
+ga_view_zoom_set( 33303384.000000 )
+ga_view_center_set( 4864608.000000, 3799472.000000 )
+ga_view_zoom_set( 29603008.000000 )
+ga_view_center_set( 4793888.000000, 2142512.000000 )
+ga_view_zoom_set( 23682406.000000 )
+ga_view_center_set( 4753476.000000, 1630606.000000 )
+ga_view_zoom_set( 21051028.000000 )
+ga_view_center_set( 4717552.000000, 1175577.000000 )
+ga_view_zoom_set( 18712024.000000 )
+ga_view_center_set( 4685620.000000, 771107.000000 )
+ga_view_zoom_set( 16632910.000000 )
+ga_view_center_set( 4657232.000000, 411579.000000 )
+ga_view_zoom_set( 14784809.000000 )
+ga_view_center_set( 4228324.000000, 293839.000000 )
+ga_view_zoom_set( 13142052.000000 )
+ga_view_center_set( 3847068.000000, 189181.000000 )
+ga_view_zoom_set( 11681824.000000 )
+ga_view_center_set( 3508176.000000, 96152.000000 )
+ga_view_zoom_set( 10383844.000000 )
+ga_view_center_set( 3206940.000000, 13459.000000 )
+ga_view_zoom_set( 9230084.000000 )
+ga_view_center_set( 2862166.000000, -4042.000000 )
+ga_view_zoom_set( 8204519.000000 )
+ga_view_center_set( 1941926.000000, -80410.000000 )
+ga_view_zoom_set( 5966923.000000 )
+ga_view_center_set( 1481453.000000, 19152.000000 )
+ga_view_zoom_set( 5303931.500000 )
+ga_view_center_set( 1072142.000000, 107651.000000 )
+ga_view_zoom_set( 4714606.000000 )
+ga_view_center_set( 708311.000000, 186317.000000 )
+ga_view_zoom_set( 4190761.000000 )
+ga_view_center_set( 519989.000000, 214922.750000 )
+ga_view_zoom_set( 3725121.000000 )
+ga_view_center_set( 239016.000000, 245435.750000 )
+ga_view_zoom_set( 2980096.750000 )
+ga_view_center_set( 28477.500000, 257641.250000 )
+ga_view_zoom_set( 2384077.500000 )
+ga_view_center_set( 200705.000000, 146438.500000 )
+ga_view_zoom_set( 2119180.000000 )
+ga_view_center_set( 476271.000000, -31485.812500 )
+ga_view_zoom_set( 1695344.000000 )
+ga_view_center_set( 598745.250000, -110563.250000 )
+ga_view_zoom_set( 1506972.500000 )
+ga_view_center_set( 688180.250000, -179139.937500 )
+ga_view_zoom_set( 1339531.125000 )
+ga_view_center_set( 767678.250000, -240097.000000 )
+ga_view_zoom_set( 1190694.375000 )
+ga_view_center_set( 838343.500000, -294281.000000 )
+ga_view_zoom_set( 1058395.000000 )
+ga_view_center_set( 901156.750000, -342444.687500 )
+ga_view_zoom_set( 940795.562500 )
+ga_view_center_set( 948357.125000, -413726.812500 )
+ga_view_zoom_set( 752636.437500 )
+ga_view_center_set( 985603.375000, -470752.562500 )
+ga_view_zoom_set( 602109.125000 )
+ga_view_center_set( 886850.187500, -425086.437500 )
+ga_view_zoom_set( 535208.125000 )
+ga_view_center_set( 785268.250000, -382667.562500 )
+ga_view_zoom_set( 475740.562500 )
+ga_view_center_set( 622737.125000, -314797.375000 )
+ga_view_zoom_set( 380592.437500 )
+ga_view_center_set( 550501.000000, -284344.125000 )
+ga_view_zoom_set( 338304.375000 )
+ga_view_center_set( 486547.781250, -249192.312500 )
+ga_view_zoom_set( 300715.000000 )
+ga_view_center_set( 429700.406250, -217946.250000 )
+ga_view_zoom_set( 267302.218750 )
+ga_view_center_set( 379169.500000, -190171.937500 )
+ga_view_zoom_set( 237601.968750 )
+ga_view_center_set( 334253.062500, -165483.687500 )
+ga_view_zoom_set( 211201.750000 )
+ga_view_center_set( 294327.343750, -143538.593750 )
+ga_view_zoom_set( 187734.890625 )
+ga_view_center_set( 230446.234375, -108426.406250 )
+ga_view_zoom_set( 150187.906250 )
+ga_view_center_set( 202054.625000, -92821.000000 )
+ga_view_zoom_set( 133500.359375 )
+ga_view_center_set( 178690.781250, -81987.062500 )
+ga_view_zoom_set( 118666.984375 )
+ga_view_center_set( 157922.937500, -72356.906250 )
+ga_view_zoom_set( 105481.765625 )
+ga_view_center_set( 139462.625000, -63796.765625 )
+ga_view_zoom_set( 93761.570313 )
+ga_view_center_set( 109926.132813, -50164.531250 )
+ga_view_zoom_set( 75009.257813 )
+ga_view_center_set( 96798.789063, -44105.773438 )
+ga_view_zoom_set( 66674.898438 )
+ga_view_center_set( 85130.062500, -38720.195313 )
+ga_view_zoom_set( 59266.578125 )
+ga_view_center_set( 66460.070313, -30103.281250 )
+ga_view_zoom_set( 47413.261719 )
+ga_view_center_set( 58162.300781, -26273.539063 )
+ga_view_zoom_set( 42145.121094 )
+ga_view_center_set( 45863.984375, -20232.253906 )
+ga_view_zoom_set( 33716.097656 )
+ga_view_center_set( 36025.320313, -15399.230469 )
+ga_view_zoom_set( 26972.878906 )
+ga_view_center_set( 31652.587891, -13251.214844 )
+ga_view_zoom_set( 23975.892578 )
+ga_view_center_set( 28029.380859, -11378.242188 )
+ga_view_zoom_set( 21311.904297 )
+ga_view_center_set( 22232.251953, -8526.955078 )
+ga_view_zoom_set( 17049.523438 )
+ga_view_center_set( 17594.546875, -6292.480469 )
+ga_view_zoom_set( 13639.619141 )
+ga_view_center_set( 13884.385742, -4523.519531 )
+ga_view_zoom_set( 10911.695313 )
+ga_view_center_set( 10916.254883, -3108.350586 )
+ga_view_zoom_set( 8729.356445 )
+ga_view_center_set( 9597.086914, -2482.696289 )
+ga_view_zoom_set( 7759.427734 )
+ga_view_center_set( 8480.399414, -1944.216797 )
+ga_view_zoom_set( 6897.269043 )
+ga_view_center_set( 7487.788574, -1465.566895 )
+ga_view_zoom_set( 6130.905762 )
+ga_view_center_set( 4840.827637, -224.040527 )
+ga_view_zoom_set( 4087.270508 )
+ga_view_center_set( 3787.622070, 225.140625 )
+ga_view_zoom_set( 3269.816406 )
+ga_view_center_set( 2635.628906, 702.982178 )
+ga_view_zoom_set( 2378.048340 )
+ga_view_center_set( 2294.296875, 837.350342 )
+ga_view_zoom_set( 2113.820801 )
+ga_view_center_set( 2059.828857, 703.483093 )
+ga_view_zoom_set( 1878.951782 )
+ga_view_center_set( 1850.700195, 584.489868 )
+ga_view_zoom_set( 1670.179321 )
+ga_view_center_set( 1512.674072, 391.820679 )
+ga_view_zoom_set( 1336.143433 )
+ga_view_center_set( 1325.958618, 311.256897 )
+ga_view_zoom_set( 1187.683105 )
+ga_view_center_set( 1158.187500, 239.644562 )
+ga_view_zoom_set( 1055.718262 )
+ga_view_center_set( 1007.857056, 175.989227 )
+ga_view_zoom_set( 938.416260 )
+ga_view_center_set( 755.797791, 74.781219 )
+ga_view_zoom_set( 750.733032 )
+ga_view_center_set( 613.594055, 51.436462 )
+ga_view_zoom_set( 667.318237 )
+ga_view_center_set( 487.190735, 30.685547 )
+ga_view_zoom_set( 593.171753 )
+ga_view_center_set( 374.832184, 12.240295 )
+ga_view_zoom_set( 527.263794 )
+ga_view_center_set( 274.957977, -4.155457 )
+ga_view_zoom_set( 468.678925 )
+ga_view_center_set( 193.823456, -10.553802 )
+ga_view_zoom_set( 416.603485 )
+ga_view_center_set( 121.703766, -16.241241 )
+ga_view_zoom_set( 370.314209 )
+ga_view_center_set( 113.067474, -24.667023 )
+ga_view_zoom_set( 329.168182 )
+ga_view_center_set( 105.390594, -32.156631 )
+ga_view_zoom_set( 292.593933 )
+ga_view_center_set( 98.566742, -38.814072 )
+ga_view_zoom_set( 260.083496 )
+ga_view_center_set( 86.682037, -31.910110 )
+ga_view_zoom_set( 231.185333 )
+ga_view_center_set( 76.117828, -25.773224 )
+ga_view_zoom_set( 205.498077 )
+ga_view_center_set( 59.215057, -15.954208 )
+ga_view_zoom_set( 164.398468 )
+ga_view_center_set( 51.578033, -11.714890 )
+ga_view_zoom_set( 146.131973 )
+ga_view_center_set( 44.789612, -9.664474 )
+ga_view_zoom_set( 129.895081 )
+ga_view_center_set( 39.100189, -9.270416 )
+ga_view_zoom_set( 115.462296 )
+ga_view_center_set( 34.042984, -8.920128 )
+ga_view_zoom_set( 102.633148 )
+ga_view_center_set( 30.014725, -8.336319 )
+ga_view_zoom_set( 91.229462 )
+ga_view_center_set( 26.364838, -7.886574 )
+ga_view_zoom_set( 81.092857 )
+ga_view_center_set( 23.120514, -7.456039 )
+ga_view_zoom_set( 72.082542 )
+ga_view_center_set( 20.236679, -7.073349 )
+ga_view_zoom_set( 64.073372 )
+ga_view_center_set( 15.622513, -6.461048 )
+ga_view_zoom_set( 51.258698 )
+ga_view_center_set( 13.921654, -5.702957 )
+ga_view_zoom_set( 45.563286 )
+ga_view_center_set( 12.409798, -5.029095 )
+ga_view_zoom_set( 40.500698 )
+ga_view_center_set( 11.065910, -4.430111 )
+ga_view_zoom_set( 36.000622 )
+ga_view_center_set( 9.871353, -3.897678 )
+ga_view_zoom_set( 32.000553 )
+ga_view_center_set( 7.960052, -3.045786 )
+ga_view_zoom_set( 25.600443 )
+ga_view_center_set( 7.110596, -2.667166 )
+ga_view_zoom_set( 22.755949 )
+ga_view_center_set( 5.751450, -2.061377 )
+ga_view_zoom_set( 18.204760 )
+ga_view_center_set( 5.140484, -1.792137 )
+ga_view_zoom_set( 16.182009 )
+ga_view_center_set( 4.597397, -1.552814 )
+ga_view_zoom_set( 14.384007 )
+ga_view_center_set( 4.000111, -1.410993 )
+ga_view_zoom_set( 12.785785 )
+ga_view_center_set( 3.469189, -1.284928 )
+ga_view_zoom_set( 11.365142 )
+ga_view_center_set( 2.619713, -1.083226 )
+ga_view_zoom_set( 9.092113 )
+ga_view_center_set( 2.242168, -0.993581 )
+ga_view_zoom_set( 8.081879 )
+ga_view_center_set( 1.638094, -0.850148 )
+ga_view_zoom_set( 6.465503 )
+ga_view_center_set( 1.369617, -0.786400 )
+ga_view_zoom_set( 5.747114 )
+ga_view_center_set( 1.165843, -0.725376 )
+ga_view_zoom_set( 5.108545 )
+ga_view_center_set( 0.984709, -0.671133 )
+ga_view_zoom_set( 4.540929 )
+ga_view_center_set( 0.823702, -0.622917 )
+ga_view_zoom_set( 4.036382 )
+ga_view_center_set( 0.718850, -0.576997 )
+ga_view_zoom_set( 3.587895 )
+ga_view_center_set( 0.625649, -0.536179 )
+ga_view_zoom_set( 3.189240 )
+ga_view_center_set( 0.542804, -0.499897 )
+ga_view_zoom_set( 2.834880 )
+ga_view_center_set( 0.410252, -0.441844 )
+ga_view_zoom_set( 2.267904 )
+ga_view_center_set( 0.313498, -0.392307 )
+ga_view_zoom_set( 1.814323 )
+ga_view_center_set( 0.236095, -0.352677 )
+ga_view_zoom_set( 1.451458 )
+ga_view_center_set( 0.201694, -0.335063 )
+ga_view_zoom_set( 1.290185 )
+ga_view_center_set( 0.172093, -0.309132 )
+ga_view_zoom_set( 1.146831 )
+ga_view_center_set( 0.145782, -0.286082 )
+ga_view_zoom_set( 1.019406 )
+ga_view_center_set( 0.088375, -0.235792 )
+ga_view_zoom_set( 0.741386 )
+ga_view_center_set( 0.057758, -0.194295 )
+ga_view_zoom_set( 0.593109 )
+ga_view_center_set( 0.044151, -0.175851 )
+ga_view_zoom_set( 0.527208 )
+ga_view_center_set( 0.022379, -0.146342 )
+ga_view_zoom_set( 0.421766 )
+ga_view_center_set( 0.012702, -0.133227 )
+ga_view_zoom_set( 0.374903 )
+ga_view_center_set( -0.002780, -0.112243 )
+ga_view_zoom_set( 0.299923 )
+ga_view_center_set( -0.019670, -0.089351 )
+ga_view_zoom_set( 0.218126 )
+ga_view_center_set( -0.024674, -0.081906 )
+ga_view_zoom_set( 0.193889 )
+ga_view_center_set( -0.032681, -0.069995 )
+ga_view_zoom_set( 0.155112 )
+ga_view_center_set( -0.039087, -0.060466 )
+ga_view_zoom_set( 0.124089 )
+ga_view_center_set( -0.037558, -0.055148 )
+ga_view_zoom_set( 0.110302 )
+ga_view_center_set( -0.046899, -0.062866 )
+ga_view_zoom_set( 0.124089 )
+ga_view_center_set( -0.005949, 0.002902 )
+uil_primary_file.db_save(  )

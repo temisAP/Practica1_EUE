@@ -75,7 +75,7 @@ el_bode_loco(Acc,theta,w,w0,name)
 
 load('./numerico/sinusoidal6num.mat')
 
-Acc_num = A(:,2);
+Acc_num = A(:,2)/9.81;
 theta_num = deg2rad(-A(:,3)+180);
 w_num = 2*pi*A(:,1);
 
