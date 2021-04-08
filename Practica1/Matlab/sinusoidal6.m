@@ -16,7 +16,7 @@ nu = 0.3;
 chi = 0.02;
 
 % Excitación
-A = 5*9.81; %m/s^2
+AA = 5*9.81; %m/s^2
 fmin = 5;   %Hz
 fmax = 100; %Hz
 
@@ -42,20 +42,16 @@ F = chi * 2*(K*M)^0.5;
 w0 = (K/M)^0.5;
 chi = chi;
 
-% Función de transferencia
+% Frecuencias
 
-f = linspace(fmin,fmax,96*2); %Frecuencias discretizadas
+f = linspace(fmin,fmax,96); %Frecuencias discretizadas
 w = f*2*pi;
-
-H = 1 ./ ((1-(w/w0).^2).^2 + (2*chi*w/w0).^2).^0.5;
-theta = atan((2*chi*w/w0) ./ (1-(w/w0).^2));
 
 % Respuesta en frecuencia
 
-P = A*M/1e6;
+Q = ((w/w0).^2*AA./w.^2) ./ ((1-(w/w0).^2).^2 + (2*chi*w/w0).^2).^0.5 + AA./w.^2 ;    %Módulo
 
-Q = H*P;                                  %Módulo
-theta = atan((2*chi*w/w0) ./ (1-(w/w0).^2));    %Argumento
+theta = atan((2*chi*w/w0) ./ (1-(w/w0).^2));                    %Argumento
 
 for i = 1:length(w)
     if w(i)>w0
