@@ -12,7 +12,7 @@ H  = 50e-3; % m
 Panel = struct();
 Panel.A         = Lx*Ly;    % m^2
 Panel.thickness = 5e-3;     % m
-Panel.rho       = 27000;    % kg/m^3
+Panel.rho       = 2700;     % kg/m^3
 Panel.E         = 70e9;     % Pa
 Panel.nu        = 0.3;
 Panel.D         = Panel.E*Panel.thickness^3/12/(1-Panel.nu^2);
@@ -94,7 +94,7 @@ fc  = Panel.fc;
     
 for f = 1:length(Frecuencias(:,2))
     frec   = Frecuencias(f,2);
-    lambda = (frec/Panel.fc)^0.5 ;
+    lambda = (frec/fc)^0.5 ;
     
     if Panel.f11 <= Panel.fc/2
         if frec<Panel.f11
@@ -104,11 +104,11 @@ for f = 1:length(Frecuencias(:,2))
             A2 = ((1-lambda^2)*log((1+lambda)/(1-lambda))+2*lambda) / (4*pi^2*(1-lambda^2)^1.5);
             A3 = 2*(2*c0/fc/pi^2)^2;
             A4 = (1-2*lambda^2)/(A*lambda*(1-lambda^2)^0.5);
-            sigma(f) = A * A2 + A3 * A4;
+            sigma(f) = A1 * A2 + A3 * A4;
         elseif Panel.fc/2 < frec && frec < Panel.fc
             A1 = c0*P/A/fc;
             A2 = ((1-lambda^2)*log((1+lambda)/(1-lambda))+2*lambda) / (4*pi^2*(1-lambda^2)^1.5);
-            sigma(f) = A * A2;
+            sigma(f) = A1 * A2;
         elseif frec >= Panel.fc
             sigma(f) = 1/(1-fc/frec)^0.5;
         end
