@@ -1,6 +1,6 @@
 clc
 close all
-clear all
+%clear all
 
 % Cogemos los datos del excel
 frec = xlsread('Practica3.xlsx',2,'J17:J32');

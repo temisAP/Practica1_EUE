@@ -1,7 +1,7 @@
 clear all
 close all
 fig = 1;
-fig_flag = 1;
+fig_flag = 0;
 
 %% Datos
 
@@ -175,7 +175,7 @@ Aire.M(2,1,:) = -Panel.eta(:);
 Aire.M(2,2,:) = +Panel.eta(:);
 
 % Conjuntos
-Paneles = [Panel Panel Panel];      
+Paneles = [Panel Panel];      
 Aires   = [Aire Aire];
 
 % Nodos
@@ -185,8 +185,9 @@ Paneles(2).nodes    = [3 4];
 Aires(2).nodes      = [4 5];
 
 % Ensamblaje
-estructura = conjunto({Paneles(1), Paneles(2), Aires(1), Aires(2)},1);  %Hay que quitar el último panel porque no tiene aire detrás
-estructura.M(5,5,:) = estructura.M(5,5,:) + eta_pd;                     %Faltaba la disipación del último panel
+estructura = conjunto({Paneles(1), Paneles(2), Aires(1), Aires(2)},1);
+
+estructura.M(5,5,:) = estructura.M(5,5,:) + eta_pd; %Faltaba la disipación del último panel
 
 %% Potencias externas aplicadas
 
@@ -268,6 +269,7 @@ clear omega M P
 
 % Representación gráfica
 
+fig_flag = 1;
 if fig_flag == 1
     figure(fig)
     set(gca, 'XScale', 'log')
@@ -277,7 +279,7 @@ if fig_flag == 1
     for p = 1:length(E(:,1))
         FF = Frecuencias(idx,2);
         EE = E(p,idx);
-        plot(FF,EE,'DisplayName',display_names{p});
+        plot(FF,EE,'--','DisplayName',display_names{p});
     end
     grid on
     legend()
@@ -286,58 +288,10 @@ if fig_flag == 1
     fig = fig+1;
 end
 
-clear EE FF
-
 
 %% /////// APARTADO E /////// %%
 
 %% Velocidad media en los paneles
 % E = 1/2 * m * v^2
 
-v(1:3,:) = (2*E([1,3,5],:)./Panel.A/Panel.rho/Panel.thickness).^0.5;
-
-
-if fig_flag == 1
-    figure(fig)
-    set(gca, 'XScale', 'log')
-    set(gca, 'YScale', 'log')
-    hold on
-    display_names = {'Panel 1', 'Panel 2' 'Panel 3'};
-    for p = 1:length(v(:,1))
-        FF = Frecuencias(idx,2);
-        vv = v(p,idx);
-        plot(FF,vv,'DisplayName',display_names{p});
-    end
-    grid on
-    legend()
-    ylabel('v [m/s]')
-    xlabel('Frecuencia [Hz]')
-    fig = fig+1;
-end
-
-clear FF vv
-
-%% Presión media en las capas de aire
-% E = V * P^2 / (rho*c0^2)
-
-P(1:2,:) = (E([2,4],:)./Aire.V * Aire.rho * Aire.c^2).^0.5;
-
-if fig_flag == 1
-    figure(fig)
-    set(gca, 'XScale', 'log')
-    set(gca, 'YScale', 'log')
-    hold on
-    display_names = {'Aire 1', 'Aire 2'};
-    for p = 1:length(P(:,1))
-        FF = Frecuencias(idx,2);
-        PP = P(p,idx);
-        plot(FF,PP,'DisplayName',display_names{p});
-    end
-    grid on
-    legend()
-    ylabel('P [Pa]')
-    xlabel('Frecuencia [Hz]')
-    fig = fig+1;
-end
-
-clear FF PP
+v = 
