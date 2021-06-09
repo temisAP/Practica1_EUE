@@ -37,15 +37,15 @@ end
 
 % Paneles
 Panel.modos(:,:) = Frecuencias(:,:);
-Panel.modos(:,5) = Panel.A/4/pi * (Panel.rho*Panel.thickness/Panel.D)^0.5;
-Panel.modos(:,6) = Panel.modos(:,5) .* Panel.modos(:,4) ;
+Panel.modos(:,5) = Panel.A/4/pi * (Panel.rho*Panel.thickness/Panel.D)^0.5; % modos/(rad/s)
+Panel.modos(:,6) = Panel.modos(:,5) .* Panel.modos(:,4)*2*pi ;
 
 % Capas de aire
 Aire.modos(:,:) = Frecuencias(:,:);
 Aire.modos(:,5) = Aire.V/pi/Aire.c * (Frecuencias(:,2).*2*pi ./ Aire.c).^2 +...
     Aire.A/4/Aire.c * (Frecuencias(:,2).*2*pi ./ Aire.c) + ...
-    Aire.L/8/Aire.c;
-Aire.modos(:,6) = Aire.modos(:,5) .* Aire.modos(:,4);
+    Aire.L/8/Aire.c; % modos/(rad/s)
+Aire.modos(:,6) = Aire.modos(:,5) .* Aire.modos(:,4)*2*pi;
 
 % Requisito para el SEA
 
@@ -211,21 +211,23 @@ Paneles(2).p_ext(f,2) = 4.35;
 Paneles(3).p_ext(f,2) = 10;
                       
 for f=2:length(Frecuencias)
-    
-    if Frecuencias(f,2) > Frecuencias_list(1) && Frecuencias(f,2) <= Frecuencias_list(2) l = 2; end
-    if Frecuencias(f,2) > Frecuencias_list(2) && Frecuencias(f,2) <= Frecuencias_list(3) l = 3; end
-    if Frecuencias(f,2) > Frecuencias_list(3) && Frecuencias(f,2) <= Frecuencias_list(4) l = 4; end
-    if Frecuencias(f,2) > Frecuencias_list(4) && Frecuencias(f,2) <= Frecuencias_list(5) l = 5; end
-    if Frecuencias(f,2) > Frecuencias_list(5) && Frecuencias(f,2) <= Frecuencias_list(6) l = 6; end
-    if Frecuencias(f,2) > Frecuencias_list(6) && Frecuencias(f,2) <= Frecuencias_list(7) l = 7; end
-    if Frecuencias(f,2) > Frecuencias_list(7) && Frecuencias(f,2) <= Frecuencias_list(8) l = 8; end
-    if Frecuencias(f,2) > Frecuencias_list(8) && Frecuencias(f,2) <= Frecuencias_list(9) l = 9; end
-    if Frecuencias(f,2) > Frecuencias_list(9) && Frecuencias(f,2) <= Frecuencias_list(10) l = 10; end
+     
+    if Frecuencias(f,2) > Frecuencias_list(1) && Frecuencias(f,2) <= Frecuencias_list(2) l = 1; end
+    if Frecuencias(f,2) > Frecuencias_list(2) && Frecuencias(f,2) <= Frecuencias_list(3) l = 2; end
+    if Frecuencias(f,2) > Frecuencias_list(3) && Frecuencias(f,2) <= Frecuencias_list(4) l = 3; end
+    if Frecuencias(f,2) > Frecuencias_list(4) && Frecuencias(f,2) <= Frecuencias_list(5) l = 4; end
+    if Frecuencias(f,2) > Frecuencias_list(5) && Frecuencias(f,2) <= Frecuencias_list(6) l = 5; end
+    if Frecuencias(f,2) > Frecuencias_list(6) && Frecuencias(f,2) <= Frecuencias_list(7) l = 6; end
+    if Frecuencias(f,2) > Frecuencias_list(7) && Frecuencias(f,2) <= Frecuencias_list(8) l = 7; end
+    if Frecuencias(f,2) > Frecuencias_list(8) && Frecuencias(f,2) <= Frecuencias_list(9) l = 8; end
+    if Frecuencias(f,2) > Frecuencias_list(9) && Frecuencias(f,2) <= Frecuencias_list(10) l = 9; end
     
     for p=1:length(Paneles)
-        deltaW = (Potencias_list(p,l) - Potencias_list(p,l-1))  / (Frecuencias_list(l) - Frecuencias_list(l-1)) ;
-        deltaf = Frecuencias(f,2) - Frecuencias(f-1);
+        deltaW = (Potencias_list(p,l+1) - Potencias_list(p,l))  / (Frecuencias_list(l+1) - Frecuencias_list(l)) ;
+        deltaf = Frecuencias(f,2) - Frecuencias_list(l);
         Paneles(p).p_ext(f,2) = Paneles(p).p_ext(f-1,2) + deltaW*deltaf;
+        dW(l) = deltaW;
+        df(l) = deltaf;
     end
 
 end
@@ -251,7 +253,7 @@ end
 
 Z = zeros(length(Frecuencias(:,2)),1);
 P_ext = [Paneles(1).p_ext(:,2) Z Paneles(2).p_ext(:,2) Z Paneles(3).p_ext(:,2)]';
-
+P_ext = P_ext';
 
 %% Energías 
 
@@ -260,8 +262,8 @@ idx = find(Frecuencias(:,2)>SEA_frec);
 for f = idx(1):idx(end)
     omega = Frecuencias(f,2) * 2 * pi;
     M = estructura.M(:,:,f); % Porque el último panel no tiene aire luego
-    P = P_ext(:,f);
-    E(:,f) = 1/omega .* inv(M) * P;
+    P = P_ext(f,:)';
+    E(f,:) = 1/omega .* inv(M) * P;
 end
 
 clear omega M P
@@ -274,9 +276,9 @@ if fig_flag == 1
     set(gca, 'YScale', 'log')
     hold on
     display_names = {'Panel 1', 'Aire 1', 'Panel 2', 'Aire 2', 'Panel 3'};
-    for p = 1:length(E(:,1))
+    for p = 1:length(E(1,:))
         FF = Frecuencias(idx,2);
-        EE = E(p,idx);
+        EE = E(idx,p);
         plot(FF,EE,'DisplayName',display_names{p});
     end
     grid on
@@ -294,8 +296,7 @@ clear EE FF
 %% Velocidad media en los paneles
 % E = 1/2 * m * v^2
 
-v(1:3,:) = (2*E([1,3,5],:)./Panel.A/Panel.rho/Panel.thickness).^0.5;
-
+vrms(:,1:3) = (2*E(:,[1,3,5])./Panel.A/Panel.rho/Panel.thickness).^0.5;
 
 if fig_flag == 1
     figure(fig)
@@ -303,9 +304,9 @@ if fig_flag == 1
     set(gca, 'YScale', 'log')
     hold on
     display_names = {'Panel 1', 'Panel 2' 'Panel 3'};
-    for p = 1:length(v(:,1))
+    for p = 1:length(vrms(1,:))
         FF = Frecuencias(idx,2);
-        vv = v(p,idx);
+        vv = vrms(idx,p);
         plot(FF,vv,'DisplayName',display_names{p});
     end
     grid on
@@ -320,7 +321,7 @@ clear FF vv
 %% Presión media en las capas de aire
 % E = V * P^2 / (rho*c0^2)
 
-P(1:2,:) = (E([2,4],:)./Aire.V * Aire.rho * Aire.c^2).^0.5;
+Prms(:,1:2) = (E(:,[2,4])./Aire.V * Aire.rho * Aire.c^2).^0.5;
 
 if fig_flag == 1
     figure(fig)
@@ -328,9 +329,9 @@ if fig_flag == 1
     set(gca, 'YScale', 'log')
     hold on
     display_names = {'Aire 1', 'Aire 2'};
-    for p = 1:length(P(:,1))
+    for p = 1:length(Prms(1,:))
         FF = Frecuencias(idx,2);
-        PP = P(p,idx);
+        PP = Prms(idx,p);
         plot(FF,PP,'DisplayName',display_names{p});
     end
     grid on
