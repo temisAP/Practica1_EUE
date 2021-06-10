@@ -43,19 +43,62 @@ vigas = estructura({viga1,viga2},1);
 
 %% Velocidad rms 
 
-f = 1:2000; % Hz
+frecuencias = linspace(1,2000,2000); % Hz
 
-for 
-q = vigas.dinamic_solution(100);
+for f=1:length(frecuencias)
+    q = vigas.dinamic_solution(frecuencias(f));
+    qrms(f) = rms(q);
+end
+
+vrms = qrms * 2 * pi .*frecuencias;
 
 %% /////// APARTADO B /////// %%
 %% Reducción de la estructura
 
-% Transformación Craig-Bampton
+% Condiciones de contorno
+viga(1).bn = [viga(1).N(1)];
+viga(1).iface = [viga(1).N(end)];
+
+viga(2).bn = [viga(2).N(end)];
+viga(2).iface = [viga(2).N(1)];
+
+% Creación de estructuras 
+viga1 = estructura({viga(1)},1);
+viga2 = estructura({viga(2)},1);
+
+% Transformación Craig-Bampton de las vigas
 viga1.CB_transformation();
+viga1.CB_getGDLred(5);
+
 viga2.CB_transformation();
+viga2.CB_getGDLred(5);
+
+% Renumeración para que encajen
+viga2.N = viga2.N + viga1.N(end) - 1;
+
+% Condiciones de contorno
+viga1.bn = [viga1.N(1)];
+viga1.iface = [viga1.N(end)];
+viga2.bn = [viga2.N(end)];
+viga2.iface = [viga2.N(1)];
 
 % Estrcuctura completa
 vigas_CB = estructura({viga1,viga2},1);
 
+% Calcular las matrices CB a partir de los componentes
+vigas_CB.CB_matriz;
+
+% Reducción
+f_red = 30;
+vigas_CB.CB_reduction(f_red);
+
 %% Velocidad rms
+
+frecuencias = linspace(1,2000,2000); % Hz
+
+for f=1:length(frecuencias)
+    q = vigas_CB.dinamic_solution(frecuencias(f));
+    qrms(f) = rms(q);
+end
+
+vrms = qrms * 2 * pi .*frecuencias;

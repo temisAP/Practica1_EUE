@@ -34,7 +34,7 @@ classdef estructura < handle
         M_CB;   % Matriz de masa de Craig-Bampton
         F_CB;   % Vector de fuerzas de Craig-Bampton
         psi;    % Matriz modal
-        gdl_red;% Grados de libertad a reducir según criterio
+        gdl_red;% Número de grados de libertad a reducir según criterio
         
     end
     
@@ -60,7 +60,7 @@ classdef estructura < handle
         
         function obj = estructura(component_s,g)
             
-            disp('Creando estructura...')
+            disp('***Creando estructura...***')
             
             % Compoenentes de la estructura
             obj.component_s = component_s;
@@ -82,10 +82,9 @@ classdef estructura < handle
             disp('    Ensamblando matrices');
             matrices_globales(obj);
                                     
-            disp('Estructura creada')
-            disp('')
-            
+            disp('***Estructura creada***')            
         end
+        
     end
     
     %% Otros métodos
@@ -134,21 +133,21 @@ classdef estructura < handle
                 end
             end
             
-            obj.N = unique(obj.N);
+            obj.N = sort(unique(obj.N));
             
             % Autocompletar
-            if isempty(obj.in) && ~isempty(obj.bn)
-                obj.in = obj.N(obj.N~=obj.bn & obj.N~=obj.iface);
-            elseif ~isempty(obj.in) && ~isempty(obj.bn)
+            if ~isempty(obj.in) && ~isempty(obj.bn)
                 for c = 1:length(component_s)
                     obj.bn = [obj.bn; component_s{c}.bn];
                     obj.in = [obj.in; component_s{c}.in];
-                end
+                end             
+            if ~isempty(obj.bn)
+                obj.in = obj.N(obj.N~=obj.bn & obj.N~=obj.iface);
             end
             
-            obj.in = unique(obj.in);
-            obj.bn = unique(obj.bn);
-            obj.iface = unique(obj.iface);
+            obj.in = sort(unique(obj.in));
+            obj.bn = sort(unique(obj.bn));
+            obj.iface = sort(unique(obj.iface));
             
         end
         
@@ -301,7 +300,7 @@ classdef estructura < handle
             
         end
             
-    function q = dinamic_solution(obj,f,M,K,F)
+        function q = dinamic_solution(obj,f,M,K,F)
             
             w = 2*pi*f; % rad/s
             
@@ -336,15 +335,20 @@ classdef estructura < handle
     %% Métodos de reducción modal
     methods
         
+        % Correr todo de seguido (no recomendado si se quieren reducir los
+        % componentes por separado)
         function CB(obj)
             CB_transformation(obj);
             CB_getGDLred(obj);
             CB_reduction(obj);          
         end
         
+        % Transformación al espacio de CB
         function CB_transformation(obj)
             
-            % Nodos interiores
+            disp('Transformando al espacio de CB')
+            
+            % Nodos
             in = obj.in';
             nb = obj.bn';
             iface = obj.iface';
@@ -358,13 +362,9 @@ classdef estructura < handle
             gdl_CB = [nb, iface, in];
             
             % Matrices de masa y rigidez ordenadas
-
-            M = CB_assembly(obj,M);
-            K = CB_assembly(obj,K);
-            
-            M_mat = cell2mat(M);
-            K_mat = cell2mat(K);
-                
+            M = CB_decomposition(obj,M);
+            K = CB_decomposition(obj,K);
+                            
             Mff = cell2mat({M{1,1},M{1,2};M{2,1},M{2,2}});
             Mii = M{3,3};                       
             
@@ -383,46 +383,53 @@ classdef estructura < handle
             
             psi = [phi_s, phi_i];
             
+            % Convertir a matriz
+            M = cell2mat(M);
+            K = cell2mat(K);
+            
             % Return
-            obj.M_CB = psi'*M_mat*psi;
+            obj.M_CB = psi'*M*psi;
             obj.K_CB = psi'*K*psi;
             obj.F_CB = psi'*F;
             obj.psi  = psi;
             
         end
                
-        
+        % Extraer el número de grados de libertad que se pueden reducir
         function CB_getGDLred(obj,f_red)
 
+            disp('Identificando nodos que se pueden reducir')
             % Grados de libertad a reducir de cada componente
             
             Lf = obj.Lf;                % Límites inferiores de bandas de frecuencia
             Uf = obj.Uf;                % Límites superiores de bandas de frecuencia
             k = zeros(length(Lf),1);
             
-            try
-                eigval = obj.eigval;
-            catch
+            if isempty(obj.eigval)
                 Modos(obj);
+                eigval = obj.eigval;
+            else
                 eigval = obj.eigval;
             end
 
             % Modos por banda
             for i = 1: length(k)
-                k(i) = length(eigval(eigval>Banda_baja(i) & eigval<Banda_alta(i)));
+                k(i) = length(eigval(eigval>Lf(i) & eigval<Uf(i)));
             end
-            % posiciones con más de f_red modos
+            
+            % Posiciones con más de f_red modos
             pos = find(k>f_red);
-            % Nos quedamos con solo esas posiciones en las matrices
-            gdl_red = length((find(eigval>=Banda_baja(pos(1)))));
-            obj.gld_red = gdl_red;
+            
+            % Número de gdl a reducir
+            gdl_red = length((find(eigval>=Lf(pos(1)))));
+            obj.gdl_red = gdl_red;
                                  
         end
         
         % Crear matrices reducidas globales a partir de los componentes
-        %       Si no se llama esta función se usan directamente las 
-        %       matrices reducidas de la estructura, si las hubiera.
         function CB_matriz(obj)
+            
+            disp('Ensamblando matrices de CB')
             
             component_s = obj.component_s;
             
@@ -476,34 +483,103 @@ classdef estructura < handle
             end
             
         end
+        %       (Si no se llama esta función se usan directamente las 
+        %       matrices reducidas de la estructura, si las hubiera)
         
-        function CB_reduction(obj)
+        % Reducción de grados de libertad
+        function CB_reduction(obj,f_red)
             
-            component_s = obj.component_s;
+            % Matrices a reducir
+            M = obj.M_CB;
+            K = obj.K_CB;
+            F = obj.F_CB;
             
-            nodos_frontera = [1 2];
-            nodos_interfaz = [3];
+            % Identificadores de tipo de nodo
+            in = obj.in';
+            nb = obj.bn';
+            iface = obj.iface';
             
-            for c = 1:length(component_s)
-                gdl_red(c) = component_s{c}.gdl_red;
+            % Descomponer las matrices en submatrices
+            M = CB_decomposition(obj,M,[]);
+            K = CB_decomposition(obj,K,[]);
+            
+            % Descomponer las submatrices de nodos internos
+            Min = CB_inner_decomp(obj,M{3,3});
+            Kin = CB_inner_decomp(obj,K{3,3});
+            
+            % Eliminar el final de las submatrices
+            for c=1:length(obj.component_s)
+                for i = 1:length(Min)
+                    for j = 1:length(Min)
+                        if i == c
+                            comp = obj.component_s{c};
+                            % Eliminar última fila de la matriz de masa
+                            A = Min{i,j};  
+                            A(end-comp.gdl_red:end,:) = [];
+                            Min{i,j} = A;
+                            % Eliminar última fila de la matriz de rigidez
+                            A = Kin{i,j};  
+                            A(end-comp.gdl_red:end,:) = [];
+                            Kin{i,j} = A;
+                        end
+                        if j == c
+                            comp = obj.component_s{c};
+                            % Eliminar última fila de la matriz de masa
+                            A = Min{i,j};
+                            A(:,end-comp.gdl_red:end) = [];
+                            Min{i,j} = A;
+                            % Eliminar última fila de la matriz de rigidez
+                            A = Kin{i,j};
+                            A(:,end-comp.gdl_red:end) = [];
+                            Kin{i,j} = A;
+                        end
+                            
+                    end
+                end
             end
+            
+            M3 = cell2mat(Min);
+            K3 = cell2mat(Kin);
+            
+            % Volver a montar las matrices
+            
+            M = {M{1,1}, M{1,2}, M{1,3};...
+                M{2,1}, M{2,2}, M{2,3};...
+                M{3,1}, M{3,2}, M3};
+            
+            K = {K{1,1}, K{1,2}, K{1,3};...
+                K{2,1}, K{2,2}, K{2,3};...
+                K{3,1}, K{3,2}, K3};
+            
+            obj.M_CB = cell2mat(M);
+            obj.K_CB = cell2mat(K);
             
         end        
     end
     
     methods (Access = private)
-        function [C] = CB_assembly(obj,M,gdl_CB)
+        function [C] = CB_decomposition(obj,M,gdl_CB)
             
+            % Para descomponer según nodos especificados anteriormente
             if nargin == 2
                 in = obj.in;
-                bn = obj.bn';
-                iface = obj.iface';
+                bn = obj.bn;
+                iface = obj.iface;
+            % Para descomponer según nodos especificados ahora
             else
-                in = gdl_CB{1};
-                bn = gdl_CB(2);
-                iface = gdl_CB(3);
+                % Si es {} entonces es que la matriz ya está ordenada
+                if isempty(gdl_CB) 
+                    bn = (1:length(obj.bn));
+                    iface = (1:length(obj.iface)) + max(bn);
+                    in = 1:length(obj.in) + max(iface);
+                % Si no lo que sea especificado en gdl
+                else
+                    in = gdl_CB{1};
+                    bn = gdl_CB(2);
+                    iface = gdl_CB(3);
+                end
             end
-                        
+            
             C = cell(3);
             C{1,1} = M(bn,bn);
             C{1,2} = M(bn,iface);
@@ -516,7 +592,23 @@ classdef estructura < handle
             C{3,1} = M(in,bn);
             C{3,2} = M(in,iface);
             C{3,3} = M(in,in);
+
                         
+        end
+        
+        function [C] = CB_inner_decomp(obj,M)
+            
+            component_s = obj.component_s;
+            
+            % Tamaño de las submatrices
+            sub_matrix_number = length(component_s);                  % Número de submatrices    
+            for c = 1:length(component_s)
+                sub_matrix_sizes(c)  = length(component_s{c}.in);     % Tamaño de las submatrices (nodos internos del componente)   
+            end
+            
+            % Dividir la matriz de nodos internos en submatrices
+            C = mat2cell(M,sub_matrix_sizes,sub_matrix_sizes);
+       
         end
 
     end
