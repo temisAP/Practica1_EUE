@@ -1,7 +1,7 @@
 clear all
 close all
 fig = 1;
-fig_flag = 1;
+fig_flag = 0;
 
 %% Importar datos de vigas del .pch 
 
@@ -53,6 +53,16 @@ end
 
 vrms = qrms * 2 * pi .*frecuencias;
 
+%% Representación gráfica
+
+if fig_flag == 1
+    figure(fig)
+        loglog(frecuencias,vrms)
+        grid on
+        title('vrms')
+    fig = fig+1;
+end
+
 %% /////// APARTADO B /////// %%
 %% Reducción de la estructura
 
@@ -91,15 +101,46 @@ vigas_CB.CB_matriz;
 
 % Reducción
 f_red = 30;
-vigas_CB.CB_reduction(f_red);
+vigas_CB.CB_reduction();
 
 %% Velocidad rms
 
 frecuencias = linspace(1,2000,2000); % Hz
 
 for f=1:length(frecuencias)
-    q = vigas_CB.dinamic_solution(frecuencias(f));
-    qrms(f) = rms(q);
+    q = vigas_CB.CB_sol(frecuencias(f));
+    qrms_CB(f) = rms(q);
 end
 
-vrms = qrms * 2 * pi .*frecuencias;
+vrms_CB = qrms_CB * 2 * pi .*frecuencias;
+
+%% Representación gráfica
+
+if fig_flag == 1
+    figure(fig)
+        loglog(frecuencias,vrms_CB)
+        grid on
+        title('vrms')
+    fig = fig+1;
+end
+
+%% /////// APARTADO C /////// %%
+
+
+%% Representación gráfica
+
+fig_flag = 1;
+if fig_flag == 1
+    figure(fig)
+        set(gca, 'XScale', 'log')
+        set(gca, 'YScale', 'log')
+        hold on
+        plot(frecuencias, vrms)
+        plot(frecuencias, vrms_CB)
+        grid on; box on
+        title('vrms')
+        ylabel('vrms [m/s]')
+        xlabel('Frecuencia [Hz]')
+        legend('Completa','Reducida')
+    fig = fig+1;
+end

@@ -22,7 +22,7 @@ classdef estructura < handle
         K;      % Matriz de rigidez
         M;      % Matriz de masa
         F;      % Vector de fuerzas
-                
+        
         eigval; % Autovalores
         eigvec; % Autovectores
         
@@ -41,7 +41,7 @@ classdef estructura < handle
     properties (Access = private)
         
         % Para hacer los ensamblajes
-        Matrix; 
+        Matrix;
         Vector;
         
         % Bandas de frecuencia
@@ -81,8 +81,8 @@ classdef estructura < handle
             % Crear matrices globales
             disp('    Ensamblando matrices');
             matrices_globales(obj);
-                                    
-            disp('***Estructura creada***')            
+            
+            disp('***Estructura creada***')
         end
         
     end
@@ -94,7 +94,7 @@ classdef estructura < handle
         % Encontrar el número de nodos totales de la estrcutura
         function val = N_nodes(obj)
             
-            component_s = obj.component_s;           
+            component_s = obj.component_s;
             
             val = 0;
             for b = 1:length(component_s)
@@ -119,12 +119,6 @@ classdef estructura < handle
                 catch
                     disp('    *No se han encontrado nodos frontera')
                 end
-                % Nodos interiores
-                try
-                    obj.in = [obj.in ; component_s{c}.in];
-                catch
-                    disp('    *No se han encontrado nodos interiores')
-                end
                 % Nodos interfaz
                 try
                     obj.iface = [obj.iface ; component_s{c}.iface];
@@ -136,13 +130,8 @@ classdef estructura < handle
             obj.N = sort(unique(obj.N));
             
             % Autocompletar
-            if ~isempty(obj.in) && ~isempty(obj.bn)
-                for c = 1:length(component_s)
-                    obj.bn = [obj.bn; component_s{c}.bn];
-                    obj.in = [obj.in; component_s{c}.in];
-                end             
-            if ~isempty(obj.bn)
-                obj.in = obj.N(obj.N~=obj.bn & obj.N~=obj.iface);
+            if isempty(obj.in) && ~isempty(obj.bn)
+                obj.in = setdiff(obj.N,[obj.bn,obj.iface]);
             end
             
             obj.in = sort(unique(obj.in));
@@ -169,7 +158,7 @@ classdef estructura < handle
                 component = component_s{c};
                 
                 % Ensamblar matriz de masas
-                obj.Matrix = component.M;    
+                obj.Matrix = component.M;
                 obj.M = obj.M + ensamblar(obj,component);
                 
                 % Ensamblar matriz de rigidez
@@ -182,7 +171,7 @@ classdef estructura < handle
                 
             end
         end
-  
+        
     end
     
     %% Métodos de ensamblaje
@@ -230,7 +219,7 @@ classdef estructura < handle
             
             g = obj.gdl;              % g    : grados de libertad locales (escalar)
             NN = obj.NN;              % nn   : número de nodos total (escalar)
-             
+            
             % Nodos globales que usa cada elemento
             n = component.N(:);
             
@@ -252,7 +241,7 @@ classdef estructura < handle
             for i = 1:sub_vector_number
                 C{n(i)} = V{i};
             end
-
+            
             % Cell 2 matrix
             J = cell2mat(C);
             
@@ -299,7 +288,7 @@ classdef estructura < handle
             end
             
         end
-            
+        
         function q = dinamic_solution(obj,f,M,K,F)
             
             w = 2*pi*f; % rad/s
@@ -310,7 +299,7 @@ classdef estructura < handle
                 M = obj.M;
                 K = obj.K;
                 F = obj.F;
-             
+                
                 % Condiciones de contorno
                 cc = sort([obj.bn; obj.iface]);
                 aa = setdiff(obj.N,cc);
@@ -318,17 +307,26 @@ classdef estructura < handle
                 M(cc,:) = []; M(:,cc) = [];
                 K(cc,:) = []; K(:,cc) = [];
                 F(cc)   = [];
-                               
-            end
-            
+                
             % Respuesta permanente
             z = inv(K - w^2*M)*F;
             q = zeros(obj.GDL,1);
             q(aa) = z;
             obj.q = q;
+            
+            else
+                % Respuesta permanente
+                try
+                    z = inv(K - w^2*M)*F;
+                catch
+                    z = inv(K - w^2*M)*F';
+                end
+                q = z;
+                obj.q = q;
+            end
+            
+        end
         
-    end
-    
     end
     
     
@@ -340,7 +338,7 @@ classdef estructura < handle
         function CB(obj)
             CB_transformation(obj);
             CB_getGDLred(obj);
-            CB_reduction(obj);          
+            CB_reduction(obj);
         end
         
         % Transformación al espacio de CB
@@ -364,9 +362,9 @@ classdef estructura < handle
             % Matrices de masa y rigidez ordenadas
             M = CB_decomposition(obj,M);
             K = CB_decomposition(obj,K);
-                            
+            
             Mff = cell2mat({M{1,1},M{1,2};M{2,1},M{2,2}});
-            Mii = M{3,3};                       
+            Mii = M{3,3};
             
             Kif = cell2mat({K{3,1},K{3,2}});
             Kii = K{3,3};
@@ -394,10 +392,10 @@ classdef estructura < handle
             obj.psi  = psi;
             
         end
-               
+        
         % Extraer el número de grados de libertad que se pueden reducir
         function CB_getGDLred(obj,f_red)
-
+            
             disp('Identificando nodos que se pueden reducir')
             % Grados de libertad a reducir de cada componente
             
@@ -411,7 +409,7 @@ classdef estructura < handle
             else
                 eigval = obj.eigval;
             end
-
+            
             % Modos por banda
             for i = 1: length(k)
                 k(i) = length(eigval(eigval>Lf(i) & eigval<Uf(i)));
@@ -423,7 +421,7 @@ classdef estructura < handle
             % Número de gdl a reducir
             gdl_red = length((find(eigval>=Lf(pos(1)))));
             obj.gdl_red = gdl_red;
-                                 
+            
         end
         
         % Crear matrices reducidas globales a partir de los componentes
@@ -436,7 +434,7 @@ classdef estructura < handle
             for c = 1:length(component_s)
                 gdl(c) = component_s{c}.GDL;
             end
-             
+            
             try
                 
                 % Matrices de las dos vigas
@@ -450,30 +448,30 @@ classdef estructura < handle
                 F2 = component_s{2}.F_CB;
                 psi_2 = component_s{2}.psi;
                 
-
+                
                 % Matrices globales
                 M = zeros(gdl(1) + gdl(2) - 1);
                 K = zeros(gdl(1) + gdl(2) - 1);
                 F = zeros(gdl(1) + gdl(2) - 1, 1);
                 psi = zeros(gdl(1) + gdl(2) - 1);
-
+                
                 % Vector de posiciones
                 pos_1 = [1, 3:(gdl(1)+1)];
                 pos_2 = [2:3, (pos_1(end)+1):length(M)];
-
+                
                 % Ensamblar matrices
                 M(pos_1,pos_1) = M(pos_1,pos_1) + M1;
                 M(pos_2,pos_2) = M(pos_2,pos_2) + M2;
-
+                
                 K(pos_1,pos_1) = K(pos_1,pos_1) + K1;
                 K(pos_2,pos_2) = K(pos_2,pos_2) + K2;
-
+                
                 F(pos_1) = F(pos_1) + F1;
                 F(pos_2) = F(pos_2) + F2;
-
+                
                 psi(pos_1,pos_1) = psi(pos_1,pos_1) + psi_1;
                 psi(pos_2,pos_2) = psi(pos_2,pos_2) + psi_2;
-
+                
                 obj.M_CB = M;
                 obj.K_CB = K;
                 obj.F_CB = F;
@@ -483,11 +481,11 @@ classdef estructura < handle
             end
             
         end
-        %       (Si no se llama esta función se usan directamente las 
+        %       (Si no se llama esta función se usan directamente las
         %       matrices reducidas de la estructura, si las hubiera)
         
         % Reducción de grados de libertad
-        function CB_reduction(obj,f_red)
+        function CB_reduction(obj)
             
             % Matrices a reducir
             M = obj.M_CB;
@@ -495,66 +493,140 @@ classdef estructura < handle
             F = obj.F_CB;
             
             % Identificadores de tipo de nodo
-            in = obj.in';
-            nb = obj.bn';
-            iface = obj.iface';
+            bn = (1:length(obj.bn));
+            iface = (1:length(obj.iface)) + max(bn);
+            in = setdiff(1:length(M),[bn,iface]);
             
             % Descomponer las matrices en submatrices
             M = CB_decomposition(obj,M,[]);
-            K = CB_decomposition(obj,K,[]);
+            K = CB_decomposition(obj,K,[]);    
+            F = {F(bn);F(iface);F(in)};
             
             % Descomponer las submatrices de nodos internos
-            Min = CB_inner_decomp(obj,M{3,3});
-            Kin = CB_inner_decomp(obj,K{3,3});
+            Min22 = CB_inner_decomp22(obj,M{3,3});
+            Min12 = CB_inner_decomp12(obj,cell2mat({M{1,3};M{2,3}}));
+            Kin22 = CB_inner_decomp22(obj,K{3,3});
+            Kin12 = CB_inner_decomp12(obj,cell2mat({M{1,3};M{2,3}}));
             
-            % Eliminar el final de las submatrices
+            F3 = CB_vect_decomp(obj,F{3});
+            
+            % Eliminar el final de las submatrices cuadradas
             for c=1:length(obj.component_s)
-                for i = 1:length(Min)
-                    for j = 1:length(Min)
+                for i = 1:length(Min22)
+                    for j = 1:length(Min22)
                         if i == c
                             comp = obj.component_s{c};
                             % Eliminar última fila de la matriz de masa
-                            A = Min{i,j};  
+                            A = Min22{i,j};
                             A(end-comp.gdl_red:end,:) = [];
-                            Min{i,j} = A;
+                            Min22{i,j} = A;
                             % Eliminar última fila de la matriz de rigidez
-                            A = Kin{i,j};  
+                            A = Kin22{i,j};
                             A(end-comp.gdl_red:end,:) = [];
-                            Kin{i,j} = A;
+                            Kin22{i,j} = A;
                         end
                         if j == c
                             comp = obj.component_s{c};
-                            % Eliminar última fila de la matriz de masa
-                            A = Min{i,j};
+                            % Eliminar última columna de la matriz de masa
+                            A = Min22{i,j};
                             A(:,end-comp.gdl_red:end) = [];
-                            Min{i,j} = A;
-                            % Eliminar última fila de la matriz de rigidez
-                            A = Kin{i,j};
+                            Min22{i,j} = A;
+                            % Eliminar última columna de la matriz de rigidez
+                            A = Kin22{i,j};
                             A(:,end-comp.gdl_red:end) = [];
-                            Kin{i,j} = A;
+                            Kin22{i,j} = A;
                         end
-                            
+                        
                     end
                 end
             end
             
-            M3 = cell2mat(Min);
-            K3 = cell2mat(Kin);
+            % Eliminar el final de las submatrices rectangulares
+            for c=1:length(obj.component_s)
+                for j = 1:length(Min12)
+                    i = 1;
+                    if j == c
+                        comp = obj.component_s{c};
+                        % Eliminar última columna de la matriz de masa
+                        B = Min12{i,j};
+                        B(:,end-comp.gdl_red:end) = [];
+                        Min12{i,j} = B;
+                        % Eliminar última columna de la matriz de rigidez
+                        B = Kin12{i,j};
+                        B(:,end-comp.gdl_red:end) = [];
+                        Kin12{i,j} = B;
+                    end                 
+                end
+            end
             
-            % Volver a montar las matrices
+            % Eliminar el final de los subvectores
+            for c=1:length(obj.component_s)
+                for i = 1:length(F3)
+                    if i == c
+                        comp = obj.component_s{c};
+                        % Eliminar última columna de la matriz de masa
+                        J = F3{i};
+                        J(end-comp.gdl_red:end) = [];
+                        F3{i} = J;
+                    end                 
+                end
+            end
             
-            M = {M{1,1}, M{1,2}, M{1,3};...
-                M{2,1}, M{2,2}, M{2,3};...
-                M{3,1}, M{3,2}, M3};
+            % Submatrices
             
-            K = {K{1,1}, K{1,2}, K{1,3};...
-                K{2,1}, K{2,2}, K{2,3};...
-                K{3,1}, K{3,2}, K3};
+            M11 = cell2mat({M{1,1},M{1,2};...
+                M{2,1},M{2,2}});        
+            K11 = cell2mat({K{1,1},K{1,2};...
+                K{2,1},K{2,2}});
+            
+            M13 = cell2mat(Min12);
+            K13 = cell2mat(Kin12);
+            
+            M31 = M13';
+            K31 = K13';
+            
+            M33 = cell2mat(Min22);
+            K33 = cell2mat(Kin22);
+            
+            F3 = cell2mat(F3);
+            
+            % Volver a ensamblar las matrices
+            
+            M = {M11, M13;...
+                M31, M33};
+            
+            K = {K11, K13;...
+                K31, K33};
+            
+            F = {F{1}; F{2};F3};
             
             obj.M_CB = cell2mat(M);
             obj.K_CB = cell2mat(K);
+            obj.F_CB = cell2mat(F);
             
-        end        
+        end
+        
+        % Solución CB
+        function q = CB_sol(obj,f)
+            
+           M = obj.M_CB;
+           K = obj.K_CB;
+           F = obj.F_CB;
+                
+           % Condiciones de contorno
+           cc = 1:length(obj.bn);
+           aa = setdiff(1:length(M),cc);
+                
+           M(cc,:) = []; M(:,cc) = [];
+           K(cc,:) = []; K(:,cc) = [];
+           F(cc)   = [];
+            
+           z = dinamic_solution(obj,f,M,K,F);
+           q(aa) = z;
+           q = obj.psi * q;
+           
+           
+        end
     end
     
     methods (Access = private)
@@ -562,21 +634,21 @@ classdef estructura < handle
             
             % Para descomponer según nodos especificados anteriormente
             if nargin == 2
-                in = obj.in;
                 bn = obj.bn;
                 iface = obj.iface;
-            % Para descomponer según nodos especificados ahora
+                in = obj.in;
+                % Para descomponer según nodos especificados ahora
             else
                 % Si es {} entonces es que la matriz ya está ordenada
-                if isempty(gdl_CB) 
+                if isempty(gdl_CB)
                     bn = (1:length(obj.bn));
                     iface = (1:length(obj.iface)) + max(bn);
-                    in = 1:length(obj.in) + max(iface);
+                    in = setdiff(1:length(M),[bn,iface]);
                 % Si no lo que sea especificado en gdl
                 else
-                    in = gdl_CB{1};
-                    bn = gdl_CB(2);
-                    iface = gdl_CB(3);
+                    bn = gdl_CB(1);
+                    iface = gdl_CB(2);
+                    in = setdiff(1:length(M),[bn,iface]);
                 end
             end
             
@@ -592,25 +664,54 @@ classdef estructura < handle
             C{3,1} = M(in,bn);
             C{3,2} = M(in,iface);
             C{3,3} = M(in,in);
-
-                        
+            
+            
         end
         
-        function [C] = CB_inner_decomp(obj,M)
+        function [C] = CB_inner_decomp22(obj,M)
             
             component_s = obj.component_s;
             
             % Tamaño de las submatrices
-            sub_matrix_number = length(component_s);                  % Número de submatrices    
             for c = 1:length(component_s)
-                sub_matrix_sizes(c)  = length(component_s{c}.in);     % Tamaño de las submatrices (nodos internos del componente)   
+                sub_matrix_sizes(c)  = length(component_s{c}.in);     % Tamaño de las submatrices (nodos internos del componente)
             end
             
             % Dividir la matriz de nodos internos en submatrices
             C = mat2cell(M,sub_matrix_sizes,sub_matrix_sizes);
-       
+            
         end
+        
+        function [C] = CB_inner_decomp12(obj,M)
+            
+            component_s = obj.component_s;
+            
+            % Tamaño de las submatrices
+            sub_matrix_size1 = size(M,1);                               % Tamaño vertical
+            for c = 1:length(component_s)
+                sub_matrix_sizes2(c)  = length(component_s{c}.in);      % Tamaño de las submatrices (nodos internos del componente)
+            end
+            
+            
+            % Dividir la matriz de nodos internos en submatrices
+            C = mat2cell(M,sub_matrix_size1,sub_matrix_sizes2);
+            
+        end
+        
+        function [C] = CB_vect_decomp(obj,V)
+            
+            component_s = obj.component_s;
+            
+            % Tamaño de las submatrices
+            for c = 1:length(component_s)
+                sub_vector_sizes(c)  = length(component_s{c}.in);      % Tamaño de los subvectores (nodos internos del componente)
+            end
 
+            % Dividir la matriz de nodos internos en submatrices
+            C = mat2cell(V,sub_vector_sizes,[1]);
+            
+        end
+        
     end
     
 end

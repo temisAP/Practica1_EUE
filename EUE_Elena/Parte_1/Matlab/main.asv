@@ -39,6 +39,7 @@ viga1.iface = [viga1.N(end)];
 viga2.bn = [viga2.N(end)];
 viga2.iface = [viga2.N(1)];
 
+% Estrcuctura completa
 vigas = estructura({viga1,viga2},1);
 
 %% Velocidad rms 
@@ -51,6 +52,15 @@ for f=1:length(frecuencias)
 end
 
 vrms = qrms * 2 * pi .*frecuencias;
+
+%% Representación gráfica
+
+figure(2)
+    loglog(f,vrms_f(:,2))
+    hold on
+    loglog(f, rms_z2_r(:,2))
+    title('z2')
+    legend({'Normal','CB'})
 
 %% /////// APARTADO B /////// %%
 %% Reducción de la estructura
@@ -98,7 +108,10 @@ frecuencias = linspace(1,2000,2000); % Hz
 
 for f=1:length(frecuencias)
     q = vigas_CB.dinamic_solution(frecuencias(f));
-    qrms(f) = rms(q);
+    qrms_CB(f) = rms(q);
 end
 
-vrms = qrms * 2 * pi .*frecuencias;
+vrms_CB = qrms_CB * 2 * pi .*frecuencias;
+
+
+
