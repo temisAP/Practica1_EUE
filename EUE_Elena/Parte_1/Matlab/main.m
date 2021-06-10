@@ -1,7 +1,14 @@
 clear all
 close all
 fig = 1;
-fig_flag = 0;
+fig_flag = 1;
+save_flag = 1;
+
+colors = [0, 0.4470, 0.7410;
+          [255, 102, 26]/255;
+          [255,140,0]/255;
+          [139,0,139]/255;
+          [50,205,50]/255];
 
 %% Importar datos de vigas del .pch 
 
@@ -56,10 +63,31 @@ vrms = qrms * 2 * pi .*frecuencias;
 %% Representación gráfica
 
 if fig_flag == 1
-    figure(fig)
-        loglog(frecuencias,vrms)
-        grid on
-        title('vrms')
+    h = figure(fig); %set(h, 'Visible', 'off')
+    
+    set(gca, 'XScale', 'log')
+    set(gca, 'YScale', 'log')
+    set(get(gca,'ylabel'),'rotation',0);
+    set(gca,'TickLabelInterpreter','latex');
+    set(gca,'FontSize',10.5);
+    set(gca,'TitleFontSizeMultiplier',1.25);
+    set(gca,'LabelFontSizeMultiplier',1.3);
+    ylh = get(gca,'ylabel'); ylh.Position(1) = 0.35; ylh.Position(2) = 100;
+    xlh = get(gca,'xlabel'); xlh.Position(1) = 2000; xlh.Position(2) = 0.005;
+    
+    hold on
+    plot(frecuencias, vrms, ...
+        'LineWidth', 1, 'Color', colors(1,:))
+    grid on; box on;
+    xlabel('$Frecuencia$ [Hz]','Interpreter','latex');
+    ylabel({'$v_{rms}$';'[m/s]'},'Interpreter','latex');
+    
+    if save_flag == 1
+        set(h,'Units','Inches');
+        pos = get(h,'Position');
+        set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
+        print(h, './Figures/ApartadoA.pdf','-dpdf','-r0','-painters')
+    end
     fig = fig+1;
 end
 
@@ -117,10 +145,32 @@ vrms_CB = qrms_CB * 2 * pi .*frecuencias;
 %% Representación gráfica
 
 if fig_flag == 1
-    figure(fig)
-        loglog(frecuencias,vrms_CB)
-        grid on
-        title('vrms')
+    h = figure(fig); %set(h, 'Visible', 'off')
+    
+    set(gca, 'XScale', 'log')
+    set(gca, 'YScale', 'log')
+    set(get(gca,'ylabel'),'rotation',0);
+    set(gca,'TickLabelInterpreter','latex');
+    set(gca,'FontSize',10.5);
+    set(gca,'TitleFontSizeMultiplier',1.25);
+    set(gca,'LabelFontSizeMultiplier',1.3);
+    ylh = get(gca,'ylabel'); ylh.Position(1) = 0.35; ylh.Position(2) = 100;
+    xlh = get(gca,'xlabel'); xlh.Position(1) = 2000; xlh.Position(2) = 0.005;
+    
+    hold on
+    plot(frecuencias, vrms_CB, ...
+        'LineWidth', 1, 'Color', colors(1,:))
+    
+    grid on; box on;
+    xlabel('$Frecuencia$ [Hz]','Interpreter','latex');
+    ylabel({'$v_{rms}$';'[m/s]'},'Interpreter','latex');
+    
+    if save_flag == 1
+        set(h,'Units','Inches');
+        pos = get(h,'Position');
+        set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
+        print(h, './Figures/ApartadoB.pdf','-dpdf','-r0','-painters')
+    end
     fig = fig+1;
 end
 
@@ -129,18 +179,36 @@ end
 
 %% Representación gráfica
 
-fig_flag = 1;
 if fig_flag == 1
-    figure(fig)
-        set(gca, 'XScale', 'log')
-        set(gca, 'YScale', 'log')
-        hold on
-        plot(frecuencias, vrms)
-        plot(frecuencias, vrms_CB)
-        grid on; box on
-        title('vrms')
-        ylabel('vrms [m/s]')
-        xlabel('Frecuencia [Hz]')
-        legend('Completa','Reducida')
+    h = figure(fig); %set(h, 'Visible', 'off')
+    
+    set(gca, 'XScale', 'log')
+    set(gca, 'YScale', 'log')
+    set(get(gca,'ylabel'),'rotation',0);
+    set(gca,'TickLabelInterpreter','latex');
+    set(gca,'FontSize',10.5);
+    set(gca,'TitleFontSizeMultiplier',1.25);
+    set(gca,'LabelFontSizeMultiplier',1.3);
+    ylh = get(gca,'ylabel'); ylh.Position(1) = 0.35; ylh.Position(2) = 100;
+    xlh = get(gca,'xlabel'); xlh.Position(1) = 2000; xlh.Position(2) = 0.005;
+    
+    hold on
+    plot(frecuencias, vrms, ...
+        'LineWidth', 1, 'Color', colors(1,:), 'DisplayName', "Soluci\'on completa")
+    plot(frecuencias, vrms_CB, ...
+        'LineWidth', 1, 'Color', colors(2,:), 'DisplayName', "Modelo reducido")
+    
+    grid on; box on;
+    legend('Interpreter', 'Latex', 'Location', 'Best')
+    xlabel('$Frecuencia$ [Hz]','Interpreter','latex');
+    ylabel({'$v_{rms}$';'[m/s]'},'Interpreter','latex');
+    
+    if save_flag == 1
+        set(h,'Units','Inches');
+        pos = get(h,'Position');
+        set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
+        print(h, './Figures/ApartadoC.pdf','-dpdf','-r0','-painters')
+    end
     fig = fig+1;
 end
+
