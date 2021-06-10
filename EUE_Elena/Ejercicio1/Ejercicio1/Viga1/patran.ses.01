@@ -1,0 +1,63 @@
+$# Session file patran.ses.01 started recording at 10-Jun-21 16:35:26
+$# Build: 27.1.801631 Thu Mar 25 06:46:07 PDT 2021
+$# Recorded by: Patran 2021.1  (Student Edition)
+uil_file_open.go( "C:\Users\anabe\Desktop\UPM_Local\PATRAN\Teoria\Ejercici" // @
+"o1\Viga1\Viga1.db" )
+$# Database version 3.22 created by Patran 2021.1  (Student Edition) 
+$# successfully opened.
+$# Warning reported in application FILE by application Journal
+$#     Journal file 
+$# C:\Users\anabe\Desktop\UPM_Local\PATRAN\Teoria\Ejercicio1\Viga1\Viga1.db.jo
+$# u does not exist. No journal file will be created.
+$# FLEXlm initialization complete.  Acquiring license(s)...
+$# License File: EDU
+$# Patran 2021.1  (Student Edition) has obtained 0 concurrent license(s) from 
+$# FLEXlm per a request to execute on Windows node MSI(386893b5beb8) (Windows 
+$# 6.2 (Build 9200: Service Pack 0)) at 10-Jun-21 16:35:27.
+$# Begin Reading RMB Menu definitions
+$# Done Reading RMB Menu definitions
+$# Loading dynamic library C:\Program 
+$# Files\MSC.Software\NaPa_SE\20211\Patran\bin\exe\loads_browser.dll
+$# €çÁd shared library 'Loads Browser', Version 2021, Revision 3, Patch 0, 
+$# has been loaded for: MSC.Patran.
+ga_view_center_set( -0.156174, -0.050578 )
+ga_view_zoom_set( 0.043592 )
+ga_view_center_set( -0.153033, -0.052298 )
+ga_view_zoom_set( 0.049041 )
+ga_view_center_set( -0.149622, -0.054192 )
+ga_view_zoom_set( 0.055171 )
+ga_view_center_set( -0.145784, -0.056322 )
+ga_view_zoom_set( 0.062068 )
+ga_view_center_set( -0.141467, -0.058720 )
+ga_view_zoom_set( 0.069826 )
+ga_view_center_set( -0.136726, -0.061445 )
+ga_view_zoom_set( 0.078554 )
+ga_view_center_set( -0.126058, -0.067578 )
+ga_view_zoom_set( 0.098193 )
+ga_view_center_set( -0.119391, -0.071411 )
+ga_view_zoom_set( 0.110467 )
+ga_view_center_set( -0.111891, -0.075724 )
+ga_view_zoom_set( 0.124276 )
+ga_view_center_set( -0.112794, -0.080781 )
+ga_view_zoom_set( 0.139810 )
+ga_view_center_set( -0.113926, -0.086529 )
+ga_view_zoom_set( 0.157286 )
+ga_view_center_set( -0.115200, -0.092996 )
+ga_view_zoom_set( 0.176947 )
+ga_view_center_set( -0.116633, -0.100271 )
+ga_view_zoom_set( 0.199065 )
+ga_view_center_set( -0.118245, -0.108455 )
+ga_view_zoom_set( 0.223949 )
+ga_view_center_set( -0.095139, -0.097377 )
+ga_view_zoom_set( 0.199065 )
+ga_view_center_set( -0.074453, -0.087310 )
+ga_view_zoom_set( 0.176947 )
+ga_view_center_set( -0.055870, -0.078035 )
+ga_view_zoom_set( 0.157286 )
+ga_view_center_set( -0.039178, -0.069558 )
+ga_view_zoom_set( 0.139810 )
+ga_view_center_set( -0.023772, -0.061352 )
+ga_view_zoom_set( 0.124276 )
+uil_file_close.goquit(  )
+$# Flushing the User Data Manager
+$# Session file patran.ses.01 stopped recording at 10-Jun-21 16:36:31

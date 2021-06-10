@@ -43,36 +43,19 @@ vigas = estructura({viga1,viga2},1);
 
 %% Velocidad rms 
 
-frecuencias = linspace(1,2000,2000); % Hz
+f = 1:2000; % Hz
 
-for f=1:length(frecuencias)
-    q = vigas.dinamic_solution(frecuencias(f));
-    qrms(f) = rms(q);
-end
-
-vrms = qrms * 2 * pi .*frecuencias;
+for 
+q = vigas.dinamic_solution(100);
 
 %% /////// APARTADO B /////// %%
 %% Reducción de la estructura
 
-% Transformación Craig-Bampton de las vigas
+% Transformación Craig-Bampton
 viga1.CB_transformation();
 viga2.CB_transformation();
 
 % Estrcuctura completa
 vigas_CB = estructura({viga1,viga2},1);
 
-% Reducción
-f_red = 30;
-vigas_CB.reduccion(f_red,{viga1,viga2});
-
 %% Velocidad rms
-
-frecuencias = linspace(1,2000,2000); % Hz
-
-for f=1:length(frecuencias)
-    q = vigasCB.dinamic_solution(frecuencias(f));
-    qrms(f) = rms(q);
-end
-
-vrms = qrms * 2 * pi .*frecuencias;

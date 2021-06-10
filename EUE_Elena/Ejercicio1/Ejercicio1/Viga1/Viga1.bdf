@@ -1,0 +1,188 @@
+$ MSC.Nastran input file created on June      05, 2021 at 11:19:06 by
+$ Patran 2021.1  (Student Edition)
+$ Direct Text Input for Nastran System Cell Section
+$ Direct Text Input for File Management Section
+$ Direct Text Input for Executive Control
+$ Normal Modes Analysis, Database
+SOL 103
+CEND
+$ Direct Text Input for Global Case Control Data
+TITLE = MSC.Nastran job created on 04-Jun-21 at 09:48:08
+ECHO = NONE
+$ Using Nastran default values for RESVEC
+SUBCASE 1
+   SUBTITLE=LoadCase
+   EXTSEOUT(STIF,DAMP,MASS,EXTID=1,DMIGPCH)
+   METHOD = 1
+   SPC = 2
+   VECTOR(PUNCH,PLOT,SORT1,REAL)=ALL
+$ Direct Text Input for this Subcase
+BEGIN BULK
+$ Direct Text Input for Bulk Data
+PARAM    POST    0
+PARAM   PRTMAXIM YES
+EIGRL    1                       10      0                       MASS
+$ Elements and Element Properties for region : 1D_Viga1_1mm
+PBARL    1       1               ROD
+         .001
+$ Pset: "1D_Viga1_1mm" will be imported as: "pbarl.1"
+CBAR     7       1       7       8       0.      1.      0.
+CBAR     8       1       8       9       0.      1.      0.
+CBAR     9       1       9       10      0.      1.      0.
+CBAR     10      1       10      11      0.      1.      0.
+CBAR     11      1       11      12      0.      1.      0.
+CBAR     12      1       12      13      0.      1.      0.
+CBAR     13      1       13      14      0.      1.      0.
+CBAR     14      1       14      15      0.      1.      0.
+CBAR     15      1       15      16      0.      1.      0.
+CBAR     16      1       16      17      0.      1.      0.
+CBAR     17      1       17      18      0.      1.      0.
+CBAR     18      1       18      19      0.      1.      0.
+CBAR     19      1       19      20      0.      1.      0.
+CBAR     20      1       20      21      0.      1.      0.
+CBAR     21      1       21      22      0.      1.      0.
+CBAR     22      1       22      23      0.      1.      0.
+CBAR     23      1       23      24      0.      1.      0.
+CBAR     24      1       24      25      0.      1.      0.
+CBAR     25      1       25      26      0.      1.      0.
+CBAR     26      1       26      27      0.      1.      0.
+CBAR     27      1       27      28      0.      1.      0.
+CBAR     28      1       28      29      0.      1.      0.
+CBAR     29      1       29      30      0.      1.      0.
+CBAR     30      1       30      31      0.      1.      0.
+CBAR     31      1       31      32      0.      1.      0.
+CBAR     32      1       32      33      0.      1.      0.
+CBAR     33      1       33      34      0.      1.      0.
+CBAR     34      1       34      35      0.      1.      0.
+CBAR     35      1       35      36      0.      1.      0.
+CBAR     36      1       36      37      0.      1.      0.
+CBAR     37      1       37      38      0.      1.      0.
+CBAR     38      1       38      39      0.      1.      0.
+CBAR     39      1       39      40      0.      1.      0.
+CBAR     40      1       40      41      0.      1.      0.
+CBAR     41      1       41      42      0.      1.      0.
+CBAR     42      1       42      43      0.      1.      0.
+CBAR     43      1       43      44      0.      1.      0.
+CBAR     44      1       44      45      0.      1.      0.
+CBAR     45      1       45      46      0.      1.      0.
+CBAR     46      1       46      47      0.      1.      0.
+CBAR     47      1       47      48      0.      1.      0.
+CBAR     48      1       48      49      0.      1.      0.
+CBAR     49      1       49      50      0.      1.      0.
+CBAR     50      1       50      51      0.      1.      0.
+CBAR     51      1       51      52      0.      1.      0.
+CBAR     52      1       52      53      0.      1.      0.
+CBAR     53      1       53      54      0.      1.      0.
+CBAR     54      1       54      55      0.      1.      0.
+CBAR     55      1       55      56      0.      1.      0.
+CBAR     56      1       56      57      0.      1.      0.
+$ Referenced Material Records
+$ Material Record : Viga1
+$ Description of Material : Date: 04-Jun-21           Time: 09:40:53
+MAT1     1       2.4+8           .4      1400.
+$ Nodes of the Entire Model
+GRID     7               0.      0.      0.
+GRID*    8                              .009999999776483 0.
+*        0.
+GRID*    9                              .019999999552965 0.
+*        0.
+GRID*    10                             .029999999329448 0.
+*        0.
+GRID*    11                              .03999999910593 0.
+*        0.
+GRID*    12                             .050000000745058 0.
+*        0.
+GRID*    13                             .059999998658895 0.
+*        0.
+GRID*    14                             .070000000298023 0.
+*        0.
+GRID*    15                             .079999998211861 0.
+*        0.
+GRID*    16                             .090000003576279 0.
+*        0.
+GRID*    17                             .100000001490116 0.
+*        0.
+GRID*    18                             .109999999403954 0.
+*        0.
+GRID*    19                             .119999997317791 0.
+*        0.
+GRID*    20                             .129999995231628 0.
+*        0.
+GRID*    21                             .140000000596046 0.
+*        0.
+GRID*    22                             .150000005960464 0.
+*        0.
+GRID*    23                             .159999996423721 0.
+*        0.
+GRID*    24                             .170000001788139 0.
+*        0.
+GRID*    25                             .180000007152557 0.
+*        0.
+GRID*    26                             .189999997615814 0.
+*        0.
+GRID*    27                             .200000002980232 0.
+*        0.
+GRID*    28                             .209999993443489 0.
+*        0.
+GRID*    29                             .219999998807907 0.
+*        0.
+GRID*    30                             .230000004172325 0.
+*        0.
+GRID*    31                             .239999994635582 0.
+*        0.
+GRID     32              .25     0.      0.
+GRID*    33                             .259999990463257 0.
+*        0.
+GRID*    34                             .270000010728836 0.
+*        0.
+GRID*    35                             .280000001192093 0.
+*        0.
+GRID*    36                              .28999999165535 0.
+*        0.
+GRID*    37                             .300000011920929 0.
+*        0.
+GRID*    38                             .310000002384186 0.
+*        0.
+GRID*    39                             .319999992847443 0.
+*        0.
+GRID*    40                             .330000013113022 0.
+*        0.
+GRID*    41                             .340000003576279 0.
+*        0.
+GRID*    42                             .349999994039536 0.
+*        0.
+GRID*    43                             .360000014305115 0.
+*        0.
+GRID*    44                             .370000004768372 0.
+*        0.
+GRID*    45                             .379999995231628 0.
+*        0.
+GRID*    46                             .389999985694885 0.
+*        0.
+GRID*    47                             .400000005960464 0.
+*        0.
+GRID*    48                             .409999996423721 0.
+*        0.
+GRID*    49                             .419999986886978 0.
+*        0.
+GRID*    50                             .430000007152557 0.
+*        0.
+GRID*    51                             .439999997615814 0.
+*        0.
+GRID*    52                             .449999988079071 0.
+*        0.
+GRID*    53                              .46000000834465 0.
+*        0.
+GRID*    54                             .469999998807907 0.
+*        0.
+GRID*    55                             .479999989271164 0.
+*        0.
+GRID*    56                             .490000009536743 0.
+*        0.
+GRID     57              .5      0.      0.
+$ Loads for Load Case : LoadCase
+SPCADD   2       1
+$ Displacement Constraints of Load Set : SPC_12456
+SPC1     1       12456   7       THRU    57
+$ Referenced Coordinate Frames
+ENDDATA 4571c317

@@ -1,0 +1,46 @@
+$# Creating journal file 
+$# C:\Users\anabe\Desktop\UPM_Local\PATRAN\Teoria\viga2.db.jou at 05-Jun-21 
+$# 11:35:44
+uil_file_rebuild.start("C:\Program Files\MSC.Software\NaPa_SE\20211\Patran" // @
+"/template.db","C:\Users\anabe\Desktop\UPM_Local\PATRAN\Teoria\viga2.db")
+$# Synchronizing the User Data Manager
+set_current_dir( "C:\Users\anabe\Desktop\UPM_Local\PATRAN\Teoria" )
+$# The current working directory has been changed to the database location 
+$# shown.                                                                     
+$#                                                                            
+$#                                   
+STRING asm_create_grid_xyz_created_ids[VIRTUAL]
+asm_const_grid_xyz( "1", "[0 0 0]", "Coord 0", asm_create_grid_xyz_created_ids )
+$# 1 Point created: Point 1
+asm_const_grid_xyz( "2", "[0.6 0 0]", "Coord 0",  @
+asm_create_grid_xyz_created_ids )
+$# 1 Point created: Point 2
+point_size( 9 )
+STRING asm_line_2point_created_ids[VIRTUAL]
+asm_const_line_2point( "1", "Point 1", "Point 2", 0, "", 50., 1,  @
+asm_line_2point_created_ids )
+$# 1 Line created: Line 1
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+gm_hilight_clear(  )
+ui_exec_function( "mesh_seed_display_mgr", "init" )
+mesh_seed_display_mgr.erase(  )
+material.create( "Analysis code ID", 1, "Analysis type ID", 1, "Mat_viga2", 0, @
+ "Date: 05-Jun-21           Time: 11:36:27", "Isotropic", 1, "Directionality", @
+ 1, "Linearity", 1, "Homogeneous", 0, "Linear Elastic", 1,  @
+"Model Options & IDs", ["", "", "", "", ""], [0, 0, 0, 0, 0], "Active Flag",  @
+1, "Create", 10, "External Flag", FALSE, "Property IDs", ["Elastic Modulus",  @
+"Poisson Ratio", "Density"], [2, 5, 16, 0], "Property Values", ["7E10", "0.3", @
+ "1.1333E4", ""] )
+beam_section_create( "Section_viga2", "ROD", ["5E-4"] )
+$# Beam Section "Section_viga2" created.
+mesh_seed_display_mgr.erase(  )
+mesh_seed_create( "Curve 1", 2, 0, 0., 0.0099999998, 0. )
+$# UNDO: FEM Create Mesh Seed for Curve 1
+mesh_seed_display_mgr.refresh(  )
+uil_primary_file.db_save(  )
+$# Flushing the User Data Manager
+$# Journal file stopped recording at 05-Jun-21 11:40:10

@@ -1,0 +1,317 @@
+1
+ 
+ 
+ 
+ 
+                      Warning: This computer program is protected by copyright law and international treaties.       
+                  Unauthorized use, reproduction or distribution of this computer program, or any portion of it, may 
+                                          result in severe civil and criminal penalties.                             
+                         Copyright (C) 2021 MSC Software Corporation and its licensors. All rights reserved.         
+ 
+ 
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * *                                 * *
+                                              * *           MSC Software          * *
+                                              * *               CORP              * *
+                                              * *                                 * *
+                                              * *      M S C   N a s t r a n      * *
+                                              * *                                 * *
+                                              * *  S T U D E N T   E D I T I O N  * *
+                                              * *                                 * *
+                                              * *     Version 2021.1-CL797725     * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *          MAR 10, 2021           * *
+                                              * *                                 * *
+                                              * *              Intel              * *
+                                              * *      MODEL Xeon/2467 (MSI)      * *
+                                              * *    Windows 10 Home 6.2 9200     * *
+                                              * * Compiled for 8664 (SINGLE Mode) * *
+                                              * *                                 * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+
+ 
+ 
+                                                 This Student Edition version is  
+                                                    valid until MAR 15, 2023.     
+ 
+ 
+                  This program is being distributed as part of the MSC Software Student Edition. Use of this program 
+                     or its results at a commercial installation, for commercial purposes, or for production work    
+                                             I S   S T R I C T L Y  P R O H I B I T E D.                             
+                  ==================================== FOR EDUCATIONAL USE ONLY =====================================
+ 
+ 
+1News file - (February 22, 2021)
+  
+               Welcome to MSC Nastran 2021.1
+  
+  
+   MSC Nastran brings powerful new features and enhancements for engineering
+   solutions.
+  
+     MSC Nastran 2021.1 Features and Enhancements
+  
+     Statics
+     The original SOL 1 (Legacy Linear Statics solution) Inertia Relief method,
+     allowing for more than six rigid body modes is now available in SOL 101
+     (Linear Statics)
+  
+     Dynamics
+     Real Coupled Modes enhancements:
+      - Supported for AVL Excite EXB Export and acoustic weakly-coupled modes
+      - Residual vector logic tuned up for improved solution accuracy
+        in transient response analysis
+  
+     Fatigue
+     CAE Fatigue Time Domain completeness
+      - Hot Spot detection for computational speed
+      - Spot Weld fatigue analyzer
+  
+     Nonlinear
+     Enhanced accelerated separation check in node-to-segment (N2S) contact
+  
+     Design Optimization
+     - Design response screening option added to force retention of all
+       defined responses in the model
+  
+     High Performance Computing
+     - Improved MUMPS direct solver performance in SOL 101 linear statics
+  
+     Documentation
+     The complete documentation set is provided in a separate installer and
+     when installed is available at: MSC_DOC_DIR/doc/pdf_nastran directory.
+     Where MSC_DOC_DIR is the directory where documentation was installed
+     This help set has cross references between documents, links to how-to
+     videos, and example files.
+  
+     Individual MSC Nastran documents are available for download from the
+       Simcompanion Website at:
+       http://simcompanion.mscsoftware.com/
+  
+     These documents were updated for the MSC Nastran 2021.1 Release
+  
+         1.  MSC Nastran 2021.1 Installation and Operations Guide
+1        2.  MSC Nastran 2021.1 Quick Reference Guide
+         3.  MSC Nastran 2021.1 Release Guide
+         4.  MSC Nastran 2021.1 Linear Statics Analysis User's Guide
+         5.  MSC Nastran 2021.1 Dynamic Analysis User's Guide
+         6.  MSC Nastran 2021.1 Superelements User's Guide
+         7.  MSC Nastran 2021.1 Rotordynamics User's Guide
+         8.  MSC Nastran 2021.1 Demonstration Problems Manual
+         9.  MSC Nastran 2021.1 Nastran Embedded Fatigue User's Guide
+        10.  MSC Nastran 2021.1 Design Sensitivity and Optimization
+        11.  MSC Nastran 2021.1 Nonlinear User's Guide SOL 400
+        12.  MSC Nastran 2021.1 DMAP Programmer's Guide
+        13.  MSC Nastran 2021.1 High Performance Computing User's Guide
+        14.  MSC Nastran 2021.1 New Verification Manual
+        15.  MSC Nastran 2021.1 DEMATD Guide
+        16.  MSC Nastran 2021.1 Explicit Nonlinear (SOL 700) User's Guide
+  
+   Please refer to  MSC_DOC_DIR/doc/pdf_nastran/nastran_library.pdf
+   for the complete document set:
+  
+  
+     Feature Deprecation List
+     To streamline the MSC Nastran program and simplify ongoing maintenance
+     activiy, some obsolete capabilities have been identified and tagged for
+     removal from a future release of the program in late 2021 and 2022.
+     Please review the list of features marked for deprecation below to
+     ensure that there will be no disruption to your use of MSC Nastran.
+     If you see a feature that you currently use and do not wish to lose,
+     contact MSC Technical Support to report it.
+  
+     Features tagged for removal:
+     - P-elements
+     - SOL 600 nonlinear solution sequence
+     - Unstructured one- and two-digit solution sequences (e.g. SOL 3, SOL 24)
+     - SOL 190 (DBTRANS)
+     - TAUCS solver
+     - MSGMESH
+     - Obsolete DMAP modules
+     - SSSALTERS
+  
+     Refer to the MSC Nastran 2021 Release Guide for more details.
+  
+  
+   Additional information about the release can be found at the MSC Nastran
+   Product Support page: http://simcompanion.mscsoftware.com
+  
+   The support page provides links to these valuable information:
+      * A searchable Knowledge Base containing examples and answers to thousands
+        of frequently asked questions written by MSC Software subject-matter
+        experts.
+      * Peer-to-peer Discussion Forums enabling you to post questions for your
+1       MSC Software products and receive answers from other users worldwide.
+      * A list of known issues with the product and any workarounds.
+      * Instructions on how to contact technical support
+      * A mechanism for sending us product feedback or enhancement requests.
+      * Hardware and software requirements.
+      * Examples and Tutorials
+      * and much more.
+  
+   For information on training, please visit our Training web site
+  
+      http://www.mscsoftware.com/Contents/Services/Training/
+  
+1                                                       **STUDENT EDITION*     JUNE   8, 2021  MSC Nastran  3/10/21   PAGE     1
+                                                                                                                                    
+0        N A S T R A N    F I L E    A N D    S Y S T E M    P A R A M E T E R    E C H O                                           
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     NASTRAN BUFFSIZE=8193 $(C:/PROGRAM FILES/MSC.SOFTWARE/NAPA_SE/20211/NASTRAN/CONF
+     $ MSC.NASTRAN INPUT FILE CREATED ON JUNE      05, 2021 AT 14:03:44 BY           
+     $ PATRAN 2021.1  (STUDENT EDITION)                                              
+     $ DIRECT TEXT INPUT FOR NASTRAN SYSTEM CELL SECTION                             
+     $ DIRECT TEXT INPUT FOR FILE MANAGEMENT SECTION                                 
+     $ DIRECT TEXT INPUT FOR EXECUTIVE CONTROL                                       
+     $ NORMAL MODES ANALYSIS, DATABASE                                               
+1                                                       **STUDENT EDITION*     JUNE   8, 2021  MSC Nastran  3/10/21   PAGE     2
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    E C H O                                                             
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     SOL 103                                                                                 
+     CEND                                                                                    
+1    MSC.NASTRAN JOB CREATED ON 05-JUN-21 AT 14:03:00   **STUDENT EDITION*     JUNE   8, 2021  MSC Nastran  3/10/21   PAGE     3
+                                                                                                                                    
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L    E C H O                                                        
+                 COMMAND                                                                                                            
+                 COUNT                                                                                                              
+                  1      $ DIRECT TEXT INPUT FOR GLOBAL CASE CONTROL DATA                                        
+                  2      TITLE = MSC.NASTRAN JOB CREATED ON 05-JUN-21 AT 14:03:00                                
+                  3      ECHO = NONE                                                                             
+                  4      $ USING NASTRAN DEFAULT VALUES FOR RESVEC                                               
+                  5      SUBCASE 1                                                                               
+                  6         SUBTITLE=LOADCASE                                                                    
+                  7         METHOD = 1                                                                           
+                  8         EXTSEOUT(STIF,DAMP,MASS,EXTID=1,DMIGPCH)                                             
+                  9         SPC = 2                                                                              
+                 10         VECTOR(PLOT,SORT1,REAL)=ALL                                                          
+                 11      $ DIRECT TEXT INPUT FOR THIS SUBCASE                                                    
+                 12      BEGIN BULK                                                                              
+1    MSC.NASTRAN JOB CREATED ON 05-JUN-21 AT 14:03:00   **STUDENT EDITION*     JUNE   8, 2021  MSC Nastran  3/10/21   PAGE     4
+                                                                                                                                    
+0                                                                                                                                   
+                                        M O D E L   S U M M A R Y          BULK = 0
+                                   ENTRY NAME        NUMBER OF ENTRIES
+                                   ----------        -----------------
+                                         CBAR                       60
+                                        EIGRL                        1
+                                         GRID                       61
+                                         MAT1                        1
+                                        PARAM                        2
+                                        PBARL                        1
+                                         SPC1                        1
+                                       SPCADD                        1
+
+ ^^^     
+ ^^^ >>> IFP OPERATIONS COMPLETE <<< 
+ ^^^     
+1    MSC.NASTRAN JOB CREATED ON 05-JUN-21 AT 14:03:00   **STUDENT EDITION*     JUNE   8, 2021  MSC Nastran  3/10/21   PAGE     5
+                                                                                                                                    
+0                                                                                                                                   
+ *** USER INFORMATION MESSAGE 7310 (VECPRN)
+     ORIGIN OF SUPERELEMENT OR MODULE BASIC COORDINATE SYSTEM WILL BE USED AS REFERENCE LOCATION.
+     RESULTANTS ABOUT ORIGIN OF SUPERELEMENT OR MODULE BASIC COORDINATE SYSTEM IN SUPERELEMENT OR MODULE
+     BASIC SYSTEM COORDINATES.
+0                                                  OLOAD    RESULTANT       
+  SUBCASE/    LOAD
+  DAREA ID    TYPE       T1            T2            T3            R1            R2            R3
+0        1     FX    0.000000E+00     ----          ----          ----       0.000000E+00  0.000000E+00                             
+               FY       ----       0.000000E+00     ----       0.000000E+00     ----       0.000000E+00                             
+               FZ       ----          ----       0.000000E+00  0.000000E+00  0.000000E+00     ----                                  
+               MX       ----          ----          ----       0.000000E+00     ----          ----                                  
+               MY       ----          ----          ----          ----       0.000000E+00     ----                                  
+               MZ       ----          ----          ----          ----          ----       0.000000E+00                             
+             TOTALS  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+1    MSC.NASTRAN JOB CREATED ON 05-JUN-21 AT 14:03:00   **STUDENT EDITION*     JUNE   8, 2021  MSC Nastran  3/10/21   PAGE     6
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+ *******************************************************************
+ SUMMARY OF ACTIONS RESULTING FROM THE EXTSEOUT CASE CONTROL COMMAND
+ *******************************************************************
+
+ MATRIX DATA ACTION
+ ------------------
+
+ THE FOLLOWING MATRICES HAVE BEEN WRITTEN IN DMIG FORMAT ON THE STANDARD PUNCH (.PCH) FILE --
+
+ STIFFNESS                 --  OUTPUT AS KAAX     DMIG MATRIX
+ MASS                      --  OUTPUT AS MAAX     DMIG MATRIX
+
+ BULK DATA ACTION
+ ----------------
+
+ BOUNDARY RELATED BULK DATA HAS BEEN WRITTEN ON THE STANDARD PUNCH (.PCH) FILE
+
+ TYPE OF REDUCTION
+ -----------------
+
+ STATIC CONDENSATION
+
+ LIST OF BOUNDARY POINTS (T-SET)
+ -------------------------------
+
+ POINT ID - COMP.    POINT ID - COMP.    POINT ID - COMP.    POINT ID - COMP.
+
+        7 -      3          8 -      3          9 -      3         10 -      3
+       11 -      3         12 -      3         13 -      3         14 -      3
+       15 -      3         16 -      3         17 -      3         18 -      3
+       19 -      3         20 -      3         21 -      3         22 -      3
+       23 -      3         24 -      3         25 -      3         26 -      3
+       27 -      3         28 -      3         29 -      3         30 -      3
+       31 -      3         32 -      3         33 -      3         34 -      3
+       35 -      3         36 -      3         37 -      3         38 -      3
+       39 -      3         40 -      3         41 -      3         42 -      3
+       43 -      3         44 -      3         45 -      3         46 -      3
+       47 -      3         48 -      3         49 -      3         50 -      3
+       51 -      3         52 -      3         53 -      3         54 -      3
+       55 -      3         56 -      3         57 -      3         58 -      3
+       59 -      3         60 -      3         61 -      3         62 -      3
+       63 -      3         64 -      3         65 -      3         66 -      3
+       67 -      3
+
+1    MSC.NASTRAN JOB CREATED ON 05-JUN-21 AT 14:03:00   **STUDENT EDITION*     JUNE   8, 2021  MSC Nastran  3/10/21   PAGE     7
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+ * * * *  D B D I C T   P R I N T  * * * *      SUBDMAP = PRTSUM  ,  DMAP STATEMENT NO.     74
+
+
+
+0                                   * * * *  A N A L Y S I S  S U M M A R Y  T A B L E  * * * *
+0 SEID  PEID PROJ VERS APRCH      SEMG SEMR SEKR SELG SELR MODES DYNRED SOLLIN PVALID SOLNL LOOPID DESIGN CYCLE SENSITIVITY
+ --------------------------------------------------------------------------------------------------------------------------
+     0     0    1    1 '        '    T    T    T    T    T     F      F      F      0     F     -1            0           F
+0SEID = SUPERELEMENT ID.
+ PEID = PRIMARY SUPERELEMENT ID OF IMAGE SUPERELEMENT.
+ PROJ = PROJECT ID NUMBER.
+ VERS = VERSION ID.
+ APRCH = BLANK FOR STRUCTURAL ANALYSIS.  HEAT FOR HEAT TRANSFER ANALYSIS.
+ SEMG = STIFFNESS AND MASS MATRIX GENERATION STEP.
+ SEMR = MASS MATRIX REDUCTION STEP (INCLUDES EIGENVALUE SOLUTION FOR MODES).
+ SEKR = STIFFNESS MATRIX REDUCTION STEP.
+ SELG = LOAD MATRIX GENERATION STEP.
+ SELR = LOAD MATRIX REDUCTION STEP. 
+ MODES = T (TRUE) IF NORMAL MODES OR BUCKLING MODES CALCULATED.
+ DYNRED = T (TRUE) MEANS GENERALIZED DYNAMIC AND/OR COMPONENT MODE REDUCTION PERFORMED.
+ SOLLIN = T (TRUE) IF LINEAR SOLUTION EXISTS IN DATABASE.
+ PVALID = P-DISTRIBUTION ID OF P-VALUE FOR P-ELEMENTS
+ LOOPID = THE LAST LOOPID VALUE USED IN THE NONLINEAR ANALYSIS.  USEFUL FOR RESTARTS.
+ SOLNL = T (TRUE) IF NONLINEAR SOLUTION EXISTS IN DATABASE.
+ DESIGN CYCLE = THE LAST DESIGN CYCLE (ONLY VALID IN OPTIMIZATION).
+ SENSITIVITY = SENSITIVITY MATRIX GENERATION FLAG.
+ 
+ No PARAM values were set in the Control File.
+ 
+1                                        * * * END OF JOB * * *
+ 
+ 
+ No Symbolic Replacement variables or values were specified.
+
