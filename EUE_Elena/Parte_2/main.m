@@ -38,14 +38,14 @@ end
 % Paneles
 Panel.modos(:,:) = Frecuencias(:,:);
 Panel.modos(:,5) = Panel.A/4/pi * (Panel.rho*Panel.thickness/Panel.D)^0.5; % modos/(rad/s)
-Panel.modos(:,6) = Panel.modos(:,5) .* Panel.modos(:,4)*2*pi ;
+Panel.modos(:,6) = Panel.modos(:,5) .* Panel.modos(:,4);
 
 % Capas de aire
 Aire.modos(:,:) = Frecuencias(:,:);
 Aire.modos(:,5) = Aire.V/pi/Aire.c * (Frecuencias(:,2).*2*pi ./ Aire.c).^2 +...
     Aire.A/4/Aire.c * (Frecuencias(:,2).*2*pi ./ Aire.c) + ...
     Aire.L/8/Aire.c; % modos/(rad/s)
-Aire.modos(:,6) = Aire.modos(:,5) .* Aire.modos(:,4)*2*pi;
+Aire.modos(:,6) = Aire.modos(:,5) .* Aire.modos(:,4);
 
 % Requisito para el SEA
 
