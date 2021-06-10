@@ -128,7 +128,7 @@ clear deltaf deltaW lambda
 sigma = sigma';
 
 % Pérdidas panel-aire
-Panel.eta = Aire.A*Aire.rho*Aire.c.*sigma./(Panel.rho*Panel.A*Panel.thickness*2*pi.*Frecuencias(:,2));
+Panel.eta = Panel.A*Aire.rho*Aire.c.*sigma./(Panel.rho*Panel.A*Panel.thickness*2*pi.*Frecuencias(:,2));
 
 % Pérdidas aire-panel
 Aire.eta  = Panel.eta .* Panel.modos(:,5) ./ Aire.modos(:,5);
@@ -161,8 +161,8 @@ end
 eta_pd = 0.015;
 
 Panel.M(1,1,:) = +Panel.eta(:)+eta_pd;
-Panel.M(1,2,:) = -Panel.eta(:);
-Panel.M(2,1,:) = -Aire.eta(:);
+Panel.M(2,1,:) = -Panel.eta(:);
+Panel.M(1,2,:) = -Aire.eta(:);
 Panel.M(2,2,:) = +Aire.eta(:);
 
 % Aire-Panel
@@ -170,8 +170,8 @@ Panel.M(2,2,:) = +Aire.eta(:);
 eta_ad = 0.01;
 
 Aire.M(1,1,:) = +Aire.eta(:)+eta_ad;
-Aire.M(1,2,:) = -Aire.eta(:);
-Aire.M(2,1,:) = -Panel.eta(:);
+Aire.M(2,1,:) = -Aire.eta(:);
+Aire.M(1,2,:) = -Panel.eta(:);
 Aire.M(2,2,:) = +Panel.eta(:);
 
 % Conjuntos

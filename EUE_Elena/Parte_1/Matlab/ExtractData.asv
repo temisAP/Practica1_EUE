@@ -27,6 +27,14 @@ viga(1).F(26) = -1;
 
 viga(2).F = zeros(length(viga(2).N),1);
 
+%% Unión de las vigas
+
+for viga_indx = 1:length(dir)
+    viga(viga_idx).N = vigaviga_idx).N - min(viga().N);
+end
+
+viga(2).N = viga(2).N + viga(1).N(1);
+
 %% Guardar los datos para usarlos luego
 
 save('Data.mat', 'viga')

@@ -239,14 +239,9 @@ classdef estructura < handle
             phi_s = [eye(size(Mff));...
                 -inv(Kii)*Kif];
             
-            % Obtencion de los modos y frecuencias propias^2
-            [mod_prop, frec_matrix] = eig( M\K );
-            frec_matrix = frec_matrix(sub2ind(size(frec_matrix),...
-                1:size(frec_matrix,1),1:size(frec_matrix,2)));
-            
-            [frec_prop,idx] = sort(frec_matrix);
-            frec_prop = frec_prop/(2*pi);
-            mod_prop = mod_prop(:,idx);
+            cc = [];
+            [mod_prop, ~] = f_Modos(Mii, Kii, cc);
+            phi_i = [zeros(length(Mff),size(mod_prop,1)); mod_prop];
             
             phi_i = [zeros(length(Mff),size(mod_prop,1)); mod_prop];
             

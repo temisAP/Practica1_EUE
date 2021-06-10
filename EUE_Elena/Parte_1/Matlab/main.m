@@ -1,4 +1,4 @@
-clear all
+%clear all
 close all
 fig = 1;
 fig_flag = 1;
@@ -12,16 +12,36 @@ catch
 end
 
 %% Reducción de Craig-Bampton
-viga(1).nodes = [1 2];
 
-viga1 = estructura({viga(1)},length(viga(1).N));
-%viga1.CB_reduction();
+% Renumeración de cada viga
+for viga_indx = 1:length(viga)
+    viga(viga_indx).N = viga(viga_indx).N - min(viga(viga_indx).N) + 1 ;
+end
 
-viga(2).nodes = [2 3];
-viga2 = estructura({viga(2)},length(viga(2).N));
+
+% Condiciones de contorno
+viga(1).bn = [viga(1).N(1)];
+viga(1).iface = [viga(1).N(end)];
+
+viga(2).bn = [viga(2).N(end)];
+viga(2).iface = [viga(2).N(1)];
+
+% Creación de estructuras 
+viga1 = estructura({viga(1)},1);
+viga2 = estructura({viga(2)},1);
+
+
+% Reducción
+
+viga1.CB_reduction();
 %viga2.CB_reduction();
 
 %% Ensamblaje
+
+% Renumeración para que encajen
+viga2.N = viga2.N + viga1.N(end) - 1;
+
+% Condiciones de contorno
 
 vigas = estructura({viga1,viga2},1);
 
