@@ -121,19 +121,19 @@ viga1.iface = [viga1.N(end)];
 viga2.bn = [viga2.N(end)];
 viga2.iface = [viga2.N(1)];
 
-% Estrcuctura completa
+% Estructura completa
 vigas_CB = estructura({viga1,viga2},1);
 
 % Calcular las matrices CB a partir de los componentes
-vigas_CB.CB_matriz;
+vigas_CB.CB_matriz();
 
 % Reducción
-f_red = 30;
 vigas_CB.CB_reduction();
 
 %% Velocidad rms
 
 frecuencias = linspace(1,2000,2000); % Hz
+
 
 for f=1:length(frecuencias)
     q = vigas_CB.CB_sol(frecuencias(f));
@@ -208,6 +208,38 @@ if fig_flag == 1
         pos = get(h,'Position');
         set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
         print(h, './Figures/ApartadoC.pdf','-dpdf','-r0','-painters')
+    end
+    fig = fig+1;
+end
+
+%%
+
+if fig_flag == 1
+    h = figure(fig); %set(h, 'Visible', 'off')
+    
+    set(gca, 'XScale', 'log')
+    set(gca, 'YScale', 'log')
+    set(get(gca,'ylabel'),'rotation',0);
+    set(gca,'TickLabelInterpreter','latex');
+    set(gca,'FontSize',10.5);
+    set(gca,'TitleFontSizeMultiplier',1.25);
+    set(gca,'LabelFontSizeMultiplier',1.3);
+    ylh = get(gca,'ylabel'); ylh.Position(1) = 0.35; ylh.Position(2) = 100;
+    xlh = get(gca,'xlabel'); xlh.Position(1) = 2000; xlh.Position(2) = 0.0000003;
+    
+    hold on
+    plot(frecuencias, abs(vrms-vrms_CB), ...
+        'LineWidth', 1, 'Color', 'k')
+  
+    grid on; box on;
+    xlabel('$Frecuencia$ [Hz]','Interpreter','latex');
+    ylabel({'$\Delta v_{rms}$';'[m/s]'},'Interpreter','latex');
+    
+    if save_flag == 1
+        set(h,'Units','Inches');
+        pos = get(h,'Position');
+        set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
+        print(h, './Figures/ApartadoC_error.pdf','-dpdf','-r0','-painters')
     end
     fig = fig+1;
 end

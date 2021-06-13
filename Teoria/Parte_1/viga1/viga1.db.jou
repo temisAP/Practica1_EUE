@@ -288,3 +288,284 @@ uil_file_saveas.copy( "D:\0_Andres\1_Universidad\MUSE\EUE\Practica1_EUE\EU" // @
 "E_Elena\Parte_1\viga2\viga2.db", FALSE )
 $# Flushing the User Data Manager
 $# Journal file stopped recording at 10-Jun-21 01:05:07
+$# Appending to existing journal file 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Practica1_EUE\Teoria\Parte_1\viga1\viga1
+$# .db.jou at 12-Jun-21 17:17:00
+$# Synchronizing the User Data Manager
+set_current_dir( "D:\0_Andres\1_Universidad\MUSE\EUE\Practica1_EUE\Teoria\" // @
+"Parte_1\viga1" )
+$# The current working directory has been changed to the database location 
+$# shown.                                                                     
+$#                                                                            
+$#                                   
+ui_exec_function( "mesh_seed_display_mgr", "init" )
+mesh_seed_display_mgr.erase(  )
+INTEGER fem_delete_any_nnode
+INTEGER fem_delete_any_idnodes(VIRTUAL)
+INTEGER fem_delete_any_nnon
+INTEGER fem_delete_any_idnoexist(VIRTUAL)
+fem_get_node_ids( "Node 1:51 Elm 1:50", fem_delete_any_nnode,  @
+fem_delete_any_idnodes, fem_delete_any_nnon, fem_delete_any_idnoexist )
+INTEGER fem_delete_any_nnode_groups
+INTEGER fem_delete_node_assoc_group_ids(VIRTUAL)
+fem_get_node_assoc_groups( 51, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, @
+ 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,  @
+34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51],  @
+fem_delete_any_nnode_groups, fem_delete_node_assoc_group_ids )
+INTEGER fem_delete_any_nelem
+INTEGER fem_delete_any_idelems(VIRTUAL)
+fem_get_elem_ids( "Node 1:51 Elm 1:50", fem_delete_any_nelem,  @
+fem_delete_any_idelems, fem_delete_any_nnon, fem_delete_any_idnoexist )
+INTEGER fem_delete_any_nelem_groups
+INTEGER fem_delete_elem_assoc_group_ids(VIRTUAL)
+fem_get_elem_assoc_groups( 50, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, @
+ 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,  @
+34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],  @
+fem_delete_any_nelem_groups, fem_delete_elem_assoc_group_ids )
+STRING fem_delete_any_deleted_ids[VIRTUAL]
+fem_delete_elem_and_node( "Node 1:51 Elm 1:50", fem_delete_any_deleted_ids )
+$# 50 elements deleted. IDs = Element 1:50
+$# 51 nodes deleted. IDs = Node 1:51
+STRING fem_delete_any_not_found_ids[VIRTUAL]
+fem_delete_free_node( "Node 1:51 Elm 1:50", fem_delete_any_deleted_ids,  @
+fem_delete_any_not_found_ids )
+$# No Nodes deleted.
+$# 51 FEM entities do not exist or are still associated and cannot be 
+$# deleted: Node 1:51
+fem_delete_assoc_group( 2, [1, 1], fem_delete_any_deleted_ids )
+$# No Groups deleted.
+INTEGER fem_create_mesh_curve_num_nodes
+INTEGER fem_create_mesh_curve_num_elems
+STRING fem_create_mesh_c_nodes_created[VIRTUAL]
+STRING fem_create_mesh_c_elems_created[VIRTUAL]
+fem_create_mesh_curv_1( "Curve 1", 16384, 0.050000001, "Bar2", "100", "100",  @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes,  @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created,  @
+fem_create_mesh_c_elems_created )
+$# 51 nodes and 50 elements created for Curve 1.
+$# === 51 nodes created.  IDs  = 100:150.
+$# === 50 elements created.  IDs  = 100:149.
+fem_associate_elems_to_ep( "beam", fem_create_mesh_c_elems_created,  @
+fem_create_mesh_curve_num_elems )
+$# 50 Element(s) associated to the Element Property beam.
+uil_primary_file.db_save(  )
+mesh_seed_display_mgr.erase(  )
+$#  Beginning analysis of  viga1
+jobfile.open( "viga1", "ANALYZE NO JOBFILE" )
+$# Question from application APP INTERFACES
+$#     The jobname (viga1) is already defined in the database. Do you wish to 
+$# overwrite?
+$? YES 6016027 
+msc_delete_old_files( "viga1", ".bdf", ".op2" )
+$# Question from application APP INTERFACES
+$#     Files from a previous analysis conflict with the current job name: 
+$# "viga1".  These files are viga1.xdb, viga1.f04, viga1.f06, viga1.log, 
+$# viga1.pch, viga1.bdf.  Will you permit deletion of these files?
+$? YES 6022037 
+jobfile.write_spl( "/* Jobfile for PATNAS created %A% at %A% */", ["12-Jun-21" @
+, "17:18:28"] )
+jobfile.writec( "", "TRANSLATOR = pat3nas" )
+jobfile.writec( "DATABASE", "D:\0_Andres\1_Universidad\MUSE\EUE\Practica1_" // @
+"EUE\Teoria\Parte_1\viga1\viga1.db" )
+jobfile.writec( "JOBNAME", "viga1" )
+jobfile.writec( "ANALYSIS TITLE", "MSC.Nastran job created on 10-Jun-21 at" // @
+" 00:50:34" )
+jobfile.writec( "ANALYSIS SUBTITLE", "" )
+jobfile.writec( "ANALYSIS LABEL", "" )
+jobfile.writec( "", "" )
+jobfile.writec( "OBJECT", "Entire Model" )
+jobfile.writec( "METHOD", "Full Run" )
+jobfile.writec( "", "" )
+jobfile.writec( "MODEL SUFFIX", ".bdf" )
+jobfile.writec( "RESULTS SUFFIX", ".op2" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * File Search Path Declaration" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "File Search Path", "C:\Users\Andrés" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\helpfiles" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\alters" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\icons\RibbonIcons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\bin" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\bin\exe" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscexplore_files\" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\dmap" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\plb" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\lib" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\mscprocor_files\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\icons" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\plb" )
+jobfile.writec( "File Search Path", "D:\Archivos de programa\MSC.Software\" // @
+"NaPa_SE\2020\Patran\shareware\msc\unsupported\utilities\extra_files" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * Translation Parameters" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "DATA OUTPUT", "HDF5+PRINT" )
+jobfile.writec( "OUTPUT2 REQUESTS", "P3 Built In" )
+jobfile.writec( "OUTPUT2 FORMAT", "Binary" )
+jobfile.writec( "DIVISION TOLERANCE", "1.0e-08" )
+jobfile.writec( "NUMERICAL TOLERANCE", "1.0e-04" )
+jobfile.writec( "WRITING TOLERANCE", "1.0e-21" )
+jobfile.writec( "GEOM CHECK", "INFORM" )
+jobfile.writec( "SORTED BULK", "NO" )
+jobfile.writec( "CARD FORMAT", "either" )
+jobfile.writec( "NODE COORDINATES", "reference frame" )
+jobfile.writec( "COORD COORDINATES", "global" )
+jobfile.writec( "MSC.Nastran VERSION", "2020." )
+jobfile.writec( "WRITE STORED PRECISION", "TRUE" )
+jobfile.writec( "WRITE IN FREE FORMAT", "FALSE" )
+jobfile.writec( "PROPS ON ELEM ENTRY", "FALSE" )
+jobfile.writec( "CONTINUATION ENTRY", "FALSE" )
+jobfile.writec( "PCOMPG ENTRY", "TRUE" )
+jobfile.writec( "CONVERT CBAR CBEAM", "FALSE" )
+jobfile.writec( "ITERATIVE SOLVER", "FALSE" )
+jobfile.writei( "SUPER ELEMENT 0", 0 )
+jobfile.writec( "SEALL WRITE", "FALSE" )
+jobfile.writec( "PART SUPERELEMENT CREATE", "TRUE" )
+jobfile.writec( "AUTOQSET", "FALSE" )
+jobfile.writec( "FIXEDB", "FALSE" )
+jobfile.writei( "SUPER TREE COUNT", 0 )
+jobfile.writec( "MODEL TOLERANCE", "0.00030000001" )
+jobfile.writec( "ELEMENT PROPERTY OFFSET", "0" )
+jobfile.writec( "MATERIAL PROPERTY OFFSET", "0" )
+jobfile.writec( "TABLE OFFSET", "0" )
+jobfile.writec( "LOAD SET OFFSET", "0" )
+jobfile.writec( "LOAD CASE OFFSET", "0" )
+jobfile.writec( "CONTROL SET OFFSET", "0" )
+jobfile.writec( "RIGID ELEMENT OFFSET", "0" )
+jobfile.writec( "SCALAR POINT OFFSET", "0" )
+jobfile.writec( "BEGINNING CONTINUATION MARKER", "+      A" )
+jobfile.writec( "NUMBER ONLY", "ON" )
+jobfile.writec( "BEGINNING NUMBER", "OFF" )
+jobfile.writec( "TRAILING NUMBER", "OFF" )
+jobfile.writec( "SYNTAX NUMBER", "ON" )
+jobfile.writec( "SYNTAX MARKER", "." )
+jobfile.writec( "EXTERNAL SUPERELEMENT METHOD", "NONE" )
+jobfile.writec( "GRID COORDINATES ROUNDING", "15" )
+jobfile.writec( "COORD DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "MPC DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "LBC DATA PRECISION ROUNDING", "7" )
+jobfile.writec( "MAT DATA PRECISION ROUNDING", "15" )
+jobfile.writec( "PROP DATA PRECISION ROUNDING", "7" )
+jobfile.writec( "USE LEGACY PRECISION", "FALSE" )
+jobfile.writec( "EXPONENTIAL WRITE", "As Needed" )
+jobfile.writec( "EXPONENTIAL FORM", "Condensed" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * Solution Parameters" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "SOLUTION TYPE", "NORMAL MODES" )
+jobfile.writei( "SOLUTION SEQUENCE", 103 )
+jobfile.writec( "CONTACT CHECK", "OFF" )
+jobfile.writec( "DATABASE RUN", "ON" )
+jobfile.writec( "INTERACTIVE MODES", "OFF" )
+jobfile.writec( "CYCLIC SYMMETRY", "OFF" )
+jobfile.writec( "AUTOMATIC CONSTRAINTS", "ON" )
+jobfile.writec( "SHELL NORMAL TOLERANCE", "" )
+jobfile.writec( "MASS CALCULATION", "Lumped" )
+jobfile.writec( "DATA DECK ECHO", "None" )
+jobfile.writec( "PLATE RZ STIFFNESS FACTOR", "100.0" )
+jobfile.writec( "MAXIMUM PRINTED LINES", "" )
+jobfile.writec( "MAXIMUM RUN TIME", "" )
+jobfile.writec( "WT-MASS CONVERSION", "1.0" )
+jobfile.writec( "NODE ID FOR WT-GENER", "" )
+jobfile.writec( "RIGID ELEMENT TYPE", "LINEAR" )
+jobfile.writec( "USE SOL600", "OFF" )
+jobfile.writec( "RESIDUAL VECTOR", "Nastran Default" )
+jobfile.writec( "SN MEAN STRESS CORRECTION", "NONE" )
+jobfile.writec( "NEF FATIGUE STRESS OUTPUT", "NONE" )
+jobfile.writec( "NEF STRESS UNITS", "MPA" )
+jobfile.writec( "NEF STRESS COMBINATION", "ABSMAXPR" )
+jobfile.writec( "NEF RESULT LOCATION", "NODA" )
+jobfile.writec( "NEF RECOVERY LOCATION", "CORNER" )
+jobfile.writec( "NEF LAYER LOCATION", "WORST" )
+jobfile.writec( "NEF INTERPOLATION LIMIT", "0" )
+jobfile.writec( "NEF LEVEL OF MESSAGE", "0" )
+jobfile.writec( "NEF NUMBER OF THREADS", "1" )
+jobfile.writer( "NEF CERTAINTY OF SURVIVAL", 50. )
+jobfile.writer( "NEF OVERALL SCALE FACTOR", 1. )
+jobfile.writer( "NEF TOP STRESS PERCENTAGE FILTER", 100. )
+jobfile.writer( "NEF TOP DAMAGE PERCENTAGE FILTER", 100. )
+jobfile.writec( "NEF TIME HISTORY DIRECTORY", "C:\Users\Andrés" )
+jobfile.writei( "NEF MAX LOAD PER EVENT", 1 )
+jobfile.writec( "NEF EVENT DATA", "0" )
+jobfile.writec( "NEF LOAD SEQUENCE DATA", "0" )
+jobfile.writec( "USE CONTACT TABLE", "OFF" )
+jobfile.writec( "INITIAL CONTACTPAIR LOADCASE NAME", "" )
+jobfile.writei( "MDOF DATA", 0 )
+jobfile.writec( "CELL WRITE", "ON" )
+jobfile.writei( "CELL INPUT 0", 0 )
+jobfile.writec( "FMS WRITE", "ON" )
+jobfile.writei( "FMS INPUT 0", 0 )
+jobfile.writec( "EXEC WRITE", "ON" )
+jobfile.writei( "EXEC INPUT 0", 0 )
+jobfile.writec( "CASE WRITE", "ON" )
+jobfile.writei( "CASE INPUT 0", 0 )
+jobfile.writec( "BULK WRITE", "ON" )
+jobfile.writei( "BULK INPUT 0", 0 )
+jobfile.writec( "CELL DTI POSITION", "START" )
+jobfile.writec( "FMS DTI POSITION", "START" )
+jobfile.writec( "EXEC DTI POSITION", "START" )
+jobfile.writec( "CASE DTI POSITION", "START" )
+jobfile.writec( "BULK DTI POSITION", "START" )
+jobfile.writec( "", "END" )
+jobfile.close(  )
+mscnastran_job.associate_subcases( "103", "viga1", 1, ["Default"] )
+analysis_submit_2( "MSC.Nastran", "viga1" )
+$# Patran 2020  (Student Edition) has obtained 0 concurrent license(s) from 
+$# FLEXlm per a request to execute on Windows node TEMIS(48a4728ba777) (
+$# Windows 6.2 (Build 9200: Service Pack 0)) at 12-Jun-21 17:18:29.
+$# 
+$# Reading model information from the specified database, 
+$# D:\0_Andres\1_Universidad\MUSE\EUE\Practica1_EUE\Teoria\Parte_1\viga1\viga1
+$# .db.
+$# Messages output from the Patran 2020  (Student Edition) input deck 
+$# translator on June      12, 2021 at 17:18:30.
+$# 
+$# The NASTRAN input file, viga1.bdf, has been successfully opened.
+$# 
+$# Translating 50 elements from the element property region beam.
+$# 
+$# 1 property regions translated.
+$# 
+$# Translating 1 referenced material records.
+$# 
+$# Translating 51 nodes from the entire model.
+$# 
+$# Writing loads for Load Case : Default.
+$# Writing interface element lbcs.
+$# Total execution time in real seconds: 0.01
+$# Total execution time in CPU seconds: 0.282005
+$# 
+$# End of NASTRAN input file translation.
+$# Student Edition Patran Nastran Preference Patran 2020  (Student Edition) 
+$# has released 0 license(s) to FLEXlm at 12-Jun-21 17:18:30.
+$# The translation has completed successfully.
+$# Executing /bin/sh -c D:\Archivos de 
+$# programa\MSC.Software\NaPa_SE\2020\Patran\bi
+$# n\MscNastranExecute.exe -j viga1 -m bdf -x 2020 -c 
+$# %%prog=edu%auth=edu%arch=64% 
+$# -v
+uil_primary_file.db_save(  )
+$# Flushing the User Data Manager
+$# Journal file stopped recording at 12-Jun-21 17:20:37

@@ -2,6 +2,15 @@ clear all
 close all
 fig = 1;
 fig_flag = 1;
+save_flag = 1;
+
+colors = [0, 0.4470, 0.7410;
+          [255, 102, 26]/255;
+          0, 0.6, 0.7410;
+          [255, 200, 26]/255;
+          [255,140,0]/255;
+          [139,0,139]/255;
+          [50,205,50]/255];
 
 %% Datos
 
@@ -32,19 +41,19 @@ Aire.L          = 4*(Lx+Ly+H);
 try 
     load('Frecuencias.mat','Frecuencias');
 catch
-    disp('Error al cargar Frecuencias.mat')
+    CreateFrec
 end
 
 % Paneles
 Panel.modos(:,:) = Frecuencias(:,:);
-Panel.modos(:,5) = Panel.A/4/pi * (Panel.rho*Panel.thickness/Panel.D)^0.5; % modos/(rad/s)
+Panel.modos(:,5) = Panel.A/4/pi * (Panel.rho*Panel.thickness/Panel.D)^0.5; % modos/Hz
 Panel.modos(:,6) = Panel.modos(:,5) .* Panel.modos(:,4);
 
 % Capas de aire
 Aire.modos(:,:) = Frecuencias(:,:);
 Aire.modos(:,5) = Aire.V/pi/Aire.c * (Frecuencias(:,2).*2*pi ./ Aire.c).^2 +...
     Aire.A/4/Aire.c * (Frecuencias(:,2).*2*pi ./ Aire.c) + ...
-    Aire.L/8/Aire.c; % modos/(rad/s)
+    Aire.L/8/Aire.c; % modos/Hz
 Aire.modos(:,6) = Aire.modos(:,5) .* Aire.modos(:,4);
 
 % Requisito para el SEA
@@ -60,19 +69,36 @@ clear idx
 SEA_frec = max([Panel.f_SEA, Aire.f_SEA]);
 
 if fig_flag == 1
-    figure(fig)
+    h = figure(fig); %set(h, 'Visible', 'off')
+    
     set(gca, 'XScale', 'log')
     set(gca, 'YScale', 'log')
+    set(get(gca,'ylabel'),'rotation',0);
+    set(gca,'TickLabelInterpreter','latex');
+    set(gca,'FontSize',10.5);
+    set(gca,'TitleFontSizeMultiplier',1.25);
+    set(gca,'LabelFontSizeMultiplier',1.3);
+    ylh = get(gca,'ylabel'); ylh.Position(1) = 0.35; ylh.Position(2) = 100;
+    xlh = get(gca,'xlabel'); xlh.Position(1) = 2000; xlh.Position(2) = 0.004;
+    
     hold on
-    plot(Panel.modos(:,2),Panel.modos(:,6), 'DisplayName', 'Panel')
-    plot(Aire.modos(:,2), Aire.modos(:,6),  'DisplayName', 'Aire' )
-    yline(5,'--','Color','k','DisplayName', 'N=5')
-    xline(Panel.f_SEA,'Color','g', 'DisplayName', 'Panel f SEA')
-    xline(Aire.f_SEA,'Color','y', 'DisplayName', 'Aire f SEA')
-    grid on
-    ylabel('N (Número de modos)')
-    xlabel('Frecuencia [Hz]')
-    legend('Location','best')
+        plot(Panel.modos(:,2),Panel.modos(:,6),'Color', colors(1,:),'DisplayName', 'Panel')
+        plot(Aire.modos(:,2), Aire.modos(:,6), 'Color', colors(2,:), 'DisplayName', 'Aire' )
+        yline(5,'--','Color','k','DisplayName', 'N=5')
+        xline(Panel.f_SEA,'--','Color', colors(1,:), 'DisplayName', 'Panel f SEA')
+        xline(Aire.f_SEA,'--','Color', colors(2,:), 'DisplayName', 'Aire f SEA')
+    grid on; box on;
+    legend('Interpreter', 'Latex', 'Location', 'Best')
+    xlabel('$Frecuencia$ [Hz]','Interpreter','latex');
+    ylabel({'$N$'},'Interpreter','latex');
+    
+    
+    if save_flag == 1
+        set(h,'Units','Inches');
+        pos = get(h,'Position');
+        set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
+        print(h, './Figures/Modos_por_banda.pdf','-dpdf','-r0','-painters')
+    end
     fig = fig+1;
 end
 
@@ -129,22 +155,43 @@ sigma = sigma';
 
 % Pérdidas panel-aire
 Panel.eta = Panel.A*Aire.rho*Aire.c.*sigma./(Panel.rho*Panel.A*Panel.thickness*2*pi.*Frecuencias(:,2));
+eta_pd = 0.015;
 
 % Pérdidas aire-panel
 Aire.eta  = Panel.eta .* Panel.modos(:,5) ./ Aire.modos(:,5);
+eta_ad = 0.01;
 
 % Representación gráfica
 
 if fig_flag == 1
-    figure(fig)
+    h = figure(fig); %set(h, 'Visible', 'off')
+    
     set(gca, 'XScale', 'log')
+    %set(gca, 'YScale', 'log')
+    set(get(gca,'ylabel'),'rotation',0);
+    set(gca,'TickLabelInterpreter','latex');
+    set(gca,'FontSize',10.5);
+    set(gca,'TitleFontSizeMultiplier',1.25);
+    set(gca,'LabelFontSizeMultiplier',1.3);
+    ylh = get(gca,'ylabel'); ylh.Position(1) = 0.35; ylh.Position(2) = 100;
+    xlh = get(gca,'xlabel'); xlh.Position(1) = 2000; xlh.Position(2) = -0.00077;
+    
     hold on
-    plot(Frecuencias(:,2), Panel.eta(:), 'DisplayName', 'Panel')
-    plot(Frecuencias(:,2), Aire.eta(:),  'DisplayName', 'Aire' )
-    grid on
-    legend('Location','best')
-    ylabel('eta')
-    xlabel('Frecuencia [Hz]')
+        plot(Frecuencias(:,2), Panel.eta(:),'Color', colors(1,:),'DisplayName', '$\eta_{pa}$')
+        plot(Frecuencias(:,2), Aire.eta(:), 'Color', colors(2,:), 'DisplayName', '$\eta_{ap}$' )
+        yline(eta_pd,'Color',colors(3,:),'DisplayName', '$\eta_{pd}$')
+        yline(eta_ad,'Color',colors(4,:),'DisplayName', '$\eta_{ad}$')
+    grid on; box on;
+    legend('Interpreter', 'Latex', 'Location', 'Best')
+    xlabel('$Frecuencia$ [Hz]','Interpreter','latex');
+   
+    
+    if save_flag == 1
+        set(h,'Units','Inches');
+        pos = get(h,'Position');
+        set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
+        print(h, './Figures/Factor_de_perdidas.pdf','-dpdf','-r0','-painters')
+    end
     fig = fig+1;
 end
 
@@ -158,16 +205,12 @@ end
 
 % Panel-Aire
 
-eta_pd = 0.015;
-
 Panel.M(1,1,:) = +Panel.eta(:)+eta_pd;
 Panel.M(2,1,:) = -Panel.eta(:);
 Panel.M(1,2,:) = -Aire.eta(:);
 Panel.M(2,2,:) = +Aire.eta(:);
 
 % Aire-Panel
-
-eta_ad = 0.01;
 
 Aire.M(1,1,:) = +Aire.eta(:)+eta_ad;
 Aire.M(2,1,:) = -Aire.eta(:);
@@ -271,9 +314,16 @@ clear omega M P
 % Representación gráfica
 
 if fig_flag == 1
-    figure(fig)
+    h = figure(fig); %set(h, 'Visible', 'off')
+    
     set(gca, 'XScale', 'log')
     set(gca, 'YScale', 'log')
+    set(gca,'TickLabelInterpreter','latex');
+    set(gca,'FontSize',10.5);
+    set(gca,'TitleFontSizeMultiplier',1.25);
+    set(gca,'LabelFontSizeMultiplier',1.3);
+    
+
     hold on
     display_names = {'Panel 1', 'Aire 1', 'Panel 2', 'Aire 2', 'Panel 3'};
     for p = 1:length(E(1,:))
@@ -281,10 +331,29 @@ if fig_flag == 1
         EE = E(idx,p);
         plot(FF,EE,'DisplayName',display_names{p});
     end
-    grid on
-    legend()
-    ylabel('E [J]')
-    xlabel('Frecuencia [Hz]')
+    grid on; box on;
+    legend('Interpreter', 'Latex', 'Location', 'Best')
+    xlabel('$Frecuencia$ [Hz]','Interpreter','latex');
+    ylabel({'$E$';'[J]'},'Interpreter','latex');
+    
+    % Get axis size
+    ax = axis();
+    
+    % Move x label
+    xlh = get(gca,'xlabel');
+    xlh.Position(1) = 0.9*( ax(2) - ax(1) ) + ax(1);
+    
+    % Move y label
+    ylh = get(gca,'ylabel');
+    set(get(gca,'ylabel'),'rotation',0)
+    ylh.Position(2) = 0.7*( ax(4) - ax(3) ) + ax(3);
+      
+    if save_flag == 1
+        set(h,'Units','Inches');
+        pos = get(h,'Position');
+        set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
+        print(h, './Figures/Energia.pdf','-dpdf','-r0','-painters')
+    end
     fig = fig+1;
 end
 
@@ -299,20 +368,47 @@ clear EE FF
 vrms(:,1:3) = (2*E(:,[1,3,5])./Panel.A/Panel.rho/Panel.thickness).^0.5;
 
 if fig_flag == 1
-    figure(fig)
+    h = figure(fig); %set(h, 'Visible', 'off')
+    
     set(gca, 'XScale', 'log')
     set(gca, 'YScale', 'log')
+    set(gca,'TickLabelInterpreter','latex');
+    set(gca,'FontSize',10.5);
+    set(gca,'TitleFontSizeMultiplier',1.25);
+    set(gca,'LabelFontSizeMultiplier',1.3);
+  
     hold on
-    display_names = {'Panel 1', 'Panel 2' 'Panel 3'};
+    display_names = {'Panel 1', 'Panel 2', 'Panel 3'};
     for p = 1:length(vrms(1,:))
         FF = Frecuencias(idx,2);
         vv = vrms(idx,p);
         plot(FF,vv,'DisplayName',display_names{p});
     end
-    grid on
-    legend()
-    ylabel('v [m/s]')
-    xlabel('Frecuencia [Hz]')
+    grid on; box on;
+    legend('Interpreter', 'Latex', 'Location', 'Best')
+    xlabel('$Frecuencia$ [Hz]','Interpreter','latex');
+    ylabel({'$v$';'[m/s]'},'Interpreter','latex');
+    
+    % Get axis size
+    ax = axis();
+    
+    % Move x label
+    xlh = get(gca,'xlabel');
+    xlh.Position(1) = 0.9*( ax(2) - ax(1) ) + ax(1);
+    
+    % Move y label
+    ylh = get(gca,'ylabel');
+    set(get(gca,'ylabel'),'rotation',0)
+    ylh.Position(1) = ylh.Position(1) - 100;
+    ylh.Position(2) = 0.7*( ax(4) - ax(3) ) + ax(3);
+   
+    
+    if save_flag == 1
+        set(h,'Units','Inches');
+        pos = get(h,'Position');
+        set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
+        print(h, './Figures/v.pdf','-dpdf','-r0','-painters')
+    end
     fig = fig+1;
 end
 
@@ -324,20 +420,47 @@ clear FF vv
 Prms(:,1:2) = (E(:,[2,4])./Aire.V * Aire.rho * Aire.c^2).^0.5;
 
 if fig_flag == 1
-    figure(fig)
+    h = figure(fig); %set(h, 'Visible', 'off')
+    
     set(gca, 'XScale', 'log')
     set(gca, 'YScale', 'log')
+    set(gca,'TickLabelInterpreter','latex');
+    set(gca,'FontSize',10.5);
+    set(gca,'TitleFontSizeMultiplier',1.25);
+    set(gca,'LabelFontSizeMultiplier',1.3);
+    
     hold on
-    display_names = {'Aire 1', 'Aire 2'};
+    display_names = {'Aire 1','Aire 2'};
     for p = 1:length(Prms(1,:))
         FF = Frecuencias(idx,2);
         PP = Prms(idx,p);
         plot(FF,PP,'DisplayName',display_names{p});
     end
-    grid on
-    legend()
-    ylabel('P [Pa]')
-    xlabel('Frecuencia [Hz]')
+    grid on; box on;
+    legend('Interpreter', 'Latex', 'Location', 'Best')
+    xlabel('$Frecuencia$ [Hz]','Interpreter','latex');
+    ylabel({'$P$';'[Pa]'},'Interpreter','latex');
+    
+    % Get axis size
+    ax = axis();
+    
+    % Move x label
+    xlh = get(gca,'xlabel');
+    xlh.Position(1) = 0.9*( ax(2) - ax(1) ) + ax(1);
+    
+    % Move y label
+    ylh = get(gca,'ylabel');
+    set(get(gca,'ylabel'),'rotation',0)
+    ylh.Position(1) = ylh.Position(1) - 100;
+    ylh.Position(2) = 0.7*( ax(4) - ax(3) ) + ax(3);
+    
+
+    if save_flag == 1
+        set(h,'Units','Inches');
+        pos = get(h,'Position');
+        set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
+        print(h, './Figures/Prms.pdf','-dpdf','-r0','-painters')
+    end
     fig = fig+1;
 end
 

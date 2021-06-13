@@ -70,7 +70,7 @@ classdef estructura < handle
             
             % Extraer grados de libertad y número de nodos de los componentes
             obj.NN  = N_nodes(obj);             % Número de nodos totales
-            obj.GDL = obj.gdl * obj.NN;                     % Grados de libertad totales
+            obj.GDL = obj.gdl * obj.NN;         % Grados de libertad totales
             disp(['    Número de nodos totales: ',num2str(obj.NN)]);
             disp(['    Número de grados de libertad totales: ',num2str(obj.GDL)]);
             

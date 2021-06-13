@@ -26,7 +26,7 @@
                                               * *          AUG  4, 2020           * *
                                               * *                                 * *
                                               * *              Intel              * *
-                                              * *     MODEL Xeon/1478 (temis)     * *
+                                              * *     MODEL Xeon/1825 (temis)     * *
                                               * *     Windows 10 Pro 6.2 9200     * *
                                               * * Compiled for 8664 (SINGLE Mode) * *
                                               * *                                 * *
@@ -193,20 +193,20 @@
   
       http://www.mscsoftware.com/Contents/Services/Training/
   
-1                                                       **STUDENT EDITION*     JUNE  10, 2021  MSC Nastran  8/ 4/20   PAGE     1
+1                                                       **STUDENT EDITION*     JUNE  12, 2021  MSC Nastran  8/ 4/20   PAGE     1
                                                                                                                                     
 0        N A S T R A N    F I L E    A N D    S Y S T E M    P A R A M E T E R    E C H O                                           
 0                                                                                                                                   
                                                                                                                                     
                                                                                                                                     
      NASTRAN BUFFSIZE=8193 $(D:/ARCHIVOS DE PROGRAMA/MSC.SOFTWARE/NAPA_SE/2020/NASTRA
-     $ MSC.NASTRAN INPUT FILE CREATED ON JUNE      10, 2021 AT 00:52:54 BY           
+     $ MSC.NASTRAN INPUT FILE CREATED ON JUNE      12, 2021 AT 17:18:30 BY           
      $ PATRAN 2020  (STUDENT EDITION)                                                
      $ DIRECT TEXT INPUT FOR NASTRAN SYSTEM CELL SECTION                             
      $ DIRECT TEXT INPUT FOR FILE MANAGEMENT SECTION                                 
      $ DIRECT TEXT INPUT FOR EXECUTIVE CONTROL                                       
      $ NORMAL MODES ANALYSIS, DATABASE                                               
-1                                                       **STUDENT EDITION*     JUNE  10, 2021  MSC Nastran  8/ 4/20   PAGE     2
+1                                                       **STUDENT EDITION*     JUNE  12, 2021  MSC Nastran  8/ 4/20   PAGE     2
                                                                                                                                     
 0        N A S T R A N    E X E C U T I V E    C O N T R O L    E C H O                                                             
 0                                                                                                                                   
@@ -214,7 +214,7 @@
                                                                                                                                     
      SOL 103                                                                                 
      CEND                                                                                    
-1    MSC.NASTRAN JOB CREATED ON 10-JUN-21 AT 00:50:34   **STUDENT EDITION*     JUNE  10, 2021  MSC Nastran  8/ 4/20   PAGE     3
+1    MSC.NASTRAN JOB CREATED ON 10-JUN-21 AT 00:50:34   **STUDENT EDITION*     JUNE  12, 2021  MSC Nastran  8/ 4/20   PAGE     3
                                                                                                                                     
 0                                                                                                                                   
 0                                        C A S E    C O N T R O L    E C H O                                                        
@@ -232,7 +232,7 @@
                  10         SPCFORCES(SORT1,REAL)=ALL                                                            
                  11         EXTSEOUT(STIF,DAMP,MASS,EXTID=1,DMIGPCH)                                             
                  12      BEGIN BULK                                                                              
-1    MSC.NASTRAN JOB CREATED ON 10-JUN-21 AT 00:50:34   **STUDENT EDITION*     JUNE  10, 2021  MSC Nastran  8/ 4/20   PAGE     4
+1    MSC.NASTRAN JOB CREATED ON 10-JUN-21 AT 00:50:34   **STUDENT EDITION*     JUNE  12, 2021  MSC Nastran  8/ 4/20   PAGE     4
                                                                                                                                     
 0                                                                                                                                   
                                         M O D E L   S U M M A R Y          BULK = 0
@@ -248,7 +248,7 @@
  ^^^     
  ^^^ >>> IFP OPERATIONS COMPLETE <<< 
  ^^^     
-1    MSC.NASTRAN JOB CREATED ON 10-JUN-21 AT 00:50:34   **STUDENT EDITION*     JUNE  10, 2021  MSC Nastran  8/ 4/20   PAGE     5
+1    MSC.NASTRAN JOB CREATED ON 10-JUN-21 AT 00:50:34   **STUDENT EDITION*     JUNE  12, 2021  MSC Nastran  8/ 4/20   PAGE     5
                                                                                                                                     
 0                                                                                                                                   
  *** USER INFORMATION MESSAGE 7310 (VECPRN)
@@ -265,7 +265,7 @@
                MY       ----          ----          ----          ----       0.000000E+00     ----                                  
                MZ       ----          ----          ----          ----          ----       0.000000E+00                             
              TOTALS  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
-1    MSC.NASTRAN JOB CREATED ON 10-JUN-21 AT 00:50:34   **STUDENT EDITION*     JUNE  10, 2021  MSC Nastran  8/ 4/20   PAGE     6
+1    MSC.NASTRAN JOB CREATED ON 10-JUN-21 AT 00:50:34   **STUDENT EDITION*     JUNE  12, 2021  MSC Nastran  8/ 4/20   PAGE     6
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
  *******************************************************************
@@ -295,21 +295,21 @@
 
  POINT ID - COMP.    POINT ID - COMP.    POINT ID - COMP.    POINT ID - COMP.
 
-        1 - 123456          2 - 123456          3 - 123456          4 - 123456
-        5 - 123456          6 - 123456          7 - 123456          8 - 123456
-        9 - 123456         10 - 123456         11 - 123456         12 - 123456
-       13 - 123456         14 - 123456         15 - 123456         16 - 123456
-       17 - 123456         18 - 123456         19 - 123456         20 - 123456
-       21 - 123456         22 - 123456         23 - 123456         24 - 123456
-       25 - 123456         26 - 123456         27 - 123456         28 - 123456
-       29 - 123456         30 - 123456         31 - 123456         32 - 123456
-       33 - 123456         34 - 123456         35 - 123456         36 - 123456
-       37 - 123456         38 - 123456         39 - 123456         40 - 123456
-       41 - 123456         42 - 123456         43 - 123456         44 - 123456
-       45 - 123456         46 - 123456         47 - 123456         48 - 123456
-       49 - 123456         50 - 123456         51 - 123456
+      100 - 123456        101 - 123456        102 - 123456        103 - 123456
+      104 - 123456        105 - 123456        106 - 123456        107 - 123456
+      108 - 123456        109 - 123456        110 - 123456        111 - 123456
+      112 - 123456        113 - 123456        114 - 123456        115 - 123456
+      116 - 123456        117 - 123456        118 - 123456        119 - 123456
+      120 - 123456        121 - 123456        122 - 123456        123 - 123456
+      124 - 123456        125 - 123456        126 - 123456        127 - 123456
+      128 - 123456        129 - 123456        130 - 123456        131 - 123456
+      132 - 123456        133 - 123456        134 - 123456        135 - 123456
+      136 - 123456        137 - 123456        138 - 123456        139 - 123456
+      140 - 123456        141 - 123456        142 - 123456        143 - 123456
+      144 - 123456        145 - 123456        146 - 123456        147 - 123456
+      148 - 123456        149 - 123456        150 - 123456
 
-1    MSC.NASTRAN JOB CREATED ON 10-JUN-21 AT 00:50:34   **STUDENT EDITION*     JUNE  10, 2021  MSC Nastran  8/ 4/20   PAGE     7
+1    MSC.NASTRAN JOB CREATED ON 10-JUN-21 AT 00:50:34   **STUDENT EDITION*     JUNE  12, 2021  MSC Nastran  8/ 4/20   PAGE     7
                                                                                                                                     
 0                                                                                                                                   
  * * * *  D B D I C T   P R I N T  * * * *      SUBDMAP = PRTSUM  ,  DMAP STATEMENT NO.     71
